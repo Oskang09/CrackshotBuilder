@@ -17306,7 +17306,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:CrackshotBuilderSetup"
         "ProductCode" = "8:{EFDA2A39-B63F-4406-B326-CA2C8A7269CD}"
-        "PackageCode" = "8:{E939CF06-D867-4654-B61A-E650112EFB34}"
+        "PackageCode" = "8:{1100AF33-12A6-4305-B27C-10AEBD11C3C7}"
         "UpgradeCode" = "8:{2025E60D-B56E-4EAA-B535-CB68689B0A86}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -17437,7 +17437,7 @@
             "Target" = "8:_A4C30313C1A04ED38D6D637301D113A8"
             "Folder" = "8:_0A316EF676114AE09D5DEE44C63CD480"
             "WorkingFolder" = "8:_58AD0B498ADF474DAAFB8B0EC4208A8E"
-            "Icon" = "8:"
+            "Icon" = "8:_92E9E30E578049E4BD87CD9FAE7F4B91"
             "Feature" = "8:"
             }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_DAC03563BDEA4DE5A949A7D2B2735405"
@@ -17451,7 +17451,7 @@
             "Target" = "8:_A4C30313C1A04ED38D6D637301D113A8"
             "Folder" = "8:_69DBE5D0204E451E9A9F7ADA7AC7C3D4"
             "WorkingFolder" = "8:_58AD0B498ADF474DAAFB8B0EC4208A8E"
-            "Icon" = "8:"
+            "Icon" = "8:_92E9E30E578049E4BD87CD9FAE7F4B91"
             "Feature" = "8:"
             }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_E3F3FC4097BD4F228ED240D5A241B375"
@@ -17465,7 +17465,7 @@
             "Target" = "8:_A4C30313C1A04ED38D6D637301D113A8"
             "Folder" = "8:_58AD0B498ADF474DAAFB8B0EC4208A8E"
             "WorkingFolder" = "8:_58AD0B498ADF474DAAFB8B0EC4208A8E"
-            "Icon" = "8:"
+            "Icon" = "8:_92E9E30E578049E4BD87CD9FAE7F4B91"
             "Feature" = "8:"
             }
         }

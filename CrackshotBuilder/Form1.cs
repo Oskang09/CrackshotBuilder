@@ -13,8 +13,8 @@ namespace CrackshotBuilder
 {
     public partial class Form1 : Form
     {
-        //string filepath = Application.StartupPath + "/CrackshotFiles";
-        public string filepath = "C:/Users/Oska/Desktop/CrackshotFiles";
+        public string filepath = Application.StartupPath + "/CrackshotFiles";
+        //public string filepath = "C:/Users/Oska/Desktop/CrackshotFiles";
         string doublespacebar = "        ";
         string spacebar = "    ";
         private TTPHelper ttphelper;
