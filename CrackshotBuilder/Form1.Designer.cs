@@ -241,7 +241,84 @@
             this.G_S_NoRecoillabel = new System.Windows.Forms.CheckBox();
             this.G_S_Enablelabel = new System.Windows.Forms.CheckBox();
             this.G2_Tablabel = new System.Windows.Forms.TabPage();
+            this.G2_CH_namelabel = new System.Windows.Forms.GroupBox();
+            this.G2_CH_ChanceBox = new System.Windows.Forms.TextBox();
+            this.G2_CH_Chancelabel = new System.Windows.Forms.Label();
+            this.RS20 = new System.Windows.Forms.Button();
+            this.G2_CH_SVlabel = new System.Windows.Forms.Label();
+            this.AS20 = new System.Windows.Forms.Button();
+            this.AS20_Sound = new System.Windows.Forms.ListBox();
+            this.RS19 = new System.Windows.Forms.Button();
+            this.G2_CH_SSlabel = new System.Windows.Forms.Label();
+            this.AS19 = new System.Windows.Forms.Button();
+            this.AS19_Sound = new System.Windows.Forms.ListBox();
+            this.G2_CH_MVBox = new System.Windows.Forms.TextBox();
+            this.G2_CH_MSBox = new System.Windows.Forms.TextBox();
+            this.G2_CH_MVlabel = new System.Windows.Forms.Label();
+            this.G2_CH_MSlabel = new System.Windows.Forms.Label();
+            this.G2_CH_BDBox = new System.Windows.Forms.TextBox();
+            this.G2_CH_BDlabel = new System.Windows.Forms.Label();
+            this.G2_CH_Enablelabel = new System.Windows.Forms.CheckBox();
+            this.G2_B_namelabel = new System.Windows.Forms.GroupBox();
+            this.RS18 = new System.Windows.Forms.Button();
+            this.G2_B_SVlabel = new System.Windows.Forms.Label();
+            this.AS18 = new System.Windows.Forms.Button();
+            this.AS18_Sound = new System.Windows.Forms.ListBox();
+            this.RS17 = new System.Windows.Forms.Button();
+            this.G2_B_SSlabel = new System.Windows.Forms.Label();
+            this.AS17 = new System.Windows.Forms.Button();
+            this.AS17_Sound = new System.Windows.Forms.ListBox();
+            this.G2_B_MVBox = new System.Windows.Forms.TextBox();
+            this.G2_B_MSBox = new System.Windows.Forms.TextBox();
+            this.G2_B_MVlabel = new System.Windows.Forms.Label();
+            this.G2_B_MSlabel = new System.Windows.Forms.Label();
+            this.G2_B_BDBox = new System.Windows.Forms.TextBox();
+            this.G2_B_BDlabel = new System.Windows.Forms.Label();
+            this.G2_B_Enablelabel = new System.Windows.Forms.CheckBox();
+            this.G2_H_namelabel = new System.Windows.Forms.GroupBox();
+            this.RS16 = new System.Windows.Forms.Button();
+            this.G2_H_SVlabel = new System.Windows.Forms.Label();
+            this.AS16 = new System.Windows.Forms.Button();
+            this.AS16_Sound = new System.Windows.Forms.ListBox();
+            this.RS15 = new System.Windows.Forms.Button();
+            this.G2_H_SSlabel = new System.Windows.Forms.Label();
+            this.AS15 = new System.Windows.Forms.Button();
+            this.AS15_Sound = new System.Windows.Forms.ListBox();
+            this.G2_H_MVBox = new System.Windows.Forms.TextBox();
+            this.G2_H_MSBox = new System.Windows.Forms.TextBox();
+            this.G2_H_MVlabel = new System.Windows.Forms.Label();
+            this.G2_H_MSlabel = new System.Windows.Forms.Label();
+            this.G2_H_BDBox = new System.Windows.Forms.TextBox();
+            this.G2_H_BDlabel = new System.Windows.Forms.Label();
+            this.G2_H_Enablelabel = new System.Windows.Forms.CheckBox();
+            this.E_Tablabel = new System.Windows.Forms.TabPage();
+            this.E_SEOH_namelabel = new System.Windows.Forms.GroupBox();
+            this.E_SEOH_TDBox = new System.Windows.Forms.TextBox();
+            this.E_SEOH_TDlabel = new System.Windows.Forms.Label();
+            this.E_SEOH_RElabel = new System.Windows.Forms.Button();
+            this.E_SEOH_MVBox = new System.Windows.Forms.TextBox();
+            this.E_SEOH_MVlabel = new System.Windows.Forms.Label();
+            this.E_SEOH_MSBox = new System.Windows.Forms.TextBox();
+            this.E_SEOH_MSlabel = new System.Windows.Forms.Label();
+            this.E_SEOH_AElabel = new System.Windows.Forms.Button();
+            this.E_SEOH_Elabel = new System.Windows.Forms.Label();
+            this.E_SEOH_Entityett = new System.Windows.Forms.ComboBox();
+            this.E_SEOH_AmBox = new System.Windows.Forms.TextBox();
+            this.E_SEOH_Amlabel = new System.Windows.Forms.Label();
+            this.E_SEOH_Explolabel = new System.Windows.Forms.CheckBox();
+            this.E_SEOH_Babylabel = new System.Windows.Forms.CheckBox();
+            this.E_SEOH_EBox = new System.Windows.Forms.ListBox();
+            this.E_SEOH_EDDlabel = new System.Windows.Forms.CheckBox();
+            this.E_SEOH_METVlabel = new System.Windows.Forms.CheckBox();
+            this.E_SEOH_MNBox = new System.Windows.Forms.TextBox();
+            this.E_SEOH_MNlabel = new System.Windows.Forms.Label();
+            this.E_SEOH_ChanceBox = new System.Windows.Forms.TextBox();
+            this.E_SEOH_Chancelabel = new System.Windows.Forms.Label();
+            this.E_SEOH_Enablelabel = new System.Windows.Forms.CheckBox();
             this.O_Tablabel = new System.Windows.Forms.TabPage();
+            this.O_CDM_namelabel = new System.Windows.Forms.GroupBox();
+            this.O_CDM_MBox = new System.Windows.Forms.TextBox();
+            this.O_CDM_Nlabel = new System.Windows.Forms.Label();
             this.O_RC_namelabel = new System.Windows.Forms.GroupBox();
             this.O_RC_Modbox = new System.Windows.Forms.TextBox();
             this.O_RC_Modlabel = new System.Windows.Forms.Label();
@@ -327,7 +404,14 @@
             this.G_FA_GBlabel.SuspendLayout();
             this.G_FBlabel.SuspendLayout();
             this.G_S_Sneaklabel.SuspendLayout();
+            this.G2_Tablabel.SuspendLayout();
+            this.G2_CH_namelabel.SuspendLayout();
+            this.G2_B_namelabel.SuspendLayout();
+            this.G2_H_namelabel.SuspendLayout();
+            this.E_Tablabel.SuspendLayout();
+            this.E_SEOH_namelabel.SuspendLayout();
             this.O_Tablabel.SuspendLayout();
+            this.O_CDM_namelabel.SuspendLayout();
             this.O_RC_namelabel.SuspendLayout();
             this.O_CCR_namelabel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.C_OOR_p9)).BeginInit();
@@ -352,11 +436,11 @@
             this.tabControl1.Controls.Add(this.I_Tablabel);
             this.tabControl1.Controls.Add(this.G_Tablabel);
             this.tabControl1.Controls.Add(this.G2_Tablabel);
+            this.tabControl1.Controls.Add(this.E_Tablabel);
             this.tabControl1.Controls.Add(this.O_Tablabel);
             this.tabControl1.Controls.Add(this.Yamllabel);
             this.tabControl1.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
             this.tabControl1.Location = new System.Drawing.Point(1, 1);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(2, 5, 2, 5);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1366, 714);
@@ -364,6 +448,7 @@
             // 
             // II_Tablabel
             // 
+            this.II_Tablabel.BackColor = System.Drawing.Color.White;
             this.II_Tablabel.Controls.Add(this.II_IDPics);
             this.II_Tablabel.Controls.Add(this.II_Lore);
             this.II_Tablabel.Controls.Add(this.wallpaper3pic);
@@ -397,7 +482,6 @@
             this.II_Tablabel.Size = new System.Drawing.Size(1358, 685);
             this.II_Tablabel.TabIndex = 0;
             this.II_Tablabel.Text = "Item Information";
-            this.II_Tablabel.UseVisualStyleBackColor = true;
             // 
             // II_IDPics
             // 
@@ -685,6 +769,8 @@
             // 
             // II_A_Attachlabel
             // 
+            this.II_A_Attachlabel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.II_A_Attachlabel.BackColor = System.Drawing.Color.Transparent;
             this.II_A_Attachlabel.Controls.Add(this.RS2);
             this.II_A_Attachlabel.Controls.Add(this.AS2_Sound);
             this.II_A_Attachlabel.Controls.Add(this.AS2);
@@ -813,6 +899,7 @@
             // 
             // S_Tablabel
             // 
+            this.S_Tablabel.BackColor = System.Drawing.Color.White;
             this.S_Tablabel.Controls.Add(this.wallpaper6pic);
             this.S_Tablabel.Controls.Add(this.wallpaper5pic);
             this.S_Tablabel.Controls.Add(this.wallpaper4pic);
@@ -832,7 +919,6 @@
             this.S_Tablabel.Size = new System.Drawing.Size(1358, 685);
             this.S_Tablabel.TabIndex = 2;
             this.S_Tablabel.Text = "Shooting";
-            this.S_Tablabel.UseVisualStyleBackColor = true;
             // 
             // wallpaper6pic
             // 
@@ -1432,6 +1518,7 @@
             // 
             // I_Tablabel
             // 
+            this.I_Tablabel.BackColor = System.Drawing.Color.White;
             this.I_Tablabel.Controls.Add(this.I_RS_riotlabel);
             this.I_Tablabel.Location = new System.Drawing.Point(4, 25);
             this.I_Tablabel.Name = "I_Tablabel";
@@ -1439,7 +1526,6 @@
             this.I_Tablabel.Size = new System.Drawing.Size(1358, 685);
             this.I_Tablabel.TabIndex = 5;
             this.I_Tablabel.Text = "Items";
-            this.I_Tablabel.UseVisualStyleBackColor = true;
             // 
             // I_RS_riotlabel
             // 
@@ -1636,6 +1722,7 @@
             // 
             // G_Tablabel
             // 
+            this.G_Tablabel.BackColor = System.Drawing.Color.White;
             this.G_Tablabel.Controls.Add(this.G_S_Scopelabel);
             this.G_Tablabel.Controls.Add(this.G_R_GBoxlabel);
             this.G_Tablabel.Controls.Add(this.G_A_Ammolabel);
@@ -1649,7 +1736,6 @@
             this.G_Tablabel.Size = new System.Drawing.Size(1358, 685);
             this.G_Tablabel.TabIndex = 3;
             this.G_Tablabel.Text = "Gameplay";
-            this.G_Tablabel.UseVisualStyleBackColor = true;
             // 
             // G_S_Scopelabel
             // 
@@ -2537,10 +2623,11 @@
             // 
             // G_FA_TypeBox
             // 
+            this.G_FA_TypeBox.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
             this.G_FA_TypeBox.FormattingEnabled = true;
             this.G_FA_TypeBox.Location = new System.Drawing.Point(18, 44);
             this.G_FA_TypeBox.Name = "G_FA_TypeBox";
-            this.G_FA_TypeBox.Size = new System.Drawing.Size(142, 28);
+            this.G_FA_TypeBox.Size = new System.Drawing.Size(142, 24);
             this.G_FA_TypeBox.TabIndex = 0;
             // 
             // G_F_Burstlabel
@@ -2717,16 +2804,879 @@
             // 
             // G2_Tablabel
             // 
+            this.G2_Tablabel.BackColor = System.Drawing.Color.White;
+            this.G2_Tablabel.Controls.Add(this.G2_CH_namelabel);
+            this.G2_Tablabel.Controls.Add(this.G2_B_namelabel);
+            this.G2_Tablabel.Controls.Add(this.G2_H_namelabel);
             this.G2_Tablabel.Location = new System.Drawing.Point(4, 25);
             this.G2_Tablabel.Name = "G2_Tablabel";
             this.G2_Tablabel.Padding = new System.Windows.Forms.Padding(3);
             this.G2_Tablabel.Size = new System.Drawing.Size(1358, 685);
             this.G2_Tablabel.TabIndex = 4;
             this.G2_Tablabel.Text = "Gameplay2";
-            this.G2_Tablabel.UseVisualStyleBackColor = true;
+            // 
+            // G2_CH_namelabel
+            // 
+            this.G2_CH_namelabel.Controls.Add(this.G2_CH_ChanceBox);
+            this.G2_CH_namelabel.Controls.Add(this.G2_CH_Chancelabel);
+            this.G2_CH_namelabel.Controls.Add(this.RS20);
+            this.G2_CH_namelabel.Controls.Add(this.G2_CH_SVlabel);
+            this.G2_CH_namelabel.Controls.Add(this.AS20);
+            this.G2_CH_namelabel.Controls.Add(this.AS20_Sound);
+            this.G2_CH_namelabel.Controls.Add(this.RS19);
+            this.G2_CH_namelabel.Controls.Add(this.G2_CH_SSlabel);
+            this.G2_CH_namelabel.Controls.Add(this.AS19);
+            this.G2_CH_namelabel.Controls.Add(this.AS19_Sound);
+            this.G2_CH_namelabel.Controls.Add(this.G2_CH_MVBox);
+            this.G2_CH_namelabel.Controls.Add(this.G2_CH_MSBox);
+            this.G2_CH_namelabel.Controls.Add(this.G2_CH_MVlabel);
+            this.G2_CH_namelabel.Controls.Add(this.G2_CH_MSlabel);
+            this.G2_CH_namelabel.Controls.Add(this.G2_CH_BDBox);
+            this.G2_CH_namelabel.Controls.Add(this.G2_CH_BDlabel);
+            this.G2_CH_namelabel.Controls.Add(this.G2_CH_Enablelabel);
+            this.G2_CH_namelabel.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold);
+            this.G2_CH_namelabel.Location = new System.Drawing.Point(7, 448);
+            this.G2_CH_namelabel.Name = "G2_CH_namelabel";
+            this.G2_CH_namelabel.Size = new System.Drawing.Size(830, 237);
+            this.G2_CH_namelabel.TabIndex = 15;
+            this.G2_CH_namelabel.TabStop = false;
+            this.G2_CH_namelabel.Text = "Critical Hits";
+            // 
+            // G2_CH_ChanceBox
+            // 
+            this.G2_CH_ChanceBox.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.G2_CH_ChanceBox.Location = new System.Drawing.Point(158, 78);
+            this.G2_CH_ChanceBox.Name = "G2_CH_ChanceBox";
+            this.G2_CH_ChanceBox.Size = new System.Drawing.Size(107, 22);
+            this.G2_CH_ChanceBox.TabIndex = 16;
+            this.G2_CH_ChanceBox.Visible = false;
+            // 
+            // G2_CH_Chancelabel
+            // 
+            this.G2_CH_Chancelabel.AutoSize = true;
+            this.G2_CH_Chancelabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.G2_CH_Chancelabel.Location = new System.Drawing.Point(155, 57);
+            this.G2_CH_Chancelabel.Name = "G2_CH_Chancelabel";
+            this.G2_CH_Chancelabel.Size = new System.Drawing.Size(70, 18);
+            this.G2_CH_Chancelabel.TabIndex = 15;
+            this.G2_CH_Chancelabel.Text = "Chance";
+            this.G2_CH_Chancelabel.Visible = false;
+            // 
+            // RS20
+            // 
+            this.RS20.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.RS20.Location = new System.Drawing.Point(736, 129);
+            this.RS20.Name = "RS20";
+            this.RS20.Size = new System.Drawing.Size(75, 71);
+            this.RS20.TabIndex = 14;
+            this.RS20.Text = "button3";
+            this.RS20.UseVisualStyleBackColor = true;
+            this.RS20.Visible = false;
+            // 
+            // G2_CH_SVlabel
+            // 
+            this.G2_CH_SVlabel.AutoSize = true;
+            this.G2_CH_SVlabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.G2_CH_SVlabel.Location = new System.Drawing.Point(566, 31);
+            this.G2_CH_SVlabel.Name = "G2_CH_SVlabel";
+            this.G2_CH_SVlabel.Size = new System.Drawing.Size(121, 18);
+            this.G2_CH_SVlabel.TabIndex = 13;
+            this.G2_CH_SVlabel.Text = "Sounds Victim";
+            this.G2_CH_SVlabel.Visible = false;
+            // 
+            // AS20
+            // 
+            this.AS20.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.AS20.Location = new System.Drawing.Point(736, 52);
+            this.AS20.Name = "AS20";
+            this.AS20.Size = new System.Drawing.Size(75, 71);
+            this.AS20.TabIndex = 12;
+            this.AS20.Text = "button4";
+            this.AS20.UseVisualStyleBackColor = true;
+            this.AS20.Visible = false;
+            // 
+            // AS20_Sound
+            // 
+            this.AS20_Sound.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.AS20_Sound.FormattingEnabled = true;
+            this.AS20_Sound.ItemHeight = 16;
+            this.AS20_Sound.Location = new System.Drawing.Point(569, 52);
+            this.AS20_Sound.Name = "AS20_Sound";
+            this.AS20_Sound.Size = new System.Drawing.Size(161, 148);
+            this.AS20_Sound.TabIndex = 11;
+            this.AS20_Sound.Visible = false;
+            // 
+            // RS19
+            // 
+            this.RS19.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.RS19.Location = new System.Drawing.Point(479, 129);
+            this.RS19.Name = "RS19";
+            this.RS19.Size = new System.Drawing.Size(75, 71);
+            this.RS19.TabIndex = 10;
+            this.RS19.Text = "button2";
+            this.RS19.UseVisualStyleBackColor = true;
+            this.RS19.Visible = false;
+            // 
+            // G2_CH_SSlabel
+            // 
+            this.G2_CH_SSlabel.AutoSize = true;
+            this.G2_CH_SSlabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.G2_CH_SSlabel.Location = new System.Drawing.Point(309, 31);
+            this.G2_CH_SSlabel.Name = "G2_CH_SSlabel";
+            this.G2_CH_SSlabel.Size = new System.Drawing.Size(136, 18);
+            this.G2_CH_SSlabel.TabIndex = 9;
+            this.G2_CH_SSlabel.Text = "Sounds Shooter";
+            this.G2_CH_SSlabel.Visible = false;
+            // 
+            // AS19
+            // 
+            this.AS19.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.AS19.Location = new System.Drawing.Point(479, 52);
+            this.AS19.Name = "AS19";
+            this.AS19.Size = new System.Drawing.Size(75, 71);
+            this.AS19.TabIndex = 8;
+            this.AS19.Text = "button1";
+            this.AS19.UseVisualStyleBackColor = true;
+            this.AS19.Visible = false;
+            // 
+            // AS19_Sound
+            // 
+            this.AS19_Sound.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.AS19_Sound.FormattingEnabled = true;
+            this.AS19_Sound.ItemHeight = 16;
+            this.AS19_Sound.Location = new System.Drawing.Point(312, 52);
+            this.AS19_Sound.Name = "AS19_Sound";
+            this.AS19_Sound.Size = new System.Drawing.Size(161, 148);
+            this.AS19_Sound.TabIndex = 7;
+            this.AS19_Sound.Visible = false;
+            // 
+            // G2_CH_MVBox
+            // 
+            this.G2_CH_MVBox.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.G2_CH_MVBox.Location = new System.Drawing.Point(17, 172);
+            this.G2_CH_MVBox.Name = "G2_CH_MVBox";
+            this.G2_CH_MVBox.Size = new System.Drawing.Size(267, 22);
+            this.G2_CH_MVBox.TabIndex = 6;
+            this.G2_CH_MVBox.Visible = false;
+            // 
+            // G2_CH_MSBox
+            // 
+            this.G2_CH_MSBox.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.G2_CH_MSBox.Location = new System.Drawing.Point(17, 126);
+            this.G2_CH_MSBox.Name = "G2_CH_MSBox";
+            this.G2_CH_MSBox.Size = new System.Drawing.Size(267, 22);
+            this.G2_CH_MSBox.TabIndex = 5;
+            this.G2_CH_MSBox.Visible = false;
+            // 
+            // G2_CH_MVlabel
+            // 
+            this.G2_CH_MVlabel.AutoSize = true;
+            this.G2_CH_MVlabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.G2_CH_MVlabel.Location = new System.Drawing.Point(14, 151);
+            this.G2_CH_MVlabel.Name = "G2_CH_MVlabel";
+            this.G2_CH_MVlabel.Size = new System.Drawing.Size(132, 18);
+            this.G2_CH_MVlabel.TabIndex = 4;
+            this.G2_CH_MVlabel.Text = "Message Victim";
+            this.G2_CH_MVlabel.Visible = false;
+            // 
+            // G2_CH_MSlabel
+            // 
+            this.G2_CH_MSlabel.AutoSize = true;
+            this.G2_CH_MSlabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.G2_CH_MSlabel.Location = new System.Drawing.Point(14, 102);
+            this.G2_CH_MSlabel.Name = "G2_CH_MSlabel";
+            this.G2_CH_MSlabel.Size = new System.Drawing.Size(147, 18);
+            this.G2_CH_MSlabel.TabIndex = 3;
+            this.G2_CH_MSlabel.Text = "Message Shooter";
+            this.G2_CH_MSlabel.Visible = false;
+            // 
+            // G2_CH_BDBox
+            // 
+            this.G2_CH_BDBox.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.G2_CH_BDBox.Location = new System.Drawing.Point(17, 78);
+            this.G2_CH_BDBox.Name = "G2_CH_BDBox";
+            this.G2_CH_BDBox.Size = new System.Drawing.Size(107, 22);
+            this.G2_CH_BDBox.TabIndex = 2;
+            this.G2_CH_BDBox.Visible = false;
+            // 
+            // G2_CH_BDlabel
+            // 
+            this.G2_CH_BDlabel.AutoSize = true;
+            this.G2_CH_BDlabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.G2_CH_BDlabel.Location = new System.Drawing.Point(14, 57);
+            this.G2_CH_BDlabel.Name = "G2_CH_BDlabel";
+            this.G2_CH_BDlabel.Size = new System.Drawing.Size(129, 18);
+            this.G2_CH_BDlabel.TabIndex = 1;
+            this.G2_CH_BDlabel.Text = "Bonus Damage";
+            this.G2_CH_BDlabel.Visible = false;
+            // 
+            // G2_CH_Enablelabel
+            // 
+            this.G2_CH_Enablelabel.AutoSize = true;
+            this.G2_CH_Enablelabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.G2_CH_Enablelabel.Location = new System.Drawing.Point(17, 31);
+            this.G2_CH_Enablelabel.Name = "G2_CH_Enablelabel";
+            this.G2_CH_Enablelabel.Size = new System.Drawing.Size(82, 22);
+            this.G2_CH_Enablelabel.TabIndex = 0;
+            this.G2_CH_Enablelabel.Text = "Enable";
+            this.G2_CH_Enablelabel.UseVisualStyleBackColor = true;
+            this.G2_CH_Enablelabel.Visible = false;
+            this.G2_CH_Enablelabel.CheckedChanged += new System.EventHandler(this.G2_CH_Enablelabel_CheckedChanged);
+            // 
+            // G2_B_namelabel
+            // 
+            this.G2_B_namelabel.Controls.Add(this.RS18);
+            this.G2_B_namelabel.Controls.Add(this.G2_B_SVlabel);
+            this.G2_B_namelabel.Controls.Add(this.AS18);
+            this.G2_B_namelabel.Controls.Add(this.AS18_Sound);
+            this.G2_B_namelabel.Controls.Add(this.RS17);
+            this.G2_B_namelabel.Controls.Add(this.G2_B_SSlabel);
+            this.G2_B_namelabel.Controls.Add(this.AS17);
+            this.G2_B_namelabel.Controls.Add(this.AS17_Sound);
+            this.G2_B_namelabel.Controls.Add(this.G2_B_MVBox);
+            this.G2_B_namelabel.Controls.Add(this.G2_B_MSBox);
+            this.G2_B_namelabel.Controls.Add(this.G2_B_MVlabel);
+            this.G2_B_namelabel.Controls.Add(this.G2_B_MSlabel);
+            this.G2_B_namelabel.Controls.Add(this.G2_B_BDBox);
+            this.G2_B_namelabel.Controls.Add(this.G2_B_BDlabel);
+            this.G2_B_namelabel.Controls.Add(this.G2_B_Enablelabel);
+            this.G2_B_namelabel.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold);
+            this.G2_B_namelabel.Location = new System.Drawing.Point(7, 227);
+            this.G2_B_namelabel.Name = "G2_B_namelabel";
+            this.G2_B_namelabel.Size = new System.Drawing.Size(830, 215);
+            this.G2_B_namelabel.TabIndex = 1;
+            this.G2_B_namelabel.TabStop = false;
+            this.G2_B_namelabel.Text = "Backstab";
+            // 
+            // RS18
+            // 
+            this.RS18.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.RS18.Location = new System.Drawing.Point(736, 129);
+            this.RS18.Name = "RS18";
+            this.RS18.Size = new System.Drawing.Size(75, 71);
+            this.RS18.TabIndex = 14;
+            this.RS18.Text = "button3";
+            this.RS18.UseVisualStyleBackColor = true;
+            this.RS18.Visible = false;
+            // 
+            // G2_B_SVlabel
+            // 
+            this.G2_B_SVlabel.AutoSize = true;
+            this.G2_B_SVlabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.G2_B_SVlabel.Location = new System.Drawing.Point(566, 31);
+            this.G2_B_SVlabel.Name = "G2_B_SVlabel";
+            this.G2_B_SVlabel.Size = new System.Drawing.Size(121, 18);
+            this.G2_B_SVlabel.TabIndex = 13;
+            this.G2_B_SVlabel.Text = "Sounds Victim";
+            this.G2_B_SVlabel.Visible = false;
+            // 
+            // AS18
+            // 
+            this.AS18.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.AS18.Location = new System.Drawing.Point(736, 52);
+            this.AS18.Name = "AS18";
+            this.AS18.Size = new System.Drawing.Size(75, 71);
+            this.AS18.TabIndex = 12;
+            this.AS18.Text = "button4";
+            this.AS18.UseVisualStyleBackColor = true;
+            this.AS18.Visible = false;
+            // 
+            // AS18_Sound
+            // 
+            this.AS18_Sound.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.AS18_Sound.FormattingEnabled = true;
+            this.AS18_Sound.ItemHeight = 16;
+            this.AS18_Sound.Location = new System.Drawing.Point(569, 52);
+            this.AS18_Sound.Name = "AS18_Sound";
+            this.AS18_Sound.Size = new System.Drawing.Size(161, 148);
+            this.AS18_Sound.TabIndex = 11;
+            this.AS18_Sound.Visible = false;
+            // 
+            // RS17
+            // 
+            this.RS17.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.RS17.Location = new System.Drawing.Point(479, 129);
+            this.RS17.Name = "RS17";
+            this.RS17.Size = new System.Drawing.Size(75, 71);
+            this.RS17.TabIndex = 10;
+            this.RS17.Text = "button2";
+            this.RS17.UseVisualStyleBackColor = true;
+            this.RS17.Visible = false;
+            // 
+            // G2_B_SSlabel
+            // 
+            this.G2_B_SSlabel.AutoSize = true;
+            this.G2_B_SSlabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.G2_B_SSlabel.Location = new System.Drawing.Point(309, 31);
+            this.G2_B_SSlabel.Name = "G2_B_SSlabel";
+            this.G2_B_SSlabel.Size = new System.Drawing.Size(136, 18);
+            this.G2_B_SSlabel.TabIndex = 9;
+            this.G2_B_SSlabel.Text = "Sounds Shooter";
+            this.G2_B_SSlabel.Visible = false;
+            // 
+            // AS17
+            // 
+            this.AS17.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.AS17.Location = new System.Drawing.Point(479, 52);
+            this.AS17.Name = "AS17";
+            this.AS17.Size = new System.Drawing.Size(75, 71);
+            this.AS17.TabIndex = 8;
+            this.AS17.Text = "button1";
+            this.AS17.UseVisualStyleBackColor = true;
+            this.AS17.Visible = false;
+            // 
+            // AS17_Sound
+            // 
+            this.AS17_Sound.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.AS17_Sound.FormattingEnabled = true;
+            this.AS17_Sound.ItemHeight = 16;
+            this.AS17_Sound.Location = new System.Drawing.Point(312, 52);
+            this.AS17_Sound.Name = "AS17_Sound";
+            this.AS17_Sound.Size = new System.Drawing.Size(161, 148);
+            this.AS17_Sound.TabIndex = 7;
+            this.AS17_Sound.Visible = false;
+            // 
+            // G2_B_MVBox
+            // 
+            this.G2_B_MVBox.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.G2_B_MVBox.Location = new System.Drawing.Point(17, 182);
+            this.G2_B_MVBox.Name = "G2_B_MVBox";
+            this.G2_B_MVBox.Size = new System.Drawing.Size(267, 22);
+            this.G2_B_MVBox.TabIndex = 6;
+            this.G2_B_MVBox.Visible = false;
+            // 
+            // G2_B_MSBox
+            // 
+            this.G2_B_MSBox.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.G2_B_MSBox.Location = new System.Drawing.Point(17, 136);
+            this.G2_B_MSBox.Name = "G2_B_MSBox";
+            this.G2_B_MSBox.Size = new System.Drawing.Size(267, 22);
+            this.G2_B_MSBox.TabIndex = 5;
+            this.G2_B_MSBox.Visible = false;
+            // 
+            // G2_B_MVlabel
+            // 
+            this.G2_B_MVlabel.AutoSize = true;
+            this.G2_B_MVlabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.G2_B_MVlabel.Location = new System.Drawing.Point(14, 161);
+            this.G2_B_MVlabel.Name = "G2_B_MVlabel";
+            this.G2_B_MVlabel.Size = new System.Drawing.Size(132, 18);
+            this.G2_B_MVlabel.TabIndex = 4;
+            this.G2_B_MVlabel.Text = "Message Victim";
+            this.G2_B_MVlabel.Visible = false;
+            // 
+            // G2_B_MSlabel
+            // 
+            this.G2_B_MSlabel.AutoSize = true;
+            this.G2_B_MSlabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.G2_B_MSlabel.Location = new System.Drawing.Point(14, 112);
+            this.G2_B_MSlabel.Name = "G2_B_MSlabel";
+            this.G2_B_MSlabel.Size = new System.Drawing.Size(147, 18);
+            this.G2_B_MSlabel.TabIndex = 3;
+            this.G2_B_MSlabel.Text = "Message Shooter";
+            this.G2_B_MSlabel.Visible = false;
+            // 
+            // G2_B_BDBox
+            // 
+            this.G2_B_BDBox.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.G2_B_BDBox.Location = new System.Drawing.Point(17, 78);
+            this.G2_B_BDBox.Name = "G2_B_BDBox";
+            this.G2_B_BDBox.Size = new System.Drawing.Size(107, 22);
+            this.G2_B_BDBox.TabIndex = 2;
+            this.G2_B_BDBox.Visible = false;
+            // 
+            // G2_B_BDlabel
+            // 
+            this.G2_B_BDlabel.AutoSize = true;
+            this.G2_B_BDlabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.G2_B_BDlabel.Location = new System.Drawing.Point(14, 57);
+            this.G2_B_BDlabel.Name = "G2_B_BDlabel";
+            this.G2_B_BDlabel.Size = new System.Drawing.Size(129, 18);
+            this.G2_B_BDlabel.TabIndex = 1;
+            this.G2_B_BDlabel.Text = "Bonus Damage";
+            this.G2_B_BDlabel.Visible = false;
+            // 
+            // G2_B_Enablelabel
+            // 
+            this.G2_B_Enablelabel.AutoSize = true;
+            this.G2_B_Enablelabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.G2_B_Enablelabel.Location = new System.Drawing.Point(17, 31);
+            this.G2_B_Enablelabel.Name = "G2_B_Enablelabel";
+            this.G2_B_Enablelabel.Size = new System.Drawing.Size(82, 22);
+            this.G2_B_Enablelabel.TabIndex = 0;
+            this.G2_B_Enablelabel.Text = "Enable";
+            this.G2_B_Enablelabel.UseVisualStyleBackColor = true;
+            this.G2_B_Enablelabel.Visible = false;
+            this.G2_B_Enablelabel.CheckedChanged += new System.EventHandler(this.G2_B_Enablelabel_CheckedChanged);
+            // 
+            // G2_H_namelabel
+            // 
+            this.G2_H_namelabel.Controls.Add(this.RS16);
+            this.G2_H_namelabel.Controls.Add(this.G2_H_SVlabel);
+            this.G2_H_namelabel.Controls.Add(this.AS16);
+            this.G2_H_namelabel.Controls.Add(this.AS16_Sound);
+            this.G2_H_namelabel.Controls.Add(this.RS15);
+            this.G2_H_namelabel.Controls.Add(this.G2_H_SSlabel);
+            this.G2_H_namelabel.Controls.Add(this.AS15);
+            this.G2_H_namelabel.Controls.Add(this.AS15_Sound);
+            this.G2_H_namelabel.Controls.Add(this.G2_H_MVBox);
+            this.G2_H_namelabel.Controls.Add(this.G2_H_MSBox);
+            this.G2_H_namelabel.Controls.Add(this.G2_H_MVlabel);
+            this.G2_H_namelabel.Controls.Add(this.G2_H_MSlabel);
+            this.G2_H_namelabel.Controls.Add(this.G2_H_BDBox);
+            this.G2_H_namelabel.Controls.Add(this.G2_H_BDlabel);
+            this.G2_H_namelabel.Controls.Add(this.G2_H_Enablelabel);
+            this.G2_H_namelabel.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold);
+            this.G2_H_namelabel.Location = new System.Drawing.Point(7, 6);
+            this.G2_H_namelabel.Name = "G2_H_namelabel";
+            this.G2_H_namelabel.Size = new System.Drawing.Size(830, 215);
+            this.G2_H_namelabel.TabIndex = 0;
+            this.G2_H_namelabel.TabStop = false;
+            this.G2_H_namelabel.Text = "Headshots";
+            // 
+            // RS16
+            // 
+            this.RS16.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.RS16.Location = new System.Drawing.Point(736, 129);
+            this.RS16.Name = "RS16";
+            this.RS16.Size = new System.Drawing.Size(75, 71);
+            this.RS16.TabIndex = 14;
+            this.RS16.Text = "button3";
+            this.RS16.UseVisualStyleBackColor = true;
+            this.RS16.Visible = false;
+            // 
+            // G2_H_SVlabel
+            // 
+            this.G2_H_SVlabel.AutoSize = true;
+            this.G2_H_SVlabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.G2_H_SVlabel.Location = new System.Drawing.Point(566, 31);
+            this.G2_H_SVlabel.Name = "G2_H_SVlabel";
+            this.G2_H_SVlabel.Size = new System.Drawing.Size(121, 18);
+            this.G2_H_SVlabel.TabIndex = 13;
+            this.G2_H_SVlabel.Text = "Sounds Victim";
+            this.G2_H_SVlabel.Visible = false;
+            // 
+            // AS16
+            // 
+            this.AS16.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.AS16.Location = new System.Drawing.Point(736, 52);
+            this.AS16.Name = "AS16";
+            this.AS16.Size = new System.Drawing.Size(75, 71);
+            this.AS16.TabIndex = 12;
+            this.AS16.Text = "button4";
+            this.AS16.UseVisualStyleBackColor = true;
+            this.AS16.Visible = false;
+            // 
+            // AS16_Sound
+            // 
+            this.AS16_Sound.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.AS16_Sound.FormattingEnabled = true;
+            this.AS16_Sound.ItemHeight = 16;
+            this.AS16_Sound.Location = new System.Drawing.Point(569, 52);
+            this.AS16_Sound.Name = "AS16_Sound";
+            this.AS16_Sound.Size = new System.Drawing.Size(161, 148);
+            this.AS16_Sound.TabIndex = 11;
+            this.AS16_Sound.Visible = false;
+            // 
+            // RS15
+            // 
+            this.RS15.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.RS15.Location = new System.Drawing.Point(479, 129);
+            this.RS15.Name = "RS15";
+            this.RS15.Size = new System.Drawing.Size(75, 71);
+            this.RS15.TabIndex = 10;
+            this.RS15.Text = "button2";
+            this.RS15.UseVisualStyleBackColor = true;
+            this.RS15.Visible = false;
+            // 
+            // G2_H_SSlabel
+            // 
+            this.G2_H_SSlabel.AutoSize = true;
+            this.G2_H_SSlabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.G2_H_SSlabel.Location = new System.Drawing.Point(309, 31);
+            this.G2_H_SSlabel.Name = "G2_H_SSlabel";
+            this.G2_H_SSlabel.Size = new System.Drawing.Size(136, 18);
+            this.G2_H_SSlabel.TabIndex = 9;
+            this.G2_H_SSlabel.Text = "Sounds Shooter";
+            this.G2_H_SSlabel.Visible = false;
+            // 
+            // AS15
+            // 
+            this.AS15.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.AS15.Location = new System.Drawing.Point(479, 52);
+            this.AS15.Name = "AS15";
+            this.AS15.Size = new System.Drawing.Size(75, 71);
+            this.AS15.TabIndex = 8;
+            this.AS15.Text = "button1";
+            this.AS15.UseVisualStyleBackColor = true;
+            this.AS15.Visible = false;
+            // 
+            // AS15_Sound
+            // 
+            this.AS15_Sound.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.AS15_Sound.FormattingEnabled = true;
+            this.AS15_Sound.ItemHeight = 16;
+            this.AS15_Sound.Location = new System.Drawing.Point(312, 52);
+            this.AS15_Sound.Name = "AS15_Sound";
+            this.AS15_Sound.Size = new System.Drawing.Size(161, 148);
+            this.AS15_Sound.TabIndex = 7;
+            this.AS15_Sound.Visible = false;
+            // 
+            // G2_H_MVBox
+            // 
+            this.G2_H_MVBox.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.G2_H_MVBox.Location = new System.Drawing.Point(17, 182);
+            this.G2_H_MVBox.Name = "G2_H_MVBox";
+            this.G2_H_MVBox.Size = new System.Drawing.Size(267, 22);
+            this.G2_H_MVBox.TabIndex = 6;
+            this.G2_H_MVBox.Visible = false;
+            // 
+            // G2_H_MSBox
+            // 
+            this.G2_H_MSBox.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.G2_H_MSBox.Location = new System.Drawing.Point(17, 136);
+            this.G2_H_MSBox.Name = "G2_H_MSBox";
+            this.G2_H_MSBox.Size = new System.Drawing.Size(267, 22);
+            this.G2_H_MSBox.TabIndex = 5;
+            this.G2_H_MSBox.Visible = false;
+            // 
+            // G2_H_MVlabel
+            // 
+            this.G2_H_MVlabel.AutoSize = true;
+            this.G2_H_MVlabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.G2_H_MVlabel.Location = new System.Drawing.Point(14, 161);
+            this.G2_H_MVlabel.Name = "G2_H_MVlabel";
+            this.G2_H_MVlabel.Size = new System.Drawing.Size(132, 18);
+            this.G2_H_MVlabel.TabIndex = 4;
+            this.G2_H_MVlabel.Text = "Message Victim";
+            this.G2_H_MVlabel.Visible = false;
+            // 
+            // G2_H_MSlabel
+            // 
+            this.G2_H_MSlabel.AutoSize = true;
+            this.G2_H_MSlabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.G2_H_MSlabel.Location = new System.Drawing.Point(14, 112);
+            this.G2_H_MSlabel.Name = "G2_H_MSlabel";
+            this.G2_H_MSlabel.Size = new System.Drawing.Size(147, 18);
+            this.G2_H_MSlabel.TabIndex = 3;
+            this.G2_H_MSlabel.Text = "Message Shooter";
+            this.G2_H_MSlabel.Visible = false;
+            // 
+            // G2_H_BDBox
+            // 
+            this.G2_H_BDBox.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.G2_H_BDBox.Location = new System.Drawing.Point(17, 78);
+            this.G2_H_BDBox.Name = "G2_H_BDBox";
+            this.G2_H_BDBox.Size = new System.Drawing.Size(107, 22);
+            this.G2_H_BDBox.TabIndex = 2;
+            this.G2_H_BDBox.Visible = false;
+            // 
+            // G2_H_BDlabel
+            // 
+            this.G2_H_BDlabel.AutoSize = true;
+            this.G2_H_BDlabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.G2_H_BDlabel.Location = new System.Drawing.Point(14, 57);
+            this.G2_H_BDlabel.Name = "G2_H_BDlabel";
+            this.G2_H_BDlabel.Size = new System.Drawing.Size(129, 18);
+            this.G2_H_BDlabel.TabIndex = 1;
+            this.G2_H_BDlabel.Text = "Bonus Damage";
+            this.G2_H_BDlabel.Visible = false;
+            // 
+            // G2_H_Enablelabel
+            // 
+            this.G2_H_Enablelabel.AutoSize = true;
+            this.G2_H_Enablelabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.G2_H_Enablelabel.Location = new System.Drawing.Point(17, 31);
+            this.G2_H_Enablelabel.Name = "G2_H_Enablelabel";
+            this.G2_H_Enablelabel.Size = new System.Drawing.Size(82, 22);
+            this.G2_H_Enablelabel.TabIndex = 0;
+            this.G2_H_Enablelabel.Text = "Enable";
+            this.G2_H_Enablelabel.UseVisualStyleBackColor = true;
+            this.G2_H_Enablelabel.CheckedChanged += new System.EventHandler(this.G2_H_Enablelabel_CheckedChanged);
+            // 
+            // E_Tablabel
+            // 
+            this.E_Tablabel.BackColor = System.Drawing.Color.White;
+            this.E_Tablabel.Controls.Add(this.E_SEOH_namelabel);
+            this.E_Tablabel.Location = new System.Drawing.Point(4, 25);
+            this.E_Tablabel.Name = "E_Tablabel";
+            this.E_Tablabel.Padding = new System.Windows.Forms.Padding(3);
+            this.E_Tablabel.Size = new System.Drawing.Size(1358, 685);
+            this.E_Tablabel.TabIndex = 7;
+            this.E_Tablabel.Text = "Effects";
+            // 
+            // E_SEOH_namelabel
+            // 
+            this.E_SEOH_namelabel.Controls.Add(this.E_SEOH_TDBox);
+            this.E_SEOH_namelabel.Controls.Add(this.E_SEOH_TDlabel);
+            this.E_SEOH_namelabel.Controls.Add(this.E_SEOH_RElabel);
+            this.E_SEOH_namelabel.Controls.Add(this.E_SEOH_MVBox);
+            this.E_SEOH_namelabel.Controls.Add(this.E_SEOH_MVlabel);
+            this.E_SEOH_namelabel.Controls.Add(this.E_SEOH_MSBox);
+            this.E_SEOH_namelabel.Controls.Add(this.E_SEOH_MSlabel);
+            this.E_SEOH_namelabel.Controls.Add(this.E_SEOH_AElabel);
+            this.E_SEOH_namelabel.Controls.Add(this.E_SEOH_Elabel);
+            this.E_SEOH_namelabel.Controls.Add(this.E_SEOH_Entityett);
+            this.E_SEOH_namelabel.Controls.Add(this.E_SEOH_AmBox);
+            this.E_SEOH_namelabel.Controls.Add(this.E_SEOH_Amlabel);
+            this.E_SEOH_namelabel.Controls.Add(this.E_SEOH_Explolabel);
+            this.E_SEOH_namelabel.Controls.Add(this.E_SEOH_Babylabel);
+            this.E_SEOH_namelabel.Controls.Add(this.E_SEOH_EBox);
+            this.E_SEOH_namelabel.Controls.Add(this.E_SEOH_EDDlabel);
+            this.E_SEOH_namelabel.Controls.Add(this.E_SEOH_METVlabel);
+            this.E_SEOH_namelabel.Controls.Add(this.E_SEOH_MNBox);
+            this.E_SEOH_namelabel.Controls.Add(this.E_SEOH_MNlabel);
+            this.E_SEOH_namelabel.Controls.Add(this.E_SEOH_ChanceBox);
+            this.E_SEOH_namelabel.Controls.Add(this.E_SEOH_Chancelabel);
+            this.E_SEOH_namelabel.Controls.Add(this.E_SEOH_Enablelabel);
+            this.E_SEOH_namelabel.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold);
+            this.E_SEOH_namelabel.Location = new System.Drawing.Point(7, 6);
+            this.E_SEOH_namelabel.Name = "E_SEOH_namelabel";
+            this.E_SEOH_namelabel.Size = new System.Drawing.Size(859, 235);
+            this.E_SEOH_namelabel.TabIndex = 0;
+            this.E_SEOH_namelabel.TabStop = false;
+            this.E_SEOH_namelabel.Text = "Spawn Entity On Hit";
+            // 
+            // E_SEOH_TDBox
+            // 
+            this.E_SEOH_TDBox.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.E_SEOH_TDBox.Location = new System.Drawing.Point(611, 181);
+            this.E_SEOH_TDBox.Name = "E_SEOH_TDBox";
+            this.E_SEOH_TDBox.Size = new System.Drawing.Size(100, 22);
+            this.E_SEOH_TDBox.TabIndex = 21;
+            this.E_SEOH_TDBox.Visible = false;
+            // 
+            // E_SEOH_TDlabel
+            // 
+            this.E_SEOH_TDlabel.AutoSize = true;
+            this.E_SEOH_TDlabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.E_SEOH_TDlabel.Location = new System.Drawing.Point(608, 160);
+            this.E_SEOH_TDlabel.Name = "E_SEOH_TDlabel";
+            this.E_SEOH_TDlabel.Size = new System.Drawing.Size(108, 18);
+            this.E_SEOH_TDlabel.TabIndex = 20;
+            this.E_SEOH_TDlabel.Text = "Timed Death";
+            this.E_SEOH_TDlabel.Visible = false;
+            // 
+            // E_SEOH_RElabel
+            // 
+            this.E_SEOH_RElabel.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.E_SEOH_RElabel.Location = new System.Drawing.Point(421, 181);
+            this.E_SEOH_RElabel.Name = "E_SEOH_RElabel";
+            this.E_SEOH_RElabel.Size = new System.Drawing.Size(133, 39);
+            this.E_SEOH_RElabel.TabIndex = 19;
+            this.E_SEOH_RElabel.Text = "Remove Entity";
+            this.E_SEOH_RElabel.UseVisualStyleBackColor = true;
+            this.E_SEOH_RElabel.Visible = false;
+            this.E_SEOH_RElabel.Click += new System.EventHandler(this.E_SEOH_RElabel_Click);
+            // 
+            // E_SEOH_MVBox
+            // 
+            this.E_SEOH_MVBox.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.E_SEOH_MVBox.Location = new System.Drawing.Point(611, 97);
+            this.E_SEOH_MVBox.Name = "E_SEOH_MVBox";
+            this.E_SEOH_MVBox.Size = new System.Drawing.Size(242, 22);
+            this.E_SEOH_MVBox.TabIndex = 18;
+            this.E_SEOH_MVBox.Visible = false;
+            // 
+            // E_SEOH_MVlabel
+            // 
+            this.E_SEOH_MVlabel.AutoSize = true;
+            this.E_SEOH_MVlabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.E_SEOH_MVlabel.Location = new System.Drawing.Point(608, 76);
+            this.E_SEOH_MVlabel.Name = "E_SEOH_MVlabel";
+            this.E_SEOH_MVlabel.Size = new System.Drawing.Size(132, 18);
+            this.E_SEOH_MVlabel.TabIndex = 17;
+            this.E_SEOH_MVlabel.Text = "Message Victim";
+            this.E_SEOH_MVlabel.Visible = false;
+            // 
+            // E_SEOH_MSBox
+            // 
+            this.E_SEOH_MSBox.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.E_SEOH_MSBox.Location = new System.Drawing.Point(611, 47);
+            this.E_SEOH_MSBox.Name = "E_SEOH_MSBox";
+            this.E_SEOH_MSBox.Size = new System.Drawing.Size(242, 22);
+            this.E_SEOH_MSBox.TabIndex = 16;
+            this.E_SEOH_MSBox.Visible = false;
+            // 
+            // E_SEOH_MSlabel
+            // 
+            this.E_SEOH_MSlabel.AutoSize = true;
+            this.E_SEOH_MSlabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.E_SEOH_MSlabel.Location = new System.Drawing.Point(608, 26);
+            this.E_SEOH_MSlabel.Name = "E_SEOH_MSlabel";
+            this.E_SEOH_MSlabel.Size = new System.Drawing.Size(147, 18);
+            this.E_SEOH_MSlabel.TabIndex = 15;
+            this.E_SEOH_MSlabel.Text = "Message Shooter";
+            this.E_SEOH_MSlabel.Visible = false;
+            // 
+            // E_SEOH_AElabel
+            // 
+            this.E_SEOH_AElabel.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.E_SEOH_AElabel.Location = new System.Drawing.Point(263, 181);
+            this.E_SEOH_AElabel.Name = "E_SEOH_AElabel";
+            this.E_SEOH_AElabel.Size = new System.Drawing.Size(152, 39);
+            this.E_SEOH_AElabel.TabIndex = 14;
+            this.E_SEOH_AElabel.Text = "Add Entity";
+            this.E_SEOH_AElabel.UseVisualStyleBackColor = true;
+            this.E_SEOH_AElabel.Visible = false;
+            this.E_SEOH_AElabel.Click += new System.EventHandler(this.E_SEOH_AElabel_Click);
+            // 
+            // E_SEOH_Elabel
+            // 
+            this.E_SEOH_Elabel.AutoSize = true;
+            this.E_SEOH_Elabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.E_SEOH_Elabel.Location = new System.Drawing.Point(431, 26);
+            this.E_SEOH_Elabel.Name = "E_SEOH_Elabel";
+            this.E_SEOH_Elabel.Size = new System.Drawing.Size(54, 18);
+            this.E_SEOH_Elabel.TabIndex = 13;
+            this.E_SEOH_Elabel.Text = "Entity";
+            this.E_SEOH_Elabel.Visible = false;
+            // 
+            // E_SEOH_Entityett
+            // 
+            this.E_SEOH_Entityett.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.E_SEOH_Entityett.FormattingEnabled = true;
+            this.E_SEOH_Entityett.Location = new System.Drawing.Point(433, 47);
+            this.E_SEOH_Entityett.Name = "E_SEOH_Entityett";
+            this.E_SEOH_Entityett.Size = new System.Drawing.Size(121, 24);
+            this.E_SEOH_Entityett.TabIndex = 12;
+            this.E_SEOH_Entityett.Visible = false;
+            // 
+            // E_SEOH_AmBox
+            // 
+            this.E_SEOH_AmBox.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.E_SEOH_AmBox.Location = new System.Drawing.Point(433, 152);
+            this.E_SEOH_AmBox.Name = "E_SEOH_AmBox";
+            this.E_SEOH_AmBox.Size = new System.Drawing.Size(87, 22);
+            this.E_SEOH_AmBox.TabIndex = 11;
+            this.E_SEOH_AmBox.Visible = false;
+            // 
+            // E_SEOH_Amlabel
+            // 
+            this.E_SEOH_Amlabel.AutoSize = true;
+            this.E_SEOH_Amlabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.E_SEOH_Amlabel.Location = new System.Drawing.Point(430, 131);
+            this.E_SEOH_Amlabel.Name = "E_SEOH_Amlabel";
+            this.E_SEOH_Amlabel.Size = new System.Drawing.Size(70, 18);
+            this.E_SEOH_Amlabel.TabIndex = 10;
+            this.E_SEOH_Amlabel.Text = "Amount";
+            this.E_SEOH_Amlabel.Visible = false;
+            // 
+            // E_SEOH_Explolabel
+            // 
+            this.E_SEOH_Explolabel.AutoSize = true;
+            this.E_SEOH_Explolabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.E_SEOH_Explolabel.Location = new System.Drawing.Point(430, 106);
+            this.E_SEOH_Explolabel.Name = "E_SEOH_Explolabel";
+            this.E_SEOH_Explolabel.Size = new System.Drawing.Size(90, 22);
+            this.E_SEOH_Explolabel.TabIndex = 9;
+            this.E_SEOH_Explolabel.Text = "Explode";
+            this.E_SEOH_Explolabel.UseVisualStyleBackColor = true;
+            this.E_SEOH_Explolabel.Visible = false;
+            // 
+            // E_SEOH_Babylabel
+            // 
+            this.E_SEOH_Babylabel.AutoSize = true;
+            this.E_SEOH_Babylabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.E_SEOH_Babylabel.Location = new System.Drawing.Point(430, 78);
+            this.E_SEOH_Babylabel.Name = "E_SEOH_Babylabel";
+            this.E_SEOH_Babylabel.Size = new System.Drawing.Size(68, 22);
+            this.E_SEOH_Babylabel.TabIndex = 8;
+            this.E_SEOH_Babylabel.Text = "Baby";
+            this.E_SEOH_Babylabel.UseVisualStyleBackColor = true;
+            this.E_SEOH_Babylabel.Visible = false;
+            // 
+            // E_SEOH_EBox
+            // 
+            this.E_SEOH_EBox.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.E_SEOH_EBox.FormattingEnabled = true;
+            this.E_SEOH_EBox.ItemHeight = 16;
+            this.E_SEOH_EBox.Location = new System.Drawing.Point(263, 26);
+            this.E_SEOH_EBox.Name = "E_SEOH_EBox";
+            this.E_SEOH_EBox.Size = new System.Drawing.Size(161, 148);
+            this.E_SEOH_EBox.TabIndex = 7;
+            this.E_SEOH_EBox.Visible = false;
+            // 
+            // E_SEOH_EDDlabel
+            // 
+            this.E_SEOH_EDDlabel.AutoSize = true;
+            this.E_SEOH_EDDlabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.E_SEOH_EDDlabel.Location = new System.Drawing.Point(14, 84);
+            this.E_SEOH_EDDlabel.Name = "E_SEOH_EDDlabel";
+            this.E_SEOH_EDDlabel.Size = new System.Drawing.Size(188, 22);
+            this.E_SEOH_EDDlabel.TabIndex = 6;
+            this.E_SEOH_EDDlabel.Text = "Entity Disable Drops";
+            this.E_SEOH_EDDlabel.UseVisualStyleBackColor = true;
+            this.E_SEOH_EDDlabel.Visible = false;
+            // 
+            // E_SEOH_METVlabel
+            // 
+            this.E_SEOH_METVlabel.AutoSize = true;
+            this.E_SEOH_METVlabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.E_SEOH_METVlabel.Location = new System.Drawing.Point(14, 56);
+            this.E_SEOH_METVlabel.Name = "E_SEOH_METVlabel";
+            this.E_SEOH_METVlabel.Size = new System.Drawing.Size(243, 22);
+            this.E_SEOH_METVlabel.TabIndex = 5;
+            this.E_SEOH_METVlabel.Text = "Make Entities Target Victim";
+            this.E_SEOH_METVlabel.UseVisualStyleBackColor = true;
+            this.E_SEOH_METVlabel.Visible = false;
+            // 
+            // E_SEOH_MNBox
+            // 
+            this.E_SEOH_MNBox.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.E_SEOH_MNBox.Location = new System.Drawing.Point(14, 189);
+            this.E_SEOH_MNBox.Name = "E_SEOH_MNBox";
+            this.E_SEOH_MNBox.Size = new System.Drawing.Size(100, 22);
+            this.E_SEOH_MNBox.TabIndex = 4;
+            this.E_SEOH_MNBox.Visible = false;
+            // 
+            // E_SEOH_MNlabel
+            // 
+            this.E_SEOH_MNlabel.AutoSize = true;
+            this.E_SEOH_MNlabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.E_SEOH_MNlabel.Location = new System.Drawing.Point(11, 168);
+            this.E_SEOH_MNlabel.Name = "E_SEOH_MNlabel";
+            this.E_SEOH_MNlabel.Size = new System.Drawing.Size(89, 18);
+            this.E_SEOH_MNlabel.TabIndex = 3;
+            this.E_SEOH_MNlabel.Text = "Mob name";
+            this.E_SEOH_MNlabel.Visible = false;
+            // 
+            // E_SEOH_ChanceBox
+            // 
+            this.E_SEOH_ChanceBox.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.E_SEOH_ChanceBox.Location = new System.Drawing.Point(14, 143);
+            this.E_SEOH_ChanceBox.Name = "E_SEOH_ChanceBox";
+            this.E_SEOH_ChanceBox.Size = new System.Drawing.Size(100, 22);
+            this.E_SEOH_ChanceBox.TabIndex = 2;
+            this.E_SEOH_ChanceBox.Visible = false;
+            // 
+            // E_SEOH_Chancelabel
+            // 
+            this.E_SEOH_Chancelabel.AutoSize = true;
+            this.E_SEOH_Chancelabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.E_SEOH_Chancelabel.Location = new System.Drawing.Point(11, 122);
+            this.E_SEOH_Chancelabel.Name = "E_SEOH_Chancelabel";
+            this.E_SEOH_Chancelabel.Size = new System.Drawing.Size(70, 18);
+            this.E_SEOH_Chancelabel.TabIndex = 1;
+            this.E_SEOH_Chancelabel.Text = "Chance";
+            this.E_SEOH_Chancelabel.Visible = false;
+            // 
+            // E_SEOH_Enablelabel
+            // 
+            this.E_SEOH_Enablelabel.AutoSize = true;
+            this.E_SEOH_Enablelabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.E_SEOH_Enablelabel.Location = new System.Drawing.Point(14, 28);
+            this.E_SEOH_Enablelabel.Name = "E_SEOH_Enablelabel";
+            this.E_SEOH_Enablelabel.Size = new System.Drawing.Size(82, 22);
+            this.E_SEOH_Enablelabel.TabIndex = 0;
+            this.E_SEOH_Enablelabel.Text = "Enable";
+            this.E_SEOH_Enablelabel.UseVisualStyleBackColor = true;
+            this.E_SEOH_Enablelabel.CheckedChanged += new System.EventHandler(this.E_SEOH_Enablelabel_CheckedChanged);
             // 
             // O_Tablabel
             // 
+            this.O_Tablabel.BackColor = System.Drawing.Color.White;
+            this.O_Tablabel.Controls.Add(this.O_CDM_namelabel);
             this.O_Tablabel.Controls.Add(this.O_RC_namelabel);
             this.O_Tablabel.Controls.Add(this.O_CCR_namelabel);
             this.O_Tablabel.Controls.Add(this.groupBox1);
@@ -2735,7 +3685,36 @@
             this.O_Tablabel.Size = new System.Drawing.Size(1358, 685);
             this.O_Tablabel.TabIndex = 6;
             this.O_Tablabel.Text = "Others";
-            this.O_Tablabel.UseVisualStyleBackColor = true;
+            // 
+            // O_CDM_namelabel
+            // 
+            this.O_CDM_namelabel.Controls.Add(this.O_CDM_MBox);
+            this.O_CDM_namelabel.Controls.Add(this.O_CDM_Nlabel);
+            this.O_CDM_namelabel.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold);
+            this.O_CDM_namelabel.Location = new System.Drawing.Point(7, 239);
+            this.O_CDM_namelabel.Name = "O_CDM_namelabel";
+            this.O_CDM_namelabel.Size = new System.Drawing.Size(327, 88);
+            this.O_CDM_namelabel.TabIndex = 10;
+            this.O_CDM_namelabel.TabStop = false;
+            this.O_CDM_namelabel.Text = "Custom Death Message";
+            // 
+            // O_CDM_MBox
+            // 
+            this.O_CDM_MBox.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.O_CDM_MBox.Location = new System.Drawing.Point(18, 49);
+            this.O_CDM_MBox.Name = "O_CDM_MBox";
+            this.O_CDM_MBox.Size = new System.Drawing.Size(290, 22);
+            this.O_CDM_MBox.TabIndex = 22;
+            // 
+            // O_CDM_Nlabel
+            // 
+            this.O_CDM_Nlabel.AutoSize = true;
+            this.O_CDM_Nlabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.O_CDM_Nlabel.Location = new System.Drawing.Point(15, 28);
+            this.O_CDM_Nlabel.Name = "O_CDM_Nlabel";
+            this.O_CDM_Nlabel.Size = new System.Drawing.Size(65, 18);
+            this.O_CDM_Nlabel.TabIndex = 23;
+            this.O_CDM_Nlabel.Text = "Normal";
             // 
             // O_RC_namelabel
             // 
@@ -3312,6 +4291,7 @@
             // 
             // Yamllabel
             // 
+            this.Yamllabel.BackColor = System.Drawing.Color.White;
             this.Yamllabel.Controls.Add(this.saveBtn);
             this.Yamllabel.Controls.Add(this.buildBtnlabel);
             this.Yamllabel.Controls.Add(this.csyamlbox);
@@ -3322,7 +4302,6 @@
             this.Yamllabel.Size = new System.Drawing.Size(1358, 685);
             this.Yamllabel.TabIndex = 1;
             this.Yamllabel.Text = "Yaml Generate";
-            this.Yamllabel.UseVisualStyleBackColor = true;
             // 
             // saveBtn
             // 
@@ -3359,8 +4338,9 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(5F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AllowDrop = true;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1350, 723);
             this.Controls.Add(this.tabControl1);
             this.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -3414,7 +4394,19 @@
             this.G_FBlabel.PerformLayout();
             this.G_S_Sneaklabel.ResumeLayout(false);
             this.G_S_Sneaklabel.PerformLayout();
+            this.G2_Tablabel.ResumeLayout(false);
+            this.G2_CH_namelabel.ResumeLayout(false);
+            this.G2_CH_namelabel.PerformLayout();
+            this.G2_B_namelabel.ResumeLayout(false);
+            this.G2_B_namelabel.PerformLayout();
+            this.G2_H_namelabel.ResumeLayout(false);
+            this.G2_H_namelabel.PerformLayout();
+            this.E_Tablabel.ResumeLayout(false);
+            this.E_SEOH_namelabel.ResumeLayout(false);
+            this.E_SEOH_namelabel.PerformLayout();
             this.O_Tablabel.ResumeLayout(false);
+            this.O_CDM_namelabel.ResumeLayout(false);
+            this.O_CDM_namelabel.PerformLayout();
             this.O_RC_namelabel.ResumeLayout(false);
             this.O_RC_namelabel.PerformLayout();
             this.O_CCR_namelabel.ResumeLayout(false);
@@ -3708,6 +4700,83 @@
         private System.Windows.Forms.Label O_RC_Worldlabel;
         private System.Windows.Forms.CheckBox O_RC_Blacklabel;
         private System.Windows.Forms.CheckBox O_RC_Enablelabel;
+        private System.Windows.Forms.GroupBox O_CDM_namelabel;
+        private System.Windows.Forms.TextBox O_CDM_MBox;
+        private System.Windows.Forms.Label O_CDM_Nlabel;
+        private System.Windows.Forms.GroupBox G2_H_namelabel;
+        private System.Windows.Forms.TextBox G2_H_BDBox;
+        private System.Windows.Forms.Label G2_H_BDlabel;
+        private System.Windows.Forms.CheckBox G2_H_Enablelabel;
+        private System.Windows.Forms.TextBox G2_H_MVBox;
+        private System.Windows.Forms.TextBox G2_H_MSBox;
+        private System.Windows.Forms.Label G2_H_MVlabel;
+        private System.Windows.Forms.Label G2_H_MSlabel;
+        private System.Windows.Forms.Button RS16;
+        private System.Windows.Forms.Label G2_H_SVlabel;
+        private System.Windows.Forms.Button AS16;
+        private System.Windows.Forms.ListBox AS16_Sound;
+        private System.Windows.Forms.Button RS15;
+        private System.Windows.Forms.Label G2_H_SSlabel;
+        private System.Windows.Forms.Button AS15;
+        private System.Windows.Forms.ListBox AS15_Sound;
+        private System.Windows.Forms.GroupBox G2_B_namelabel;
+        private System.Windows.Forms.Button RS18;
+        private System.Windows.Forms.Label G2_B_SVlabel;
+        private System.Windows.Forms.Button AS18;
+        private System.Windows.Forms.ListBox AS18_Sound;
+        private System.Windows.Forms.Button RS17;
+        private System.Windows.Forms.Label G2_B_SSlabel;
+        private System.Windows.Forms.Button AS17;
+        private System.Windows.Forms.ListBox AS17_Sound;
+        private System.Windows.Forms.TextBox G2_B_MVBox;
+        private System.Windows.Forms.TextBox G2_B_MSBox;
+        private System.Windows.Forms.Label G2_B_MVlabel;
+        private System.Windows.Forms.Label G2_B_MSlabel;
+        private System.Windows.Forms.TextBox G2_B_BDBox;
+        private System.Windows.Forms.Label G2_B_BDlabel;
+        private System.Windows.Forms.CheckBox G2_B_Enablelabel;
+        private System.Windows.Forms.GroupBox G2_CH_namelabel;
+        private System.Windows.Forms.TextBox G2_CH_ChanceBox;
+        private System.Windows.Forms.Label G2_CH_Chancelabel;
+        private System.Windows.Forms.Button RS20;
+        private System.Windows.Forms.Label G2_CH_SVlabel;
+        private System.Windows.Forms.Button AS20;
+        private System.Windows.Forms.ListBox AS20_Sound;
+        private System.Windows.Forms.Button RS19;
+        private System.Windows.Forms.Label G2_CH_SSlabel;
+        private System.Windows.Forms.Button AS19;
+        private System.Windows.Forms.ListBox AS19_Sound;
+        private System.Windows.Forms.TextBox G2_CH_MVBox;
+        private System.Windows.Forms.TextBox G2_CH_MSBox;
+        private System.Windows.Forms.Label G2_CH_MVlabel;
+        private System.Windows.Forms.Label G2_CH_MSlabel;
+        private System.Windows.Forms.TextBox G2_CH_BDBox;
+        private System.Windows.Forms.Label G2_CH_BDlabel;
+        private System.Windows.Forms.CheckBox G2_CH_Enablelabel;
+        private System.Windows.Forms.TabPage E_Tablabel;
+        private System.Windows.Forms.GroupBox E_SEOH_namelabel;
+        private System.Windows.Forms.TextBox E_SEOH_MVBox;
+        private System.Windows.Forms.Label E_SEOH_MVlabel;
+        private System.Windows.Forms.TextBox E_SEOH_MSBox;
+        private System.Windows.Forms.Label E_SEOH_MSlabel;
+        private System.Windows.Forms.Button E_SEOH_AElabel;
+        private System.Windows.Forms.Label E_SEOH_Elabel;
+        private System.Windows.Forms.ComboBox E_SEOH_Entityett;
+        private System.Windows.Forms.TextBox E_SEOH_AmBox;
+        private System.Windows.Forms.Label E_SEOH_Amlabel;
+        private System.Windows.Forms.CheckBox E_SEOH_Explolabel;
+        private System.Windows.Forms.CheckBox E_SEOH_Babylabel;
+        private System.Windows.Forms.ListBox E_SEOH_EBox;
+        private System.Windows.Forms.CheckBox E_SEOH_EDDlabel;
+        private System.Windows.Forms.CheckBox E_SEOH_METVlabel;
+        private System.Windows.Forms.TextBox E_SEOH_MNBox;
+        private System.Windows.Forms.Label E_SEOH_MNlabel;
+        private System.Windows.Forms.TextBox E_SEOH_ChanceBox;
+        private System.Windows.Forms.Label E_SEOH_Chancelabel;
+        private System.Windows.Forms.CheckBox E_SEOH_Enablelabel;
+        private System.Windows.Forms.Button E_SEOH_RElabel;
+        private System.Windows.Forms.TextBox E_SEOH_TDBox;
+        private System.Windows.Forms.Label E_SEOH_TDlabel;
     }
 }
 
