@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Net;
+using System.Diagnostics;
+using System.IO.Compression;
 
 namespace CrackshotBuilder
 {
@@ -15,12 +18,16 @@ namespace CrackshotBuilder
     {
         public string filepath = Application.StartupPath + "/CrackshotFiles";
         //public string filepath = "C:/Users/Oska/Desktop/CrackshotFiles";
+        public string currentversion = "dev3";
+        //
         string doublespacebar = "        ";
         string spacebar = "    ";
         private TTPHelper ttphelper;
         public Form1()
         {
             InitializeComponent();
+            // Version
+            S_U_CVersion.Text = currentversion;
             // TTP Helper POPUP
             TTPHelper frm = new TTPHelper();
             frm.TopMost = true;
@@ -205,6 +212,7 @@ namespace CrackshotBuilder
             loadG_FA_Box();
             loadsound();
             loadETT();
+            loadPCABox();
         }
         public void loadPotion()
         {
@@ -220,6 +228,14 @@ namespace CrackshotBuilder
                         c.Items.Add(enchant);
                     }
                 }
+            }
+        }
+        public void loadPCABox()
+        {
+            string[] particles = "smoke/lightning/explosion/potion_splash/block_break/flames".Split('/');
+            foreach (string part in particles)
+            {
+                I_A_PCABox.Items.Add(part);
             }
         }
         public void loadG_FA_Box()
@@ -596,7 +612,37 @@ namespace CrackshotBuilder
                 csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Message_Shooter: " + E_SEOH_MSBox.Text);
                 csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Message_Victim: " + E_SEOH_MVBox.Text);
             }
-            
+            if (getTrueFalse(G2_DBOFT_Enablelabel) == "true")
+            {
+                csyamlbox.AppendText(Environment.NewLine + spacebar + "Damage_Based_On_Flight_Time:");
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Enable: " + getTrueFalse(G2_DBOFT_Enablelabel));
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Bonus_Damage_Per_Tick: " + G2_DBOFT_BDPTBox.Text);
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Minimum_Damage: " + G2_DBOFT_MDBox.Text);
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Maximum_Damage: " + G2_DBOFT_MXBox.Text);
+            }
+            if (getTrueFalse(I_A_Enablelabel) == "true")
+            {
+                csyamlbox.AppendText(Environment.NewLine + spacebar + "Airstrikes:");
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Enable: " + getTrueFalse(I_A_Enablelabel));
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Flare_Activation_Delay: " + I_A_FADBox.Text);
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Particle_Call_Airstrike: " + getListItem(I_A_PCAListSource));
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Message_Call_Airstrike: " + I_A_MCABox.Text);
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Block_Type: " + I_A_BTBox.Text.Replace('-', '~'));
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Area: " + I_A_ABox.Text);
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Distance_Between_Bombs: " + I_A_DBBBox.Text);
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Height_Dropped: " + I_A_HDBox.Text);
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Vertical_Variation: " + I_A_VVBox.Text);
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Horizontal_Variation: " + I_A_HVBox.Text);
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Sounds_Airstrike: " + getListItem(AS21_Sound));
+                if (getTrueFalse(I_A_MS_Enablelabel) == "true")
+                {
+                    csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Multiple_Strikes:");
+                    csyamlbox.AppendText(Environment.NewLine + doublespacebar + spacebar + "Enable: " + getTrueFalse(I_A_MS_Enablelabel));
+                    csyamlbox.AppendText(Environment.NewLine + doublespacebar + spacebar + "Number_Of_Strikes: " + I_A_MS_NOSBox.Text);
+                    csyamlbox.AppendText(Environment.NewLine + doublespacebar + spacebar + "Delay_Between_Strikes: " + I_A_MS_DBSBox.Text);
+                }
+
+            }
         }
         private void II_ItemIDBox_SelectedIndexChanged(object sender, EventArgs e)
         { 
@@ -1448,6 +1494,195 @@ namespace CrackshotBuilder
             if (E_SEOH_EBox.SelectedItem != null)
             {
                 E_SEOH_EBox.Items.Remove(E_SEOH_EBox.SelectedItem);
+            }
+        }
+
+        private void G2_DBOFT_Enablelabel_CheckedChanged(object sender, EventArgs e)
+        {
+            if (getTrueFalse(G2_DBOFT_Enablelabel) == "true")
+            {
+                G2_DBOFT_BDPTlabel.Visible = true;
+                G2_DBOFT_BDPTBox.Visible = true;
+                G2_DBOFT_MDlabel.Visible = true;
+                G2_DBOFT_MDBox.Visible = true;
+                G2_DBOFT_MXlabel.Visible = true;
+                G2_DBOFT_MXBox.Visible = true;
+            }
+            else
+            {
+                G2_DBOFT_BDPTlabel.Visible = false;
+                G2_DBOFT_BDPTBox.Visible = false;
+                G2_DBOFT_MDlabel.Visible = false;
+                G2_DBOFT_MDBox.Visible = false;
+                G2_DBOFT_MXlabel.Visible = false;
+                G2_DBOFT_MXBox.Visible = false;
+            }
+        }
+
+        private void I_A_Enablelabel_CheckedChanged(object sender, EventArgs e)
+        {
+            if (getTrueFalse(I_A_Enablelabel) == "true")
+            {
+                I_A_FADlabel.Visible = true;
+                I_A_FADBox.Visible = true;
+                I_A_PCABox.Visible = true;
+                I_A_PCAlabel.Visible = true;
+                I_A_MCABox.Visible = true;
+                I_A_MCAlabel.Visible = true;
+                I_A_BTBox.Visible = true;
+                I_A_BTlabel.Visible = true;
+                I_A_ABox.Visible = true;
+                I_A_Alabel.Visible = true;
+                I_A_DBBlabel.Visible = true;
+                I_A_DBBlabel.Visible = true;
+                I_A_HDlabel.Visible = true;
+                I_A_HDBox.Visible = true;
+                I_A_VVBox.Visible = true;
+                I_A_VVlabel.Visible = true;
+                I_A_HVBox.Visible = true;
+                I_A_HVlabel.Visible = true;
+                I_A_SAlabel.Visible = true;
+                AS21.Visible = true;
+                AS21_Sound.Visible = true;
+                RS21.Visible = true;
+                I_A_MS_Enablelabel.Visible = true;
+                I_A_Addlabel.Visible = true;
+                I_A_Removelabel.Visible = true;
+                I_A_PCAListSource.Visible = true;
+            }
+            else
+            {
+                I_A_FADlabel.Visible = false;
+                I_A_FADBox.Visible = false;
+                I_A_PCABox.Visible = false;
+                I_A_PCAlabel.Visible = false;
+                I_A_MCABox.Visible = false;
+                I_A_MCAlabel.Visible = false;
+                I_A_BTBox.Visible = false;
+                I_A_BTlabel.Visible = false;
+                I_A_ABox.Visible = false;
+                I_A_Alabel.Visible = false;
+                I_A_DBBlabel.Visible = false;
+                I_A_DBBlabel.Visible = false;
+                I_A_HDlabel.Visible = false;
+                I_A_HDBox.Visible = false;
+                I_A_VVBox.Visible = false;
+                I_A_VVlabel.Visible = false;
+                I_A_HVBox.Visible = false;
+                I_A_HVlabel.Visible = false;
+                I_A_SAlabel.Visible = false;
+                AS21.Visible = false;
+                AS21_Sound.Visible = false;
+                RS21.Visible = false;
+                I_A_MS_Enablelabel.Visible = false;
+                I_A_MS_Enablelabel.CheckState = CheckState.Unchecked;
+                I_A_Addlabel.Visible = false;
+                I_A_Removelabel.Visible = false;
+                I_A_PCAListSource.Visible = false;
+            }
+        }
+
+        private void I_A_MS_Enablelabel_CheckedChanged(object sender, EventArgs e)
+        {
+            if (getTrueFalse(I_A_MS_Enablelabel) == "true")
+            {
+                I_A_MS_NOSBox.Visible = true;
+                I_A_MS_NOSlabel.Visible = true;
+                I_A_MS_DBSBox.Visible = true;
+                I_A_MS_DBSlabel.Visible = true;
+            }
+            else
+            {
+                I_A_MS_NOSBox.Visible = false;
+                I_A_MS_NOSlabel.Visible = false;
+                I_A_MS_DBSBox.Visible = false;
+                I_A_MS_DBSlabel.Visible = false;
+            }
+        }
+
+        private void I_A_PCABox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            I_A_PCATextbox.Visible = false;
+            I_A_PCAListbox.Visible = false;
+            I_A_PCAListbox.Items.Clear();
+            switch (I_A_PCABox.Text)
+            {
+                case "potion_splash":
+                    I_A_PCAListbox.Visible = true;
+                    string[] potionnumlist = File.ReadAllLines(filepath + "/potion.txt");
+                    foreach (string pot in potionnumlist)
+                    {
+                        I_A_PCAListbox.Items.Add(pot.Split(':').Last());
+                    }
+                    break;
+                case "block_break":
+                    I_A_PCAListbox.Visible = true;
+                    string[] idlist = File.ReadAllLines(filepath + "/ids.txt");
+                    foreach (string block in idlist)
+                    {
+                        if (block.Split('-').First() != "256")
+                        {
+                            if (!I_A_PCAListbox.Items.Contains(block.Split('-').First()))
+                            {
+                                I_A_PCAListbox.Items.Add(block.Split('-').First());
+                            }
+                        }
+                        else
+                        {
+                            break;
+                        }
+                    }
+                    break;
+                case "flames":
+                    I_A_PCATextbox.Visible = true;
+                    break;
+            }
+        }
+
+        private void I_A_Addlabel_Click(object sender, EventArgs e)
+        {
+            if (I_A_PCABox.Text != "")
+            {
+                if (I_A_PCATextbox.Visible == false && I_A_PCAListbox.Visible == false)
+                {
+                    I_A_PCAListSource.Items.Add(I_A_PCABox.Text);
+                }
+                if (I_A_PCAListbox.Visible == true)
+                {
+                    I_A_PCAListSource.Items.Add(I_A_PCABox.Text + "-" + I_A_PCAListbox.Text);
+                }
+                if (I_A_PCATextbox.Visible == true)
+                {
+                    I_A_PCAListSource.Items.Add(I_A_PCABox.Text + "-" + I_A_PCATextbox.Text);
+                }
+            }
+        }
+
+        private void I_A_Removelabel_Click(object sender, EventArgs e)
+        {
+            if (I_A_PCAListSource.SelectedItem != null)
+            {
+                I_A_PCAListSource.Items.Remove(I_A_PCAListSource.SelectedItem);
+            }
+        }
+
+        private void S_U_CFUlabel_Click(object sender, EventArgs e)
+        {
+            System.Net.WebClient request = new System.Net.WebClient();
+            string newver = request.DownloadString("http://pastebin.com/raw/ddUGMbJy");
+            S_U_NVersion.Text = newver;
+        }
+
+        private void S_U_Updatelabel_Click(object sender, EventArgs e)
+        {
+            if (S_U_NVersion.Text == "")
+            {
+                S_U_CFUlabel_Click(sender, e);
+            }
+            if (S_U_CVersion.Text != S_U_NVersion.Text)
+            {
+                Process proc = Process.Start(Application.StartupPath + "/updater.exe");
+                Application.Exit();
             }
         }
     }
