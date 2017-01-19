@@ -419,16 +419,14 @@
             this.saveBtn = new System.Windows.Forms.Button();
             this.buildBtnlabel = new System.Windows.Forms.Button();
             this.csyamlbox = new System.Windows.Forms.RichTextBox();
-            this.Setting = new System.Windows.Forms.TabPage();
+            this.Settinglabel = new System.Windows.Forms.TabPage();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.S_U_ProgressNum = new System.Windows.Forms.Label();
-            this.S_U_Progress = new System.Windows.Forms.ProgressBar();
             this.S_U_Updatelabel = new System.Windows.Forms.Button();
             this.S_U_CFUlabel = new System.Windows.Forms.Button();
             this.S_U_NVersion = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.NVersionlabel = new System.Windows.Forms.Label();
             this.S_U_CVersion = new System.Windows.Forms.TextBox();
-            this.Version = new System.Windows.Forms.Label();
+            this.CVersionlabel = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.II_Tablabel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.II_IDPics)).BeginInit();
@@ -484,7 +482,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.O_WS_IDSign)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.O_WS_PricePic)).BeginInit();
             this.Yamllabel.SuspendLayout();
-            this.Setting.SuspendLayout();
+            this.Settinglabel.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -498,7 +496,7 @@
             this.tabControl1.Controls.Add(this.E_Tablabel);
             this.tabControl1.Controls.Add(this.O_Tablabel);
             this.tabControl1.Controls.Add(this.Yamllabel);
-            this.tabControl1.Controls.Add(this.Setting);
+            this.tabControl1.Controls.Add(this.Settinglabel);
             this.tabControl1.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
             this.tabControl1.Location = new System.Drawing.Point(1, 1);
             this.tabControl1.Name = "tabControl1";
@@ -4898,49 +4896,31 @@
             this.csyamlbox.TabIndex = 0;
             this.csyamlbox.Text = "";
             // 
-            // Setting
+            // Settinglabel
             // 
-            this.Setting.Controls.Add(this.groupBox5);
-            this.Setting.Location = new System.Drawing.Point(4, 25);
-            this.Setting.Name = "Setting";
-            this.Setting.Size = new System.Drawing.Size(1358, 685);
-            this.Setting.TabIndex = 8;
-            this.Setting.Text = "Setting";
-            this.Setting.UseVisualStyleBackColor = true;
+            this.Settinglabel.Controls.Add(this.groupBox5);
+            this.Settinglabel.Location = new System.Drawing.Point(4, 25);
+            this.Settinglabel.Name = "Settinglabel";
+            this.Settinglabel.Size = new System.Drawing.Size(1358, 685);
+            this.Settinglabel.TabIndex = 8;
+            this.Settinglabel.Text = "Setting";
+            this.Settinglabel.UseVisualStyleBackColor = true;
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.S_U_Progress);
             this.groupBox5.Controls.Add(this.S_U_Updatelabel);
             this.groupBox5.Controls.Add(this.S_U_CFUlabel);
             this.groupBox5.Controls.Add(this.S_U_NVersion);
-            this.groupBox5.Controls.Add(this.label1);
+            this.groupBox5.Controls.Add(this.NVersionlabel);
             this.groupBox5.Controls.Add(this.S_U_CVersion);
-            this.groupBox5.Controls.Add(this.Version);
-            this.groupBox5.Controls.Add(this.S_U_ProgressNum);
+            this.groupBox5.Controls.Add(this.CVersionlabel);
             this.groupBox5.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold);
             this.groupBox5.Location = new System.Drawing.Point(7, 3);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(365, 244);
+            this.groupBox5.Size = new System.Drawing.Size(365, 177);
             this.groupBox5.TabIndex = 0;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Updater";
-            // 
-            // S_U_ProgressNum
-            // 
-            this.S_U_ProgressNum.AutoSize = true;
-            this.S_U_ProgressNum.Location = new System.Drawing.Point(22, 175);
-            this.S_U_ProgressNum.Name = "S_U_ProgressNum";
-            this.S_U_ProgressNum.Size = new System.Drawing.Size(35, 20);
-            this.S_U_ProgressNum.TabIndex = 7;
-            this.S_U_ProgressNum.Text = "100%";
-            // 
-            // S_U_Progress
-            // 
-            this.S_U_Progress.Location = new System.Drawing.Point(25, 198);
-            this.S_U_Progress.Name = "S_U_Progress";
-            this.S_U_Progress.Size = new System.Drawing.Size(281, 23);
-            this.S_U_Progress.TabIndex = 6;
             // 
             // S_U_Updatelabel
             // 
@@ -4973,15 +4953,15 @@
             this.S_U_NVersion.Size = new System.Drawing.Size(114, 22);
             this.S_U_NVersion.TabIndex = 3;
             // 
-            // label1
+            // NVersionlabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
-            this.label1.Location = new System.Drawing.Point(35, 82);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(133, 18);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Newest Version";
+            this.NVersionlabel.AutoSize = true;
+            this.NVersionlabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.NVersionlabel.Location = new System.Drawing.Point(35, 82);
+            this.NVersionlabel.Name = "NVersionlabel";
+            this.NVersionlabel.Size = new System.Drawing.Size(133, 18);
+            this.NVersionlabel.TabIndex = 2;
+            this.NVersionlabel.Text = "Newest Version";
             // 
             // S_U_CVersion
             // 
@@ -4992,15 +4972,15 @@
             this.S_U_CVersion.Size = new System.Drawing.Size(114, 22);
             this.S_U_CVersion.TabIndex = 1;
             // 
-            // Version
+            // CVersionlabel
             // 
-            this.Version.AutoSize = true;
-            this.Version.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
-            this.Version.Location = new System.Drawing.Point(33, 44);
-            this.Version.Name = "Version";
-            this.Version.Size = new System.Drawing.Size(135, 18);
-            this.Version.TabIndex = 0;
-            this.Version.Text = "Current Version";
+            this.CVersionlabel.AutoSize = true;
+            this.CVersionlabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.CVersionlabel.Location = new System.Drawing.Point(33, 44);
+            this.CVersionlabel.Name = "CVersionlabel";
+            this.CVersionlabel.Size = new System.Drawing.Size(135, 18);
+            this.CVersionlabel.TabIndex = 0;
+            this.CVersionlabel.Text = "Current Version";
             // 
             // Form1
             // 
@@ -5097,7 +5077,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.O_WS_IDSign)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.O_WS_PricePic)).EndInit();
             this.Yamllabel.ResumeLayout(false);
-            this.Setting.ResumeLayout(false);
+            this.Settinglabel.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
@@ -5496,16 +5476,14 @@
         private System.Windows.Forms.Button I_A_Removelabel;
         private System.Windows.Forms.Button I_A_Addlabel;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.TabPage Setting;
+        private System.Windows.Forms.TabPage Settinglabel;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.TextBox S_U_NVersion;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label NVersionlabel;
         private System.Windows.Forms.TextBox S_U_CVersion;
-        private System.Windows.Forms.Label Version;
+        private System.Windows.Forms.Label CVersionlabel;
         private System.Windows.Forms.Button S_U_CFUlabel;
         private System.Windows.Forms.Button S_U_Updatelabel;
-        private System.Windows.Forms.Label S_U_ProgressNum;
-        private System.Windows.Forms.ProgressBar S_U_Progress;
     }
 }
 

@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.Net;
 using System.Diagnostics;
+using System.IO.Compression;
 
 namespace CrackshotBuilder
 {
@@ -17,39 +18,7 @@ namespace CrackshotBuilder
     {
         public string filepath = Application.StartupPath + "/CrackshotFiles";
         //public string filepath = "C:/Users/Oska/Desktop/CrackshotFiles";
-        // Updater
-        public string downloadedFile = Application.StartupPath + "/CrackshotFiles/Update/update.msi";
-        public string currentversion = "dev2";
-        private void UpdateSoftware(string version)
-        {
-            WebClient webreq = new WebClient();
-            webreq.DownloadProgressChanged += new DownloadProgressChangedEventHandler(webreq_DLPC);
-            webreq.DownloadFileAsync(new Uri("https://github.com/Oskang09/CrackshotBuilder/releases/download/" + version + "/CrackshotBuilderSetup.msi"), downloadedFile);
-            webreq.DownloadFileCompleted += delegate
-            {
-                S_U_Progress.Value = 100;
-                S_U_ProgressNum.Text = "Completed";
-                ProcessStartInfo start = new ProcessStartInfo();
-                start.FileName = downloadedFile;
-                start.CreateNoWindow = true;
-                using (Process proc = Process.Start(start))
-                {
-                    MessageBox.Show("Updated!");
-                    proc.WaitForExit();
-                };
-            };
-        }
-        void webreq_DLPC(object sender, DownloadProgressChangedEventArgs e)
-        {
-            this.BeginInvoke((MethodInvoker)delegate
-            {
-                double byteIn = double.Parse(e.BytesReceived.ToString());
-                double totalbyte = double.Parse(e.TotalBytesToReceive.ToString());
-                double percentag = byteIn / totalbyte * 100;
-                S_U_Progress.Value = int.Parse(Math.Truncate(percentag).ToString());
-                S_U_ProgressNum.Text = "Downloaded " + e.BytesReceived + " of " + e.TotalBytesToReceive;
-            });
-        }
+        public string currentversion = "dev3";
         //
         string doublespacebar = "        ";
         string spacebar = "    ";
@@ -1712,7 +1681,8 @@ namespace CrackshotBuilder
             }
             if (S_U_CVersion.Text != S_U_NVersion.Text)
             {
-                UpdateSoftware(S_U_NVersion.Text);
+                Process proc = Process.Start(Application.StartupPath + "/updater.exe");
+                Application.Exit();
             }
         }
     }

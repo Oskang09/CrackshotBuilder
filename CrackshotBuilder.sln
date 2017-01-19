@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrackshotBuilder", "Cracksh
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "CrackshotBuilderSetup", "CrackshotBuilderSetup\CrackshotBuilderSetup.vdproj", "{9985783B-EE0C-45A4-A234-03C21915CE0E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Updater", "Updater\Updater.csproj", "{45E606D3-E983-481D-B57F-2A541B540552}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +39,18 @@ Global
 		{9985783B-EE0C-45A4-A234-03C21915CE0E}.Release|Mixed Platforms.ActiveCfg = Release
 		{9985783B-EE0C-45A4-A234-03C21915CE0E}.Release|Mixed Platforms.Build.0 = Release
 		{9985783B-EE0C-45A4-A234-03C21915CE0E}.Release|x86.ActiveCfg = Release
+		{45E606D3-E983-481D-B57F-2A541B540552}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45E606D3-E983-481D-B57F-2A541B540552}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45E606D3-E983-481D-B57F-2A541B540552}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{45E606D3-E983-481D-B57F-2A541B540552}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{45E606D3-E983-481D-B57F-2A541B540552}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{45E606D3-E983-481D-B57F-2A541B540552}.Debug|x86.Build.0 = Debug|Any CPU
+		{45E606D3-E983-481D-B57F-2A541B540552}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45E606D3-E983-481D-B57F-2A541B540552}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45E606D3-E983-481D-B57F-2A541B540552}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{45E606D3-E983-481D-B57F-2A541B540552}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{45E606D3-E983-481D-B57F-2A541B540552}.Release|x86.ActiveCfg = Release|Any CPU
+		{45E606D3-E983-481D-B57F-2A541B540552}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
