@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Media;
 
 namespace CrackshotBuilder
 {
@@ -31,7 +32,7 @@ namespace CrackshotBuilder
             string[] sounds = File.ReadAllLines(frm.filepath + "/sound.txt");
             foreach (string sound in sounds)
             {
-                Sound.Items.Add(sound);
+                Sound.Items.Add(sound.Split('=').First());
             }
         }
         private void AddSound_Click(object sender, EventArgs e)
@@ -47,6 +48,42 @@ namespace CrackshotBuilder
         private void Sounds_Load(object sender, EventArgs e)
         {
             LoadSound();
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (Sound.Text != "")
+            {
+                string[] text = { };
+                string[] sounds = File.ReadAllLines(frm.filepath + "/sound.txt");
+                foreach (string sound in sounds)
+                {
+                    if (sound.Contains(Sound.Text))
+                    {
+                        text = sound.Split('=');
+                    }
+                }
+                int num;
+                string lastnum = "";
+                string soundname = text[1].Replace("/", "\\") + ".wav";
+                int.TryParse(text[1].Substring(0, text[1].Length - 1), out num);
+                if (num > 2)
+                {
+                    soundname = text[1].Substring(0, text[1].Length - 1);
+                    Random rnd = new Random();
+                    lastnum = rnd.Next(num).ToString();
+                }
+                string soundfile = Application.StartupPath + "/CrackshotFiles/soundpack";
+                if (!File.Exists(soundfile + "/" + soundname + lastnum))
+                {
+                    MessageBox.Show("You didn't download soundpack yet!\nDownload at Github!","SoundPack");
+                }
+                else
+                {
+                    SoundPlayer sp = new SoundPlayer(soundfile + "/" + soundname + lastnum);
+                    sp.PlaySync();
+                    sp.Dispose();
+                }
+            }
         }
     }
 }

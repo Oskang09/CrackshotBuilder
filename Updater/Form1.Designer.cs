@@ -31,6 +31,8 @@
             this.S_U_Progress = new System.Windows.Forms.ProgressBar();
             this.S_U_ProgressNum = new System.Windows.Forms.Label();
             this.title = new System.Windows.Forms.Label();
+            this.updateTxt = new System.Windows.Forms.RichTextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // S_U_Progress
@@ -60,11 +62,31 @@
             this.title.TabIndex = 10;
             this.title.Text = "Downloading ...";
             // 
+            // updateTxt
+            // 
+            this.updateTxt.Location = new System.Drawing.Point(12, 191);
+            this.updateTxt.Name = "updateTxt";
+            this.updateTxt.Size = new System.Drawing.Size(349, 182);
+            this.updateTxt.TabIndex = 11;
+            this.updateTxt.Text = "";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(12, 164);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(43, 20);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Update";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(373, 165);
+            this.ClientSize = new System.Drawing.Size(373, 385);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.updateTxt);
             this.Controls.Add(this.title);
             this.Controls.Add(this.S_U_Progress);
             this.Controls.Add(this.S_U_ProgressNum);
@@ -81,6 +103,8 @@
         private System.Windows.Forms.ProgressBar S_U_Progress;
         private System.Windows.Forms.Label S_U_ProgressNum;
         private System.Windows.Forms.Label title;
+        private System.Windows.Forms.RichTextBox updateTxt;
+        private System.Windows.Forms.Label label1;
     }
 }
 

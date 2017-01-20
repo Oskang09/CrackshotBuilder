@@ -37,14 +37,15 @@
             this.Volume = new System.Windows.Forms.TextBox();
             this.Soundlabel = new System.Windows.Forms.Label();
             this.Sound = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // ASlabel
             // 
             this.ASlabel.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
-            this.ASlabel.Location = new System.Drawing.Point(85, 60);
+            this.ASlabel.Location = new System.Drawing.Point(84, 139);
             this.ASlabel.Name = "ASlabel";
-            this.ASlabel.Size = new System.Drawing.Size(141, 144);
+            this.ASlabel.Size = new System.Drawing.Size(141, 65);
             this.ASlabel.TabIndex = 69;
             this.ASlabel.Text = "Add Sound";
             this.ASlabel.UseVisualStyleBackColor = true;
@@ -124,11 +125,23 @@
             this.Sound.Size = new System.Drawing.Size(200, 24);
             this.Sound.TabIndex = 61;
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.button1.Location = new System.Drawing.Point(82, 68);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(141, 65);
+            this.button1.TabIndex = 70;
+            this.button1.Text = "Test Sound";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Sounds
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(238, 218);
+            this.ClientSize = new System.Drawing.Size(237, 214);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.ASlabel);
             this.Controls.Add(this.Delay);
             this.Controls.Add(this.Delaylabel);
@@ -157,5 +170,6 @@
         private System.Windows.Forms.TextBox Volume;
         private System.Windows.Forms.Label Soundlabel;
         private System.Windows.Forms.ComboBox Sound;
+        private System.Windows.Forms.Button button1;
     }
 }

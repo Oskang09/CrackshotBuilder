@@ -724,12 +724,6 @@
         "Entry"
         {
         "MsmKey" = "8:_2EFA4B0C6AABFA552320469BED588E3E"
-        "OwnerKey" = "8:_A4C30313C1A04ED38D6D637301D113A8"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_2EFA4B0C6AABFA552320469BED588E3E"
         "OwnerKey" = "8:_1575E32EBA3F47E08A971BAEC4AC3F04"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -1258,13 +1252,13 @@
         "Entry"
         {
         "MsmKey" = "8:_5050804BAF4947CAB58145A6B56388DC"
-        "OwnerKey" = "8:_A4C30313C1A04ED38D6D637301D113A8"
+        "OwnerKey" = "8:_1575E32EBA3F47E08A971BAEC4AC3F04"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_5050804BAF4947CAB58145A6B56388DC"
-        "OwnerKey" = "8:_1575E32EBA3F47E08A971BAEC4AC3F04"
+        "OwnerKey" = "8:_A4C30313C1A04ED38D6D637301D113A8"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -1300,12 +1294,6 @@
         "Entry"
         {
         "MsmKey" = "8:_51E5E05B3FE5414FB57E4BC30A10787A"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_51E60C321F894E958D90054B47D158F7"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -1510,6 +1498,12 @@
         "Entry"
         {
         "MsmKey" = "8:_610D73B0FD3D4FB58AB88B594A6DD10C"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_613060CEF3DB4840B6438FBAB0C1DE1B"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -1894,12 +1888,6 @@
         "Entry"
         {
         "MsmKey" = "8:_77D7D33B0BC32D89943884D81D2A390E"
-        "OwnerKey" = "8:_A4C30313C1A04ED38D6D637301D113A8"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_77D7D33B0BC32D89943884D81D2A390E"
         "OwnerKey" = "8:_1575E32EBA3F47E08A971BAEC4AC3F04"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -2236,6 +2224,12 @@
         "Entry"
         {
         "MsmKey" = "8:_9008B18B199B4B109554A61BC2E31AD2"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_905C6076BC434F91B38C8440CEC3F24F"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -8402,26 +8396,6 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_51E60C321F894E958D90054B47D158F7"
-            {
-            "SourcePath" = "8:..\\..\\..\\..\\..\\Desktop\\CrackshotBuilder Setup\\CrackshotFiles\\sound.txt"
-            "TargetName" = "8:sound.txt"
-            "Tag" = "8:"
-            "Folder" = "8:_24B0AA7F93E74F419289D170638C766C"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_527BBD13CA3B4FE397D75A8DD1168027"
             {
             "SourcePath" = "8:..\\..\\..\\..\\..\\Desktop\\CrackshotBuilder Setup\\CrackshotFiles\\Resource\\ids\\97-1.png"
@@ -9088,6 +9062,26 @@
             "TargetName" = "8:17-0.png"
             "Tag" = "8:"
             "Folder" = "8:_5500B773083045B38552EEB965B40B9F"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_613060CEF3DB4840B6438FBAB0C1DE1B"
+            {
+            "SourcePath" = "8:..\\..\\..\\..\\..\\Desktop\\CrackshotBuilder Setup\\CrackshotFiles\\soundpack\\sound.txt"
+            "TargetName" = "8:sound.txt"
+            "Tag" = "8:"
+            "Folder" = "8:_D70FFE7FC7B04F66B4C6333ADD9BDE74"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -11479,6 +11473,26 @@
             "TargetName" = "8:296-0.png"
             "Tag" = "8:"
             "Folder" = "8:_5500B773083045B38552EEB965B40B9F"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_905C6076BC434F91B38C8440CEC3F24F"
+            {
+            "SourcePath" = "8:..\\..\\..\\..\\..\\Desktop\\CrackshotBuilder Setup\\CrackshotFiles\\sound.txt"
+            "TargetName" = "8:sound.txt"
+            "Tag" = "8:"
+            "Folder" = "8:_24B0AA7F93E74F419289D170638C766C"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -17429,6 +17443,17 @@
                     "Property" = "8:_A10E473C337E441AB61CEF70E8C5537A"
                         "Folders"
                         {
+                            "{9EF0B969-E518-4E46-987F-47570745A589}:_D70FFE7FC7B04F66B4C6333ADD9BDE74"
+                            {
+                            "Name" = "8:soundpack"
+                            "AlwaysCreate" = "11:FALSE"
+                            "Condition" = "8:"
+                            "Transitive" = "11:FALSE"
+                            "Property" = "8:_27D2F0436B444D5981DAA1D76D49CF39"
+                                "Folders"
+                                {
+                                }
+                            }
                             "{9EF0B969-E518-4E46-987F-47570745A589}:_E7A59EB60CFC45F385E5F04723F25213"
                             {
                             "Name" = "8:Resource"
