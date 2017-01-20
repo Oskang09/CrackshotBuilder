@@ -51,7 +51,42 @@ namespace Updater
         {
             WebClient req = new WebClient();
             string newver = req.DownloadString("http://pastebin.com/raw/ddUGMbJy");
-            unZipUpdateFile();
+            string[] array = newver.Split('\n');
+            UpdateSoftware(array[0]);
+
+            int from = 0;
+            int to = 0;
+            foreach (string line in array)
+            {
+                if (line == "[FILE]")
+                {
+                    from = GetIndexOfArray(line, array);
+                }
+                if (line == "[UPDATE]")
+                {
+                    to = GetIndexOfArray(line, array);
+                }
+            }
+            for (int i = from++; i < to; i++)
+            {
+                updateTxt.AppendText(array[i]);
+            }
+            for (int j = to++;j < array.Count();j++)
+            {
+                string path = array[j];
+                File.Delete(Application.StartupPath + "/" + path);
+            }
+        }
+        public int GetIndexOfArray(string Element, string[] Array)
+        {
+            for (int i = 0; i < Array.Length; i++)
+            {
+                if (Element == Array[i])
+                {
+                    return i;
+                }
+            }
+            return -1;
         }
         void unZipUpdateFile()
         {

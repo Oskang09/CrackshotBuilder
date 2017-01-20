@@ -17,8 +17,8 @@ namespace CrackshotBuilder
     public partial class Form1 : Form
     {
         public string filepath = Application.StartupPath + "/CrackshotFiles";
-        //public string filepath = "C:/Users/Oska/Desktop/CrackshotFiles";
-        public string currentversion = "dev3";
+        //public string filepath = "C:/Users/Oska/Desktop/CrackshotBuilder Setup/CrackshotFiles";
+        public string currentversion = Properties.Settings.Default.Version;
         //
         string doublespacebar = "        ";
         string spacebar = "    ";
@@ -1670,7 +1670,7 @@ namespace CrackshotBuilder
         {
             System.Net.WebClient request = new System.Net.WebClient();
             string newver = request.DownloadString("http://pastebin.com/raw/ddUGMbJy");
-            S_U_NVersion.Text = newver;
+            S_U_NVersion.Text = newver.Split('\n').First();
         }
 
         private void S_U_Updatelabel_Click(object sender, EventArgs e)
