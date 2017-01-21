@@ -33,6 +33,37 @@ namespace Updater
             {
                 S_U_Progress.Value = 100;
                 S_U_ProgressNum.Text = "Download Completed!";
+                // Web Req Version , Update Features , File Need Del
+                WebClient req = new WebClient();
+                string newver = req.DownloadString("http://pastebin.com/raw/ddUGMbJy");
+                string[] array = newver.Split('\n');
+                int from = 0;
+                int to = 0;
+                foreach (string line in array)
+                {
+                    if (line.Contains("[FILE]"))
+                    {
+                        from = GetIndexOfArray(line, array);
+                    }
+                    if (line.Contains("[UPDATE]"))
+                    {
+                        to = GetIndexOfArray(line, array);
+                    }
+                }
+                from++;
+                to++;
+                for (int j = from; j < to; j++)
+                {
+                    string pathe = array[j];
+                    string path = System.Text.RegularExpressions.Regex.Replace(array[j], @"\t|\n|\r", "");
+                    File.Delete(Path.Combine(Application.StartupPath + path));
+                }
+                for (int i = to; i < array.Count(); i++)
+                {
+                    string update = System.Text.RegularExpressions.Regex.Replace(array[i], @"\t|\n|\r", "");
+                    updateTxt.AppendText(update + "\n");
+                }
+                // 
                 unZipUpdateFile();
             };
         }
@@ -52,30 +83,8 @@ namespace Updater
             WebClient req = new WebClient();
             string newver = req.DownloadString("http://pastebin.com/raw/ddUGMbJy");
             string[] array = newver.Split('\n');
-            UpdateSoftware(array[0]);
-
-            int from = 0;
-            int to = 0;
-            foreach (string line in array)
-            {
-                if (line == "[FILE]")
-                {
-                    from = GetIndexOfArray(line, array);
-                }
-                if (line == "[UPDATE]")
-                {
-                    to = GetIndexOfArray(line, array);
-                }
-            }
-            for (int i = from++; i < to; i++)
-            {
-                updateTxt.AppendText(array[i]);
-            }
-            for (int j = to++;j < array.Count();j++)
-            {
-                string path = array[j];
-                File.Delete(Application.StartupPath + "/" + path);
-            }
+            string version = System.Text.RegularExpressions.Regex.Replace(array[0], @"\t|\n|\r", "");
+            UpdateSoftware(version);
         }
         public int GetIndexOfArray(string Element, string[] Array)
         {
@@ -95,7 +104,6 @@ namespace Updater
                 int totalfile = zip.Entries.Count;
                 int extracted = 0;
                 title.Text = "Installing ...";
-                Directory.Delete(updatePath + "/CrackshotFiles", true);
                 foreach (ZipArchiveEntry files in zip.Entries)
                 {
                     string comFile = Path.Combine(updatePath ,files.FullName);

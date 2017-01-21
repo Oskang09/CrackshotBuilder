@@ -130,6 +130,53 @@
             this.AS3 = new System.Windows.Forms.Button();
             this.I_Tablabel = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.I_ED_Sbox = new System.Windows.Forms.TextBox();
+            this.I_ED_NIDlabel = new System.Windows.Forms.CheckBox();
+            this.I_ED_Headbox = new System.Windows.Forms.TextBox();
+            this.I_ED_IDPic = new System.Windows.Forms.PictureBox();
+            this.I_ED_A2Box = new System.Windows.Forms.TextBox();
+            this.I_ED_Abox = new System.Windows.Forms.TextBox();
+            this.I_ED_afterboxids = new System.Windows.Forms.ComboBox();
+            this.I_ED_UIDbox = new System.Windows.Forms.TextBox();
+            this.I_ED_Itemids = new System.Windows.Forms.ComboBox();
+            this.I_ED_Reuselabel = new System.Windows.Forms.CheckBox();
+            this.I_ED_b4boxids = new System.Windows.Forms.ComboBox();
+            this.I_ED_mcart = new System.Windows.Forms.ComboBox();
+            this.AS24_Sound = new System.Windows.Forms.ListBox();
+            this.I_ED_DAPlabel = new System.Windows.Forms.CheckBox();
+            this.I_ED_STlabel = new System.Windows.Forms.Label();
+            this.AS24 = new System.Windows.Forms.Button();
+            this.RS24 = new System.Windows.Forms.Button();
+            this.AS23_Sound = new System.Windows.Forms.ListBox();
+            this.I_ED_SAPlabel = new System.Windows.Forms.Label();
+            this.AS23 = new System.Windows.Forms.Button();
+            this.RS23 = new System.Windows.Forms.Button();
+            this.I_ED_Picklabel = new System.Windows.Forms.CheckBox();
+            this.AS22_Sound = new System.Windows.Forms.ListBox();
+            this.I_ED_MTVbox = new System.Windows.Forms.TextBox();
+            this.I_ED_SDlabel = new System.Windows.Forms.Label();
+            this.I_ED_MTVlabel = new System.Windows.Forms.Label();
+            this.AS22 = new System.Windows.Forms.Button();
+            this.I_ED_MTPbox = new System.Windows.Forms.TextBox();
+            this.RS22 = new System.Windows.Forms.Button();
+            this.I_ED_MTPlabel = new System.Windows.Forms.Label();
+            this.I_ED_MDbox = new System.Windows.Forms.TextBox();
+            this.I_ED_MDlabel = new System.Windows.Forms.Label();
+            this.I_ED_RBRlabel = new System.Windows.Forms.CheckBox();
+            this.I_ED_DeviceTlabel = new System.Windows.Forms.Label();
+            this.I_ED_B4label = new System.Windows.Forms.Label();
+            this.I_ED_Enablelabel = new System.Windows.Forms.CheckBox();
+            this.I_ED_A2label = new System.Windows.Forms.Label();
+            this.I_ED_DeviceTBox = new System.Windows.Forms.ComboBox();
+            this.I_ED_Slabel = new System.Windows.Forms.Label();
+            this.I_ED_UIDlabel = new System.Windows.Forms.Label();
+            this.I_ED_Afterlabel = new System.Windows.Forms.Label();
+            this.I_ED_Headlabel = new System.Windows.Forms.Label();
+            this.I_ED_Chestlabel = new System.Windows.Forms.CheckBox();
+            this.I_ED_Alabel = new System.Windows.Forms.Label();
+            this.I_ED_mcarttlabel = new System.Windows.Forms.Label();
+            this.I_ED_itemIdlabel = new System.Windows.Forms.Label();
+            this.I_ED_DeviceIlabel = new System.Windows.Forms.Label();
             this.I_A_MS_namelabel = new System.Windows.Forms.GroupBox();
             this.I_A_MS_DBSBox = new System.Windows.Forms.TextBox();
             this.I_A_MS_DBSlabel = new System.Windows.Forms.Label();
@@ -153,6 +200,7 @@
             this.I_RS_DNBPlabel = new System.Windows.Forms.CheckBox();
             this.I_RS_Enablelabel = new System.Windows.Forms.CheckBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.I_A_BTPics = new System.Windows.Forms.PictureBox();
             this.I_A_Removelabel = new System.Windows.Forms.Button();
             this.I_A_Addlabel = new System.Windows.Forms.Button();
             this.I_A_PCAListSource = new System.Windows.Forms.ListBox();
@@ -446,9 +494,12 @@
             this.S_PIncendiarylabel.SuspendLayout();
             this.S_Soundlabel.SuspendLayout();
             this.I_Tablabel.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.I_ED_IDPic)).BeginInit();
             this.I_A_MS_namelabel.SuspendLayout();
             this.I_RS_riotlabel.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.I_A_BTPics)).BeginInit();
             this.G_Tablabel.SuspendLayout();
             this.G_S_Scopelabel.SuspendLayout();
             this.G_R_GBoxlabel.SuspendLayout();
@@ -1590,13 +1641,562 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.I_ED_Sbox);
+            this.groupBox4.Controls.Add(this.I_ED_NIDlabel);
+            this.groupBox4.Controls.Add(this.I_ED_Headbox);
+            this.groupBox4.Controls.Add(this.I_ED_IDPic);
+            this.groupBox4.Controls.Add(this.I_ED_A2Box);
+            this.groupBox4.Controls.Add(this.I_ED_Abox);
+            this.groupBox4.Controls.Add(this.I_ED_afterboxids);
+            this.groupBox4.Controls.Add(this.I_ED_UIDbox);
+            this.groupBox4.Controls.Add(this.I_ED_Itemids);
+            this.groupBox4.Controls.Add(this.I_ED_Reuselabel);
+            this.groupBox4.Controls.Add(this.I_ED_b4boxids);
+            this.groupBox4.Controls.Add(this.I_ED_mcart);
+            this.groupBox4.Controls.Add(this.AS24_Sound);
+            this.groupBox4.Controls.Add(this.I_ED_DAPlabel);
+            this.groupBox4.Controls.Add(this.I_ED_STlabel);
+            this.groupBox4.Controls.Add(this.AS24);
+            this.groupBox4.Controls.Add(this.RS24);
+            this.groupBox4.Controls.Add(this.AS23_Sound);
+            this.groupBox4.Controls.Add(this.I_ED_SAPlabel);
+            this.groupBox4.Controls.Add(this.AS23);
+            this.groupBox4.Controls.Add(this.RS23);
+            this.groupBox4.Controls.Add(this.I_ED_Picklabel);
+            this.groupBox4.Controls.Add(this.AS22_Sound);
+            this.groupBox4.Controls.Add(this.I_ED_MTVbox);
+            this.groupBox4.Controls.Add(this.I_ED_SDlabel);
+            this.groupBox4.Controls.Add(this.I_ED_MTVlabel);
+            this.groupBox4.Controls.Add(this.AS22);
+            this.groupBox4.Controls.Add(this.I_ED_MTPbox);
+            this.groupBox4.Controls.Add(this.RS22);
+            this.groupBox4.Controls.Add(this.I_ED_MTPlabel);
+            this.groupBox4.Controls.Add(this.I_ED_MDbox);
+            this.groupBox4.Controls.Add(this.I_ED_MDlabel);
+            this.groupBox4.Controls.Add(this.I_ED_RBRlabel);
+            this.groupBox4.Controls.Add(this.I_ED_DeviceTlabel);
+            this.groupBox4.Controls.Add(this.I_ED_B4label);
+            this.groupBox4.Controls.Add(this.I_ED_Enablelabel);
+            this.groupBox4.Controls.Add(this.I_ED_A2label);
+            this.groupBox4.Controls.Add(this.I_ED_DeviceTBox);
+            this.groupBox4.Controls.Add(this.I_ED_Slabel);
+            this.groupBox4.Controls.Add(this.I_ED_UIDlabel);
+            this.groupBox4.Controls.Add(this.I_ED_Afterlabel);
+            this.groupBox4.Controls.Add(this.I_ED_Headlabel);
+            this.groupBox4.Controls.Add(this.I_ED_Chestlabel);
+            this.groupBox4.Controls.Add(this.I_ED_Alabel);
+            this.groupBox4.Controls.Add(this.I_ED_mcarttlabel);
+            this.groupBox4.Controls.Add(this.I_ED_itemIdlabel);
+            this.groupBox4.Controls.Add(this.I_ED_DeviceIlabel);
             this.groupBox4.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold);
             this.groupBox4.Location = new System.Drawing.Point(7, 483);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(901, 194);
+            this.groupBox4.Size = new System.Drawing.Size(1318, 196);
             this.groupBox4.TabIndex = 16;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Explosive devices";
+            // 
+            // I_ED_Sbox
+            // 
+            this.I_ED_Sbox.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.I_ED_Sbox.Location = new System.Drawing.Point(80, 145);
+            this.I_ED_Sbox.Name = "I_ED_Sbox";
+            this.I_ED_Sbox.Size = new System.Drawing.Size(82, 22);
+            this.I_ED_Sbox.TabIndex = 40;
+            this.I_ED_Sbox.Visible = false;
+            // 
+            // I_ED_NIDlabel
+            // 
+            this.I_ED_NIDlabel.AutoSize = true;
+            this.I_ED_NIDlabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.I_ED_NIDlabel.Location = new System.Drawing.Point(122, 98);
+            this.I_ED_NIDlabel.Name = "I_ED_NIDlabel";
+            this.I_ED_NIDlabel.Size = new System.Drawing.Size(158, 22);
+            this.I_ED_NIDlabel.TabIndex = 37;
+            this.I_ED_NIDlabel.Text = "NoItemDespawn";
+            this.I_ED_NIDlabel.UseVisualStyleBackColor = true;
+            this.I_ED_NIDlabel.Visible = false;
+            // 
+            // I_ED_Headbox
+            // 
+            this.I_ED_Headbox.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.I_ED_Headbox.Location = new System.Drawing.Point(198, 148);
+            this.I_ED_Headbox.Name = "I_ED_Headbox";
+            this.I_ED_Headbox.Size = new System.Drawing.Size(82, 22);
+            this.I_ED_Headbox.TabIndex = 58;
+            this.I_ED_Headbox.Visible = false;
+            // 
+            // I_ED_IDPic
+            // 
+            this.I_ED_IDPic.Location = new System.Drawing.Point(115, 140);
+            this.I_ED_IDPic.Name = "I_ED_IDPic";
+            this.I_ED_IDPic.Size = new System.Drawing.Size(32, 32);
+            this.I_ED_IDPic.TabIndex = 53;
+            this.I_ED_IDPic.TabStop = false;
+            // 
+            // I_ED_A2Box
+            // 
+            this.I_ED_A2Box.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.I_ED_A2Box.Location = new System.Drawing.Point(80, 118);
+            this.I_ED_A2Box.Name = "I_ED_A2Box";
+            this.I_ED_A2Box.Size = new System.Drawing.Size(82, 22);
+            this.I_ED_A2Box.TabIndex = 39;
+            this.I_ED_A2Box.Visible = false;
+            // 
+            // I_ED_Abox
+            // 
+            this.I_ED_Abox.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.I_ED_Abox.Location = new System.Drawing.Point(105, 148);
+            this.I_ED_Abox.Name = "I_ED_Abox";
+            this.I_ED_Abox.Size = new System.Drawing.Size(82, 22);
+            this.I_ED_Abox.TabIndex = 57;
+            this.I_ED_Abox.Visible = false;
+            // 
+            // I_ED_afterboxids
+            // 
+            this.I_ED_afterboxids.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.I_ED_afterboxids.FormattingEnabled = true;
+            this.I_ED_afterboxids.Location = new System.Drawing.Point(229, 143);
+            this.I_ED_afterboxids.Name = "I_ED_afterboxids";
+            this.I_ED_afterboxids.Size = new System.Drawing.Size(82, 24);
+            this.I_ED_afterboxids.TabIndex = 36;
+            this.I_ED_afterboxids.Visible = false;
+            // 
+            // I_ED_UIDbox
+            // 
+            this.I_ED_UIDbox.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.I_ED_UIDbox.Location = new System.Drawing.Point(12, 148);
+            this.I_ED_UIDbox.Name = "I_ED_UIDbox";
+            this.I_ED_UIDbox.Size = new System.Drawing.Size(82, 22);
+            this.I_ED_UIDbox.TabIndex = 56;
+            this.I_ED_UIDbox.Visible = false;
+            // 
+            // I_ED_Itemids
+            // 
+            this.I_ED_Itemids.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.I_ED_Itemids.FormattingEnabled = true;
+            this.I_ED_Itemids.Location = new System.Drawing.Point(13, 148);
+            this.I_ED_Itemids.Name = "I_ED_Itemids";
+            this.I_ED_Itemids.Size = new System.Drawing.Size(96, 24);
+            this.I_ED_Itemids.TabIndex = 50;
+            this.I_ED_Itemids.Visible = false;
+            this.I_ED_Itemids.SelectedIndexChanged += new System.EventHandler(this.I_ED_Itemids_SelectedIndexChanged);
+            // 
+            // I_ED_Reuselabel
+            // 
+            this.I_ED_Reuselabel.AutoSize = true;
+            this.I_ED_Reuselabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.I_ED_Reuselabel.Location = new System.Drawing.Point(105, 123);
+            this.I_ED_Reuselabel.Name = "I_ED_Reuselabel";
+            this.I_ED_Reuselabel.Size = new System.Drawing.Size(112, 22);
+            this.I_ED_Reuselabel.TabIndex = 36;
+            this.I_ED_Reuselabel.Text = "Reuseable";
+            this.I_ED_Reuselabel.UseVisualStyleBackColor = true;
+            this.I_ED_Reuselabel.Visible = false;
+            // 
+            // I_ED_b4boxids
+            // 
+            this.I_ED_b4boxids.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.I_ED_b4boxids.FormattingEnabled = true;
+            this.I_ED_b4boxids.Location = new System.Drawing.Point(229, 113);
+            this.I_ED_b4boxids.Name = "I_ED_b4boxids";
+            this.I_ED_b4boxids.Size = new System.Drawing.Size(82, 24);
+            this.I_ED_b4boxids.TabIndex = 34;
+            this.I_ED_b4boxids.Visible = false;
+            // 
+            // I_ED_mcart
+            // 
+            this.I_ED_mcart.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.I_ED_mcart.FormattingEnabled = true;
+            this.I_ED_mcart.Location = new System.Drawing.Point(168, 148);
+            this.I_ED_mcart.Name = "I_ED_mcart";
+            this.I_ED_mcart.Size = new System.Drawing.Size(133, 24);
+            this.I_ED_mcart.TabIndex = 49;
+            this.I_ED_mcart.Visible = false;
+            // 
+            // AS24_Sound
+            // 
+            this.AS24_Sound.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.AS24_Sound.FormattingEnabled = true;
+            this.AS24_Sound.ItemHeight = 16;
+            this.AS24_Sound.Location = new System.Drawing.Point(1056, 50);
+            this.AS24_Sound.Name = "AS24_Sound";
+            this.AS24_Sound.Size = new System.Drawing.Size(170, 132);
+            this.AS24_Sound.TabIndex = 45;
+            this.AS24_Sound.Visible = false;
+            // 
+            // I_ED_DAPlabel
+            // 
+            this.I_ED_DAPlabel.AutoSize = true;
+            this.I_ED_DAPlabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.I_ED_DAPlabel.Location = new System.Drawing.Point(18, 151);
+            this.I_ED_DAPlabel.Name = "I_ED_DAPlabel";
+            this.I_ED_DAPlabel.Size = new System.Drawing.Size(262, 22);
+            this.I_ED_DAPlabel.TabIndex = 35;
+            this.I_ED_DAPlabel.Text = "Dispenser And PressurePlate";
+            this.I_ED_DAPlabel.UseVisualStyleBackColor = true;
+            this.I_ED_DAPlabel.Visible = false;
+            // 
+            // I_ED_STlabel
+            // 
+            this.I_ED_STlabel.AutoSize = true;
+            this.I_ED_STlabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.I_ED_STlabel.Location = new System.Drawing.Point(1053, 24);
+            this.I_ED_STlabel.Name = "I_ED_STlabel";
+            this.I_ED_STlabel.Size = new System.Drawing.Size(130, 18);
+            this.I_ED_STlabel.TabIndex = 44;
+            this.I_ED_STlabel.Text = "Sounds Trigger";
+            this.I_ED_STlabel.Visible = false;
+            // 
+            // AS24
+            // 
+            this.AS24.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.AS24.Location = new System.Drawing.Point(1232, 34);
+            this.AS24.Name = "AS24";
+            this.AS24.Size = new System.Drawing.Size(75, 71);
+            this.AS24.TabIndex = 46;
+            this.AS24.Text = "Add Sound";
+            this.AS24.UseVisualStyleBackColor = true;
+            this.AS24.Visible = false;
+            // 
+            // RS24
+            // 
+            this.RS24.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.RS24.Location = new System.Drawing.Point(1232, 111);
+            this.RS24.Name = "RS24";
+            this.RS24.Size = new System.Drawing.Size(75, 71);
+            this.RS24.TabIndex = 47;
+            this.RS24.Text = "Remove Sound";
+            this.RS24.UseVisualStyleBackColor = true;
+            this.RS24.Visible = false;
+            // 
+            // AS23_Sound
+            // 
+            this.AS23_Sound.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.AS23_Sound.FormattingEnabled = true;
+            this.AS23_Sound.ItemHeight = 16;
+            this.AS23_Sound.Location = new System.Drawing.Point(796, 50);
+            this.AS23_Sound.Name = "AS23_Sound";
+            this.AS23_Sound.Size = new System.Drawing.Size(170, 132);
+            this.AS23_Sound.TabIndex = 41;
+            this.AS23_Sound.Visible = false;
+            // 
+            // I_ED_SAPlabel
+            // 
+            this.I_ED_SAPlabel.AutoSize = true;
+            this.I_ED_SAPlabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.I_ED_SAPlabel.Location = new System.Drawing.Point(793, 24);
+            this.I_ED_SAPlabel.Name = "I_ED_SAPlabel";
+            this.I_ED_SAPlabel.Size = new System.Drawing.Size(167, 18);
+            this.I_ED_SAPlabel.TabIndex = 40;
+            this.I_ED_SAPlabel.Text = "Sounds Alert Placer";
+            this.I_ED_SAPlabel.Visible = false;
+            // 
+            // AS23
+            // 
+            this.AS23.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.AS23.Location = new System.Drawing.Point(972, 34);
+            this.AS23.Name = "AS23";
+            this.AS23.Size = new System.Drawing.Size(75, 71);
+            this.AS23.TabIndex = 42;
+            this.AS23.Text = "Add Sound";
+            this.AS23.UseVisualStyleBackColor = true;
+            this.AS23.Visible = false;
+            // 
+            // RS23
+            // 
+            this.RS23.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.RS23.Location = new System.Drawing.Point(972, 111);
+            this.RS23.Name = "RS23";
+            this.RS23.Size = new System.Drawing.Size(75, 71);
+            this.RS23.TabIndex = 43;
+            this.RS23.Text = "Remove Sound";
+            this.RS23.UseVisualStyleBackColor = true;
+            this.RS23.Visible = false;
+            // 
+            // I_ED_Picklabel
+            // 
+            this.I_ED_Picklabel.AutoSize = true;
+            this.I_ED_Picklabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.I_ED_Picklabel.Location = new System.Drawing.Point(235, 121);
+            this.I_ED_Picklabel.Name = "I_ED_Picklabel";
+            this.I_ED_Picklabel.Size = new System.Drawing.Size(81, 22);
+            this.I_ED_Picklabel.TabIndex = 34;
+            this.I_ED_Picklabel.Text = "Pickup";
+            this.I_ED_Picklabel.UseVisualStyleBackColor = true;
+            this.I_ED_Picklabel.Visible = false;
+            // 
+            // AS22_Sound
+            // 
+            this.AS22_Sound.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.AS22_Sound.FormattingEnabled = true;
+            this.AS22_Sound.ItemHeight = 16;
+            this.AS22_Sound.Location = new System.Drawing.Point(533, 50);
+            this.AS22_Sound.Name = "AS22_Sound";
+            this.AS22_Sound.Size = new System.Drawing.Size(170, 132);
+            this.AS22_Sound.TabIndex = 34;
+            this.AS22_Sound.Visible = false;
+            // 
+            // I_ED_MTVbox
+            // 
+            this.I_ED_MTVbox.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.I_ED_MTVbox.Location = new System.Drawing.Point(332, 160);
+            this.I_ED_MTVbox.Name = "I_ED_MTVbox";
+            this.I_ED_MTVbox.Size = new System.Drawing.Size(188, 22);
+            this.I_ED_MTVbox.TabIndex = 39;
+            this.I_ED_MTVbox.Visible = false;
+            // 
+            // I_ED_SDlabel
+            // 
+            this.I_ED_SDlabel.AutoSize = true;
+            this.I_ED_SDlabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.I_ED_SDlabel.Location = new System.Drawing.Point(530, 24);
+            this.I_ED_SDlabel.Name = "I_ED_SDlabel";
+            this.I_ED_SDlabel.Size = new System.Drawing.Size(127, 18);
+            this.I_ED_SDlabel.TabIndex = 33;
+            this.I_ED_SDlabel.Text = "Sounds Deploy";
+            this.I_ED_SDlabel.Visible = false;
+            // 
+            // I_ED_MTVlabel
+            // 
+            this.I_ED_MTVlabel.AutoSize = true;
+            this.I_ED_MTVlabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.I_ED_MTVlabel.Location = new System.Drawing.Point(329, 136);
+            this.I_ED_MTVlabel.Name = "I_ED_MTVlabel";
+            this.I_ED_MTVlabel.Size = new System.Drawing.Size(194, 18);
+            this.I_ED_MTVlabel.TabIndex = 38;
+            this.I_ED_MTVlabel.Text = "Message Trigger Victim";
+            this.I_ED_MTVlabel.Visible = false;
+            // 
+            // AS22
+            // 
+            this.AS22.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.AS22.Location = new System.Drawing.Point(709, 34);
+            this.AS22.Name = "AS22";
+            this.AS22.Size = new System.Drawing.Size(75, 71);
+            this.AS22.TabIndex = 35;
+            this.AS22.Text = "Add Sound";
+            this.AS22.UseVisualStyleBackColor = true;
+            this.AS22.Visible = false;
+            // 
+            // I_ED_MTPbox
+            // 
+            this.I_ED_MTPbox.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.I_ED_MTPbox.Location = new System.Drawing.Point(332, 107);
+            this.I_ED_MTPbox.Name = "I_ED_MTPbox";
+            this.I_ED_MTPbox.Size = new System.Drawing.Size(188, 22);
+            this.I_ED_MTPbox.TabIndex = 37;
+            this.I_ED_MTPbox.Visible = false;
+            // 
+            // RS22
+            // 
+            this.RS22.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.RS22.Location = new System.Drawing.Point(709, 111);
+            this.RS22.Name = "RS22";
+            this.RS22.Size = new System.Drawing.Size(75, 71);
+            this.RS22.TabIndex = 36;
+            this.RS22.Text = "Remove Sound";
+            this.RS22.UseVisualStyleBackColor = true;
+            this.RS22.Visible = false;
+            // 
+            // I_ED_MTPlabel
+            // 
+            this.I_ED_MTPlabel.AutoSize = true;
+            this.I_ED_MTPlabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.I_ED_MTPlabel.Location = new System.Drawing.Point(329, 83);
+            this.I_ED_MTPlabel.Name = "I_ED_MTPlabel";
+            this.I_ED_MTPlabel.Size = new System.Drawing.Size(197, 18);
+            this.I_ED_MTPlabel.TabIndex = 36;
+            this.I_ED_MTPlabel.Text = "Message Trigger Placer";
+            this.I_ED_MTPlabel.Visible = false;
+            // 
+            // I_ED_MDbox
+            // 
+            this.I_ED_MDbox.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.I_ED_MDbox.Location = new System.Drawing.Point(332, 54);
+            this.I_ED_MDbox.Name = "I_ED_MDbox";
+            this.I_ED_MDbox.Size = new System.Drawing.Size(188, 22);
+            this.I_ED_MDbox.TabIndex = 34;
+            this.I_ED_MDbox.Visible = false;
+            // 
+            // I_ED_MDlabel
+            // 
+            this.I_ED_MDlabel.AutoSize = true;
+            this.I_ED_MDlabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.I_ED_MDlabel.Location = new System.Drawing.Point(329, 30);
+            this.I_ED_MDlabel.Name = "I_ED_MDlabel";
+            this.I_ED_MDlabel.Size = new System.Drawing.Size(139, 18);
+            this.I_ED_MDlabel.TabIndex = 33;
+            this.I_ED_MDlabel.Text = "Message Disarm";
+            this.I_ED_MDlabel.Visible = false;
+            // 
+            // I_ED_RBRlabel
+            // 
+            this.I_ED_RBRlabel.AutoSize = true;
+            this.I_ED_RBRlabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.I_ED_RBRlabel.Location = new System.Drawing.Point(105, 35);
+            this.I_ED_RBRlabel.Name = "I_ED_RBRlabel";
+            this.I_ED_RBRlabel.Size = new System.Drawing.Size(221, 22);
+            this.I_ED_RBRlabel.TabIndex = 35;
+            this.I_ED_RBRlabel.Text = "Remote Bypass Regions";
+            this.I_ED_RBRlabel.UseVisualStyleBackColor = true;
+            this.I_ED_RBRlabel.Visible = false;
+            // 
+            // I_ED_DeviceTlabel
+            // 
+            this.I_ED_DeviceTlabel.AutoSize = true;
+            this.I_ED_DeviceTlabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.I_ED_DeviceTlabel.Location = new System.Drawing.Point(12, 68);
+            this.I_ED_DeviceTlabel.Name = "I_ED_DeviceTlabel";
+            this.I_ED_DeviceTlabel.Size = new System.Drawing.Size(106, 18);
+            this.I_ED_DeviceTlabel.TabIndex = 33;
+            this.I_ED_DeviceTlabel.Text = "Device Type";
+            this.I_ED_DeviceTlabel.Visible = false;
+            // 
+            // I_ED_B4label
+            // 
+            this.I_ED_B4label.AutoSize = true;
+            this.I_ED_B4label.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.I_ED_B4label.Location = new System.Drawing.Point(164, 118);
+            this.I_ED_B4label.Name = "I_ED_B4label";
+            this.I_ED_B4label.Size = new System.Drawing.Size(62, 18);
+            this.I_ED_B4label.TabIndex = 33;
+            this.I_ED_B4label.Text = "Before";
+            this.I_ED_B4label.Visible = false;
+            // 
+            // I_ED_Enablelabel
+            // 
+            this.I_ED_Enablelabel.AutoSize = true;
+            this.I_ED_Enablelabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.I_ED_Enablelabel.Location = new System.Drawing.Point(17, 35);
+            this.I_ED_Enablelabel.Name = "I_ED_Enablelabel";
+            this.I_ED_Enablelabel.Size = new System.Drawing.Size(82, 22);
+            this.I_ED_Enablelabel.TabIndex = 33;
+            this.I_ED_Enablelabel.Text = "Enable";
+            this.I_ED_Enablelabel.UseVisualStyleBackColor = true;
+            this.I_ED_Enablelabel.CheckedChanged += new System.EventHandler(this.I_ED_Enablelabel_CheckedChanged);
+            // 
+            // I_ED_A2label
+            // 
+            this.I_ED_A2label.AutoSize = true;
+            this.I_ED_A2label.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.I_ED_A2label.Location = new System.Drawing.Point(4, 119);
+            this.I_ED_A2label.Name = "I_ED_A2label";
+            this.I_ED_A2label.Size = new System.Drawing.Size(70, 18);
+            this.I_ED_A2label.TabIndex = 37;
+            this.I_ED_A2label.Text = "Amount";
+            this.I_ED_A2label.Visible = false;
+            // 
+            // I_ED_DeviceTBox
+            // 
+            this.I_ED_DeviceTBox.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.I_ED_DeviceTBox.FormattingEnabled = true;
+            this.I_ED_DeviceTBox.Location = new System.Drawing.Point(124, 67);
+            this.I_ED_DeviceTBox.Name = "I_ED_DeviceTBox";
+            this.I_ED_DeviceTBox.Size = new System.Drawing.Size(164, 24);
+            this.I_ED_DeviceTBox.TabIndex = 34;
+            this.I_ED_DeviceTBox.Visible = false;
+            this.I_ED_DeviceTBox.SelectedIndexChanged += new System.EventHandler(this.I_ED_DeviceTBox_SelectedIndexChanged);
+            // 
+            // I_ED_Slabel
+            // 
+            this.I_ED_Slabel.AutoSize = true;
+            this.I_ED_Slabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.I_ED_Slabel.Location = new System.Drawing.Point(18, 146);
+            this.I_ED_Slabel.Name = "I_ED_Slabel";
+            this.I_ED_Slabel.Size = new System.Drawing.Size(59, 18);
+            this.I_ED_Slabel.TabIndex = 38;
+            this.I_ED_Slabel.Text = "Speed";
+            this.I_ED_Slabel.Visible = false;
+            // 
+            // I_ED_UIDlabel
+            // 
+            this.I_ED_UIDlabel.AutoSize = true;
+            this.I_ED_UIDlabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.I_ED_UIDlabel.Location = new System.Drawing.Point(4, 127);
+            this.I_ED_UIDlabel.Name = "I_ED_UIDlabel";
+            this.I_ED_UIDlabel.Size = new System.Drawing.Size(81, 18);
+            this.I_ED_UIDlabel.TabIndex = 55;
+            this.I_ED_UIDlabel.Text = "UniqueID";
+            this.I_ED_UIDlabel.Visible = false;
+            // 
+            // I_ED_Afterlabel
+            // 
+            this.I_ED_Afterlabel.AutoSize = true;
+            this.I_ED_Afterlabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.I_ED_Afterlabel.Location = new System.Drawing.Point(178, 146);
+            this.I_ED_Afterlabel.Name = "I_ED_Afterlabel";
+            this.I_ED_Afterlabel.Size = new System.Drawing.Size(48, 18);
+            this.I_ED_Afterlabel.TabIndex = 35;
+            this.I_ED_Afterlabel.Text = "After";
+            this.I_ED_Afterlabel.Visible = false;
+            // 
+            // I_ED_Headlabel
+            // 
+            this.I_ED_Headlabel.AutoSize = true;
+            this.I_ED_Headlabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.I_ED_Headlabel.Location = new System.Drawing.Point(190, 127);
+            this.I_ED_Headlabel.Name = "I_ED_Headlabel";
+            this.I_ED_Headlabel.Size = new System.Drawing.Size(94, 18);
+            this.I_ED_Headlabel.TabIndex = 54;
+            this.I_ED_Headlabel.Text = "Headname";
+            this.I_ED_Headlabel.Visible = false;
+            // 
+            // I_ED_Chestlabel
+            // 
+            this.I_ED_Chestlabel.AutoSize = true;
+            this.I_ED_Chestlabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.I_ED_Chestlabel.Location = new System.Drawing.Point(16, 125);
+            this.I_ED_Chestlabel.Name = "I_ED_Chestlabel";
+            this.I_ED_Chestlabel.Size = new System.Drawing.Size(74, 22);
+            this.I_ED_Chestlabel.TabIndex = 33;
+            this.I_ED_Chestlabel.Text = "Chest";
+            this.I_ED_Chestlabel.UseVisualStyleBackColor = true;
+            this.I_ED_Chestlabel.Visible = false;
+            // 
+            // I_ED_Alabel
+            // 
+            this.I_ED_Alabel.AutoSize = true;
+            this.I_ED_Alabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.I_ED_Alabel.Location = new System.Drawing.Point(102, 127);
+            this.I_ED_Alabel.Name = "I_ED_Alabel";
+            this.I_ED_Alabel.Size = new System.Drawing.Size(70, 18);
+            this.I_ED_Alabel.TabIndex = 53;
+            this.I_ED_Alabel.Text = "Amount";
+            this.I_ED_Alabel.Visible = false;
+            // 
+            // I_ED_mcarttlabel
+            // 
+            this.I_ED_mcarttlabel.AutoSize = true;
+            this.I_ED_mcarttlabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.I_ED_mcarttlabel.Location = new System.Drawing.Point(165, 127);
+            this.I_ED_mcarttlabel.Name = "I_ED_mcarttlabel";
+            this.I_ED_mcarttlabel.Size = new System.Drawing.Size(117, 18);
+            this.I_ED_mcarttlabel.TabIndex = 52;
+            this.I_ED_mcarttlabel.Text = "MinecartType";
+            this.I_ED_mcarttlabel.Visible = false;
+            // 
+            // I_ED_itemIdlabel
+            // 
+            this.I_ED_itemIdlabel.AutoSize = true;
+            this.I_ED_itemIdlabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.I_ED_itemIdlabel.Location = new System.Drawing.Point(14, 127);
+            this.I_ED_itemIdlabel.Name = "I_ED_itemIdlabel";
+            this.I_ED_itemIdlabel.Size = new System.Drawing.Size(60, 18);
+            this.I_ED_itemIdlabel.TabIndex = 51;
+            this.I_ED_itemIdlabel.Text = "ItemID";
+            this.I_ED_itemIdlabel.Visible = false;
+            // 
+            // I_ED_DeviceIlabel
+            // 
+            this.I_ED_DeviceIlabel.AutoSize = true;
+            this.I_ED_DeviceIlabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.I_ED_DeviceIlabel.Location = new System.Drawing.Point(12, 97);
+            this.I_ED_DeviceIlabel.Name = "I_ED_DeviceIlabel";
+            this.I_ED_DeviceIlabel.Size = new System.Drawing.Size(97, 18);
+            this.I_ED_DeviceIlabel.TabIndex = 48;
+            this.I_ED_DeviceIlabel.Text = "Device Info";
+            this.I_ED_DeviceIlabel.Visible = false;
             // 
             // I_A_MS_namelabel
             // 
@@ -1861,6 +2461,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.I_A_BTPics);
             this.groupBox3.Controls.Add(this.I_A_Removelabel);
             this.groupBox3.Controls.Add(this.I_A_Addlabel);
             this.groupBox3.Controls.Add(this.I_A_PCAListSource);
@@ -1897,6 +2498,14 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Airstrikes";
             // 
+            // I_A_BTPics
+            // 
+            this.I_A_BTPics.Location = new System.Drawing.Point(582, 52);
+            this.I_A_BTPics.Name = "I_A_BTPics";
+            this.I_A_BTPics.Size = new System.Drawing.Size(32, 32);
+            this.I_A_BTPics.TabIndex = 33;
+            this.I_A_BTPics.TabStop = false;
+            // 
             // I_A_Removelabel
             // 
             this.I_A_Removelabel.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
@@ -1926,7 +2535,7 @@
             this.I_A_PCAListSource.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
             this.I_A_PCAListSource.FormattingEnabled = true;
             this.I_A_PCAListSource.ItemHeight = 16;
-            this.I_A_PCAListSource.Location = new System.Drawing.Point(226, 121);
+            this.I_A_PCAListSource.Location = new System.Drawing.Point(226, 118);
             this.I_A_PCAListSource.Name = "I_A_PCAListSource";
             this.I_A_PCAListSource.Size = new System.Drawing.Size(180, 100);
             this.I_A_PCAListSource.TabIndex = 32;
@@ -2126,6 +2735,7 @@
             this.I_A_BTBox.Size = new System.Drawing.Size(120, 24);
             this.I_A_BTBox.TabIndex = 21;
             this.I_A_BTBox.Visible = false;
+            this.I_A_BTBox.SelectedIndexChanged += new System.EventHandler(this.I_A_BTBox_SelectedIndexChanged);
             // 
             // I_A_BTlabel
             // 
@@ -5021,12 +5631,16 @@
             this.S_Soundlabel.ResumeLayout(false);
             this.S_Soundlabel.PerformLayout();
             this.I_Tablabel.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.I_ED_IDPic)).EndInit();
             this.I_A_MS_namelabel.ResumeLayout(false);
             this.I_A_MS_namelabel.PerformLayout();
             this.I_RS_riotlabel.ResumeLayout(false);
             this.I_RS_riotlabel.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.I_A_BTPics)).EndInit();
             this.G_Tablabel.ResumeLayout(false);
             this.G_Tablabel.PerformLayout();
             this.G_S_Scopelabel.ResumeLayout(false);
@@ -5484,6 +6098,54 @@
         private System.Windows.Forms.Label CVersionlabel;
         private System.Windows.Forms.Button S_U_CFUlabel;
         private System.Windows.Forms.Button S_U_Updatelabel;
+        private System.Windows.Forms.Label I_ED_DeviceTlabel;
+        private System.Windows.Forms.CheckBox I_ED_Enablelabel;
+        private System.Windows.Forms.ComboBox I_ED_DeviceTBox;
+        private System.Windows.Forms.ListBox AS24_Sound;
+        private System.Windows.Forms.Label I_ED_STlabel;
+        private System.Windows.Forms.Button AS24;
+        private System.Windows.Forms.Button RS24;
+        private System.Windows.Forms.ListBox AS23_Sound;
+        private System.Windows.Forms.Label I_ED_SAPlabel;
+        private System.Windows.Forms.Button AS23;
+        private System.Windows.Forms.Button RS23;
+        private System.Windows.Forms.ListBox AS22_Sound;
+        private System.Windows.Forms.TextBox I_ED_MTVbox;
+        private System.Windows.Forms.Label I_ED_SDlabel;
+        private System.Windows.Forms.Label I_ED_MTVlabel;
+        private System.Windows.Forms.Button AS22;
+        private System.Windows.Forms.TextBox I_ED_MTPbox;
+        private System.Windows.Forms.Button RS22;
+        private System.Windows.Forms.Label I_ED_MTPlabel;
+        private System.Windows.Forms.TextBox I_ED_MDbox;
+        private System.Windows.Forms.Label I_ED_MDlabel;
+        private System.Windows.Forms.CheckBox I_ED_RBRlabel;
+        private System.Windows.Forms.Label I_ED_DeviceIlabel;
+        private System.Windows.Forms.Label I_ED_mcarttlabel;
+        private System.Windows.Forms.Label I_ED_itemIdlabel;
+        private System.Windows.Forms.ComboBox I_ED_Itemids;
+        private System.Windows.Forms.ComboBox I_ED_mcart;
+        private System.Windows.Forms.TextBox I_ED_Abox;
+        private System.Windows.Forms.TextBox I_ED_UIDbox;
+        private System.Windows.Forms.Label I_ED_UIDlabel;
+        private System.Windows.Forms.Label I_ED_Headlabel;
+        private System.Windows.Forms.Label I_ED_Alabel;
+        private System.Windows.Forms.PictureBox I_ED_IDPic;
+        private System.Windows.Forms.TextBox I_ED_Headbox;
+        private System.Windows.Forms.CheckBox I_ED_NIDlabel;
+        private System.Windows.Forms.CheckBox I_ED_Reuselabel;
+        private System.Windows.Forms.CheckBox I_ED_DAPlabel;
+        private System.Windows.Forms.CheckBox I_ED_Picklabel;
+        private System.Windows.Forms.CheckBox I_ED_Chestlabel;
+        private System.Windows.Forms.TextBox I_ED_Sbox;
+        private System.Windows.Forms.TextBox I_ED_A2Box;
+        private System.Windows.Forms.Label I_ED_Slabel;
+        private System.Windows.Forms.Label I_ED_A2label;
+        private System.Windows.Forms.ComboBox I_ED_afterboxids;
+        private System.Windows.Forms.Label I_ED_Afterlabel;
+        private System.Windows.Forms.ComboBox I_ED_b4boxids;
+        private System.Windows.Forms.Label I_ED_B4label;
+        private System.Windows.Forms.PictureBox I_A_BTPics;
     }
 }
 

@@ -729,6 +729,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_2EFA4B0C6AABFA552320469BED588E3E"
+        "OwnerKey" = "8:_A4C30313C1A04ED38D6D637301D113A8"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_2F0B461F596C4FD5ACBF3A4BDFCB454D"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -1894,6 +1900,12 @@
         "Entry"
         {
         "MsmKey" = "8:_77D7D33B0BC32D89943884D81D2A390E"
+        "OwnerKey" = "8:_A4C30313C1A04ED38D6D637301D113A8"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_77D7D33B0BC32D89943884D81D2A390E"
         "OwnerKey" = "8:_2EFA4B0C6AABFA552320469BED588E3E"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -2242,6 +2254,12 @@
         "Entry"
         {
         "MsmKey" = "8:_90AAC3EAD9764ACABC041192BA5E464C"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_90E98ABAC7BE429DA0F59B07F6C7B4F6"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -2811,12 +2829,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_B0371660798A43609F11D6A21F8C3BCF"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_B11903FF2F1D47278544FE892DDB946D"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -2848,6 +2860,12 @@
         "Entry"
         {
         "MsmKey" = "8:_B30F02910EC74C08977C9139DD7A2FA8"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_B38129A34DC54FB4AF5D96291E0BACB0"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -3244,12 +3262,6 @@
         "Entry"
         {
         "MsmKey" = "8:_C975ADDB2D3A4C3BBD4E7F42570304B6"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_C9D50AA3558D43B8960AC3BA50167D0C"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -11547,6 +11559,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_90E98ABAC7BE429DA0F59B07F6C7B4F6"
+            {
+            "SourcePath" = "8:..\\..\\..\\..\\..\\Desktop\\CrackshotBuilder Setup\\CrackshotFiles\\Resource\\lang\\label.yml"
+            "TargetName" = "8:label.yml"
+            "Tag" = "8:"
+            "Folder" = "8:_D4BE81AE45B44B2DB76FEBDADC238FDE"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9108F2E9695C4D97910C74DA7EBC318B"
             {
             "SourcePath" = "8:..\\..\\..\\..\\..\\Desktop\\CrackshotBuilder Setup\\CrackshotFiles\\Resource\\ids\\171-13.png"
@@ -13407,26 +13439,6 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B0371660798A43609F11D6A21F8C3BCF"
-            {
-            "SourcePath" = "8:..\\..\\..\\..\\..\\Desktop\\CrackshotBuilder Setup\\CrackshotFiles\\Resource\\idbox\\id.yml"
-            "TargetName" = "8:id.yml"
-            "Tag" = "8:"
-            "Folder" = "8:_54DCBD05B63744898DA4918D13B008AD"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B11903FF2F1D47278544FE892DDB946D"
             {
             "SourcePath" = "8:..\\..\\..\\..\\..\\Desktop\\CrackshotBuilder Setup\\CrackshotFiles\\Resource\\ids\\139-1.png"
@@ -13533,6 +13545,26 @@
             "TargetName" = "8:159-15.png"
             "Tag" = "8:"
             "Folder" = "8:_5500B773083045B38552EEB965B40B9F"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B38129A34DC54FB4AF5D96291E0BACB0"
+            {
+            "SourcePath" = "8:..\\..\\..\\..\\..\\Desktop\\CrackshotBuilder Setup\\CrackshotFiles\\Resource\\idbox\\id.yml"
+            "TargetName" = "8:id.yml"
+            "Tag" = "8:"
+            "Folder" = "8:_54DCBD05B63744898DA4918D13B008AD"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -14853,26 +14885,6 @@
             "TargetName" = "8:321-0.png"
             "Tag" = "8:"
             "Folder" = "8:_5500B773083045B38552EEB965B40B9F"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C9D50AA3558D43B8960AC3BA50167D0C"
-            {
-            "SourcePath" = "8:..\\..\\..\\..\\..\\Desktop\\CrackshotBuilder Setup\\CrackshotFiles\\Resource\\lang\\label.yml"
-            "TargetName" = "8:label.yml"
-            "Tag" = "8:"
-            "Folder" = "8:_D4BE81AE45B44B2DB76FEBDADC238FDE"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -17585,7 +17597,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:CrackshotBuilderSetup"
         "ProductCode" = "8:{97BB3C79-4F29-4D06-BB51-B3E9868EE87A}"
-        "PackageCode" = "8:{46B1C677-42E6-4024-8E04-38879AEB0912}"
+        "PackageCode" = "8:{B401A993-73EE-43A7-B49F-F2BAF219B450}"
         "UpgradeCode" = "8:{2025E60D-B56E-4EAA-B535-CB68689B0A86}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"

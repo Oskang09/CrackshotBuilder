@@ -64,8 +64,10 @@
             // 
             // updateTxt
             // 
+            this.updateTxt.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.updateTxt.Location = new System.Drawing.Point(12, 191);
             this.updateTxt.Name = "updateTxt";
+            this.updateTxt.ReadOnly = true;
             this.updateTxt.Size = new System.Drawing.Size(349, 182);
             this.updateTxt.TabIndex = 11;
             this.updateTxt.Text = "";
