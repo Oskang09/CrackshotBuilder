@@ -99,7 +99,7 @@ namespace CrackshotBuilder
                     };
                 }
             }
-            for (int i = 1;; i++)
+            for (int i = 1; ; i++)
             {
                 Control[] clist = Controls.Find("RS" + i.ToString(), true);
                 if (clist.Length < 1)
@@ -115,7 +115,7 @@ namespace CrackshotBuilder
                         Control[] con = Controls.Find(c.Name.Replace('R', 'A') + "_Sound", true);
                         foreach (ListBox cl in con)
                         {
-                            if ( cl.SelectedItem != null)
+                            if (cl.SelectedItem != null)
                             {
                                 cl.Items.Remove(cl.SelectedItem);
                             }
@@ -150,7 +150,7 @@ namespace CrackshotBuilder
                         ttphelper.TTP_LabelSet = c.Text;
                         ttphelper.TTP_TextSet = ttplist[1].Replace('|', '\n');
                     };
-                    ttp.SetToolTip(c, ttplist[1].Replace('|','\n'));
+                    ttp.SetToolTip(c, ttplist[1].Replace('|', '\n'));
                 }
             }
 
@@ -213,6 +213,28 @@ namespace CrackshotBuilder
             loadsound();
             loadETT();
             loadPCABox();
+            loadED();
+            loadBT();
+        }
+        private void loadBT()
+        {
+            string[] idlist = File.ReadAllLines(filepath + "/ids.txt");
+            foreach (string block in idlist)
+            {
+                if (block.Contains("256"))
+                {
+                    break;
+                }
+                I_A_BTBox.Items.Add(block);
+            }
+        }
+        private void loadED()
+        {
+            string[] texts = "landmine/remote/trap/itembomb".Split('/');
+            foreach (string t in texts)
+            {
+                I_ED_DeviceTBox.Items.Add(t);
+            }
         }
         public void loadPotion()
         {
@@ -641,9 +663,48 @@ namespace CrackshotBuilder
                     csyamlbox.AppendText(Environment.NewLine + doublespacebar + spacebar + "Number_Of_Strikes: " + I_A_MS_NOSBox.Text);
                     csyamlbox.AppendText(Environment.NewLine + doublespacebar + spacebar + "Delay_Between_Strikes: " + I_A_MS_DBSBox.Text);
                 }
-
             }
-        }
+            if (getTrueFalse(I_A_Enablelabel) == "true")
+            {
+                csyamlbox.AppendText(Environment.NewLine + spacebar + "Explosive_Devices:");
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Enable: " + getTrueFalse(I_A_Enablelabel));
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Device_Type: " + I_ED_DeviceTBox.Text);
+                string deviceinfo = "";
+                switch (I_ED_DeviceTBox.Text)
+                {
+                    case "landmine":
+                        deviceinfo += I_ED_Itemids.Text.Replace('-', '~');
+                        deviceinfo += "-" + I_ED_mcart.Text;
+                        break;
+                    case "remote":
+                        deviceinfo += I_ED_Abox.Text;
+                        deviceinfo += "-" + I_ED_UIDbox.Text;
+                        deviceinfo += "-" + I_ED_Headbox.Text;
+                        break;
+                    case "trap":
+                        deviceinfo += getTrueFalse(I_ED_Chestlabel);
+                        deviceinfo += "-" + getTrueFalse(I_ED_Picklabel);
+                        deviceinfo += "-" + getTrueFalse(I_ED_DAPlabel);
+                        deviceinfo += "-" + getTrueFalse(I_ED_Reuselabel);
+                        deviceinfo += "-" + getTrueFalse(I_ED_NIDlabel);
+                        break;
+                    case "itembomb":
+                        deviceinfo += I_ED_A2Box.Text;
+                        deviceinfo += "," + I_ED_Sbox.Text;
+                        deviceinfo += "," + I_ED_b4boxids.Text.Replace('-', '~');
+                        deviceinfo += "," + I_ED_afterboxids.Text.Replace('-', '~');
+                        break;
+                }
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Device_Info: " + deviceinfo);
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Sounds_Deploy: " + getListItem(AS22_Sound));
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Remote_Bypass_Regions: " + getTrueFalse(I_ED_RBRlabel));
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Message_Disarm: " + I_ED_MDbox.Text);
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Message_Trigger_Placer: " + I_ED_MTPbox.Text);
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Message_Trigger_Victim: " + I_ED_MTVbox.Text);
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Sounds_Alert_Placer: " + getListItem(AS23_Sound));
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Sounds_Trigger: " + getListItem(AS24_Sound));
+            }
+        } 
         private void II_ItemIDBox_SelectedIndexChanged(object sender, EventArgs e)
         { 
             II_IDPics.Image = Image.FromFile(@filepath + "/Resource/ids/" +  II_ItemIDids.Text + ".png");
@@ -1549,9 +1610,11 @@ namespace CrackshotBuilder
                 I_A_Addlabel.Visible = true;
                 I_A_Removelabel.Visible = true;
                 I_A_PCAListSource.Visible = true;
+                I_A_DBBBox.Visible = true;
             }
             else
             {
+                I_A_DBBBox.Visible = false;
                 I_A_FADlabel.Visible = false;
                 I_A_FADBox.Visible = false;
                 I_A_PCABox.Visible = false;
@@ -1670,7 +1733,8 @@ namespace CrackshotBuilder
         {
             System.Net.WebClient request = new System.Net.WebClient();
             string newver = request.DownloadString("http://pastebin.com/raw/ddUGMbJy");
-            S_U_NVersion.Text = newver.Split('\n').First();
+            string version = System.Text.RegularExpressions.Regex.Replace(newver.Split('\n').First(), @"\t|\n|\r", "");
+            S_U_NVersion.Text = version;
         }
 
         private void S_U_Updatelabel_Click(object sender, EventArgs e)
@@ -1684,6 +1748,160 @@ namespace CrackshotBuilder
                 Process proc = Process.Start(Application.StartupPath + "/updater.exe");
                 Application.Exit();
             }
+        }
+
+        private void I_ED_DeviceTBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            I_ED_itemIdlabel.Visible = false;
+            I_ED_Itemids.Visible = false;
+            I_ED_IDPic.Visible = false;
+            I_ED_mcart.Visible = false;
+            I_ED_mcarttlabel.Visible = false;
+            I_ED_UIDlabel.Visible = false;
+            I_ED_Alabel.Visible = false;
+            I_ED_Headlabel.Visible = false;
+            I_ED_Headbox.Visible = false;
+            I_ED_Abox.Visible = false;
+            I_ED_UIDbox.Visible = false;
+            I_ED_Chestlabel.Visible = false;
+            I_ED_Picklabel.Visible = false;
+            I_ED_Reuselabel.Visible = false;
+            I_ED_DAPlabel.Visible = false;
+            I_ED_NIDlabel.Visible = false;
+            I_ED_A2Box.Visible = false;
+            I_ED_A2label.Visible = false;
+            I_ED_Afterlabel.Visible = false;
+            I_ED_afterboxids.Visible = false;
+            I_ED_b4boxids.Visible = false;
+            I_ED_B4label.Visible = false;
+            I_ED_Sbox.Visible = false;
+            I_ED_Slabel.Visible = false;
+            if (I_ED_DeviceTBox.Text == "itembomb")
+            {
+                I_ED_A2Box.Visible = true;
+                I_ED_A2label.Visible = true;
+                I_ED_Afterlabel.Visible = true;
+                I_ED_afterboxids.Visible = true;
+                I_ED_b4boxids.Visible = true;
+                I_ED_B4label.Visible = true;
+                I_ED_Sbox.Visible = true;
+                I_ED_Slabel.Visible = true;
+            }
+            if (I_ED_DeviceTBox.Text == "trap")
+            {
+                I_ED_Chestlabel.Visible = true;
+                I_ED_Picklabel.Visible = true;
+                I_ED_Reuselabel.Visible = true;
+                I_ED_DAPlabel.Visible = true;
+                I_ED_NIDlabel.Visible = true;
+            }
+            if (I_ED_DeviceTBox.Text == "remote")
+            {
+                I_ED_UIDlabel.Visible = true;
+                I_ED_Alabel.Visible = true;
+                I_ED_Headlabel.Visible = true;
+                I_ED_Headbox.Visible = true;
+                I_ED_Abox.Visible = true;
+                I_ED_UIDbox.Visible = true;
+            }
+            if (I_ED_DeviceTBox.Text == "landmine")
+            {
+                I_ED_itemIdlabel.Visible = true;
+                I_ED_Itemids.Visible = true;
+                I_ED_IDPic.Visible = true;
+                I_ED_mcart.Visible = true;
+                I_ED_mcarttlabel.Visible = true;
+                string[] items = "MINECART/MINECART_CHEST/MINECART_FURNACE/MINECART_HOPPER/MINECART_MOB_SPAWNER/MINECART_TNT".Split('/');
+                foreach (string mc in items)
+                {
+                    I_ED_mcart.Items.Add(mc);
+                }
+            }
+        }
+
+        private void I_ED_Itemids_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            I_ED_IDPic.Image = Image.FromFile(@filepath + "/Resource/ids/" + I_ED_Itemids.Text + ".png");
+        }
+
+        private void I_ED_Enablelabel_CheckedChanged(object sender, EventArgs e)
+        {
+            if (getTrueFalse(I_ED_Enablelabel) == "true")
+            {
+                I_ED_RBRlabel.Visible = true;
+                I_ED_DeviceTlabel.Visible = true;
+                I_ED_DeviceTBox.Visible = true;
+                I_ED_DeviceIlabel.Visible = true;
+                AS22.Visible = true;
+                RS22.Visible = true;
+                AS22_Sound.Visible = true;
+                AS23.Visible = true;
+                RS23.Visible = true;
+                AS23_Sound.Visible = true;
+                AS24.Visible = true;
+                RS24.Visible = true;
+                AS24_Sound.Visible = true;
+                I_ED_MDbox.Visible = true;
+                I_ED_MDlabel.Visible = true;
+                I_ED_MTPbox.Visible = true;
+                I_ED_MTPlabel.Visible = true;
+                I_ED_MTVbox.Visible = true;
+                I_ED_MTVlabel.Visible = true;
+            }
+            else
+            {
+                I_ED_RBRlabel.Visible = false;
+                I_ED_DeviceTlabel.Visible = false;
+                I_ED_DeviceTBox.Visible = false;
+                I_ED_DeviceIlabel.Visible = false;
+                I_ED_itemIdlabel.Visible = false;
+                I_ED_Itemids.Visible = false;
+                I_ED_IDPic.Visible = false;
+                I_ED_mcart.Visible = false;
+                I_ED_mcarttlabel.Visible = false;
+                I_ED_UIDlabel.Visible = false;
+                I_ED_Alabel.Visible = false;
+                I_ED_Headlabel.Visible = false;
+                I_ED_Headbox.Visible = false;
+                I_ED_Abox.Visible = false;
+                I_ED_UIDbox.Visible = false;
+                I_ED_Chestlabel.Visible = false;
+                I_ED_Picklabel.Visible = false;
+                I_ED_Reuselabel.Visible = false;
+                I_ED_DAPlabel.Visible = false;
+                I_ED_NIDlabel.Visible = false;
+                I_ED_A2Box.Visible = false;
+                I_ED_A2label.Visible = false;
+                I_ED_Afterlabel.Visible = false;
+                I_ED_afterboxids.Visible = false;
+                I_ED_b4boxids.Visible = false;
+                I_ED_B4label.Visible = false;
+                I_ED_Sbox.Visible = false;
+                I_ED_Slabel.Visible = false;
+                I_ED_MDbox.Visible = false;
+                I_ED_MDlabel.Visible = false;
+                I_ED_MTPbox.Visible = false;
+                I_ED_MTPlabel.Visible = false;
+                I_ED_MTVbox.Visible = false;
+                I_ED_MTVlabel.Visible = false;
+                I_ED_SDlabel.Visible = false;
+                I_ED_SAPlabel.Visible = false;
+                I_ED_STlabel.Visible = false;
+                AS22.Visible = false;
+                RS22.Visible = false;
+                AS22_Sound.Visible = false;
+                AS23.Visible = false;
+                RS23.Visible = false;
+                AS23_Sound.Visible = false;
+                AS24.Visible = false;
+                RS24.Visible = false;
+                AS24_Sound.Visible = false;
+            }
+        }
+
+        private void I_A_BTBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            I_A_BTPics.Image = Image.FromFile(@filepath + "/Resource/ids/" + I_A_BTBox.Text + ".png");
         }
     }
 }

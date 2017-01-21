@@ -72,14 +72,14 @@ namespace CrackshotBuilder
                     Random rnd = new Random();
                     lastnum = rnd.Next(num).ToString();
                 }
-                string soundfile = Application.StartupPath + "/CrackshotFiles/soundpack";
-                if (!File.Exists(soundfile + "/" + soundname + lastnum))
+                string soundfile = Path.Combine(frm.filepath ,"soundpack");
+                if (!File.Exists(Path.Combine(soundfile,soundname + lastnum)))
                 {
                     MessageBox.Show("You didn't download soundpack yet!\nDownload at Github!","SoundPack");
                 }
                 else
                 {
-                    SoundPlayer sp = new SoundPlayer(soundfile + "/" + soundname + lastnum);
+                    SoundPlayer sp = new SoundPlayer(Path.Combine(soundfile,soundname + lastnum));
                     sp.PlaySync();
                     sp.Dispose();
                 }

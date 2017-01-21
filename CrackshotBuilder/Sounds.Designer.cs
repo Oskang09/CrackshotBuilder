@@ -128,9 +128,9 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
-            this.button1.Location = new System.Drawing.Point(82, 68);
+            this.button1.Location = new System.Drawing.Point(85, 68);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(141, 65);
+            this.button1.Size = new System.Drawing.Size(138, 65);
             this.button1.TabIndex = 70;
             this.button1.Text = "Test Sound";
             this.button1.UseVisualStyleBackColor = true;
@@ -141,16 +141,16 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(237, 214);
+            this.Controls.Add(this.Delay);
+            this.Controls.Add(this.Pitch);
+            this.Controls.Add(this.Volume);
+            this.Controls.Add(this.Sound);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.ASlabel);
-            this.Controls.Add(this.Delay);
+            this.Controls.Add(this.Soundlabel);
             this.Controls.Add(this.Delaylabel);
-            this.Controls.Add(this.Pitch);
             this.Controls.Add(this.Pitchlabel);
             this.Controls.Add(this.Volumelabel);
-            this.Controls.Add(this.Volume);
-            this.Controls.Add(this.Soundlabel);
-            this.Controls.Add(this.Sound);
             this.Name = "Sounds";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Sounds_Load);
