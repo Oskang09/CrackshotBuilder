@@ -3531,6 +3531,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_DDCE0765CA694BF6A4A343746268A32C"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_DE05849428C5437D8E507EFE623F023D"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -15779,6 +15785,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_DDCE0765CA694BF6A4A343746268A32C"
+            {
+            "SourcePath" = "8:..\\..\\..\\..\\..\\Desktop\\CrackshotBuilder Setup\\CrackshotFiles\\Resource\\particle\\partbox.yml"
+            "TargetName" = "8:partbox.yml"
+            "Tag" = "8:"
+            "Folder" = "8:_471DE994FC224170ACB86EB5114E982C"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_DE05849428C5437D8E507EFE623F023D"
             {
             "SourcePath" = "8:..\\..\\..\\..\\..\\Desktop\\CrackshotBuilder Setup\\CrackshotFiles\\Resource\\ids\\423-0.png"
@@ -17482,6 +17508,17 @@
                                     "Condition" = "8:"
                                     "Transitive" = "11:FALSE"
                                     "Property" = "8:_13B685E0BC59464FBF8581116A1ACF2A"
+                                        "Folders"
+                                        {
+                                        }
+                                    }
+                                    "{9EF0B969-E518-4E46-987F-47570745A589}:_471DE994FC224170ACB86EB5114E982C"
+                                    {
+                                    "Name" = "8:particle"
+                                    "AlwaysCreate" = "11:FALSE"
+                                    "Condition" = "8:"
+                                    "Transitive" = "11:FALSE"
+                                    "Property" = "8:_E7B4235DDE19435BBE25BF611D25D5CD"
                                         "Folders"
                                         {
                                         }
