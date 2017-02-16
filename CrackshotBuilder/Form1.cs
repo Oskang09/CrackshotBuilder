@@ -16,8 +16,8 @@ namespace CrackshotBuilder
 {
     public partial class Form1 : Form
     {
-        public string filepath = Application.StartupPath + "/CrackshotFiles";
-        //public string filepath = "C:/Users/Oska/Desktop/CrackshotBuilder Setup/CrackshotFiles";
+        //public string filepath = Application.StartupPath + "/CrackshotFiles";
+        public string filepath = "C:/Users/Oska/Desktop/CrackshotBuilder Setup/CrackshotFiles";
         public string currentversion = Properties.Settings.Default.Version;
         //
         string doublespacebar = "        ";
@@ -212,7 +212,7 @@ namespace CrackshotBuilder
             loadG_FA_Box();
             loadsound();
             loadETT();
-            loadPCABox();
+            loadPartBox();
             loadED();
             loadBT();
         }
@@ -252,12 +252,88 @@ namespace CrackshotBuilder
                 }
             }
         }
-        public void loadPCABox()
+        public void loadPartBox()
         {
-            string[] particles = "smoke/lightning/explosion/potion_splash/block_break/flames".Split('/');
-            foreach (string part in particles)
+            string[] lines = File.ReadAllLines(filepath + "/Resource/particle/partbox.yml");
+            foreach (string text in lines)
             {
-                I_A_PCABox.Items.Add(part);
+                Control[] clist = Controls.Find(text + "part", true);
+                foreach (ComboBox c in clist)
+                {
+                    string[] particles = "smoke/lightning/explosion/potion_splash/block_break/flames".Split('/');
+                    foreach (string part in particles)
+                    {
+                        c.Items.Add(part);
+                    }
+                    Button add = (Button)Controls.Find(text + "Alabel", true).First();
+                    Button remove = (Button)Controls.Find(text + "Rlabel", true).First();
+                    ComboBox c2l = (ComboBox)Controls.Find(text + "part2", true).First();
+                    TextBox c3l = (TextBox)Controls.Find(text + "part3", true).First();
+                    ListBox lb = (ListBox)Controls.Find(text + "partls", true).First();
+                    add.Click += delegate
+                    {
+                        if (c.Text != "")
+                        {
+                            if (c3l.Visible == false && c2l.Visible == false)
+                            {
+                                lb.Items.Add(c.Text);
+                            }
+                            if (c2l.Visible == true)
+                            {
+                                lb.Items.Add(c.Text + "-" + c2l.Text);
+                            }
+                            if (c3l.Visible == true)
+                            {
+                                lb.Items.Add(c.Text + "-" + c3l.Text);
+                            }
+                        }
+                    };
+                    remove.Click += delegate
+                    {
+                        if (lb.SelectedItem != null)
+                        {
+                            lb.Items.Remove(lb.SelectedItem);
+                        }
+                    };
+                    c.SelectedIndexChanged += delegate
+                    {
+                        c2l.Visible = false;
+                        c3l.Visible = false;
+                        c2l.Items.Clear();
+                        switch (c.Text)
+                        {
+                            case "potion_splash":
+                                c2l.Visible = true;
+                                string[] potionnumlist = File.ReadAllLines(filepath + "/potion.txt");
+                                foreach (string pot in potionnumlist)
+                                {
+                                    c2l.Items.Add(pot.Split(':').Last());
+                                }
+                                break;
+                            case "block_break":
+                                c2l.Visible = true;
+                                string[] idlist = File.ReadAllLines(filepath + "/ids.txt");
+                                foreach (string block in idlist)
+                                {
+                                    if (block.Split('-').First() != "256")
+                                    {
+                                        if (!c2l.Items.Contains(block.Split('-').First()))
+                                        {
+                                            c2l.Items.Add(block.Split('-').First());
+                                        }
+                                    }
+                                    else
+                                    {
+                                        break;
+                                    }
+                                }
+                                break;
+                            case "flames":
+                                c3l.Visible = true;
+                                break;
+                        }
+                    };
+                }
             }
         }
         public void loadG_FA_Box()
@@ -647,7 +723,7 @@ namespace CrackshotBuilder
                 csyamlbox.AppendText(Environment.NewLine + spacebar + "Airstrikes:");
                 csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Enable: " + getTrueFalse(I_A_Enablelabel));
                 csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Flare_Activation_Delay: " + I_A_FADBox.Text);
-                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Particle_Call_Airstrike: " + getListItem(I_A_PCAListSource));
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Particle_Call_Airstrike: " + getListItem(I_A_PCABoxpartls));
                 csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Message_Call_Airstrike: " + I_A_MCABox.Text);
                 csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Block_Type: " + I_A_BTBox.Text.Replace('-', '~'));
                 csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Area: " + I_A_ABox.Text);
@@ -664,7 +740,7 @@ namespace CrackshotBuilder
                     csyamlbox.AppendText(Environment.NewLine + doublespacebar + spacebar + "Delay_Between_Strikes: " + I_A_MS_DBSBox.Text);
                 }
             }
-            if (getTrueFalse(I_A_Enablelabel) == "true")
+            if (getTrueFalse(I_ED_Enablelabel) == "true")
             {
                 csyamlbox.AppendText(Environment.NewLine + spacebar + "Explosive_Devices:");
                 csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Enable: " + getTrueFalse(I_A_Enablelabel));
@@ -1586,7 +1662,7 @@ namespace CrackshotBuilder
             {
                 I_A_FADlabel.Visible = true;
                 I_A_FADBox.Visible = true;
-                I_A_PCABox.Visible = true;
+                I_A_PCABoxpart.Visible = true;
                 I_A_PCAlabel.Visible = true;
                 I_A_MCABox.Visible = true;
                 I_A_MCAlabel.Visible = true;
@@ -1607,9 +1683,9 @@ namespace CrackshotBuilder
                 AS21_Sound.Visible = true;
                 RS21.Visible = true;
                 I_A_MS_Enablelabel.Visible = true;
-                I_A_Addlabel.Visible = true;
-                I_A_Removelabel.Visible = true;
-                I_A_PCAListSource.Visible = true;
+                I_A_PCABoxAlabel.Visible = true;
+                I_A_PCABoxRlabel.Visible = true;
+                I_A_PCABoxpartls.Visible = true;
                 I_A_DBBBox.Visible = true;
             }
             else
@@ -1617,7 +1693,7 @@ namespace CrackshotBuilder
                 I_A_DBBBox.Visible = false;
                 I_A_FADlabel.Visible = false;
                 I_A_FADBox.Visible = false;
-                I_A_PCABox.Visible = false;
+                I_A_PCABoxpart.Visible = false;
                 I_A_PCAlabel.Visible = false;
                 I_A_MCABox.Visible = false;
                 I_A_MCAlabel.Visible = false;
@@ -1639,9 +1715,9 @@ namespace CrackshotBuilder
                 RS21.Visible = false;
                 I_A_MS_Enablelabel.Visible = false;
                 I_A_MS_Enablelabel.CheckState = CheckState.Unchecked;
-                I_A_Addlabel.Visible = false;
-                I_A_Removelabel.Visible = false;
-                I_A_PCAListSource.Visible = false;
+                I_A_PCABoxAlabel.Visible = false;
+                I_A_PCABoxRlabel.Visible = false;
+                I_A_PCABoxpartls.Visible = false;
             }
         }
 
@@ -1662,73 +1738,6 @@ namespace CrackshotBuilder
                 I_A_MS_DBSlabel.Visible = false;
             }
         }
-
-        private void I_A_PCABox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            I_A_PCATextbox.Visible = false;
-            I_A_PCAListbox.Visible = false;
-            I_A_PCAListbox.Items.Clear();
-            switch (I_A_PCABox.Text)
-            {
-                case "potion_splash":
-                    I_A_PCAListbox.Visible = true;
-                    string[] potionnumlist = File.ReadAllLines(filepath + "/potion.txt");
-                    foreach (string pot in potionnumlist)
-                    {
-                        I_A_PCAListbox.Items.Add(pot.Split(':').Last());
-                    }
-                    break;
-                case "block_break":
-                    I_A_PCAListbox.Visible = true;
-                    string[] idlist = File.ReadAllLines(filepath + "/ids.txt");
-                    foreach (string block in idlist)
-                    {
-                        if (block.Split('-').First() != "256")
-                        {
-                            if (!I_A_PCAListbox.Items.Contains(block.Split('-').First()))
-                            {
-                                I_A_PCAListbox.Items.Add(block.Split('-').First());
-                            }
-                        }
-                        else
-                        {
-                            break;
-                        }
-                    }
-                    break;
-                case "flames":
-                    I_A_PCATextbox.Visible = true;
-                    break;
-            }
-        }
-
-        private void I_A_Addlabel_Click(object sender, EventArgs e)
-        {
-            if (I_A_PCABox.Text != "")
-            {
-                if (I_A_PCATextbox.Visible == false && I_A_PCAListbox.Visible == false)
-                {
-                    I_A_PCAListSource.Items.Add(I_A_PCABox.Text);
-                }
-                if (I_A_PCAListbox.Visible == true)
-                {
-                    I_A_PCAListSource.Items.Add(I_A_PCABox.Text + "-" + I_A_PCAListbox.Text);
-                }
-                if (I_A_PCATextbox.Visible == true)
-                {
-                    I_A_PCAListSource.Items.Add(I_A_PCABox.Text + "-" + I_A_PCATextbox.Text);
-                }
-            }
-        }
-
-        private void I_A_Removelabel_Click(object sender, EventArgs e)
-        {
-            if (I_A_PCAListSource.SelectedItem != null)
-            {
-                I_A_PCAListSource.Items.Remove(I_A_PCAListSource.SelectedItem);
-            }
-        }
-
         private void S_U_CFUlabel_Click(object sender, EventArgs e)
         {
             System.Net.WebClient request = new System.Net.WebClient();

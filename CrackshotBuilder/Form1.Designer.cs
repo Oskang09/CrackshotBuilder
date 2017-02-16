@@ -201,17 +201,17 @@
             this.I_RS_Enablelabel = new System.Windows.Forms.CheckBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.I_A_BTPics = new System.Windows.Forms.PictureBox();
-            this.I_A_Removelabel = new System.Windows.Forms.Button();
-            this.I_A_Addlabel = new System.Windows.Forms.Button();
-            this.I_A_PCAListSource = new System.Windows.Forms.ListBox();
+            this.I_A_PCABoxRlabel = new System.Windows.Forms.Button();
+            this.I_A_PCABoxAlabel = new System.Windows.Forms.Button();
+            this.I_A_PCABoxpartls = new System.Windows.Forms.ListBox();
             this.I_A_HVBox = new System.Windows.Forms.TextBox();
             this.I_A_HVlabel = new System.Windows.Forms.Label();
             this.AS21_Sound = new System.Windows.Forms.ListBox();
-            this.I_A_PCAListbox = new System.Windows.Forms.ComboBox();
-            this.I_A_PCATextbox = new System.Windows.Forms.TextBox();
+            this.I_A_PCABoxpart2 = new System.Windows.Forms.ComboBox();
+            this.I_A_PCABoxpart3 = new System.Windows.Forms.TextBox();
             this.I_A_PCAlabel = new System.Windows.Forms.Label();
             this.I_A_SAlabel = new System.Windows.Forms.Label();
-            this.I_A_PCABox = new System.Windows.Forms.ComboBox();
+            this.I_A_PCABoxpart = new System.Windows.Forms.ComboBox();
             this.I_A_VVBox = new System.Windows.Forms.TextBox();
             this.AS21 = new System.Windows.Forms.Button();
             this.I_A_VVlabel = new System.Windows.Forms.Label();
@@ -475,6 +475,9 @@
             this.NVersionlabel = new System.Windows.Forms.Label();
             this.S_U_CVersion = new System.Windows.Forms.TextBox();
             this.CVersionlabel = new System.Windows.Forms.Label();
+            this.I2_Tablabel = new System.Windows.Forms.TabPage();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.II_Tablabel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.II_IDPics)).BeginInit();
@@ -535,6 +538,8 @@
             this.Yamllabel.SuspendLayout();
             this.Settinglabel.SuspendLayout();
             this.groupBox5.SuspendLayout();
+            this.I2_Tablabel.SuspendLayout();
+            this.groupBox6.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -542,6 +547,7 @@
             this.tabControl1.Controls.Add(this.II_Tablabel);
             this.tabControl1.Controls.Add(this.S_Tablabel);
             this.tabControl1.Controls.Add(this.I_Tablabel);
+            this.tabControl1.Controls.Add(this.I2_Tablabel);
             this.tabControl1.Controls.Add(this.G_Tablabel);
             this.tabControl1.Controls.Add(this.G2_Tablabel);
             this.tabControl1.Controls.Add(this.E_Tablabel);
@@ -1637,7 +1643,7 @@
             this.I_Tablabel.Padding = new System.Windows.Forms.Padding(3);
             this.I_Tablabel.Size = new System.Drawing.Size(1358, 685);
             this.I_Tablabel.TabIndex = 5;
-            this.I_Tablabel.Text = "Enchancement";
+            this.I_Tablabel.Text = "Items";
             // 
             // groupBox4
             // 
@@ -2462,17 +2468,17 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.I_A_BTPics);
-            this.groupBox3.Controls.Add(this.I_A_Removelabel);
-            this.groupBox3.Controls.Add(this.I_A_Addlabel);
-            this.groupBox3.Controls.Add(this.I_A_PCAListSource);
+            this.groupBox3.Controls.Add(this.I_A_PCABoxRlabel);
+            this.groupBox3.Controls.Add(this.I_A_PCABoxAlabel);
+            this.groupBox3.Controls.Add(this.I_A_PCABoxpartls);
             this.groupBox3.Controls.Add(this.I_A_HVBox);
             this.groupBox3.Controls.Add(this.I_A_HVlabel);
             this.groupBox3.Controls.Add(this.AS21_Sound);
-            this.groupBox3.Controls.Add(this.I_A_PCAListbox);
-            this.groupBox3.Controls.Add(this.I_A_PCATextbox);
+            this.groupBox3.Controls.Add(this.I_A_PCABoxpart2);
+            this.groupBox3.Controls.Add(this.I_A_PCABoxpart3);
             this.groupBox3.Controls.Add(this.I_A_PCAlabel);
             this.groupBox3.Controls.Add(this.I_A_SAlabel);
-            this.groupBox3.Controls.Add(this.I_A_PCABox);
+            this.groupBox3.Controls.Add(this.I_A_PCABoxpart);
             this.groupBox3.Controls.Add(this.I_A_VVBox);
             this.groupBox3.Controls.Add(this.AS21);
             this.groupBox3.Controls.Add(this.I_A_VVlabel);
@@ -2506,40 +2512,38 @@
             this.I_A_BTPics.TabIndex = 33;
             this.I_A_BTPics.TabStop = false;
             // 
-            // I_A_Removelabel
+            // I_A_PCABoxRlabel
             // 
-            this.I_A_Removelabel.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
-            this.I_A_Removelabel.Location = new System.Drawing.Point(322, 84);
-            this.I_A_Removelabel.Name = "I_A_Removelabel";
-            this.I_A_Removelabel.Size = new System.Drawing.Size(84, 31);
-            this.I_A_Removelabel.TabIndex = 15;
-            this.I_A_Removelabel.Text = "Remove";
-            this.I_A_Removelabel.UseVisualStyleBackColor = true;
-            this.I_A_Removelabel.Visible = false;
-            this.I_A_Removelabel.Click += new System.EventHandler(this.I_A_Removelabel_Click);
+            this.I_A_PCABoxRlabel.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.I_A_PCABoxRlabel.Location = new System.Drawing.Point(322, 84);
+            this.I_A_PCABoxRlabel.Name = "I_A_PCABoxRlabel";
+            this.I_A_PCABoxRlabel.Size = new System.Drawing.Size(84, 31);
+            this.I_A_PCABoxRlabel.TabIndex = 15;
+            this.I_A_PCABoxRlabel.Text = "Remove";
+            this.I_A_PCABoxRlabel.UseVisualStyleBackColor = true;
+            this.I_A_PCABoxRlabel.Visible = false;
             // 
-            // I_A_Addlabel
+            // I_A_PCABoxAlabel
             // 
-            this.I_A_Addlabel.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
-            this.I_A_Addlabel.Location = new System.Drawing.Point(226, 84);
-            this.I_A_Addlabel.Name = "I_A_Addlabel";
-            this.I_A_Addlabel.Size = new System.Drawing.Size(90, 31);
-            this.I_A_Addlabel.TabIndex = 14;
-            this.I_A_Addlabel.Text = "Add";
-            this.I_A_Addlabel.UseVisualStyleBackColor = true;
-            this.I_A_Addlabel.Visible = false;
-            this.I_A_Addlabel.Click += new System.EventHandler(this.I_A_Addlabel_Click);
+            this.I_A_PCABoxAlabel.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.I_A_PCABoxAlabel.Location = new System.Drawing.Point(226, 84);
+            this.I_A_PCABoxAlabel.Name = "I_A_PCABoxAlabel";
+            this.I_A_PCABoxAlabel.Size = new System.Drawing.Size(90, 31);
+            this.I_A_PCABoxAlabel.TabIndex = 14;
+            this.I_A_PCABoxAlabel.Text = "Add";
+            this.I_A_PCABoxAlabel.UseVisualStyleBackColor = true;
+            this.I_A_PCABoxAlabel.Visible = false;
             // 
-            // I_A_PCAListSource
+            // I_A_PCABoxpartls
             // 
-            this.I_A_PCAListSource.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
-            this.I_A_PCAListSource.FormattingEnabled = true;
-            this.I_A_PCAListSource.ItemHeight = 16;
-            this.I_A_PCAListSource.Location = new System.Drawing.Point(226, 118);
-            this.I_A_PCAListSource.Name = "I_A_PCAListSource";
-            this.I_A_PCAListSource.Size = new System.Drawing.Size(180, 100);
-            this.I_A_PCAListSource.TabIndex = 32;
-            this.I_A_PCAListSource.Visible = false;
+            this.I_A_PCABoxpartls.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.I_A_PCABoxpartls.FormattingEnabled = true;
+            this.I_A_PCABoxpartls.ItemHeight = 16;
+            this.I_A_PCABoxpartls.Location = new System.Drawing.Point(226, 118);
+            this.I_A_PCABoxpartls.Name = "I_A_PCABoxpartls";
+            this.I_A_PCABoxpartls.Size = new System.Drawing.Size(180, 100);
+            this.I_A_PCABoxpartls.TabIndex = 32;
+            this.I_A_PCABoxpartls.Visible = false;
             // 
             // I_A_HVBox
             // 
@@ -2572,24 +2576,24 @@
             this.AS21_Sound.TabIndex = 11;
             this.AS21_Sound.Visible = false;
             // 
-            // I_A_PCAListbox
+            // I_A_PCABoxpart2
             // 
-            this.I_A_PCAListbox.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
-            this.I_A_PCAListbox.FormattingEnabled = true;
-            this.I_A_PCAListbox.Location = new System.Drawing.Point(352, 48);
-            this.I_A_PCAListbox.Name = "I_A_PCAListbox";
-            this.I_A_PCAListbox.Size = new System.Drawing.Size(54, 24);
-            this.I_A_PCAListbox.TabIndex = 16;
-            this.I_A_PCAListbox.Visible = false;
+            this.I_A_PCABoxpart2.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.I_A_PCABoxpart2.FormattingEnabled = true;
+            this.I_A_PCABoxpart2.Location = new System.Drawing.Point(352, 48);
+            this.I_A_PCABoxpart2.Name = "I_A_PCABoxpart2";
+            this.I_A_PCABoxpart2.Size = new System.Drawing.Size(54, 24);
+            this.I_A_PCABoxpart2.TabIndex = 16;
+            this.I_A_PCABoxpart2.Visible = false;
             // 
-            // I_A_PCATextbox
+            // I_A_PCABoxpart3
             // 
-            this.I_A_PCATextbox.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
-            this.I_A_PCATextbox.Location = new System.Drawing.Point(352, 50);
-            this.I_A_PCATextbox.Name = "I_A_PCATextbox";
-            this.I_A_PCATextbox.Size = new System.Drawing.Size(54, 22);
-            this.I_A_PCATextbox.TabIndex = 17;
-            this.I_A_PCATextbox.Visible = false;
+            this.I_A_PCABoxpart3.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.I_A_PCABoxpart3.Location = new System.Drawing.Point(352, 50);
+            this.I_A_PCABoxpart3.Name = "I_A_PCABoxpart3";
+            this.I_A_PCABoxpart3.Size = new System.Drawing.Size(54, 22);
+            this.I_A_PCABoxpart3.TabIndex = 17;
+            this.I_A_PCABoxpart3.Visible = false;
             // 
             // I_A_PCAlabel
             // 
@@ -2613,16 +2617,15 @@
             this.I_A_SAlabel.Text = "Sounds Airstrikes";
             this.I_A_SAlabel.Visible = false;
             // 
-            // I_A_PCABox
+            // I_A_PCABoxpart
             // 
-            this.I_A_PCABox.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
-            this.I_A_PCABox.FormattingEnabled = true;
-            this.I_A_PCABox.Location = new System.Drawing.Point(226, 48);
-            this.I_A_PCABox.Name = "I_A_PCABox";
-            this.I_A_PCABox.Size = new System.Drawing.Size(120, 24);
-            this.I_A_PCABox.TabIndex = 15;
-            this.I_A_PCABox.Visible = false;
-            this.I_A_PCABox.SelectedIndexChanged += new System.EventHandler(this.I_A_PCABox_SelectedIndexChanged);
+            this.I_A_PCABoxpart.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.I_A_PCABoxpart.FormattingEnabled = true;
+            this.I_A_PCABoxpart.Location = new System.Drawing.Point(226, 48);
+            this.I_A_PCABoxpart.Name = "I_A_PCABoxpart";
+            this.I_A_PCABoxpart.Size = new System.Drawing.Size(120, 24);
+            this.I_A_PCABoxpart.TabIndex = 15;
+            this.I_A_PCABoxpart.Visible = false;
             // 
             // I_A_VVBox
             // 
@@ -5592,6 +5595,38 @@
             this.CVersionlabel.TabIndex = 0;
             this.CVersionlabel.Text = "Current Version";
             // 
+            // I2_Tablabel
+            // 
+            this.I2_Tablabel.Controls.Add(this.groupBox6);
+            this.I2_Tablabel.Location = new System.Drawing.Point(4, 25);
+            this.I2_Tablabel.Name = "I2_Tablabel";
+            this.I2_Tablabel.Size = new System.Drawing.Size(1358, 685);
+            this.I2_Tablabel.TabIndex = 9;
+            this.I2_Tablabel.Text = "Item2";
+            this.I2_Tablabel.UseVisualStyleBackColor = true;
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.checkBox1);
+            this.groupBox6.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold);
+            this.groupBox6.Location = new System.Drawing.Point(7, 3);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(376, 234);
+            this.groupBox6.TabIndex = 0;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Cluster Bombs";
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.checkBox1.Location = new System.Drawing.Point(20, 41);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(82, 22);
+            this.checkBox1.TabIndex = 0;
+            this.checkBox1.Text = "Enable";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AllowDrop = true;
@@ -5694,6 +5729,9 @@
             this.Settinglabel.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
+            this.I2_Tablabel.ResumeLayout(false);
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -6078,17 +6116,17 @@
         private System.Windows.Forms.Label I_A_BTlabel;
         private System.Windows.Forms.TextBox I_A_MCABox;
         private System.Windows.Forms.Label I_A_MCAlabel;
-        private System.Windows.Forms.TextBox I_A_PCATextbox;
-        private System.Windows.Forms.ComboBox I_A_PCAListbox;
-        private System.Windows.Forms.ComboBox I_A_PCABox;
+        private System.Windows.Forms.TextBox I_A_PCABoxpart3;
+        private System.Windows.Forms.ComboBox I_A_PCABoxpart2;
+        private System.Windows.Forms.ComboBox I_A_PCABoxpart;
         private System.Windows.Forms.GroupBox I_A_MS_namelabel;
         private System.Windows.Forms.TextBox I_A_MS_DBSBox;
         private System.Windows.Forms.Label I_A_MS_DBSlabel;
         private System.Windows.Forms.TextBox I_A_MS_NOSBox;
         private System.Windows.Forms.Label I_A_MS_NOSlabel;
-        private System.Windows.Forms.ListBox I_A_PCAListSource;
-        private System.Windows.Forms.Button I_A_Removelabel;
-        private System.Windows.Forms.Button I_A_Addlabel;
+        private System.Windows.Forms.ListBox I_A_PCABoxpartls;
+        private System.Windows.Forms.Button I_A_PCABoxRlabel;
+        private System.Windows.Forms.Button I_A_PCABoxAlabel;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.TabPage Settinglabel;
         private System.Windows.Forms.GroupBox groupBox5;
@@ -6146,6 +6184,9 @@
         private System.Windows.Forms.ComboBox I_ED_b4boxids;
         private System.Windows.Forms.Label I_ED_B4label;
         private System.Windows.Forms.PictureBox I_A_BTPics;
+        private System.Windows.Forms.TabPage I2_Tablabel;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
 
