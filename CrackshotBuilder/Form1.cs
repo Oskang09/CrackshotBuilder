@@ -16,8 +16,8 @@ namespace CrackshotBuilder
 {
     public partial class Form1 : Form
     {
-        //public string filepath = Application.StartupPath + "/CrackshotFiles";
-        public string filepath = "C:/Users/Oska/Desktop/CrackshotBuilder Setup/CrackshotFiles";
+        public string filepath = Application.StartupPath + "/CrackshotFiles";
+        //public string filepath = "C:/Users/Oska/Desktop/CrackshotBuilder Setup/CrackshotFiles";
         public string currentversion = Properties.Settings.Default.Version;
         //
         string doublespacebar = "        ";
@@ -29,10 +29,14 @@ namespace CrackshotBuilder
             // Version
             S_U_CVersion.Text = currentversion;
             // TTP Helper POPUP
-            TTPHelper frm = new TTPHelper();
-            frm.TopMost = true;
-            frm.Show();
-            ttphelper = frm;
+            if (Properties.Settings.Default.TTP == true)
+            {
+                ttp.CheckState = CheckState.Checked;
+                TTPHelper frm = new TTPHelper();
+                frm.TopMost = true;
+                frm.Show();
+                ttphelper = frm;
+            }
         }
         public void AddSound(string title, string sound)
         {
@@ -1911,6 +1915,68 @@ namespace CrackshotBuilder
         private void I_A_BTBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             I_A_BTPics.Image = Image.FromFile(@filepath + "/Resource/ids/" + I_A_BTBox.Text + ".png");
+        }
+
+        private void savettp_Click(object sender, EventArgs e)
+        {
+            if (ttp.CheckState == CheckState.Checked)
+            {
+                Properties.Settings.Default.TTP = true;
+                return;
+            }
+            Properties.Settings.Default.TTP = false;
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            saveFormState();
+        }
+        private void saveFormState()
+        {
+            checkControl(this);
+        }
+        private void checkControl(Control c)
+        {
+            StringBuilder sb = new StringBuilder();
+            foreach (Control ctrl in c.Controls)
+            {
+                if (ctrl is TextBox)
+                {
+                    TextBox c2 = (TextBox)ctrl;
+                    sb.AppendLine(c2.Name + "=" + c2.Text);
+                }
+                if (ctrl is CheckBox)
+                {
+                    CheckBox c2 = (CheckBox)ctrl;
+                    sb.AppendLine(c2.Name + "=" + c2.CheckState);
+                }
+                if (ctrl is ComboBox)
+                {
+                    ComboBox c2 = (ComboBox)ctrl;
+                    sb.AppendLine(c2.Name + "=" + c2.Text);
+                }
+                if (ctrl is ListBox)
+                {
+                    ListBox c2 = (ListBox)ctrl;
+                    sb.AppendLine(c2.Name + "=" + c2.Text);
+                }
+                if (ctrl is GroupBox)
+                {
+                    GroupBox c2 = (GroupBox)ctrl;
+                    checkControl(c2);
+                }
+                if (ctrl is TabControl)
+                {
+                    TabControl c2 = (TabControl)ctrl;
+                    checkControl(c2);
+                }
+                if (ctrl is TabPage)
+                {
+                    TabPage c2 = (TabPage)ctrl;
+                    checkControl(c2);
+                }
+            }
+            File.AppendAllText(filepath + "/state.txt", sb.ToString());
         }
     }
 }

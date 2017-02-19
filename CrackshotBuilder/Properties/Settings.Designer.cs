@@ -35,15 +35,12 @@ namespace CrackshotBuilder.Properties {
             }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("dev5")]
+        [global::System.Configuration.DefaultSettingValueAttribute("dev5.2")]
         public string Version {
             get {
                 return ((string)(this["Version"]));
-            }
-            set {
-                this["Version"] = value;
             }
         }
     }
