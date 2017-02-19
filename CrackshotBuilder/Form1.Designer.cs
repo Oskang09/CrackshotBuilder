@@ -229,6 +229,9 @@
             this.I_A_FADBox = new System.Windows.Forms.TextBox();
             this.I_A_FADlabel = new System.Windows.Forms.Label();
             this.I_A_Enablelabel = new System.Windows.Forms.CheckBox();
+            this.I2_Tablabel = new System.Windows.Forms.TabPage();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.G_Tablabel = new System.Windows.Forms.TabPage();
             this.G_S_Scopelabel = new System.Windows.Forms.GroupBox();
             this.G_Scope_ZBSBox = new System.Windows.Forms.TextBox();
@@ -468,6 +471,9 @@
             this.buildBtnlabel = new System.Windows.Forms.Button();
             this.csyamlbox = new System.Windows.Forms.RichTextBox();
             this.Settinglabel = new System.Windows.Forms.TabPage();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.savettp = new System.Windows.Forms.Button();
+            this.ttp = new System.Windows.Forms.CheckBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.S_U_Updatelabel = new System.Windows.Forms.Button();
             this.S_U_CFUlabel = new System.Windows.Forms.Button();
@@ -475,9 +481,6 @@
             this.NVersionlabel = new System.Windows.Forms.Label();
             this.S_U_CVersion = new System.Windows.Forms.TextBox();
             this.CVersionlabel = new System.Windows.Forms.Label();
-            this.I2_Tablabel = new System.Windows.Forms.TabPage();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.II_Tablabel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.II_IDPics)).BeginInit();
@@ -503,6 +506,8 @@
             this.I_RS_riotlabel.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.I_A_BTPics)).BeginInit();
+            this.I2_Tablabel.SuspendLayout();
+            this.groupBox6.SuspendLayout();
             this.G_Tablabel.SuspendLayout();
             this.G_S_Scopelabel.SuspendLayout();
             this.G_R_GBoxlabel.SuspendLayout();
@@ -537,9 +542,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.O_WS_PricePic)).BeginInit();
             this.Yamllabel.SuspendLayout();
             this.Settinglabel.SuspendLayout();
+            this.groupBox7.SuspendLayout();
             this.groupBox5.SuspendLayout();
-            this.I2_Tablabel.SuspendLayout();
-            this.groupBox6.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -2802,6 +2806,38 @@
             this.I_A_Enablelabel.Text = "Enable";
             this.I_A_Enablelabel.UseVisualStyleBackColor = true;
             this.I_A_Enablelabel.CheckedChanged += new System.EventHandler(this.I_A_Enablelabel_CheckedChanged);
+            // 
+            // I2_Tablabel
+            // 
+            this.I2_Tablabel.Controls.Add(this.groupBox6);
+            this.I2_Tablabel.Location = new System.Drawing.Point(4, 25);
+            this.I2_Tablabel.Name = "I2_Tablabel";
+            this.I2_Tablabel.Size = new System.Drawing.Size(1358, 685);
+            this.I2_Tablabel.TabIndex = 9;
+            this.I2_Tablabel.Text = "Item2";
+            this.I2_Tablabel.UseVisualStyleBackColor = true;
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.checkBox1);
+            this.groupBox6.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold);
+            this.groupBox6.Location = new System.Drawing.Point(7, 3);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(376, 234);
+            this.groupBox6.TabIndex = 0;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Cluster Bombs";
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.checkBox1.Location = new System.Drawing.Point(17, 36);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(82, 22);
+            this.checkBox1.TabIndex = 0;
+            this.checkBox1.Text = "Enable";
+            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // G_Tablabel
             // 
@@ -5511,6 +5547,7 @@
             // 
             // Settinglabel
             // 
+            this.Settinglabel.Controls.Add(this.groupBox7);
             this.Settinglabel.Controls.Add(this.groupBox5);
             this.Settinglabel.Location = new System.Drawing.Point(4, 25);
             this.Settinglabel.Name = "Settinglabel";
@@ -5518,6 +5555,40 @@
             this.Settinglabel.TabIndex = 8;
             this.Settinglabel.Text = "Setting";
             this.Settinglabel.UseVisualStyleBackColor = true;
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.savettp);
+            this.groupBox7.Controls.Add(this.ttp);
+            this.groupBox7.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold);
+            this.groupBox7.Location = new System.Drawing.Point(378, 7);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(284, 173);
+            this.groupBox7.TabIndex = 1;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "TTP Setting";
+            // 
+            // savettp
+            // 
+            this.savettp.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.savettp.Location = new System.Drawing.Point(16, 116);
+            this.savettp.Name = "savettp";
+            this.savettp.Size = new System.Drawing.Size(132, 40);
+            this.savettp.TabIndex = 6;
+            this.savettp.Text = "Save";
+            this.savettp.UseVisualStyleBackColor = true;
+            this.savettp.Click += new System.EventHandler(this.savettp_Click);
+            // 
+            // ttp
+            // 
+            this.ttp.AutoSize = true;
+            this.ttp.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.ttp.Location = new System.Drawing.Point(16, 36);
+            this.ttp.Name = "ttp";
+            this.ttp.Size = new System.Drawing.Size(111, 22);
+            this.ttp.TabIndex = 0;
+            this.ttp.Text = "TTPHelper";
+            this.ttp.UseVisualStyleBackColor = true;
             // 
             // groupBox5
             // 
@@ -5595,38 +5666,6 @@
             this.CVersionlabel.TabIndex = 0;
             this.CVersionlabel.Text = "Current Version";
             // 
-            // I2_Tablabel
-            // 
-            this.I2_Tablabel.Controls.Add(this.groupBox6);
-            this.I2_Tablabel.Location = new System.Drawing.Point(4, 25);
-            this.I2_Tablabel.Name = "I2_Tablabel";
-            this.I2_Tablabel.Size = new System.Drawing.Size(1358, 685);
-            this.I2_Tablabel.TabIndex = 9;
-            this.I2_Tablabel.Text = "Item2";
-            this.I2_Tablabel.UseVisualStyleBackColor = true;
-            // 
-            // groupBox6
-            // 
-            this.groupBox6.Controls.Add(this.checkBox1);
-            this.groupBox6.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold);
-            this.groupBox6.Location = new System.Drawing.Point(7, 3);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(376, 234);
-            this.groupBox6.TabIndex = 0;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Cluster Bombs";
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
-            this.checkBox1.Location = new System.Drawing.Point(20, 41);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(82, 22);
-            this.checkBox1.TabIndex = 0;
-            this.checkBox1.Text = "Enable";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
             // Form1
             // 
             this.AllowDrop = true;
@@ -5638,6 +5677,7 @@
             this.Margin = new System.Windows.Forms.Padding(2, 5, 2, 5);
             this.Name = "Form1";
             this.Text = "Crackshot Builder";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tabControl1.ResumeLayout(false);
             this.II_Tablabel.ResumeLayout(false);
@@ -5676,6 +5716,9 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.I_A_BTPics)).EndInit();
+            this.I2_Tablabel.ResumeLayout(false);
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
             this.G_Tablabel.ResumeLayout(false);
             this.G_Tablabel.PerformLayout();
             this.G_S_Scopelabel.ResumeLayout(false);
@@ -5727,11 +5770,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.O_WS_PricePic)).EndInit();
             this.Yamllabel.ResumeLayout(false);
             this.Settinglabel.ResumeLayout(false);
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
-            this.I2_Tablabel.ResumeLayout(false);
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox6.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -6187,6 +6229,9 @@
         private System.Windows.Forms.TabPage I2_Tablabel;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.Button savettp;
+        private System.Windows.Forms.CheckBox ttp;
     }
 }
 
