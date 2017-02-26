@@ -1,33 +1,24 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
-using System.Net;
-using System.Diagnostics;
-using System.IO.Compression;
 
 namespace CrackshotBuilder
 {
     public partial class Form1 : Form
     {
         public string filepath = Application.StartupPath + "/CrackshotFiles";
-        //public string filepath = "C:/Users/Oska/Desktop/CrackshotBuilder Setup/CrackshotFiles";
-        public string currentversion = Properties.Settings.Default.Version;
         //
         string doublespacebar = "        ";
         string spacebar = "    ";
         private TTPHelper ttphelper;
         public Form1()
         {
+
             InitializeComponent();
-            // Version
-            S_U_CVersion.Text = currentversion;
             // TTP Helper POPUP
             if (Properties.Settings.Default.TTP == true)
             {
@@ -82,6 +73,25 @@ namespace CrackshotBuilder
                     }
                 }
             }
+        }
+        public void loadActivation()
+        {
+            string[] all = "head,back,crit,hit,shoot,reload".Split(',');
+            foreach (string box in all)
+            {
+                E2_PE_ActiveBox.Items.Add(box);
+            }
+            E2_PE_Addlabel.Click += delegate
+            {
+                E2_PE_Alist.Items.Add(E2_PE_ActiveBox.Text);
+            };
+            E2_PE_Removelabel.Click += delegate
+            {
+                if (E2_PE_Alist.SelectedItem != null)
+                {
+                    E2_PE_Alist.Items.Remove(E2_PE_Alist.SelectedItem);
+                }
+            };
         }
         private void loadsound()
         {
@@ -219,6 +229,223 @@ namespace CrackshotBuilder
             loadPartBox();
             loadED();
             loadBT();
+            loadPotionEff();
+            loadActivation();
+            loadFirework();
+            loadAbilities();
+            loadcmds();
+
+            loadFormState();
+        }
+        public void loadcmds()
+        {
+            O2_E_MVRCAlabel.Click += delegate
+            {
+                O2_E_MVRCls.Items.Add(O2_E_MVRCcmd.Text);
+            };
+            O2_E_MVRCRlabel.Click += delegate
+            {
+                if (O2_E_MVRCls.SelectedItem != null)
+                {
+                    O2_E_MVRCls.Items.Remove(O2_E_MVRCls.SelectedItem);
+                }
+            };
+            O2_E_RCCAlabel.Click += delegate
+            {
+                O2_E_RCCls.Items.Add(O2_E_RCCcmd.Text);
+            };
+            O2_E_RCCRlabel.Click += delegate
+            {
+                if (O2_E_RCCls.SelectedItem != null)
+                {
+                    O2_E_RCCls.Items.Remove(O2_E_MVRCls.SelectedItem);
+                }
+            };
+            O2_E_RCAlabel.Click += delegate
+            {
+                if (O2_E_RBBox.Text == "CONSOLE")
+                {
+                    O2_E_RCls.Items.Add("@" + O2_E_RCcmd.Text);
+                }
+                else
+                {
+                    O2_E_RCls.Items.Add(O2_E_RCcmd.Text);
+                }
+            };
+            O2_E_RCRlabel.Click += delegate
+            {
+                if (O2_E_RCls.SelectedItem != null)
+                {
+                    O2_E_RCls.Items.Remove(O2_E_RCls.SelectedItem);
+                }
+            };
+        }
+        public void loadAbilities()
+        {
+            O_A_SEAlabel.Click += delegate
+            {
+                string item = O_A_SEBoxett.Text + "-" + O_E_SEMBox.Text;
+                O_A_SEls.Items.Add(item);
+            };
+            O_A_SERlabel.Click += delegate
+            {
+                if (O_A_SEls.SelectedItem != null)
+                {
+                    O_A_SEls.Items.Remove(O_A_SEls.SelectedItem);
+                }
+            };
+            O_A_BDids.SelectedIndexChanged += delegate
+            {
+                if (O_A_BDids.SelectedItem != null)
+                {
+                    O_A_BDPics.Image = Image.FromFile(@filepath + "/Resource/ids/" + O_A_BDids.Text + ".png");
+                }
+            };
+            O_A_BDAlabel.Click += delegate
+            {
+                O_A_BDls.Items.Add(O_A_BDids.Text.Replace('-', '~'));
+            };
+            O_A_BDRlabel.Click += delegate
+            {
+                if (O_A_BDls.SelectedItem != null)
+                {
+                    O_A_BDls.Items.Remove(O_A_BDls.SelectedItem);
+                }
+            };
+            O_A_BBids.SelectedIndexChanged += delegate
+            {
+                if (O_A_BBids.SelectedItem != null)
+                {
+                    O_A_BBPics.Image = Image.FromFile(@filepath + "/Resource/ids/" + O_A_BBids.Text + ".png");
+                }
+            };
+            O_A_BBAlabel.Click += delegate
+            {
+                if (getTrueFalse(O_A_Wlabel) == "true")
+                {
+                    bool checkitem = false;
+                    int index;
+                    string whitelist = string.Empty;
+                    foreach (string item in O_A_BBls.Items)
+                    {
+                        if (item.Contains("TRUE"))
+                        {
+                            checkitem = true;
+                            index = O_A_BBls.Items.IndexOf(item);
+                            whitelist = item;
+                        }
+                    }
+                    if (checkitem)
+                    {
+                        string ids = string.Empty;
+                        string[] check = O_A_BBids.Text.Split('-');
+                        if (check[1] == "0")
+                        {
+                            ids += check[0];
+                        }
+                        else
+                        {
+                            ids += O_A_BBids.Text.Replace('-', '~');
+                        }
+                        whitelist += "," + ids;
+                    }
+                    else
+                    {
+                        O_A_BBls.Items.Clear();
+                        string ids = string.Empty;
+                        string[] check = O_A_BBids.Text.Split('-');
+                        if (check[1] == "0")
+                        {
+                            ids += check[0];
+                        }
+                        else
+                        {
+                            ids += O_A_BBids.Text.Replace('-', '~');
+                        }
+                        whitelist = "TRUE-" + ids;
+                    }
+                    O_A_BBls.Items.Add(whitelist);
+                }
+                else
+                {
+                    bool checkitem = false;
+                    int index;
+                    string whitelist = string.Empty;
+                    foreach (string item in O_A_BBls.Items)
+                    {
+                        if (item.Contains("FALSE"))
+                        {
+                            checkitem = true;
+                            index = O_A_BBls.Items.IndexOf(item);
+                            whitelist = item;
+                        }
+                    }
+                    if (checkitem)
+                    {
+                        string ids = string.Empty;
+                        string[] check = O_A_BBids.Text.Split('-');
+                        if (check[1] == "0")
+                        {
+                            ids += check[0];
+                        }
+                        else
+                        {
+                            ids += O_A_BBids.Text.Replace('-', '~');
+                        }
+                        whitelist += "," + ids;
+                    }
+                    else
+                    {
+                        string ids = string.Empty;
+                        string[] check = O_A_BBids.Text.Split('-');
+                        if (check[1] == "0")
+                        {
+                            ids += check[0];
+                        }
+                        else
+                        {
+                            ids += O_A_BBids.Text.Replace('-', '~');
+                        }
+                        O_A_BBls.Items.Clear();
+                        whitelist = "FALSE-" + ids;
+                    }
+                    O_A_BBls.Items.Add(whitelist);
+                }
+            };
+            O_A_BBRlabel.Click += delegate
+            {
+                if (O_A_BBls.SelectedItem != null)
+                {
+                    O_A_BBls.Items.Remove(O_A_BBls.SelectedItem);
+                }
+            };
+        }
+        public void loadFirework()
+        {
+            string[] texts = "BALL,BALL_LARGE,BURST,CREEPER,STAR".Split(',');
+            foreach (string t in texts)
+            {
+                E2_FC_TBox.Items.Add(t);
+            }
+            string[] clist = "E2_F_FPS/E2_F_FE/E2_F_FH/E2_F_FH2/E2_F_FC/E2_F_FB".Split('/');
+            foreach (string cl in clist)
+            {
+                Button add = (Button)Controls.Find( cl + "Alabel", true).FirstOrDefault();
+                Button remove = (Button)Controls.Find(cl + "Rlabel", true).FirstOrDefault();
+                ListBox lb = (ListBox)Controls.Find(cl + "ls", true).FirstOrDefault();
+                add.Click += delegate
+                {
+                    string item = E2_FC_TBox.Text + "-" + getTrueFalse(E2_F_T2label).ToUpper() + "-" + getTrueFalse(E2_F_Flabel).ToUpper() + "-" + E2_FC_R.Text + "-" + E2_FC_G.Text + "-" + E2_FC_B.Text;
+                    lb.Items.Add(item);
+                };
+                remove.Click += delegate
+                {
+                    if (lb.SelectedItem != null)
+                    {
+                        lb.Items.Remove(lb.SelectedItem);
+                    }
+                };
+            }
         }
         private void loadBT()
         {
@@ -238,6 +465,36 @@ namespace CrackshotBuilder
             foreach (string t in texts)
             {
                 I_ED_DeviceTBox.Items.Add(t);
+            }
+        }
+        public void loadPotionEff()
+        {
+            string[] lines = File.ReadAllLines(filepath + "/Resource/potion/potioneff.yml");
+            foreach (string text in lines)
+            {
+                ComboBox potion = (ComboBox)Controls.Find(text + "peff", true).FirstOrDefault();
+                Button add = (Button)Controls.Find(text + "peffAlabel", true).FirstOrDefault();
+                Button remove = (Button)Controls.Find(text + "peffRlabel", true).FirstOrDefault();
+                ListBox list = (ListBox)Controls.Find(text + "peffls", true).FirstOrDefault();
+                TextBox duration = (TextBox)Controls.Find(text + "peffD", true).FirstOrDefault();
+                TextBox level = (TextBox)Controls.Find(text + "peffL", true).FirstOrDefault();
+
+                string[] enchants = File.ReadAllLines(filepath + "/potioneff.txt");
+                foreach (string enchant in enchants)
+                {
+                    potion.Items.Add(enchant);
+                }
+                add.Click += delegate
+                {
+                    list.Items.Add(potion.Text + "-" + duration.Text + "-" + level.Text);
+                };
+                remove.Click += delegate
+                {
+                    if (list.SelectedItem != null)
+                    {
+                        list.Items.Remove(list.SelectedItem);
+                    }
+                };
             }
         }
         public void loadPotion()
@@ -753,7 +1010,15 @@ namespace CrackshotBuilder
                 switch (I_ED_DeviceTBox.Text)
                 {
                     case "landmine":
-                        deviceinfo += I_ED_Itemids.Text.Replace('-', '~');
+                        string[] check = I_ED_Itemids.Text.Split('-');
+                        if (check[1] == "0")
+                        {
+                            deviceinfo += check[0];
+                        }
+                        else
+                        {
+                            deviceinfo += I_ED_Itemids.Text.Replace('-', '~');
+                        }
                         deviceinfo += "-" + I_ED_mcart.Text;
                         break;
                     case "remote":
@@ -771,8 +1036,25 @@ namespace CrackshotBuilder
                     case "itembomb":
                         deviceinfo += I_ED_A2Box.Text;
                         deviceinfo += "," + I_ED_Sbox.Text;
-                        deviceinfo += "," + I_ED_b4boxids.Text.Replace('-', '~');
-                        deviceinfo += "," + I_ED_afterboxids.Text.Replace('-', '~');
+                        string[] chec3k = I_ED_b4boxids.Text.Split('-');
+                        if (chec3k[1] == "0")
+                        {
+                            deviceinfo += chec3k[0];
+                        }
+                        else
+                        {
+                            deviceinfo += I_ED_b4boxids.Text.Replace('-', '~');
+                        }
+
+                        string[] check2 = I_ED_afterboxids.Text.Split('-');
+                        if (check2[1] == "0")
+                        {
+                            deviceinfo += check2[0];
+                        }
+                        else
+                        {
+                            deviceinfo += I_ED_afterboxids.Text.Replace('-', '~');
+                        }
                         break;
                 }
                 csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Device_Info: " + deviceinfo);
@@ -784,7 +1066,159 @@ namespace CrackshotBuilder
                 csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Sounds_Alert_Placer: " + getListItem(AS23_Sound));
                 csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Sounds_Trigger: " + getListItem(AS24_Sound));
             }
-        } 
+            if (getTrueFalse(I2_CB_Enablelabel) == "true")
+            {
+                csyamlbox.AppendText(Environment.NewLine + spacebar + "Cluster_Bombs:");
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Enable: " + getTrueFalse(I2_CB_Enablelabel));
+                string ids = string.Empty;
+                string[] check = I2_CB_bombletids.Text.Split('-');
+                if (check[1] == "0")
+                {
+                    ids += check[0];
+                }
+                else
+                {
+                    ids += I2_CB_bombletids.Text.Replace('-', '~');
+                }
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Bomblet_Type: " + ids);
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Delay_Before_Split: " + I2_CB_DBSBox.Text);
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Number_Of_Splits: " + I2_CB_NOSBox.Text);
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Number_Of_Bomblets: " + I2_CB_NOBBox.Text);
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Speed_Of_Bomblets: " + I2_CB_SOBBox.Text);
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Delay_Before_Detonation: " + I2_CB_DBDBox.Text);
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Detonation_Delay_Variation: " + I2_CB_DDVBox.Text);
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Particle_Release: " + getListItem(I2_CB_PRpartls));
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Sounds_Release: " + getListItem(AS25_Sound));
+            }
+            if (getTrueFalse(E_S_Enablelabel) == "true")
+            {
+                csyamlbox.AppendText(Environment.NewLine + spacebar + "Shrapnel:");
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Enable: " + getTrueFalse(E_S_Enablelabel));
+                string ids = string.Empty;
+                string[] check = E_S_BTids.Text.Split('-');
+                if (check[1] == "0")
+                {
+                    ids += check[0];
+                }
+                else
+                {
+                    ids += E_S_BTids.Text.Replace('-', '~');
+                }
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Block_Type: " + ids);
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Amount: " + E_S_ABox.Text);
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Speed: " + E_S_SBox.Text);
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Place_Blocks: " + getTrueFalse(E_S_PBlabel));
+            }
+            if (getTrueFalse(E_E_Enablelabel) == "true")
+            {
+                csyamlbox.AppendText(Environment.NewLine + spacebar + "Explosions:");
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Enable: " + getTrueFalse(E_E_Enablelabel));
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Knockback: " + E_E_KBox.Text);
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Ignite_Victims: " + E_E_IVBox.Text);
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Damage_Multiplier: " + E_E_DMBox.Text);
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Enable_Friendly_Fire: " + getTrueFalse(E_E_EFFlabel));
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Enable_Owner_Immunity: " + getTrueFalse(E_E_EOIlabel));
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Explosion_No_Damage: " + getTrueFalse(E_E_ENDlabel));
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Explosion_Potion_Effect: " + getListItem(E_E_EPEpeffls));
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Explosion_No_Grief: " + getTrueFalse(E_E_ENGlabel));
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Explosion_Radius: " + E_E_ERBox.Text);
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Explosion_Incendiary: " + getTrueFalse(E_E_EIlabel));
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Explosion_Delay: " + E_E_EDBox.Text);
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "On_Impact_With_Anything: " + getTrueFalse(E_E_EOIlabel));
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Projectile_Activation_Time: " + E_E_PATBox.Text);
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Message_Shooter: " + E_E_MSBox.Text);
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Message_Victim: " + E_E_MVBox.Text);
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Sounds_Shooter: " + getListItem(AS26_Sound));
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Sounds_Victim: " + getListItem(AS27_Sound));
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Sounds_Explode: " + getListItem(AS28_Sound));
+            }
+            if (E2_PE_Alist.Items.Count > 0)
+            {
+                csyamlbox.AppendText(Environment.NewLine + spacebar + "Potion_Effects:");
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Activation: " + getListItem(E2_PE_Alist));
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Potion_Effect_Shooter: " + getListItem(E2_PE_PESpeffls));
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Potion_Effect_Victim: " + getListItem(E2_PE_PEVpeffls));
+            }
+            if (getTrueFalse(E2_P_Enablelabel) == "true")
+            {
+                csyamlbox.AppendText(Environment.NewLine + spacebar + "Particles:");
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Enable: " + getTrueFalse(E2_P_Enablelabel));
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Particle_Terrain: " + getTrueFalse(E2_P_PTlabel));
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Particle_Player_Shoot: " + getListItem(E2_P_PPSpartls));
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Particle_Impact_Anything: " + getListItem(E2_P_PIApartls));
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Particle_Hit: " + getListItem(E2_P_PHpartls));
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Particle_Headshot: " + getListItem(E2_P_PH2partls));
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Particle_Critical: " + getListItem(E2_P_PCpartls));
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Particle_Backstab: " + getListItem(E2_P_PBpartls));
+            }
+            if (getTrueFalse(E2_F_Enablelabel) == "true")
+            {
+                csyamlbox.AppendText(Environment.NewLine + spacebar + "Fireworks:");
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Enable: " + getTrueFalse(E2_F_Enablelabel));
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Firework_Player_Shoot: " + getListItem(E2_F_FPSls));
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Firework_Explode: " + getListItem(E2_F_FEls));
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Firework_Hit: " + getListItem(E2_F_FHls));
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Firework_Headshot: " + getListItem(E2_F_FH2ls));
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Firework_Critical: " + getListItem(E2_F_FCls));
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Firework_Backstab: " + getListItem(E2_F_FBls));
+            }
+            csyamlbox.AppendText(Environment.NewLine + spacebar + "Abilities:");
+            if (getListItem(O_A_SEls) != null)
+            {
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Super_Effective: " + getListItem(O_A_SEls));
+            }
+            csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Death_No_Drop: " + getTrueFalse(O_A_DNDlabel));
+            if (getListItem(O_A_BDls) != null)
+            {
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Bonus_Drops: " + getListItem(O_A_BDls));
+            }
+            csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Reset_Hit_Cooldown: " + getTrueFalse(O_A_RHClabel));
+            if (O_A_KBox.Text != "")
+            {
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Knockback: " + O_A_KBox.Text);
+            }
+            csyamlbox.AppendText(Environment.NewLine + doublespacebar + "No_Fall_Damage: " + getTrueFalse(O_A_NFDlabel));
+            csyamlbox.AppendText(Environment.NewLine + doublespacebar + "No_Vertical_Recoil: " + getTrueFalse(O_A_NVRlabel));
+            csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Hurt_Effect: " + getTrueFalse(O_A_HElabel));
+            csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Jetpack_Mode: " + getTrueFalse(O_A_JMlabel));
+            if (getListItem(O_A_BBls) != null)
+            {
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Break_Blocks: " + getListItem(O_A_BBls));
+            }
+            if (getTrueFalse(O_HE_Enablelabel) == "true")
+            {
+                csyamlbox.AppendText(Environment.NewLine + spacebar + "Hit_Events:");
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Enable: " + getTrueFalse(O_HE_Enablelabel));
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Message_Shooter: " + O_HE_MSBox.Text);
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Message_Victim: " + O_HE_MVBox.Text);
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Sounds_Impact: " + getListItem(E2_F_FHls));
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Sounds_Shooter: " + getListItem(E2_F_FH2ls));
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Sounds_Victim: " + getListItem(E2_F_FCls));
+            }
+            csyamlbox.AppendText(Environment.NewLine + spacebar + "Extras:");
+            csyamlbox.AppendText(Environment.NewLine + doublespacebar + "One_Time_Use: " + getTrueFalse(O2_E_OTUlabel));
+            csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Disable_Underwater: " + getTrueFalse(O2_E_DUlabel));
+            if (O2_E_MVSBox.Text != "")
+            {
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Make_Victim_Speak: " + O2_E_MVSBox.Text);
+            }
+            if (getListItem(O2_E_MVRCls) != null)
+            {
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Make_Victim_Run_Commmand: " + getListItem(O2_E_MVRCls).Replace(',','|'));
+            }
+            if (getListItem(O2_E_RCCls) != null)
+            {
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Run_Console_Command: " + getListItem(O2_E_RCCls).Replace(',', '|'));
+            }
+            if (getListItem(O2_E_RCls) != null)
+            {
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Run_Command: " + getTrueFalse(O2_E_OTUlabel));
+                foreach (string text in O2_E_RCls.Items)
+                {
+                    csyamlbox.AppendText(Environment.NewLine + doublespacebar + spacebar + "- '" + text + "'");
+                }
+            }
+        }
         private void II_ItemIDBox_SelectedIndexChanged(object sender, EventArgs e)
         { 
             II_IDPics.Image = Image.FromFile(@filepath + "/Resource/ids/" +  II_ItemIDids.Text + ".png");
@@ -989,37 +1423,23 @@ namespace CrackshotBuilder
         {
             if (getTrueFalse(G_A_Enablelabel) == "true")
             {
-                G_A_ItemIDlabel.Visible = true;
-                G_AmmoBoxids.Visible = true;
-                G_AmmoBoxidpic.Visible = true;
-                G_A_NameClabel.Visible = true;
-                G_A_ANCbox.Visible = true;
-                G_A_TAPSlabel.Visible = true;
-                G_A_SoundOOAlabel.Visible = true;
-                AS5_Sound.Visible = true;
-                AS5.Visible = true;
-                RS5.Visible = true;
-                G_A_SSWNAlabel.Visible = true;
-                AS6_Sound.Visible = true;
-                AS6.Visible = true;
-                RS6.Visible = true;
+                foreach (Control c in G_A_Ammolabel.Controls)
+                {
+                    if (c.Name != "G_A_Enablelabel")
+                    {
+                        c.Visible = true;
+                    }
+                }
             }
             else
             {
-                G_A_ItemIDlabel.Visible = false;
-                G_AmmoBoxids.Visible = false;
-                G_AmmoBoxidpic.Visible = false;
-                G_A_NameClabel.Visible = false;
-                G_A_ANCbox.Visible = false;
-                G_A_TAPSlabel.Visible = false;
-                G_A_SoundOOAlabel.Visible = false;
-                AS5_Sound.Visible = false;
-                AS5.Visible = false;
-                RS5.Visible = false;
-                G_A_SSWNAlabel.Visible = false;
-                AS6_Sound.Visible = false;
-                AS6.Visible = false;
-                RS6.Visible = false;
+                foreach (Control c in G_A_Ammolabel.Controls)
+                {
+                    if (c.Name != "G_A_Enablelabel")
+                    {
+                        c.Visible = false;
+                    }
+                }
             }
         }
 
@@ -1241,29 +1661,23 @@ namespace CrackshotBuilder
         {
             if (getTrueFalse(G_Scope_Enablelabel) == "true")
             {
-                G_Scope_NVlabel.Visible = true;
-                G_Scope_Zoomlabel.Visible = true;
-                G_Scope_ZAlabel.Visible = true;
-                G_Scope_ZABox.Visible = true;
-                G_Scope_ZBSlabel.Visible = true;
-                G_Scope_ZBSBox.Visible = true;
-                G_FA_GBlabel.Visible = true;
-                AS12_Sound.Visible = true;
-                AS12.Visible = true;
-                RS12.Visible = true;
+                foreach (Control c in G_S_Scopelabel.Controls)
+                {
+                    if (c.Name != "G_Scope_Enablelabel")
+                    {
+                        c.Visible = true;
+                    }
+                }
             }
             else
             {
-                G_Scope_NVlabel.Visible = false;
-                G_Scope_Zoomlabel.Visible = false;
-                G_Scope_ZAlabel.Visible = false;
-                G_Scope_ZABox.Visible = false;
-                G_Scope_ZBSlabel.Visible = false;
-                G_Scope_ZBSBox.Visible = false;
-                G_FA_GBlabel.Visible = false;
-                AS12_Sound.Visible = false;
-                AS12.Visible = false;
-                RS12.Visible = false;
+                foreach (Control c in G_S_Scopelabel.Controls)
+                {
+                    if (c.Name != "G_Scope_Enablelabel")
+                    {
+                        c.Visible = false;
+                    }
+                }
             }
         }
 
@@ -1282,37 +1696,23 @@ namespace CrackshotBuilder
         {
             if (getTrueFalse(I_RS_Enablelabel) == "true")
             {
-                I_RS_DNBPlabel.Visible = true;
-                I_RS_DNBMAlabel.Visible = true;
-                I_RS_DBODlabel.Visible = true;
-                I_RS_FFMlabel.Visible = true;
-                I_RS_DLPHlabel.Visible = true;
-                I_RS_DLPHBox.Visible = true;
-                I_RS_SBlabel.Visible = true;
-                I_FA_SBrlabel.Visible = true;
-                AS13_Sound.Visible = true;
-                AS13.Visible = true;
-                RS14.Visible = true;
-                AS14.Visible = true;
-                AS14_Sound.Visible = true;
-                RS13.Visible = true;
+                foreach (Control c in I_RS_riotlabel.Controls)
+                {
+                    if (c.Name != "I_RS_Enablelabel")
+                    {
+                        c.Visible = true;
+                    }
+                }
             }
             else
             {
-                I_RS_DNBPlabel.Visible = false;
-                I_RS_DNBMAlabel.Visible = false;
-                I_RS_DBODlabel.Visible = false;
-                I_RS_FFMlabel.Visible = false;
-                I_RS_DLPHlabel.Visible = false;
-                I_RS_DLPHBox.Visible = false;
-                I_RS_SBlabel.Visible = false;
-                I_FA_SBrlabel.Visible = false;
-                AS13_Sound.Visible = false;
-                AS13.Visible = false;
-                RS13.Visible = false;
-                RS14.Visible = false;
-                AS14.Visible = false;
-                AS14_Sound.Visible = false;
+                foreach (Control c in I_RS_riotlabel.Controls)
+                {
+                    if (c.Name != "I_RS_Enablelabel")
+                    {
+                        c.Visible = false;
+                    }
+                }
             }
         }
 
@@ -1333,23 +1733,23 @@ namespace CrackshotBuilder
         {
             if (getTrueFalse(O_WS_Enablelabel) == "true")
             {
-                O_WS_Pricelabel.Visible = true;
-                O_WS_Priceids.Visible = true;
-                O_WS_PriceNum.Visible = true;
-                O_WS_PricePic.Visible = true;
-                O_WS_GUNIDlabel.Visible = true;
-                O_GUNIDBox.Visible = true;
-                O_WS_IDSign.Visible = true;
+                foreach (Control c in O_WS_namelabel.Controls)
+                {
+                    if (c.Name != "O_WS_Enablelabel")
+                    {
+                        c.Visible = true;
+                    }
+                }
             }
             else
             {
-                O_WS_Pricelabel.Visible = false;
-                O_WS_Priceids.Visible = false;
-                O_WS_PriceNum.Visible = false;
-                O_WS_PricePic.Visible = false;
-                O_WS_GUNIDlabel.Visible = false;
-                O_GUNIDBox.Visible = false;
-                O_WS_IDSign.Visible = false;
+                foreach (Control c in O_WS_namelabel.Controls)
+                {
+                    if (c.Name != "O_WS_Enablelabel")
+                    {
+                        c.Visible = false;
+                    }
+                }
             }
         }
 
@@ -1412,43 +1812,23 @@ namespace CrackshotBuilder
         {
             if (getTrueFalse(O_RC_Enablelabel) == "true")
             {
-                O_RC_Worldlabel.Visible = true;
-                O_RC_WorldBox.Visible = true;
-                O_RC_X1.Visible = true;
-                O_RC_Y1.Visible = true;
-                O_RC_Z1.Visible = true;
-                O_RC_X2.Visible = true;
-                O_RC_Y2.Visible = true;
-                O_RC_Z2.Visible = true;
-                x1.Visible = true;
-                y1.Visible = true;
-                z1.Visible = true;
-                x2.Visible = true;
-                y2.Visible = true;
-                z2.Visible = true;
-                O_RC_Modlabel.Visible = true;
-                O_RC_Blacklabel.Visible = true;
-                O_RC_Modbox.Visible = true;
+                foreach (Control c in O_CCR_namelabel.Controls)
+                {
+                    if (c.Name != "O_RC_Enablelabel")
+                    {
+                        c.Visible = true;
+                    }
+                }
             }
             else
             {
-                O_RC_Worldlabel.Visible = false;
-                O_RC_WorldBox.Visible = false;
-                O_RC_X1.Visible = false;
-                O_RC_Y1.Visible = false;
-                O_RC_Z1.Visible = false;
-                O_RC_X2.Visible = false;
-                O_RC_Y2.Visible = false;
-                O_RC_Z2.Visible = false;
-                x1.Visible = false;
-                y1.Visible = false;
-                z1.Visible = false;
-                x2.Visible = false;
-                y2.Visible = false;
-                z2.Visible = false;
-                O_RC_Modlabel.Visible = false;
-                O_RC_Blacklabel.Visible = false;
-                O_RC_Modbox.Visible = false;
+                foreach (Control c in O_CCR_namelabel.Controls)
+                {
+                    if (c.Name != "O_RC_Enablelabel")
+                    {
+                        c.Visible = false;
+                    }
+                }
             }
         }
 
@@ -1456,37 +1836,23 @@ namespace CrackshotBuilder
         {
             if (getTrueFalse(G2_H_Enablelabel) == "true")
             {
-                G2_H_BDlabel.Visible = true;
-                G2_H_BDBox.Visible = true;
-                G2_H_MSlabel.Visible = true;
-                G2_H_MVlabel.Visible = true;
-                G2_H_MSBox.Visible = true;
-                G2_H_MVBox.Visible = true;
-                G2_H_SSlabel.Visible = true;
-                G2_H_SVlabel.Visible = true;
-                AS15.Visible = true;
-                AS15_Sound.Visible = true;
-                RS15.Visible = true;
-                AS16.Visible = true;
-                AS16_Sound.Visible = true;
-                RS16.Visible = true;
+                foreach (Control c in G2_H_namelabel.Controls)
+                {
+                    if (c.Name != "G2_H_Enablelabel")
+                    {
+                        c.Visible = true;
+                    }
+                }
             }
             else
             {
-                G2_H_BDlabel.Visible = false;
-                G2_H_BDBox.Visible = false;
-                G2_H_MSlabel.Visible = false;
-                G2_H_MVlabel.Visible = false;
-                G2_H_MSBox.Visible = false;
-                G2_H_MVBox.Visible = false;
-                G2_H_SSlabel.Visible = false;
-                G2_H_SVlabel.Visible = false;
-                AS15.Visible = false;
-                AS15_Sound.Visible = false;
-                RS15.Visible = false;
-                AS16.Visible = false;
-                AS16_Sound.Visible = false;
-                RS16.Visible = false;
+                foreach (Control c in G2_H_namelabel.Controls)
+                {
+                    if (c.Name != "G2_H_Enablelabel")
+                    {
+                        c.Visible = false;
+                    }
+                }
             }
         }
 
@@ -1494,37 +1860,23 @@ namespace CrackshotBuilder
         {
             if (getTrueFalse(G2_B_Enablelabel) == "true")
             {
-                G2_B_BDlabel.Visible = true;
-                G2_B_BDBox.Visible = true;
-                G2_B_MSlabel.Visible = true;
-                G2_B_MVlabel.Visible = true;
-                G2_B_MSBox.Visible = true;
-                G2_B_MVBox.Visible = true;
-                G2_B_SSlabel.Visible = true;
-                G2_B_SVlabel.Visible = true;
-                AS17.Visible = true;
-                AS17_Sound.Visible = true;
-                RS17.Visible = true;
-                AS18.Visible = true;
-                AS18_Sound.Visible = true;
-                RS18.Visible = true;
+                foreach (Control c in G2_B_namelabel.Controls)
+                {
+                    if (c.Name != "G2_B_Enablelabel")
+                    {
+                        c.Visible = true;
+                    }
+                }
             }
             else
             {
-                G2_B_BDlabel.Visible = false;
-                G2_B_BDBox.Visible = false;
-                G2_B_MSlabel.Visible = false;
-                G2_B_MVlabel.Visible = false;
-                G2_B_MSBox.Visible = false;
-                G2_B_MVBox.Visible = false;
-                G2_B_SSlabel.Visible = false;
-                G2_B_SVlabel.Visible = false;
-                AS17.Visible = false;
-                AS17_Sound.Visible = false;
-                RS17.Visible = false;
-                AS18.Visible = false;
-                AS18_Sound.Visible = false;
-                RS18.Visible = false;
+                foreach (Control c in G2_B_namelabel.Controls)
+                {
+                    if (c.Name != "G2_B_Enablelabel")
+                    {
+                        c.Visible = false;
+                    }
+                }
             }
         }
 
@@ -1532,41 +1884,23 @@ namespace CrackshotBuilder
         {
             if (getTrueFalse(G2_CH_Enablelabel) == "true")
             {
-                G2_CH_BDlabel.Visible = true;
-                G2_CH_BDBox.Visible = true;
-                G2_CH_Chancelabel.Visible = true;
-                G2_CH_ChanceBox.Visible = true;
-                G2_CH_MSlabel.Visible = true;
-                G2_CH_MSBox.Visible = true;
-                G2_CH_MVlabel.Visible = true;
-                G2_CH_MVBox.Visible = true;
-                G2_CH_SSlabel.Visible = true;
-                AS19_Sound.Visible = true;
-                AS19.Visible = true;
-                RS19.Visible = true;
-                G2_CH_SVlabel.Visible = true;
-                AS20_Sound.Visible = true;
-                AS20.Visible = true;
-                RS20.Visible = true;
+                foreach (Control c in G2_CH_namelabel.Controls)
+                {
+                    if (c.Name != "G2_CH_Enablelabel")
+                    {
+                        c.Visible = true;
+                    }
+                }
             }
             else
             {
-                G2_CH_BDlabel.Visible = false;
-                G2_CH_BDBox.Visible = false;
-                G2_CH_Chancelabel.Visible = false;
-                G2_CH_ChanceBox.Visible = false;
-                G2_CH_MSlabel.Visible = false;
-                G2_CH_MSBox.Visible = false;
-                G2_CH_MVlabel.Visible = false;
-                G2_CH_MVBox.Visible = false;
-                G2_CH_SSlabel.Visible = false;
-                AS19_Sound.Visible = false;
-                AS19.Visible = false;
-                RS19.Visible = false;
-                G2_CH_SVlabel.Visible = false;
-                AS20_Sound.Visible = false;
-                AS20.Visible = false;
-                RS20.Visible = false;
+                foreach (Control c in G2_CH_namelabel.Controls)
+                {
+                    if (c.Name != "G2_CH_Enablelabel")
+                    {
+                        c.Visible = false;
+                    }
+                }
             }
         }
 
@@ -1574,51 +1908,23 @@ namespace CrackshotBuilder
         {
             if (getTrueFalse(E_SEOH_Enablelabel) == "true")
             {
-                E_SEOH_TDlabel.Visible = true;
-                E_SEOH_TDBox.Visible = true;
-                E_SEOH_METVlabel.Visible = true;
-                E_SEOH_EDDlabel.Visible = true;
-                E_SEOH_Chancelabel.Visible = true;
-                E_SEOH_ChanceBox.Visible = true;
-                E_SEOH_MNlabel.Visible = true;
-                E_SEOH_MNBox.Visible = true;
-                E_SEOH_EBox.Visible = true;
-                E_SEOH_Elabel.Visible = true;
-                E_SEOH_Entityett.Visible = true;
-                E_SEOH_Babylabel.Visible = true;
-                E_SEOH_Explolabel.Visible = true;
-                E_SEOH_Amlabel.Visible = true;
-                E_SEOH_AmBox.Visible = true;
-                E_SEOH_AElabel.Visible = true;
-                E_SEOH_RElabel.Visible = true;
-                E_SEOH_MSlabel.Visible = true;
-                E_SEOH_MSBox.Visible = true;
-                E_SEOH_MVlabel.Visible = true;
-                E_SEOH_MVBox.Visible = true;
+                foreach (Control c in E_SEOH_namelabel.Controls)
+                {
+                    if (c.Name != "E_SEOH_Enablelabel")
+                    {
+                        c.Visible = true;
+                    }
+                }
             }
             else
             {
-                E_SEOH_TDlabel.Visible = true;
-                E_SEOH_TDBox.Visible = true;
-                E_SEOH_METVlabel.Visible = false;
-                E_SEOH_EDDlabel.Visible = false;
-                E_SEOH_Chancelabel.Visible = false;
-                E_SEOH_ChanceBox.Visible = false;
-                E_SEOH_MNlabel.Visible = false;
-                E_SEOH_MNBox.Visible = false;
-                E_SEOH_EBox.Visible = false;
-                E_SEOH_Elabel.Visible = false;
-                E_SEOH_Entityett.Visible = false;
-                E_SEOH_Babylabel.Visible = false;
-                E_SEOH_Explolabel.Visible = false;
-                E_SEOH_Amlabel.Visible = false;
-                E_SEOH_AmBox.Visible = false;
-                E_SEOH_AElabel.Visible = false;
-                E_SEOH_RElabel.Visible = false;
-                E_SEOH_MSlabel.Visible = false;
-                E_SEOH_MSBox.Visible = false;
-                E_SEOH_MVlabel.Visible = false;
-                E_SEOH_MVBox.Visible = false;
+                foreach (Control c in E_SEOH_namelabel.Controls)
+                {
+                    if (c.Name != "E_SEOH_Enablelabel")
+                    {
+                        c.Visible = false;
+                    }
+                }
             }
         }
         private void E_SEOH_AElabel_Click(object sender, EventArgs e)
@@ -1642,21 +1948,23 @@ namespace CrackshotBuilder
         {
             if (getTrueFalse(G2_DBOFT_Enablelabel) == "true")
             {
-                G2_DBOFT_BDPTlabel.Visible = true;
-                G2_DBOFT_BDPTBox.Visible = true;
-                G2_DBOFT_MDlabel.Visible = true;
-                G2_DBOFT_MDBox.Visible = true;
-                G2_DBOFT_MXlabel.Visible = true;
-                G2_DBOFT_MXBox.Visible = true;
+                foreach (Control c in G2_DBOFT_titlelabel.Controls)
+                {
+                    if (c.Name != "G2_DBOFT_Enablelabel")
+                    {
+                        c.Visible = true;
+                    }
+                }
             }
             else
             {
-                G2_DBOFT_BDPTlabel.Visible = false;
-                G2_DBOFT_BDPTBox.Visible = false;
-                G2_DBOFT_MDlabel.Visible = false;
-                G2_DBOFT_MDBox.Visible = false;
-                G2_DBOFT_MXlabel.Visible = false;
-                G2_DBOFT_MXBox.Visible = false;
+                foreach (Control c in G2_DBOFT_titlelabel.Controls)
+                {
+                    if (c.Name != "G2_DBOFT_Enablelabel")
+                    {
+                        c.Visible = false;
+                    }
+                }
             }
         }
 
@@ -1664,64 +1972,23 @@ namespace CrackshotBuilder
         {
             if (getTrueFalse(I_A_Enablelabel) == "true")
             {
-                I_A_FADlabel.Visible = true;
-                I_A_FADBox.Visible = true;
-                I_A_PCABoxpart.Visible = true;
-                I_A_PCAlabel.Visible = true;
-                I_A_MCABox.Visible = true;
-                I_A_MCAlabel.Visible = true;
-                I_A_BTBox.Visible = true;
-                I_A_BTlabel.Visible = true;
-                I_A_ABox.Visible = true;
-                I_A_Alabel.Visible = true;
-                I_A_DBBlabel.Visible = true;
-                I_A_DBBlabel.Visible = true;
-                I_A_HDlabel.Visible = true;
-                I_A_HDBox.Visible = true;
-                I_A_VVBox.Visible = true;
-                I_A_VVlabel.Visible = true;
-                I_A_HVBox.Visible = true;
-                I_A_HVlabel.Visible = true;
-                I_A_SAlabel.Visible = true;
-                AS21.Visible = true;
-                AS21_Sound.Visible = true;
-                RS21.Visible = true;
-                I_A_MS_Enablelabel.Visible = true;
-                I_A_PCABoxAlabel.Visible = true;
-                I_A_PCABoxRlabel.Visible = true;
-                I_A_PCABoxpartls.Visible = true;
-                I_A_DBBBox.Visible = true;
+                foreach (Control c in I_A_GBlabel.Controls)
+                {
+                    if (c.Name != "I_A_Enablelabel")
+                    {
+                        c.Visible = true;
+                    }
+                }
             }
             else
             {
-                I_A_DBBBox.Visible = false;
-                I_A_FADlabel.Visible = false;
-                I_A_FADBox.Visible = false;
-                I_A_PCABoxpart.Visible = false;
-                I_A_PCAlabel.Visible = false;
-                I_A_MCABox.Visible = false;
-                I_A_MCAlabel.Visible = false;
-                I_A_BTBox.Visible = false;
-                I_A_BTlabel.Visible = false;
-                I_A_ABox.Visible = false;
-                I_A_Alabel.Visible = false;
-                I_A_DBBlabel.Visible = false;
-                I_A_DBBlabel.Visible = false;
-                I_A_HDlabel.Visible = false;
-                I_A_HDBox.Visible = false;
-                I_A_VVBox.Visible = false;
-                I_A_VVlabel.Visible = false;
-                I_A_HVBox.Visible = false;
-                I_A_HVlabel.Visible = false;
-                I_A_SAlabel.Visible = false;
-                AS21.Visible = false;
-                AS21_Sound.Visible = false;
-                RS21.Visible = false;
-                I_A_MS_Enablelabel.Visible = false;
-                I_A_MS_Enablelabel.CheckState = CheckState.Unchecked;
-                I_A_PCABoxAlabel.Visible = false;
-                I_A_PCABoxRlabel.Visible = false;
-                I_A_PCABoxpartls.Visible = false;
+                foreach (Control c in I_A_GBlabel.Controls)
+                {
+                    if (c.Name != "I_A_Enablelabel")
+                    {
+                        c.Visible = false;
+                    }
+                }
             }
         }
 
@@ -1740,26 +2007,6 @@ namespace CrackshotBuilder
                 I_A_MS_NOSlabel.Visible = false;
                 I_A_MS_DBSBox.Visible = false;
                 I_A_MS_DBSlabel.Visible = false;
-            }
-        }
-        private void S_U_CFUlabel_Click(object sender, EventArgs e)
-        {
-            System.Net.WebClient request = new System.Net.WebClient();
-            string newver = request.DownloadString("http://pastebin.com/raw/ddUGMbJy");
-            string version = System.Text.RegularExpressions.Regex.Replace(newver.Split('\n').First(), @"\t|\n|\r", "");
-            S_U_NVersion.Text = version;
-        }
-
-        private void S_U_Updatelabel_Click(object sender, EventArgs e)
-        {
-            if (S_U_NVersion.Text == "")
-            {
-                S_U_CFUlabel_Click(sender, e);
-            }
-            if (S_U_CVersion.Text != S_U_NVersion.Text)
-            {
-                Process proc = Process.Start(Application.StartupPath + "/updater.exe");
-                Application.Exit();
             }
         }
 
@@ -1841,74 +2088,23 @@ namespace CrackshotBuilder
         {
             if (getTrueFalse(I_ED_Enablelabel) == "true")
             {
-                I_ED_RBRlabel.Visible = true;
-                I_ED_DeviceTlabel.Visible = true;
-                I_ED_DeviceTBox.Visible = true;
-                I_ED_DeviceIlabel.Visible = true;
-                AS22.Visible = true;
-                RS22.Visible = true;
-                AS22_Sound.Visible = true;
-                AS23.Visible = true;
-                RS23.Visible = true;
-                AS23_Sound.Visible = true;
-                AS24.Visible = true;
-                RS24.Visible = true;
-                AS24_Sound.Visible = true;
-                I_ED_MDbox.Visible = true;
-                I_ED_MDlabel.Visible = true;
-                I_ED_MTPbox.Visible = true;
-                I_ED_MTPlabel.Visible = true;
-                I_ED_MTVbox.Visible = true;
-                I_ED_MTVlabel.Visible = true;
+                foreach (Control c in I_ED_namelabel.Controls)
+                {
+                    if (c.Name != "I_ED_Enablelabel")
+                    {
+                        c.Visible = true;
+                    }
+                }
             }
             else
             {
-                I_ED_RBRlabel.Visible = false;
-                I_ED_DeviceTlabel.Visible = false;
-                I_ED_DeviceTBox.Visible = false;
-                I_ED_DeviceIlabel.Visible = false;
-                I_ED_itemIdlabel.Visible = false;
-                I_ED_Itemids.Visible = false;
-                I_ED_IDPic.Visible = false;
-                I_ED_mcart.Visible = false;
-                I_ED_mcarttlabel.Visible = false;
-                I_ED_UIDlabel.Visible = false;
-                I_ED_Alabel.Visible = false;
-                I_ED_Headlabel.Visible = false;
-                I_ED_Headbox.Visible = false;
-                I_ED_Abox.Visible = false;
-                I_ED_UIDbox.Visible = false;
-                I_ED_Chestlabel.Visible = false;
-                I_ED_Picklabel.Visible = false;
-                I_ED_Reuselabel.Visible = false;
-                I_ED_DAPlabel.Visible = false;
-                I_ED_NIDlabel.Visible = false;
-                I_ED_A2Box.Visible = false;
-                I_ED_A2label.Visible = false;
-                I_ED_Afterlabel.Visible = false;
-                I_ED_afterboxids.Visible = false;
-                I_ED_b4boxids.Visible = false;
-                I_ED_B4label.Visible = false;
-                I_ED_Sbox.Visible = false;
-                I_ED_Slabel.Visible = false;
-                I_ED_MDbox.Visible = false;
-                I_ED_MDlabel.Visible = false;
-                I_ED_MTPbox.Visible = false;
-                I_ED_MTPlabel.Visible = false;
-                I_ED_MTVbox.Visible = false;
-                I_ED_MTVlabel.Visible = false;
-                I_ED_SDlabel.Visible = false;
-                I_ED_SAPlabel.Visible = false;
-                I_ED_STlabel.Visible = false;
-                AS22.Visible = false;
-                RS22.Visible = false;
-                AS22_Sound.Visible = false;
-                AS23.Visible = false;
-                RS23.Visible = false;
-                AS23_Sound.Visible = false;
-                AS24.Visible = false;
-                RS24.Visible = false;
-                AS24_Sound.Visible = false;
+                foreach (Control c in I_ED_namelabel.Controls)
+                {
+                    if (c.Name != "I_ED_Enablelabel")
+                    {
+                        c.Visible = false;
+                    }
+                }
             }
         }
 
@@ -1931,8 +2127,48 @@ namespace CrackshotBuilder
         {
             saveFormState();
         }
+        private void loadFormState()
+        {
+            if (File.Exists(filepath + "/state.txt"))
+            {
+                string[] cnamelist = File.ReadAllLines(filepath + "/state.txt");
+                foreach (string cname in cnamelist)
+                {
+                    string[] value = cname.Split('=');
+                    Control c = Controls.Find(value[0], true).FirstOrDefault();
+                    if (c is ListBox)
+                    {
+                        ListBox lb = (ListBox)c;
+                        string[] lbitems = value[1].Split('|');
+                        foreach (string item in lbitems)
+                        {
+                            lb.Items.Add(item);
+                        }
+                    }
+                    if (c is TextBox)
+                    {
+                        TextBox tb = (TextBox)c;
+                        tb.Text = value[1];
+                    }
+                    if (c is ComboBox)
+                    {
+                        ComboBox cb = (ComboBox)c;
+                        cb.SelectedItem = value[1];
+                    }
+                    if (c is CheckBox)
+                    {
+                        CheckBox cb = (CheckBox)c;
+                        if (value[1] == "Checked")
+                        {
+                            cb.Checked = true;
+                        }
+                    }
+                }
+            }
+        }
         private void saveFormState()
         {
+            File.Delete(filepath + "/state.txt");
             checkControl(this);
         }
         private void checkControl(Control c)
@@ -1943,22 +2179,39 @@ namespace CrackshotBuilder
                 if (ctrl is TextBox)
                 {
                     TextBox c2 = (TextBox)ctrl;
-                    sb.AppendLine(c2.Name + "=" + c2.Text);
+                    if (c2.Text != "")
+                    {
+                        sb.AppendLine(c2.Name + "=" + c2.Text);
+                    }
                 }
                 if (ctrl is CheckBox)
                 {
                     CheckBox c2 = (CheckBox)ctrl;
-                    sb.AppendLine(c2.Name + "=" + c2.CheckState);
+                    if (c2.CheckState == CheckState.Checked)
+                    {
+                        sb.AppendLine(c2.Name + "=" + c2.CheckState);
+                    }
                 }
                 if (ctrl is ComboBox)
                 {
                     ComboBox c2 = (ComboBox)ctrl;
-                    sb.AppendLine(c2.Name + "=" + c2.Text);
+                    if (c2.Text != "")
+                    {
+                        sb.AppendLine(c2.Name + "=" + c2.Text);
+                    }
                 }
                 if (ctrl is ListBox)
                 {
                     ListBox c2 = (ListBox)ctrl;
-                    sb.AppendLine(c2.Name + "=" + c2.Text);
+                    if (c2.Items.Count > 0)
+                    {
+                        string c2text = string.Empty;
+                        foreach (string text in c2.Items)
+                        {
+                            c2text += "|" + text;
+                        }
+                        sb.AppendLine(c2.Name + "=" + c2text);
+                    }
                 }
                 if (ctrl is GroupBox)
                 {
@@ -1977,6 +2230,231 @@ namespace CrackshotBuilder
                 }
             }
             File.AppendAllText(filepath + "/state.txt", sb.ToString());
+        }
+
+        private void I2_CS_bombletids_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            I2_CB_bombPics.Image = Image.FromFile(@filepath + "/Resource/ids/" + I2_CB_bombletids.Text + ".png");
+        }
+
+        private void I2_CB_Enablelabel_CheckedChanged(object sender, EventArgs e)
+        {
+            if (getTrueFalse(I2_CB_Enablelabel) == "true")
+            {
+                foreach (Control c in I2_CS_clusterbomlabel.Controls)
+                {
+                    if (c.Name != "I2_CB_Enablelabel")
+                    {
+                        c.Visible = true;
+                    }
+                }
+            }
+            else
+            {
+                foreach (Control c in I2_CS_clusterbomlabel.Controls)
+                {
+                    if (c.Name != "I2_CB_Enablelabel")
+                    {
+                        c.Visible = false;
+                    }
+                }
+            }
+        }
+
+        private void E_S_Enablelabel_CheckedChanged(object sender, EventArgs e)
+        {
+            if (getTrueFalse(E_S_Enablelabel) == "true")
+            {
+                foreach (Control c in E_S_namelabel.Controls)
+                {
+                    if (c.Name != "E_S_Enablelabel")
+                    {
+                        c.Visible = true;
+                    }
+                }
+            }
+            else
+            {
+                foreach (Control c in E_S_namelabel.Controls)
+                {
+                    if (c.Name != "E_S_Enablelabel")
+                    {
+                        c.Visible = false;
+                    }
+                }
+            }
+        }
+
+        private void E_E_Enablelabel_CheckedChanged(object sender, EventArgs e)
+        {
+            if (getTrueFalse(E_E_Enablelabel) == "true")
+            {
+
+                foreach (Control c in E_E_namelabel.Controls)
+                {
+                    if (c.Name != "E_E_Enablelabel")
+                    {
+                        c.Visible = true;
+                    }
+                }
+            }
+            else
+            {
+                foreach (Control c in E_E_namelabel.Controls)
+                {
+                    if (c.Name != "E_E_Enablelabel")
+                    {
+                        c.Visible = false;
+                    }
+                }
+            }
+        }
+
+        private void E_S_BTids_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            E_S_BTPics.Image = Image.FromFile(@filepath + "/Resource/ids/" + E_S_BTids.Text + ".png");
+        }
+
+        private void E_L_Enablelabel_CheckedChanged(object sender, EventArgs e)
+        {
+            if (getTrueFalse(E_L_Enablelabel) == "true")
+            {
+
+                foreach (Control c in E_L_namelabel.Controls)
+                {
+                    if (c.Name != "E_L_Enablelabel")
+                    {
+                        c.Visible = true;
+                    }
+                }
+            }
+            else
+            {
+                foreach (Control c in E_L_namelabel.Controls)
+                {
+                    if (c.Name != "E_L_Enablelabel")
+                    {
+                        c.Visible = false;
+                    }
+                }
+            }
+        }
+
+        private void E2_P_Enablelabel_CheckedChanged(object sender, EventArgs e)
+        {
+            if (getTrueFalse(E2_P_Enablelabel) == "true")
+            {
+
+                foreach (Control c in E2_P_namelabel.Controls)
+                {
+                    if (c.Name != "E2_P_Enablelabel")
+                    {
+                        c.Visible = true;
+                    }
+                }
+            }
+            else
+            {
+                foreach (Control c in E2_P_namelabel.Controls)
+                {
+                    if (c.Name != "E2_P_Enablelabel")
+                    {
+                        c.Visible = false;
+                    }
+                }
+            }
+        }
+
+        private void E2_F_Enablelabel_CheckedChanged(object sender, EventArgs e)
+        {
+            if (getTrueFalse(E2_F_Enablelabel) == "true")
+            {
+
+                foreach (Control c in E2_F_Fnamelabel.Controls)
+                {
+                    if (c.Name != "E2_F_Enablelabel")
+                    {
+                        c.Visible = true;
+                    }
+                }
+            }
+            else
+            {
+                foreach (Control c in E2_F_Fnamelabel.Controls)
+                {
+                    if (c.Name != "E2_F_Enablelabel")
+                    {
+                        c.Visible = false;
+                    }
+                }
+            }
+        }
+
+        private void O_HE_Enablelabel_CheckedChanged(object sender, EventArgs e)
+        {
+            if (getTrueFalse(O_HE_Enablelabel) == "true")
+            {
+
+                foreach (Control c in O_HE_namelabel.Controls)
+                {
+                    if (c.Name != "O_HE_Enablelabel")
+                    {
+                        c.Visible = true;
+                    }
+                }
+            }
+            else
+            {
+                foreach (Control c in O_HE_namelabel.Controls)
+                {
+                    if (c.Name != "O_HE_Enablelabel")
+                    {
+                        c.Visible = false;
+                    }
+                }
+            }
+        }
+        public void ResetAllControls(Control ctrl)
+        {
+
+            foreach (Control control in ctrl.Controls)
+            {
+                if (control is PictureBox)
+                {
+                    PictureBox pb = (PictureBox)control;
+                    pb.Image = null;
+                }
+                if (control is GroupBox || control is TabControl || control is TabPage)
+                {
+                    ResetAllControls(control);
+                }
+                if (control is TextBox)
+                {
+                    TextBox textBox = (TextBox)control;
+                    textBox.Text = null;
+                }
+                if (control is ComboBox)
+                {
+                    ComboBox comboBox = (ComboBox)control;
+                    comboBox.Text = "";
+                }
+
+                if (control is CheckBox)
+                {
+                    CheckBox checkBox = (CheckBox)control;
+                    checkBox.Checked = false;
+                }
+
+                if (control is ListBox)
+                {
+                    ListBox listBox = (ListBox)control;
+                    listBox.Items.Clear();
+                }
+            }
+        }
+        private void clearBtn_Click(object sender, EventArgs e)
+        {
+            ResetAllControls(this);
         }
     }
 }
