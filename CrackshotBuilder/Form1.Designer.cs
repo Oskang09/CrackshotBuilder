@@ -606,6 +606,34 @@
             this.E2_P_PIAlabel = new System.Windows.Forms.Label();
             this.E2_P_PPSlabel = new System.Windows.Forms.Label();
             this.O_Tablabel = new System.Windows.Forms.TabPage();
+            this.O_A_namelabel = new System.Windows.Forms.GroupBox();
+            this.O_A_KBox = new System.Windows.Forms.TextBox();
+            this.O_A_Klabel = new System.Windows.Forms.Label();
+            this.O_A_Wlabel = new System.Windows.Forms.CheckBox();
+            this.O_A_BBls = new System.Windows.Forms.ListBox();
+            this.O_A_BBRlabel = new System.Windows.Forms.Button();
+            this.O_A_BBAlabel = new System.Windows.Forms.Button();
+            this.O_A_BDls = new System.Windows.Forms.ListBox();
+            this.O_A_BDRlabel = new System.Windows.Forms.Button();
+            this.O_A_BDAlabel = new System.Windows.Forms.Button();
+            this.O_A_BBPics = new System.Windows.Forms.PictureBox();
+            this.O_A_BBlabel = new System.Windows.Forms.Label();
+            this.O_A_BBids = new System.Windows.Forms.ComboBox();
+            this.O_A_BDPics = new System.Windows.Forms.PictureBox();
+            this.O_A_BDlabel = new System.Windows.Forms.Label();
+            this.O_A_BDids = new System.Windows.Forms.ComboBox();
+            this.O_A_SEls = new System.Windows.Forms.ListBox();
+            this.O_A_SERlabel = new System.Windows.Forms.Button();
+            this.O_A_SEAlabel = new System.Windows.Forms.Button();
+            this.O_E_SEMBox = new System.Windows.Forms.TextBox();
+            this.O_A_SElabel = new System.Windows.Forms.Label();
+            this.O_A_SEBoxett = new System.Windows.Forms.ComboBox();
+            this.O_A_JMlabel = new System.Windows.Forms.CheckBox();
+            this.O_A_NVRlabel = new System.Windows.Forms.CheckBox();
+            this.O_A_HElabel = new System.Windows.Forms.CheckBox();
+            this.O_A_NFDlabel = new System.Windows.Forms.CheckBox();
+            this.O_A_RHClabel = new System.Windows.Forms.CheckBox();
+            this.O_A_DNDlabel = new System.Windows.Forms.CheckBox();
             this.O_CDM_namelabel = new System.Windows.Forms.GroupBox();
             this.O_CDM_MBox = new System.Windows.Forms.TextBox();
             this.O_CDM_Nlabel = new System.Windows.Forms.Label();
@@ -661,89 +689,58 @@
             this.O_WS_Priceids = new System.Windows.Forms.ComboBox();
             this.O_WS_Pricelabel = new System.Windows.Forms.Label();
             this.O_WS_Enablelabel = new System.Windows.Forms.CheckBox();
+            this.O_HE_namelabel = new System.Windows.Forms.GroupBox();
+            this.O_HE_MVBox = new System.Windows.Forms.TextBox();
+            this.O_HE_MSBox = new System.Windows.Forms.TextBox();
+            this.AS31_Sound = new System.Windows.Forms.ListBox();
+            this.AS29_Sound = new System.Windows.Forms.ListBox();
+            this.RS31 = new System.Windows.Forms.Button();
+            this.RS29 = new System.Windows.Forms.Button();
+            this.AS31 = new System.Windows.Forms.Button();
+            this.O_HE_SVlabel = new System.Windows.Forms.Label();
+            this.AS29 = new System.Windows.Forms.Button();
+            this.AS30_Sound = new System.Windows.Forms.ListBox();
+            this.RS30 = new System.Windows.Forms.Button();
+            this.O_HE_SIlabel = new System.Windows.Forms.Label();
+            this.O_HE_SSlabel = new System.Windows.Forms.Label();
+            this.AS30 = new System.Windows.Forms.Button();
+            this.O_HE_MVlabel = new System.Windows.Forms.Label();
+            this.O_HE_MSlabel = new System.Windows.Forms.Label();
+            this.O_HE_Enablelabel = new System.Windows.Forms.CheckBox();
+            this.O2_Tablabel = new System.Windows.Forms.TabPage();
+            this.O2_E_namelabel = new System.Windows.Forms.GroupBox();
+            this.O2_E_RBBox = new System.Windows.Forms.ComboBox();
+            this.O2_E_RCcmd = new System.Windows.Forms.TextBox();
+            this.O2_E_RCCcmd = new System.Windows.Forms.TextBox();
+            this.O2_E_MVRCcmd = new System.Windows.Forms.TextBox();
+            this.O2_E_MVSBox = new System.Windows.Forms.TextBox();
+            this.O2_E_RBlabel = new System.Windows.Forms.Label();
+            this.O2_E_RCls = new System.Windows.Forms.ListBox();
+            this.O2_E_RCRlabel = new System.Windows.Forms.Button();
+            this.O2_E_RCAlabel = new System.Windows.Forms.Button();
+            this.O2_E_RClabel = new System.Windows.Forms.Label();
+            this.O2_E_RCCls = new System.Windows.Forms.ListBox();
+            this.O2_E_RCCRlabel = new System.Windows.Forms.Button();
+            this.O2_E_RCCAlabel = new System.Windows.Forms.Button();
+            this.O2_E_RCClabel = new System.Windows.Forms.Label();
+            this.O2_E_MVRCls = new System.Windows.Forms.ListBox();
+            this.O2_E_MVRCRlabel = new System.Windows.Forms.Button();
+            this.O2_E_MVRCAlabel = new System.Windows.Forms.Button();
+            this.O2_E_MVRClabel = new System.Windows.Forms.Label();
+            this.O2_E_MVSlabel = new System.Windows.Forms.Label();
+            this.O2_E_DUlabel = new System.Windows.Forms.CheckBox();
+            this.O2_E_OTUlabel = new System.Windows.Forms.CheckBox();
             this.Yamllabel = new System.Windows.Forms.TabPage();
             this.saveBtn = new System.Windows.Forms.Button();
             this.buildBtnlabel = new System.Windows.Forms.Button();
             this.csyamlbox = new System.Windows.Forms.RichTextBox();
             this.Settinglabel = new System.Windows.Forms.TabPage();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.savettp = new System.Windows.Forms.Button();
-            this.ttp = new System.Windows.Forms.CheckBox();
-            this.O2_Tablabel = new System.Windows.Forms.TabPage();
-            this.O_A_namelabel = new System.Windows.Forms.GroupBox();
-            this.O_A_DNDlabel = new System.Windows.Forms.CheckBox();
-            this.O_A_RHClabel = new System.Windows.Forms.CheckBox();
-            this.O_A_NFDlabel = new System.Windows.Forms.CheckBox();
-            this.O_A_HElabel = new System.Windows.Forms.CheckBox();
-            this.O_A_NVRlabel = new System.Windows.Forms.CheckBox();
-            this.O_A_JMlabel = new System.Windows.Forms.CheckBox();
-            this.O_A_SElabel = new System.Windows.Forms.Label();
-            this.O_A_SEBoxett = new System.Windows.Forms.ComboBox();
-            this.O_E_SEMBox = new System.Windows.Forms.TextBox();
-            this.O_A_SEAlabel = new System.Windows.Forms.Button();
-            this.O_A_SERlabel = new System.Windows.Forms.Button();
-            this.O_A_SEls = new System.Windows.Forms.ListBox();
-            this.O_A_BDlabel = new System.Windows.Forms.Label();
-            this.O_A_BDids = new System.Windows.Forms.ComboBox();
-            this.O_A_BDPics = new System.Windows.Forms.PictureBox();
-            this.O_A_BBPics = new System.Windows.Forms.PictureBox();
-            this.O_A_BBlabel = new System.Windows.Forms.Label();
-            this.O_A_BBids = new System.Windows.Forms.ComboBox();
-            this.O_A_BDls = new System.Windows.Forms.ListBox();
-            this.O_A_BDRlabel = new System.Windows.Forms.Button();
-            this.O_A_BDAlabel = new System.Windows.Forms.Button();
-            this.O_A_BBls = new System.Windows.Forms.ListBox();
-            this.O_A_BBRlabel = new System.Windows.Forms.Button();
-            this.O_A_BBAlabel = new System.Windows.Forms.Button();
-            this.O_A_Wlabel = new System.Windows.Forms.CheckBox();
-            this.O_A_KBox = new System.Windows.Forms.TextBox();
-            this.O_A_Klabel = new System.Windows.Forms.Label();
-            this.O_HE_namelabel = new System.Windows.Forms.GroupBox();
-            this.O_HE_Enablelabel = new System.Windows.Forms.CheckBox();
-            this.O_HE_MSBox = new System.Windows.Forms.TextBox();
-            this.O_HE_MSlabel = new System.Windows.Forms.Label();
-            this.O_HE_MVBox = new System.Windows.Forms.TextBox();
-            this.O_HE_MVlabel = new System.Windows.Forms.Label();
-            this.AS29_Sound = new System.Windows.Forms.ListBox();
-            this.RS29 = new System.Windows.Forms.Button();
-            this.AS29 = new System.Windows.Forms.Button();
-            this.O_HE_SIlabel = new System.Windows.Forms.Label();
-            this.AS30_Sound = new System.Windows.Forms.ListBox();
-            this.RS30 = new System.Windows.Forms.Button();
-            this.AS30 = new System.Windows.Forms.Button();
-            this.O_HE_SSlabel = new System.Windows.Forms.Label();
-            this.AS31_Sound = new System.Windows.Forms.ListBox();
-            this.RS31 = new System.Windows.Forms.Button();
-            this.AS31 = new System.Windows.Forms.Button();
-            this.O_HE_SVlabel = new System.Windows.Forms.Label();
-            this.O2_E_namelabel = new System.Windows.Forms.GroupBox();
-            this.O2_E_OTUlabel = new System.Windows.Forms.CheckBox();
-            this.O2_E_DUlabel = new System.Windows.Forms.CheckBox();
-            this.O2_E_MVSlabel = new System.Windows.Forms.Label();
-            this.O2_E_MVSBox = new System.Windows.Forms.TextBox();
-            this.O2_E_MVRCcmd = new System.Windows.Forms.TextBox();
-            this.O2_E_MVRClabel = new System.Windows.Forms.Label();
-            this.O2_E_MVRCAlabel = new System.Windows.Forms.Button();
-            this.O2_E_MVRCRlabel = new System.Windows.Forms.Button();
-            this.O2_E_MVRCls = new System.Windows.Forms.ListBox();
-            this.O2_E_RCCls = new System.Windows.Forms.ListBox();
-            this.O2_E_RCCRlabel = new System.Windows.Forms.Button();
-            this.O2_E_RCCAlabel = new System.Windows.Forms.Button();
-            this.O2_E_RCClabel = new System.Windows.Forms.Label();
-            this.O2_E_RCCcmd = new System.Windows.Forms.TextBox();
-            this.O2_E_RCls = new System.Windows.Forms.ListBox();
-            this.O2_E_RCRlabel = new System.Windows.Forms.Button();
-            this.O2_E_RCAlabel = new System.Windows.Forms.Button();
-            this.O2_E_RClabel = new System.Windows.Forms.Label();
-            this.O2_E_RCcmd = new System.Windows.Forms.TextBox();
-            this.O2_E_RBBox = new System.Windows.Forms.ComboBox();
-            this.O2_E_RBlabel = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.clearBtn = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.tabControl1.SuspendLayout();
             this.II_Tablabel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.II_IDPics)).BeginInit();
@@ -797,6 +794,9 @@
             this.E2_PE_namelabel.SuspendLayout();
             this.E2_P_namelabel.SuspendLayout();
             this.O_Tablabel.SuspendLayout();
+            this.O_A_namelabel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.O_A_BBPics)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.O_A_BDPics)).BeginInit();
             this.O_CDM_namelabel.SuspendLayout();
             this.O_RC_namelabel.SuspendLayout();
             this.O_CCR_namelabel.SuspendLayout();
@@ -812,18 +812,14 @@
             this.O_WS_namelabel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.O_WS_IDSign)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.O_WS_PricePic)).BeginInit();
+            this.O_HE_namelabel.SuspendLayout();
+            this.O2_Tablabel.SuspendLayout();
+            this.O2_E_namelabel.SuspendLayout();
             this.Yamllabel.SuspendLayout();
             this.Settinglabel.SuspendLayout();
-            this.groupBox7.SuspendLayout();
-            this.O2_Tablabel.SuspendLayout();
-            this.O_A_namelabel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.O_A_BDPics)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.O_A_BBPics)).BeginInit();
-            this.O_HE_namelabel.SuspendLayout();
-            this.O2_E_namelabel.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -7414,6 +7410,309 @@
             this.O_Tablabel.TabIndex = 6;
             this.O_Tablabel.Text = "Others";
             // 
+            // O_A_namelabel
+            // 
+            this.O_A_namelabel.Controls.Add(this.O_A_KBox);
+            this.O_A_namelabel.Controls.Add(this.O_A_Klabel);
+            this.O_A_namelabel.Controls.Add(this.O_A_Wlabel);
+            this.O_A_namelabel.Controls.Add(this.O_A_BBls);
+            this.O_A_namelabel.Controls.Add(this.O_A_BBRlabel);
+            this.O_A_namelabel.Controls.Add(this.O_A_BBAlabel);
+            this.O_A_namelabel.Controls.Add(this.O_A_BDls);
+            this.O_A_namelabel.Controls.Add(this.O_A_BDRlabel);
+            this.O_A_namelabel.Controls.Add(this.O_A_BDAlabel);
+            this.O_A_namelabel.Controls.Add(this.O_A_BBPics);
+            this.O_A_namelabel.Controls.Add(this.O_A_BBlabel);
+            this.O_A_namelabel.Controls.Add(this.O_A_BBids);
+            this.O_A_namelabel.Controls.Add(this.O_A_BDPics);
+            this.O_A_namelabel.Controls.Add(this.O_A_BDlabel);
+            this.O_A_namelabel.Controls.Add(this.O_A_BDids);
+            this.O_A_namelabel.Controls.Add(this.O_A_SEls);
+            this.O_A_namelabel.Controls.Add(this.O_A_SERlabel);
+            this.O_A_namelabel.Controls.Add(this.O_A_SEAlabel);
+            this.O_A_namelabel.Controls.Add(this.O_E_SEMBox);
+            this.O_A_namelabel.Controls.Add(this.O_A_SElabel);
+            this.O_A_namelabel.Controls.Add(this.O_A_SEBoxett);
+            this.O_A_namelabel.Controls.Add(this.O_A_JMlabel);
+            this.O_A_namelabel.Controls.Add(this.O_A_NVRlabel);
+            this.O_A_namelabel.Controls.Add(this.O_A_HElabel);
+            this.O_A_namelabel.Controls.Add(this.O_A_NFDlabel);
+            this.O_A_namelabel.Controls.Add(this.O_A_RHClabel);
+            this.O_A_namelabel.Controls.Add(this.O_A_DNDlabel);
+            this.O_A_namelabel.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold);
+            this.O_A_namelabel.Location = new System.Drawing.Point(340, 239);
+            this.O_A_namelabel.Name = "O_A_namelabel";
+            this.O_A_namelabel.Size = new System.Drawing.Size(958, 243);
+            this.O_A_namelabel.TabIndex = 24;
+            this.O_A_namelabel.TabStop = false;
+            this.O_A_namelabel.Text = "Abilities";
+            // 
+            // O_A_KBox
+            // 
+            this.O_A_KBox.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.O_A_KBox.Location = new System.Drawing.Point(187, 189);
+            this.O_A_KBox.Name = "O_A_KBox";
+            this.O_A_KBox.Size = new System.Drawing.Size(84, 22);
+            this.O_A_KBox.TabIndex = 29;
+            // 
+            // O_A_Klabel
+            // 
+            this.O_A_Klabel.AutoSize = true;
+            this.O_A_Klabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.O_A_Klabel.Location = new System.Drawing.Point(184, 166);
+            this.O_A_Klabel.Name = "O_A_Klabel";
+            this.O_A_Klabel.Size = new System.Drawing.Size(98, 18);
+            this.O_A_Klabel.TabIndex = 28;
+            this.O_A_Klabel.Text = "Knockback";
+            // 
+            // O_A_Wlabel
+            // 
+            this.O_A_Wlabel.AutoSize = true;
+            this.O_A_Wlabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.O_A_Wlabel.Location = new System.Drawing.Point(858, 47);
+            this.O_A_Wlabel.Name = "O_A_Wlabel";
+            this.O_A_Wlabel.Size = new System.Drawing.Size(95, 22);
+            this.O_A_Wlabel.TabIndex = 27;
+            this.O_A_Wlabel.Text = "Whitelist";
+            this.O_A_Wlabel.UseVisualStyleBackColor = true;
+            // 
+            // O_A_BBls
+            // 
+            this.O_A_BBls.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.O_A_BBls.FormattingEnabled = true;
+            this.O_A_BBls.ItemHeight = 16;
+            this.O_A_BBls.Location = new System.Drawing.Point(700, 116);
+            this.O_A_BBls.Name = "O_A_BBls";
+            this.O_A_BBls.Size = new System.Drawing.Size(163, 100);
+            this.O_A_BBls.TabIndex = 26;
+            // 
+            // O_A_BBRlabel
+            // 
+            this.O_A_BBRlabel.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.O_A_BBRlabel.Location = new System.Drawing.Point(784, 79);
+            this.O_A_BBRlabel.Name = "O_A_BBRlabel";
+            this.O_A_BBRlabel.Size = new System.Drawing.Size(79, 31);
+            this.O_A_BBRlabel.TabIndex = 25;
+            this.O_A_BBRlabel.Text = "Remove";
+            this.O_A_BBRlabel.UseVisualStyleBackColor = true;
+            // 
+            // O_A_BBAlabel
+            // 
+            this.O_A_BBAlabel.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.O_A_BBAlabel.Location = new System.Drawing.Point(700, 79);
+            this.O_A_BBAlabel.Name = "O_A_BBAlabel";
+            this.O_A_BBAlabel.Size = new System.Drawing.Size(79, 31);
+            this.O_A_BBAlabel.TabIndex = 24;
+            this.O_A_BBAlabel.Text = "Add";
+            this.O_A_BBAlabel.UseVisualStyleBackColor = true;
+            // 
+            // O_A_BDls
+            // 
+            this.O_A_BDls.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.O_A_BDls.FormattingEnabled = true;
+            this.O_A_BDls.ItemHeight = 16;
+            this.O_A_BDls.Location = new System.Drawing.Point(501, 116);
+            this.O_A_BDls.Name = "O_A_BDls";
+            this.O_A_BDls.Size = new System.Drawing.Size(163, 100);
+            this.O_A_BDls.TabIndex = 23;
+            // 
+            // O_A_BDRlabel
+            // 
+            this.O_A_BDRlabel.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.O_A_BDRlabel.Location = new System.Drawing.Point(585, 79);
+            this.O_A_BDRlabel.Name = "O_A_BDRlabel";
+            this.O_A_BDRlabel.Size = new System.Drawing.Size(79, 31);
+            this.O_A_BDRlabel.TabIndex = 22;
+            this.O_A_BDRlabel.Text = "Remove";
+            this.O_A_BDRlabel.UseVisualStyleBackColor = true;
+            // 
+            // O_A_BDAlabel
+            // 
+            this.O_A_BDAlabel.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.O_A_BDAlabel.Location = new System.Drawing.Point(501, 79);
+            this.O_A_BDAlabel.Name = "O_A_BDAlabel";
+            this.O_A_BDAlabel.Size = new System.Drawing.Size(79, 31);
+            this.O_A_BDAlabel.TabIndex = 21;
+            this.O_A_BDAlabel.Text = "Add";
+            this.O_A_BDAlabel.UseVisualStyleBackColor = true;
+            // 
+            // O_A_BBPics
+            // 
+            this.O_A_BBPics.Location = new System.Drawing.Point(814, 39);
+            this.O_A_BBPics.Name = "O_A_BBPics";
+            this.O_A_BBPics.Size = new System.Drawing.Size(32, 32);
+            this.O_A_BBPics.TabIndex = 20;
+            this.O_A_BBPics.TabStop = false;
+            // 
+            // O_A_BBlabel
+            // 
+            this.O_A_BBlabel.AutoSize = true;
+            this.O_A_BBlabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.O_A_BBlabel.Location = new System.Drawing.Point(697, 21);
+            this.O_A_BBlabel.Name = "O_A_BBlabel";
+            this.O_A_BBlabel.Size = new System.Drawing.Size(114, 18);
+            this.O_A_BBlabel.TabIndex = 19;
+            this.O_A_BBlabel.Text = "Break Blocks";
+            // 
+            // O_A_BBids
+            // 
+            this.O_A_BBids.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.O_A_BBids.FormattingEnabled = true;
+            this.O_A_BBids.Location = new System.Drawing.Point(700, 47);
+            this.O_A_BBids.Name = "O_A_BBids";
+            this.O_A_BBids.Size = new System.Drawing.Size(101, 24);
+            this.O_A_BBids.TabIndex = 18;
+            // 
+            // O_A_BDPics
+            // 
+            this.O_A_BDPics.Location = new System.Drawing.Point(616, 41);
+            this.O_A_BDPics.Name = "O_A_BDPics";
+            this.O_A_BDPics.Size = new System.Drawing.Size(32, 32);
+            this.O_A_BDPics.TabIndex = 17;
+            this.O_A_BDPics.TabStop = false;
+            // 
+            // O_A_BDlabel
+            // 
+            this.O_A_BDlabel.AutoSize = true;
+            this.O_A_BDlabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.O_A_BDlabel.Location = new System.Drawing.Point(498, 23);
+            this.O_A_BDlabel.Name = "O_A_BDlabel";
+            this.O_A_BDlabel.Size = new System.Drawing.Size(111, 18);
+            this.O_A_BDlabel.TabIndex = 16;
+            this.O_A_BDlabel.Text = "Bonus Drops";
+            // 
+            // O_A_BDids
+            // 
+            this.O_A_BDids.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.O_A_BDids.FormattingEnabled = true;
+            this.O_A_BDids.Location = new System.Drawing.Point(501, 49);
+            this.O_A_BDids.Name = "O_A_BDids";
+            this.O_A_BDids.Size = new System.Drawing.Size(101, 24);
+            this.O_A_BDids.TabIndex = 15;
+            // 
+            // O_A_SEls
+            // 
+            this.O_A_SEls.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.O_A_SEls.FormattingEnabled = true;
+            this.O_A_SEls.ItemHeight = 16;
+            this.O_A_SEls.Location = new System.Drawing.Point(311, 116);
+            this.O_A_SEls.Name = "O_A_SEls";
+            this.O_A_SEls.Size = new System.Drawing.Size(163, 100);
+            this.O_A_SEls.TabIndex = 14;
+            // 
+            // O_A_SERlabel
+            // 
+            this.O_A_SERlabel.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.O_A_SERlabel.Location = new System.Drawing.Point(395, 79);
+            this.O_A_SERlabel.Name = "O_A_SERlabel";
+            this.O_A_SERlabel.Size = new System.Drawing.Size(79, 31);
+            this.O_A_SERlabel.TabIndex = 13;
+            this.O_A_SERlabel.Text = "Remove";
+            this.O_A_SERlabel.UseVisualStyleBackColor = true;
+            // 
+            // O_A_SEAlabel
+            // 
+            this.O_A_SEAlabel.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.O_A_SEAlabel.Location = new System.Drawing.Point(311, 79);
+            this.O_A_SEAlabel.Name = "O_A_SEAlabel";
+            this.O_A_SEAlabel.Size = new System.Drawing.Size(79, 31);
+            this.O_A_SEAlabel.TabIndex = 12;
+            this.O_A_SEAlabel.Text = "Add";
+            this.O_A_SEAlabel.UseVisualStyleBackColor = true;
+            // 
+            // O_E_SEMBox
+            // 
+            this.O_E_SEMBox.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.O_E_SEMBox.Location = new System.Drawing.Point(418, 49);
+            this.O_E_SEMBox.Name = "O_E_SEMBox";
+            this.O_E_SEMBox.Size = new System.Drawing.Size(56, 22);
+            this.O_E_SEMBox.TabIndex = 11;
+            // 
+            // O_A_SElabel
+            // 
+            this.O_A_SElabel.AutoSize = true;
+            this.O_A_SElabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.O_A_SElabel.Location = new System.Drawing.Point(308, 23);
+            this.O_A_SElabel.Name = "O_A_SElabel";
+            this.O_A_SElabel.Size = new System.Drawing.Size(130, 18);
+            this.O_A_SElabel.TabIndex = 10;
+            this.O_A_SElabel.Text = "Super Effective";
+            // 
+            // O_A_SEBoxett
+            // 
+            this.O_A_SEBoxett.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.O_A_SEBoxett.FormattingEnabled = true;
+            this.O_A_SEBoxett.Location = new System.Drawing.Point(311, 49);
+            this.O_A_SEBoxett.Name = "O_A_SEBoxett";
+            this.O_A_SEBoxett.Size = new System.Drawing.Size(101, 24);
+            this.O_A_SEBoxett.TabIndex = 9;
+            // 
+            // O_A_JMlabel
+            // 
+            this.O_A_JMlabel.AutoSize = true;
+            this.O_A_JMlabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.O_A_JMlabel.Location = new System.Drawing.Point(18, 172);
+            this.O_A_JMlabel.Name = "O_A_JMlabel";
+            this.O_A_JMlabel.Size = new System.Drawing.Size(138, 22);
+            this.O_A_JMlabel.TabIndex = 7;
+            this.O_A_JMlabel.Text = "Jetpack Mode";
+            this.O_A_JMlabel.UseVisualStyleBackColor = true;
+            // 
+            // O_A_NVRlabel
+            // 
+            this.O_A_NVRlabel.AutoSize = true;
+            this.O_A_NVRlabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.O_A_NVRlabel.Location = new System.Drawing.Point(18, 116);
+            this.O_A_NVRlabel.Name = "O_A_NVRlabel";
+            this.O_A_NVRlabel.Size = new System.Drawing.Size(169, 22);
+            this.O_A_NVRlabel.TabIndex = 6;
+            this.O_A_NVRlabel.Text = "No Vertical Recoil";
+            this.O_A_NVRlabel.UseVisualStyleBackColor = true;
+            // 
+            // O_A_HElabel
+            // 
+            this.O_A_HElabel.AutoSize = true;
+            this.O_A_HElabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.O_A_HElabel.Location = new System.Drawing.Point(18, 144);
+            this.O_A_HElabel.Name = "O_A_HElabel";
+            this.O_A_HElabel.Size = new System.Drawing.Size(113, 22);
+            this.O_A_HElabel.TabIndex = 5;
+            this.O_A_HElabel.Text = "Hurt Effect";
+            this.O_A_HElabel.UseVisualStyleBackColor = true;
+            // 
+            // O_A_NFDlabel
+            // 
+            this.O_A_NFDlabel.AutoSize = true;
+            this.O_A_NFDlabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.O_A_NFDlabel.Location = new System.Drawing.Point(18, 88);
+            this.O_A_NFDlabel.Name = "O_A_NFDlabel";
+            this.O_A_NFDlabel.Size = new System.Drawing.Size(151, 22);
+            this.O_A_NFDlabel.TabIndex = 4;
+            this.O_A_NFDlabel.Text = "No Fall Damage";
+            this.O_A_NFDlabel.UseVisualStyleBackColor = true;
+            // 
+            // O_A_RHClabel
+            // 
+            this.O_A_RHClabel.AutoSize = true;
+            this.O_A_RHClabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.O_A_RHClabel.Location = new System.Drawing.Point(18, 60);
+            this.O_A_RHClabel.Name = "O_A_RHClabel";
+            this.O_A_RHClabel.Size = new System.Drawing.Size(183, 22);
+            this.O_A_RHClabel.TabIndex = 3;
+            this.O_A_RHClabel.Text = "Reset Hit Cooldown";
+            this.O_A_RHClabel.UseVisualStyleBackColor = true;
+            // 
+            // O_A_DNDlabel
+            // 
+            this.O_A_DNDlabel.AutoSize = true;
+            this.O_A_DNDlabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.O_A_DNDlabel.Location = new System.Drawing.Point(18, 32);
+            this.O_A_DNDlabel.Name = "O_A_DNDlabel";
+            this.O_A_DNDlabel.Size = new System.Drawing.Size(144, 22);
+            this.O_A_DNDlabel.TabIndex = 2;
+            this.O_A_DNDlabel.Text = "Death No Drop";
+            this.O_A_DNDlabel.UseVisualStyleBackColor = true;
+            // 
             // O_CDM_namelabel
             // 
             this.O_CDM_namelabel.Controls.Add(this.O_CDM_MBox);
@@ -8017,6 +8316,465 @@
             this.O_WS_Enablelabel.UseVisualStyleBackColor = true;
             this.O_WS_Enablelabel.CheckedChanged += new System.EventHandler(this.O_WS_Enablelabel_CheckedChanged);
             // 
+            // O_HE_namelabel
+            // 
+            this.O_HE_namelabel.Controls.Add(this.O_HE_MVBox);
+            this.O_HE_namelabel.Controls.Add(this.O_HE_MSBox);
+            this.O_HE_namelabel.Controls.Add(this.AS31_Sound);
+            this.O_HE_namelabel.Controls.Add(this.AS29_Sound);
+            this.O_HE_namelabel.Controls.Add(this.RS31);
+            this.O_HE_namelabel.Controls.Add(this.RS29);
+            this.O_HE_namelabel.Controls.Add(this.AS31);
+            this.O_HE_namelabel.Controls.Add(this.O_HE_SVlabel);
+            this.O_HE_namelabel.Controls.Add(this.AS29);
+            this.O_HE_namelabel.Controls.Add(this.AS30_Sound);
+            this.O_HE_namelabel.Controls.Add(this.RS30);
+            this.O_HE_namelabel.Controls.Add(this.O_HE_SIlabel);
+            this.O_HE_namelabel.Controls.Add(this.O_HE_SSlabel);
+            this.O_HE_namelabel.Controls.Add(this.AS30);
+            this.O_HE_namelabel.Controls.Add(this.O_HE_MVlabel);
+            this.O_HE_namelabel.Controls.Add(this.O_HE_MSlabel);
+            this.O_HE_namelabel.Controls.Add(this.O_HE_Enablelabel);
+            this.O_HE_namelabel.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold);
+            this.O_HE_namelabel.Location = new System.Drawing.Point(7, 333);
+            this.O_HE_namelabel.Name = "O_HE_namelabel";
+            this.O_HE_namelabel.Size = new System.Drawing.Size(615, 336);
+            this.O_HE_namelabel.TabIndex = 24;
+            this.O_HE_namelabel.TabStop = false;
+            this.O_HE_namelabel.Text = "Hit Events";
+            // 
+            // O_HE_MVBox
+            // 
+            this.O_HE_MVBox.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.O_HE_MVBox.Location = new System.Drawing.Point(17, 127);
+            this.O_HE_MVBox.Name = "O_HE_MVBox";
+            this.O_HE_MVBox.Size = new System.Drawing.Size(290, 22);
+            this.O_HE_MVBox.TabIndex = 26;
+            this.O_HE_MVBox.Visible = false;
+            // 
+            // O_HE_MSBox
+            // 
+            this.O_HE_MSBox.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.O_HE_MSBox.Location = new System.Drawing.Point(17, 79);
+            this.O_HE_MSBox.Name = "O_HE_MSBox";
+            this.O_HE_MSBox.Size = new System.Drawing.Size(290, 22);
+            this.O_HE_MSBox.TabIndex = 24;
+            this.O_HE_MSBox.Visible = false;
+            // 
+            // AS31_Sound
+            // 
+            this.AS31_Sound.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.AS31_Sound.FormattingEnabled = true;
+            this.AS31_Sound.ItemHeight = 16;
+            this.AS31_Sound.Location = new System.Drawing.Point(433, 221);
+            this.AS31_Sound.Name = "AS31_Sound";
+            this.AS31_Sound.Size = new System.Drawing.Size(163, 100);
+            this.AS31_Sound.TabIndex = 36;
+            this.AS31_Sound.Visible = false;
+            // 
+            // AS29_Sound
+            // 
+            this.AS29_Sound.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.AS29_Sound.FormattingEnabled = true;
+            this.AS29_Sound.ItemHeight = 16;
+            this.AS29_Sound.Location = new System.Drawing.Point(53, 221);
+            this.AS29_Sound.Name = "AS29_Sound";
+            this.AS29_Sound.Size = new System.Drawing.Size(163, 100);
+            this.AS29_Sound.TabIndex = 28;
+            this.AS29_Sound.Visible = false;
+            // 
+            // RS31
+            // 
+            this.RS31.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.RS31.Location = new System.Drawing.Point(517, 184);
+            this.RS31.Name = "RS31";
+            this.RS31.Size = new System.Drawing.Size(79, 31);
+            this.RS31.TabIndex = 35;
+            this.RS31.Text = "Remove";
+            this.RS31.UseVisualStyleBackColor = true;
+            this.RS31.Visible = false;
+            // 
+            // RS29
+            // 
+            this.RS29.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.RS29.Location = new System.Drawing.Point(137, 184);
+            this.RS29.Name = "RS29";
+            this.RS29.Size = new System.Drawing.Size(79, 31);
+            this.RS29.TabIndex = 27;
+            this.RS29.Text = "Remove";
+            this.RS29.UseVisualStyleBackColor = true;
+            this.RS29.Visible = false;
+            // 
+            // AS31
+            // 
+            this.AS31.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.AS31.Location = new System.Drawing.Point(433, 184);
+            this.AS31.Name = "AS31";
+            this.AS31.Size = new System.Drawing.Size(79, 31);
+            this.AS31.TabIndex = 34;
+            this.AS31.Text = "Add";
+            this.AS31.UseVisualStyleBackColor = true;
+            this.AS31.Visible = false;
+            // 
+            // O_HE_SVlabel
+            // 
+            this.O_HE_SVlabel.AutoSize = true;
+            this.O_HE_SVlabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.O_HE_SVlabel.Location = new System.Drawing.Point(430, 163);
+            this.O_HE_SVlabel.Name = "O_HE_SVlabel";
+            this.O_HE_SVlabel.Size = new System.Drawing.Size(121, 18);
+            this.O_HE_SVlabel.TabIndex = 33;
+            this.O_HE_SVlabel.Text = "Sounds Victim";
+            this.O_HE_SVlabel.Visible = false;
+            // 
+            // AS29
+            // 
+            this.AS29.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.AS29.Location = new System.Drawing.Point(53, 184);
+            this.AS29.Name = "AS29";
+            this.AS29.Size = new System.Drawing.Size(79, 31);
+            this.AS29.TabIndex = 26;
+            this.AS29.Text = "Add";
+            this.AS29.UseVisualStyleBackColor = true;
+            this.AS29.Visible = false;
+            // 
+            // AS30_Sound
+            // 
+            this.AS30_Sound.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.AS30_Sound.FormattingEnabled = true;
+            this.AS30_Sound.ItemHeight = 16;
+            this.AS30_Sound.Location = new System.Drawing.Point(246, 221);
+            this.AS30_Sound.Name = "AS30_Sound";
+            this.AS30_Sound.Size = new System.Drawing.Size(163, 100);
+            this.AS30_Sound.TabIndex = 32;
+            this.AS30_Sound.Visible = false;
+            // 
+            // RS30
+            // 
+            this.RS30.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.RS30.Location = new System.Drawing.Point(330, 184);
+            this.RS30.Name = "RS30";
+            this.RS30.Size = new System.Drawing.Size(79, 31);
+            this.RS30.TabIndex = 31;
+            this.RS30.Text = "Remove";
+            this.RS30.UseVisualStyleBackColor = true;
+            this.RS30.Visible = false;
+            // 
+            // O_HE_SIlabel
+            // 
+            this.O_HE_SIlabel.AutoSize = true;
+            this.O_HE_SIlabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.O_HE_SIlabel.Location = new System.Drawing.Point(50, 163);
+            this.O_HE_SIlabel.Name = "O_HE_SIlabel";
+            this.O_HE_SIlabel.Size = new System.Drawing.Size(127, 18);
+            this.O_HE_SIlabel.TabIndex = 25;
+            this.O_HE_SIlabel.Text = "Sounds Impact";
+            this.O_HE_SIlabel.Visible = false;
+            // 
+            // O_HE_SSlabel
+            // 
+            this.O_HE_SSlabel.AutoSize = true;
+            this.O_HE_SSlabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.O_HE_SSlabel.Location = new System.Drawing.Point(243, 163);
+            this.O_HE_SSlabel.Name = "O_HE_SSlabel";
+            this.O_HE_SSlabel.Size = new System.Drawing.Size(136, 18);
+            this.O_HE_SSlabel.TabIndex = 29;
+            this.O_HE_SSlabel.Text = "Sounds Shooter";
+            this.O_HE_SSlabel.Visible = false;
+            // 
+            // AS30
+            // 
+            this.AS30.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.AS30.Location = new System.Drawing.Point(246, 184);
+            this.AS30.Name = "AS30";
+            this.AS30.Size = new System.Drawing.Size(79, 31);
+            this.AS30.TabIndex = 30;
+            this.AS30.Text = "Add";
+            this.AS30.UseVisualStyleBackColor = true;
+            this.AS30.Visible = false;
+            // 
+            // O_HE_MVlabel
+            // 
+            this.O_HE_MVlabel.AutoSize = true;
+            this.O_HE_MVlabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.O_HE_MVlabel.Location = new System.Drawing.Point(14, 106);
+            this.O_HE_MVlabel.Name = "O_HE_MVlabel";
+            this.O_HE_MVlabel.Size = new System.Drawing.Size(132, 18);
+            this.O_HE_MVlabel.TabIndex = 27;
+            this.O_HE_MVlabel.Text = "Message Victim";
+            this.O_HE_MVlabel.Visible = false;
+            // 
+            // O_HE_MSlabel
+            // 
+            this.O_HE_MSlabel.AutoSize = true;
+            this.O_HE_MSlabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.O_HE_MSlabel.Location = new System.Drawing.Point(14, 58);
+            this.O_HE_MSlabel.Name = "O_HE_MSlabel";
+            this.O_HE_MSlabel.Size = new System.Drawing.Size(147, 18);
+            this.O_HE_MSlabel.TabIndex = 25;
+            this.O_HE_MSlabel.Text = "Message Shooter";
+            this.O_HE_MSlabel.Visible = false;
+            // 
+            // O_HE_Enablelabel
+            // 
+            this.O_HE_Enablelabel.AutoSize = true;
+            this.O_HE_Enablelabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.O_HE_Enablelabel.Location = new System.Drawing.Point(18, 35);
+            this.O_HE_Enablelabel.Name = "O_HE_Enablelabel";
+            this.O_HE_Enablelabel.Size = new System.Drawing.Size(82, 22);
+            this.O_HE_Enablelabel.TabIndex = 3;
+            this.O_HE_Enablelabel.Text = "Enable";
+            this.O_HE_Enablelabel.UseVisualStyleBackColor = true;
+            this.O_HE_Enablelabel.CheckedChanged += new System.EventHandler(this.O_HE_Enablelabel_CheckedChanged);
+            // 
+            // O2_Tablabel
+            // 
+            this.O2_Tablabel.Controls.Add(this.O2_E_namelabel);
+            this.O2_Tablabel.Location = new System.Drawing.Point(4, 25);
+            this.O2_Tablabel.Name = "O2_Tablabel";
+            this.O2_Tablabel.Padding = new System.Windows.Forms.Padding(3);
+            this.O2_Tablabel.Size = new System.Drawing.Size(1358, 685);
+            this.O2_Tablabel.TabIndex = 11;
+            this.O2_Tablabel.Text = "Others2";
+            this.O2_Tablabel.UseVisualStyleBackColor = true;
+            // 
+            // O2_E_namelabel
+            // 
+            this.O2_E_namelabel.Controls.Add(this.O2_E_RBBox);
+            this.O2_E_namelabel.Controls.Add(this.O2_E_RCcmd);
+            this.O2_E_namelabel.Controls.Add(this.O2_E_RCCcmd);
+            this.O2_E_namelabel.Controls.Add(this.O2_E_MVRCcmd);
+            this.O2_E_namelabel.Controls.Add(this.O2_E_MVSBox);
+            this.O2_E_namelabel.Controls.Add(this.O2_E_RBlabel);
+            this.O2_E_namelabel.Controls.Add(this.O2_E_RCls);
+            this.O2_E_namelabel.Controls.Add(this.O2_E_RCRlabel);
+            this.O2_E_namelabel.Controls.Add(this.O2_E_RCAlabel);
+            this.O2_E_namelabel.Controls.Add(this.O2_E_RClabel);
+            this.O2_E_namelabel.Controls.Add(this.O2_E_RCCls);
+            this.O2_E_namelabel.Controls.Add(this.O2_E_RCCRlabel);
+            this.O2_E_namelabel.Controls.Add(this.O2_E_RCCAlabel);
+            this.O2_E_namelabel.Controls.Add(this.O2_E_RCClabel);
+            this.O2_E_namelabel.Controls.Add(this.O2_E_MVRCls);
+            this.O2_E_namelabel.Controls.Add(this.O2_E_MVRCRlabel);
+            this.O2_E_namelabel.Controls.Add(this.O2_E_MVRCAlabel);
+            this.O2_E_namelabel.Controls.Add(this.O2_E_MVRClabel);
+            this.O2_E_namelabel.Controls.Add(this.O2_E_MVSlabel);
+            this.O2_E_namelabel.Controls.Add(this.O2_E_DUlabel);
+            this.O2_E_namelabel.Controls.Add(this.O2_E_OTUlabel);
+            this.O2_E_namelabel.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold);
+            this.O2_E_namelabel.Location = new System.Drawing.Point(7, 6);
+            this.O2_E_namelabel.Name = "O2_E_namelabel";
+            this.O2_E_namelabel.Size = new System.Drawing.Size(857, 351);
+            this.O2_E_namelabel.TabIndex = 0;
+            this.O2_E_namelabel.TabStop = false;
+            this.O2_E_namelabel.Text = "Extras";
+            // 
+            // O2_E_RBBox
+            // 
+            this.O2_E_RBBox.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.O2_E_RBBox.FormattingEnabled = true;
+            this.O2_E_RBBox.Items.AddRange(new object[] {
+            "CONSOLE",
+            "PLAYER"});
+            this.O2_E_RBBox.Location = new System.Drawing.Point(750, 149);
+            this.O2_E_RBBox.Name = "O2_E_RBBox";
+            this.O2_E_RBBox.Size = new System.Drawing.Size(85, 24);
+            this.O2_E_RBBox.TabIndex = 19;
+            // 
+            // O2_E_RCcmd
+            // 
+            this.O2_E_RCcmd.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.O2_E_RCcmd.Location = new System.Drawing.Point(529, 121);
+            this.O2_E_RCcmd.Name = "O2_E_RCcmd";
+            this.O2_E_RCcmd.Size = new System.Drawing.Size(215, 22);
+            this.O2_E_RCcmd.TabIndex = 14;
+            // 
+            // O2_E_RCCcmd
+            // 
+            this.O2_E_RCCcmd.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.O2_E_RCCcmd.Location = new System.Drawing.Point(271, 121);
+            this.O2_E_RCCcmd.Name = "O2_E_RCCcmd";
+            this.O2_E_RCCcmd.Size = new System.Drawing.Size(215, 22);
+            this.O2_E_RCCcmd.TabIndex = 9;
+            // 
+            // O2_E_MVRCcmd
+            // 
+            this.O2_E_MVRCcmd.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.O2_E_MVRCcmd.Location = new System.Drawing.Point(21, 121);
+            this.O2_E_MVRCcmd.Name = "O2_E_MVRCcmd";
+            this.O2_E_MVRCcmd.Size = new System.Drawing.Size(215, 22);
+            this.O2_E_MVRCcmd.TabIndex = 4;
+            // 
+            // O2_E_MVSBox
+            // 
+            this.O2_E_MVSBox.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.O2_E_MVSBox.Location = new System.Drawing.Point(243, 60);
+            this.O2_E_MVSBox.Name = "O2_E_MVSBox";
+            this.O2_E_MVSBox.Size = new System.Drawing.Size(215, 22);
+            this.O2_E_MVSBox.TabIndex = 3;
+            // 
+            // O2_E_RBlabel
+            // 
+            this.O2_E_RBlabel.AutoSize = true;
+            this.O2_E_RBlabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.O2_E_RBlabel.Location = new System.Drawing.Point(750, 125);
+            this.O2_E_RBlabel.Name = "O2_E_RBlabel";
+            this.O2_E_RBlabel.Size = new System.Drawing.Size(65, 18);
+            this.O2_E_RBlabel.TabIndex = 20;
+            this.O2_E_RBlabel.Text = "Run By";
+            // 
+            // O2_E_RCls
+            // 
+            this.O2_E_RCls.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.O2_E_RCls.FormattingEnabled = true;
+            this.O2_E_RCls.ItemHeight = 16;
+            this.O2_E_RCls.Location = new System.Drawing.Point(529, 183);
+            this.O2_E_RCls.Name = "O2_E_RCls";
+            this.O2_E_RCls.Size = new System.Drawing.Size(215, 148);
+            this.O2_E_RCls.TabIndex = 18;
+            // 
+            // O2_E_RCRlabel
+            // 
+            this.O2_E_RCRlabel.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.O2_E_RCRlabel.Location = new System.Drawing.Point(639, 149);
+            this.O2_E_RCRlabel.Name = "O2_E_RCRlabel";
+            this.O2_E_RCRlabel.Size = new System.Drawing.Size(105, 28);
+            this.O2_E_RCRlabel.TabIndex = 17;
+            this.O2_E_RCRlabel.Text = "Remove";
+            this.O2_E_RCRlabel.UseVisualStyleBackColor = true;
+            // 
+            // O2_E_RCAlabel
+            // 
+            this.O2_E_RCAlabel.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.O2_E_RCAlabel.Location = new System.Drawing.Point(529, 149);
+            this.O2_E_RCAlabel.Name = "O2_E_RCAlabel";
+            this.O2_E_RCAlabel.Size = new System.Drawing.Size(105, 28);
+            this.O2_E_RCAlabel.TabIndex = 16;
+            this.O2_E_RCAlabel.Text = "Add";
+            this.O2_E_RCAlabel.UseVisualStyleBackColor = true;
+            // 
+            // O2_E_RClabel
+            // 
+            this.O2_E_RClabel.AutoSize = true;
+            this.O2_E_RClabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.O2_E_RClabel.Location = new System.Drawing.Point(526, 100);
+            this.O2_E_RClabel.Name = "O2_E_RClabel";
+            this.O2_E_RClabel.Size = new System.Drawing.Size(124, 18);
+            this.O2_E_RClabel.TabIndex = 15;
+            this.O2_E_RClabel.Text = "Run Command";
+            // 
+            // O2_E_RCCls
+            // 
+            this.O2_E_RCCls.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.O2_E_RCCls.FormattingEnabled = true;
+            this.O2_E_RCCls.ItemHeight = 16;
+            this.O2_E_RCCls.Location = new System.Drawing.Point(271, 183);
+            this.O2_E_RCCls.Name = "O2_E_RCCls";
+            this.O2_E_RCCls.Size = new System.Drawing.Size(215, 148);
+            this.O2_E_RCCls.TabIndex = 13;
+            // 
+            // O2_E_RCCRlabel
+            // 
+            this.O2_E_RCCRlabel.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.O2_E_RCCRlabel.Location = new System.Drawing.Point(381, 149);
+            this.O2_E_RCCRlabel.Name = "O2_E_RCCRlabel";
+            this.O2_E_RCCRlabel.Size = new System.Drawing.Size(105, 28);
+            this.O2_E_RCCRlabel.TabIndex = 12;
+            this.O2_E_RCCRlabel.Text = "Remove";
+            this.O2_E_RCCRlabel.UseVisualStyleBackColor = true;
+            // 
+            // O2_E_RCCAlabel
+            // 
+            this.O2_E_RCCAlabel.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.O2_E_RCCAlabel.Location = new System.Drawing.Point(271, 149);
+            this.O2_E_RCCAlabel.Name = "O2_E_RCCAlabel";
+            this.O2_E_RCCAlabel.Size = new System.Drawing.Size(105, 28);
+            this.O2_E_RCCAlabel.TabIndex = 11;
+            this.O2_E_RCCAlabel.Text = "Add";
+            this.O2_E_RCCAlabel.UseVisualStyleBackColor = true;
+            // 
+            // O2_E_RCClabel
+            // 
+            this.O2_E_RCClabel.AutoSize = true;
+            this.O2_E_RCClabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.O2_E_RCClabel.Location = new System.Drawing.Point(268, 100);
+            this.O2_E_RCClabel.Name = "O2_E_RCClabel";
+            this.O2_E_RCClabel.Size = new System.Drawing.Size(193, 18);
+            this.O2_E_RCClabel.TabIndex = 10;
+            this.O2_E_RCClabel.Text = "Run Console Command";
+            // 
+            // O2_E_MVRCls
+            // 
+            this.O2_E_MVRCls.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.O2_E_MVRCls.FormattingEnabled = true;
+            this.O2_E_MVRCls.ItemHeight = 16;
+            this.O2_E_MVRCls.Location = new System.Drawing.Point(21, 183);
+            this.O2_E_MVRCls.Name = "O2_E_MVRCls";
+            this.O2_E_MVRCls.Size = new System.Drawing.Size(215, 148);
+            this.O2_E_MVRCls.TabIndex = 8;
+            // 
+            // O2_E_MVRCRlabel
+            // 
+            this.O2_E_MVRCRlabel.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.O2_E_MVRCRlabel.Location = new System.Drawing.Point(131, 149);
+            this.O2_E_MVRCRlabel.Name = "O2_E_MVRCRlabel";
+            this.O2_E_MVRCRlabel.Size = new System.Drawing.Size(105, 28);
+            this.O2_E_MVRCRlabel.TabIndex = 7;
+            this.O2_E_MVRCRlabel.Text = "Remove";
+            this.O2_E_MVRCRlabel.UseVisualStyleBackColor = true;
+            // 
+            // O2_E_MVRCAlabel
+            // 
+            this.O2_E_MVRCAlabel.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.O2_E_MVRCAlabel.Location = new System.Drawing.Point(21, 149);
+            this.O2_E_MVRCAlabel.Name = "O2_E_MVRCAlabel";
+            this.O2_E_MVRCAlabel.Size = new System.Drawing.Size(105, 28);
+            this.O2_E_MVRCAlabel.TabIndex = 6;
+            this.O2_E_MVRCAlabel.Text = "Add";
+            this.O2_E_MVRCAlabel.UseVisualStyleBackColor = true;
+            // 
+            // O2_E_MVRClabel
+            // 
+            this.O2_E_MVRClabel.AutoSize = true;
+            this.O2_E_MVRClabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.O2_E_MVRClabel.Location = new System.Drawing.Point(18, 100);
+            this.O2_E_MVRClabel.Name = "O2_E_MVRClabel";
+            this.O2_E_MVRClabel.Size = new System.Drawing.Size(237, 18);
+            this.O2_E_MVRClabel.TabIndex = 5;
+            this.O2_E_MVRClabel.Text = "Make Victim Run Commmand";
+            // 
+            // O2_E_MVSlabel
+            // 
+            this.O2_E_MVSlabel.AutoSize = true;
+            this.O2_E_MVSlabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.O2_E_MVSlabel.Location = new System.Drawing.Point(240, 39);
+            this.O2_E_MVSlabel.Name = "O2_E_MVSlabel";
+            this.O2_E_MVSlabel.Size = new System.Drawing.Size(157, 18);
+            this.O2_E_MVSlabel.TabIndex = 2;
+            this.O2_E_MVSlabel.Text = "Make Victim Speak";
+            // 
+            // O2_E_DUlabel
+            // 
+            this.O2_E_DUlabel.AutoSize = true;
+            this.O2_E_DUlabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.O2_E_DUlabel.Location = new System.Drawing.Point(26, 67);
+            this.O2_E_DUlabel.Name = "O2_E_DUlabel";
+            this.O2_E_DUlabel.Size = new System.Drawing.Size(185, 22);
+            this.O2_E_DUlabel.TabIndex = 1;
+            this.O2_E_DUlabel.Text = "Disable Underwater";
+            this.O2_E_DUlabel.UseVisualStyleBackColor = true;
+            // 
+            // O2_E_OTUlabel
+            // 
+            this.O2_E_OTUlabel.AutoSize = true;
+            this.O2_E_OTUlabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.O2_E_OTUlabel.Location = new System.Drawing.Point(26, 39);
+            this.O2_E_OTUlabel.Name = "O2_E_OTUlabel";
+            this.O2_E_OTUlabel.Size = new System.Drawing.Size(137, 22);
+            this.O2_E_OTUlabel.TabIndex = 0;
+            this.O2_E_OTUlabel.Text = "One Time Use";
+            this.O2_E_OTUlabel.UseVisualStyleBackColor = true;
+            // 
             // Yamllabel
             // 
             this.Yamllabel.BackColor = System.Drawing.Color.White;
@@ -8069,7 +8827,6 @@
             this.Settinglabel.Controls.Add(this.groupBox3);
             this.Settinglabel.Controls.Add(this.groupBox2);
             this.Settinglabel.Controls.Add(this.groupBox1);
-            this.Settinglabel.Controls.Add(this.groupBox7);
             this.Settinglabel.Location = new System.Drawing.Point(4, 25);
             this.Settinglabel.Name = "Settinglabel";
             this.Settinglabel.Size = new System.Drawing.Size(1358, 685);
@@ -8077,823 +8834,27 @@
             this.Settinglabel.Text = "Setting";
             this.Settinglabel.UseVisualStyleBackColor = true;
             // 
-            // groupBox7
-            // 
-            this.groupBox7.Controls.Add(this.savettp);
-            this.groupBox7.Controls.Add(this.ttp);
-            this.groupBox7.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold);
-            this.groupBox7.Location = new System.Drawing.Point(7, 3);
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(284, 89);
-            this.groupBox7.TabIndex = 1;
-            this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "TTP Setting";
-            // 
-            // savettp
-            // 
-            this.savettp.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
-            this.savettp.Location = new System.Drawing.Point(133, 27);
-            this.savettp.Name = "savettp";
-            this.savettp.Size = new System.Drawing.Size(132, 40);
-            this.savettp.TabIndex = 6;
-            this.savettp.Text = "Save";
-            this.savettp.UseVisualStyleBackColor = true;
-            this.savettp.Click += new System.EventHandler(this.savettp_Click);
-            // 
-            // ttp
-            // 
-            this.ttp.AutoSize = true;
-            this.ttp.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
-            this.ttp.Location = new System.Drawing.Point(16, 36);
-            this.ttp.Name = "ttp";
-            this.ttp.Size = new System.Drawing.Size(111, 22);
-            this.ttp.TabIndex = 0;
-            this.ttp.Text = "TTPHelper";
-            this.ttp.UseVisualStyleBackColor = true;
-            // 
-            // O2_Tablabel
-            // 
-            this.O2_Tablabel.Controls.Add(this.O2_E_namelabel);
-            this.O2_Tablabel.Location = new System.Drawing.Point(4, 25);
-            this.O2_Tablabel.Name = "O2_Tablabel";
-            this.O2_Tablabel.Padding = new System.Windows.Forms.Padding(3);
-            this.O2_Tablabel.Size = new System.Drawing.Size(1358, 685);
-            this.O2_Tablabel.TabIndex = 11;
-            this.O2_Tablabel.Text = "Others2";
-            this.O2_Tablabel.UseVisualStyleBackColor = true;
-            // 
-            // O_A_namelabel
-            // 
-            this.O_A_namelabel.Controls.Add(this.O_A_KBox);
-            this.O_A_namelabel.Controls.Add(this.O_A_Klabel);
-            this.O_A_namelabel.Controls.Add(this.O_A_Wlabel);
-            this.O_A_namelabel.Controls.Add(this.O_A_BBls);
-            this.O_A_namelabel.Controls.Add(this.O_A_BBRlabel);
-            this.O_A_namelabel.Controls.Add(this.O_A_BBAlabel);
-            this.O_A_namelabel.Controls.Add(this.O_A_BDls);
-            this.O_A_namelabel.Controls.Add(this.O_A_BDRlabel);
-            this.O_A_namelabel.Controls.Add(this.O_A_BDAlabel);
-            this.O_A_namelabel.Controls.Add(this.O_A_BBPics);
-            this.O_A_namelabel.Controls.Add(this.O_A_BBlabel);
-            this.O_A_namelabel.Controls.Add(this.O_A_BBids);
-            this.O_A_namelabel.Controls.Add(this.O_A_BDPics);
-            this.O_A_namelabel.Controls.Add(this.O_A_BDlabel);
-            this.O_A_namelabel.Controls.Add(this.O_A_BDids);
-            this.O_A_namelabel.Controls.Add(this.O_A_SEls);
-            this.O_A_namelabel.Controls.Add(this.O_A_SERlabel);
-            this.O_A_namelabel.Controls.Add(this.O_A_SEAlabel);
-            this.O_A_namelabel.Controls.Add(this.O_E_SEMBox);
-            this.O_A_namelabel.Controls.Add(this.O_A_SElabel);
-            this.O_A_namelabel.Controls.Add(this.O_A_SEBoxett);
-            this.O_A_namelabel.Controls.Add(this.O_A_JMlabel);
-            this.O_A_namelabel.Controls.Add(this.O_A_NVRlabel);
-            this.O_A_namelabel.Controls.Add(this.O_A_HElabel);
-            this.O_A_namelabel.Controls.Add(this.O_A_NFDlabel);
-            this.O_A_namelabel.Controls.Add(this.O_A_RHClabel);
-            this.O_A_namelabel.Controls.Add(this.O_A_DNDlabel);
-            this.O_A_namelabel.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold);
-            this.O_A_namelabel.Location = new System.Drawing.Point(340, 239);
-            this.O_A_namelabel.Name = "O_A_namelabel";
-            this.O_A_namelabel.Size = new System.Drawing.Size(958, 243);
-            this.O_A_namelabel.TabIndex = 24;
-            this.O_A_namelabel.TabStop = false;
-            this.O_A_namelabel.Text = "Abilities";
-            // 
-            // O_A_DNDlabel
-            // 
-            this.O_A_DNDlabel.AutoSize = true;
-            this.O_A_DNDlabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
-            this.O_A_DNDlabel.Location = new System.Drawing.Point(18, 32);
-            this.O_A_DNDlabel.Name = "O_A_DNDlabel";
-            this.O_A_DNDlabel.Size = new System.Drawing.Size(144, 22);
-            this.O_A_DNDlabel.TabIndex = 2;
-            this.O_A_DNDlabel.Text = "Death No Drop";
-            this.O_A_DNDlabel.UseVisualStyleBackColor = true;
-            // 
-            // O_A_RHClabel
-            // 
-            this.O_A_RHClabel.AutoSize = true;
-            this.O_A_RHClabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
-            this.O_A_RHClabel.Location = new System.Drawing.Point(18, 60);
-            this.O_A_RHClabel.Name = "O_A_RHClabel";
-            this.O_A_RHClabel.Size = new System.Drawing.Size(183, 22);
-            this.O_A_RHClabel.TabIndex = 3;
-            this.O_A_RHClabel.Text = "Reset Hit Cooldown";
-            this.O_A_RHClabel.UseVisualStyleBackColor = true;
-            // 
-            // O_A_NFDlabel
-            // 
-            this.O_A_NFDlabel.AutoSize = true;
-            this.O_A_NFDlabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
-            this.O_A_NFDlabel.Location = new System.Drawing.Point(18, 88);
-            this.O_A_NFDlabel.Name = "O_A_NFDlabel";
-            this.O_A_NFDlabel.Size = new System.Drawing.Size(151, 22);
-            this.O_A_NFDlabel.TabIndex = 4;
-            this.O_A_NFDlabel.Text = "No Fall Damage";
-            this.O_A_NFDlabel.UseVisualStyleBackColor = true;
-            // 
-            // O_A_HElabel
-            // 
-            this.O_A_HElabel.AutoSize = true;
-            this.O_A_HElabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
-            this.O_A_HElabel.Location = new System.Drawing.Point(18, 144);
-            this.O_A_HElabel.Name = "O_A_HElabel";
-            this.O_A_HElabel.Size = new System.Drawing.Size(113, 22);
-            this.O_A_HElabel.TabIndex = 5;
-            this.O_A_HElabel.Text = "Hurt Effect";
-            this.O_A_HElabel.UseVisualStyleBackColor = true;
-            // 
-            // O_A_NVRlabel
-            // 
-            this.O_A_NVRlabel.AutoSize = true;
-            this.O_A_NVRlabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
-            this.O_A_NVRlabel.Location = new System.Drawing.Point(18, 116);
-            this.O_A_NVRlabel.Name = "O_A_NVRlabel";
-            this.O_A_NVRlabel.Size = new System.Drawing.Size(169, 22);
-            this.O_A_NVRlabel.TabIndex = 6;
-            this.O_A_NVRlabel.Text = "No Vertical Recoil";
-            this.O_A_NVRlabel.UseVisualStyleBackColor = true;
-            // 
-            // O_A_JMlabel
-            // 
-            this.O_A_JMlabel.AutoSize = true;
-            this.O_A_JMlabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
-            this.O_A_JMlabel.Location = new System.Drawing.Point(18, 172);
-            this.O_A_JMlabel.Name = "O_A_JMlabel";
-            this.O_A_JMlabel.Size = new System.Drawing.Size(138, 22);
-            this.O_A_JMlabel.TabIndex = 7;
-            this.O_A_JMlabel.Text = "Jetpack Mode";
-            this.O_A_JMlabel.UseVisualStyleBackColor = true;
-            // 
-            // O_A_SElabel
-            // 
-            this.O_A_SElabel.AutoSize = true;
-            this.O_A_SElabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
-            this.O_A_SElabel.Location = new System.Drawing.Point(308, 23);
-            this.O_A_SElabel.Name = "O_A_SElabel";
-            this.O_A_SElabel.Size = new System.Drawing.Size(130, 18);
-            this.O_A_SElabel.TabIndex = 10;
-            this.O_A_SElabel.Text = "Super Effective";
-            // 
-            // O_A_SEBoxett
-            // 
-            this.O_A_SEBoxett.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
-            this.O_A_SEBoxett.FormattingEnabled = true;
-            this.O_A_SEBoxett.Location = new System.Drawing.Point(311, 49);
-            this.O_A_SEBoxett.Name = "O_A_SEBoxett";
-            this.O_A_SEBoxett.Size = new System.Drawing.Size(101, 24);
-            this.O_A_SEBoxett.TabIndex = 9;
-            // 
-            // O_E_SEMBox
-            // 
-            this.O_E_SEMBox.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
-            this.O_E_SEMBox.Location = new System.Drawing.Point(418, 49);
-            this.O_E_SEMBox.Name = "O_E_SEMBox";
-            this.O_E_SEMBox.Size = new System.Drawing.Size(56, 22);
-            this.O_E_SEMBox.TabIndex = 11;
-            // 
-            // O_A_SEAlabel
-            // 
-            this.O_A_SEAlabel.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
-            this.O_A_SEAlabel.Location = new System.Drawing.Point(311, 79);
-            this.O_A_SEAlabel.Name = "O_A_SEAlabel";
-            this.O_A_SEAlabel.Size = new System.Drawing.Size(79, 31);
-            this.O_A_SEAlabel.TabIndex = 12;
-            this.O_A_SEAlabel.Text = "Add";
-            this.O_A_SEAlabel.UseVisualStyleBackColor = true;
-            // 
-            // O_A_SERlabel
-            // 
-            this.O_A_SERlabel.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
-            this.O_A_SERlabel.Location = new System.Drawing.Point(395, 79);
-            this.O_A_SERlabel.Name = "O_A_SERlabel";
-            this.O_A_SERlabel.Size = new System.Drawing.Size(79, 31);
-            this.O_A_SERlabel.TabIndex = 13;
-            this.O_A_SERlabel.Text = "Remove";
-            this.O_A_SERlabel.UseVisualStyleBackColor = true;
-            // 
-            // O_A_SEls
-            // 
-            this.O_A_SEls.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
-            this.O_A_SEls.FormattingEnabled = true;
-            this.O_A_SEls.ItemHeight = 16;
-            this.O_A_SEls.Location = new System.Drawing.Point(311, 116);
-            this.O_A_SEls.Name = "O_A_SEls";
-            this.O_A_SEls.Size = new System.Drawing.Size(163, 100);
-            this.O_A_SEls.TabIndex = 14;
-            // 
-            // O_A_BDlabel
-            // 
-            this.O_A_BDlabel.AutoSize = true;
-            this.O_A_BDlabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
-            this.O_A_BDlabel.Location = new System.Drawing.Point(498, 23);
-            this.O_A_BDlabel.Name = "O_A_BDlabel";
-            this.O_A_BDlabel.Size = new System.Drawing.Size(111, 18);
-            this.O_A_BDlabel.TabIndex = 16;
-            this.O_A_BDlabel.Text = "Bonus Drops";
-            // 
-            // O_A_BDids
-            // 
-            this.O_A_BDids.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
-            this.O_A_BDids.FormattingEnabled = true;
-            this.O_A_BDids.Location = new System.Drawing.Point(501, 49);
-            this.O_A_BDids.Name = "O_A_BDids";
-            this.O_A_BDids.Size = new System.Drawing.Size(101, 24);
-            this.O_A_BDids.TabIndex = 15;
-            // 
-            // O_A_BDPics
-            // 
-            this.O_A_BDPics.Location = new System.Drawing.Point(616, 41);
-            this.O_A_BDPics.Name = "O_A_BDPics";
-            this.O_A_BDPics.Size = new System.Drawing.Size(32, 32);
-            this.O_A_BDPics.TabIndex = 17;
-            this.O_A_BDPics.TabStop = false;
-            // 
-            // O_A_BBPics
-            // 
-            this.O_A_BBPics.Location = new System.Drawing.Point(814, 39);
-            this.O_A_BBPics.Name = "O_A_BBPics";
-            this.O_A_BBPics.Size = new System.Drawing.Size(32, 32);
-            this.O_A_BBPics.TabIndex = 20;
-            this.O_A_BBPics.TabStop = false;
-            // 
-            // O_A_BBlabel
-            // 
-            this.O_A_BBlabel.AutoSize = true;
-            this.O_A_BBlabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
-            this.O_A_BBlabel.Location = new System.Drawing.Point(697, 21);
-            this.O_A_BBlabel.Name = "O_A_BBlabel";
-            this.O_A_BBlabel.Size = new System.Drawing.Size(114, 18);
-            this.O_A_BBlabel.TabIndex = 19;
-            this.O_A_BBlabel.Text = "Break Blocks";
-            // 
-            // O_A_BBids
-            // 
-            this.O_A_BBids.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
-            this.O_A_BBids.FormattingEnabled = true;
-            this.O_A_BBids.Location = new System.Drawing.Point(700, 47);
-            this.O_A_BBids.Name = "O_A_BBids";
-            this.O_A_BBids.Size = new System.Drawing.Size(101, 24);
-            this.O_A_BBids.TabIndex = 18;
-            // 
-            // O_A_BDls
-            // 
-            this.O_A_BDls.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
-            this.O_A_BDls.FormattingEnabled = true;
-            this.O_A_BDls.ItemHeight = 16;
-            this.O_A_BDls.Location = new System.Drawing.Point(501, 116);
-            this.O_A_BDls.Name = "O_A_BDls";
-            this.O_A_BDls.Size = new System.Drawing.Size(163, 100);
-            this.O_A_BDls.TabIndex = 23;
-            // 
-            // O_A_BDRlabel
-            // 
-            this.O_A_BDRlabel.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
-            this.O_A_BDRlabel.Location = new System.Drawing.Point(585, 79);
-            this.O_A_BDRlabel.Name = "O_A_BDRlabel";
-            this.O_A_BDRlabel.Size = new System.Drawing.Size(79, 31);
-            this.O_A_BDRlabel.TabIndex = 22;
-            this.O_A_BDRlabel.Text = "Remove";
-            this.O_A_BDRlabel.UseVisualStyleBackColor = true;
-            // 
-            // O_A_BDAlabel
-            // 
-            this.O_A_BDAlabel.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
-            this.O_A_BDAlabel.Location = new System.Drawing.Point(501, 79);
-            this.O_A_BDAlabel.Name = "O_A_BDAlabel";
-            this.O_A_BDAlabel.Size = new System.Drawing.Size(79, 31);
-            this.O_A_BDAlabel.TabIndex = 21;
-            this.O_A_BDAlabel.Text = "Add";
-            this.O_A_BDAlabel.UseVisualStyleBackColor = true;
-            // 
-            // O_A_BBls
-            // 
-            this.O_A_BBls.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
-            this.O_A_BBls.FormattingEnabled = true;
-            this.O_A_BBls.ItemHeight = 16;
-            this.O_A_BBls.Location = new System.Drawing.Point(700, 116);
-            this.O_A_BBls.Name = "O_A_BBls";
-            this.O_A_BBls.Size = new System.Drawing.Size(163, 100);
-            this.O_A_BBls.TabIndex = 26;
-            // 
-            // O_A_BBRlabel
-            // 
-            this.O_A_BBRlabel.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
-            this.O_A_BBRlabel.Location = new System.Drawing.Point(784, 79);
-            this.O_A_BBRlabel.Name = "O_A_BBRlabel";
-            this.O_A_BBRlabel.Size = new System.Drawing.Size(79, 31);
-            this.O_A_BBRlabel.TabIndex = 25;
-            this.O_A_BBRlabel.Text = "Remove";
-            this.O_A_BBRlabel.UseVisualStyleBackColor = true;
-            // 
-            // O_A_BBAlabel
-            // 
-            this.O_A_BBAlabel.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
-            this.O_A_BBAlabel.Location = new System.Drawing.Point(700, 79);
-            this.O_A_BBAlabel.Name = "O_A_BBAlabel";
-            this.O_A_BBAlabel.Size = new System.Drawing.Size(79, 31);
-            this.O_A_BBAlabel.TabIndex = 24;
-            this.O_A_BBAlabel.Text = "Add";
-            this.O_A_BBAlabel.UseVisualStyleBackColor = true;
-            // 
-            // O_A_Wlabel
-            // 
-            this.O_A_Wlabel.AutoSize = true;
-            this.O_A_Wlabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
-            this.O_A_Wlabel.Location = new System.Drawing.Point(858, 47);
-            this.O_A_Wlabel.Name = "O_A_Wlabel";
-            this.O_A_Wlabel.Size = new System.Drawing.Size(95, 22);
-            this.O_A_Wlabel.TabIndex = 27;
-            this.O_A_Wlabel.Text = "Whitelist";
-            this.O_A_Wlabel.UseVisualStyleBackColor = true;
-            // 
-            // O_A_KBox
-            // 
-            this.O_A_KBox.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
-            this.O_A_KBox.Location = new System.Drawing.Point(187, 189);
-            this.O_A_KBox.Name = "O_A_KBox";
-            this.O_A_KBox.Size = new System.Drawing.Size(84, 22);
-            this.O_A_KBox.TabIndex = 29;
-            // 
-            // O_A_Klabel
-            // 
-            this.O_A_Klabel.AutoSize = true;
-            this.O_A_Klabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
-            this.O_A_Klabel.Location = new System.Drawing.Point(184, 166);
-            this.O_A_Klabel.Name = "O_A_Klabel";
-            this.O_A_Klabel.Size = new System.Drawing.Size(98, 18);
-            this.O_A_Klabel.TabIndex = 28;
-            this.O_A_Klabel.Text = "Knockback";
-            // 
-            // O_HE_namelabel
-            // 
-            this.O_HE_namelabel.Controls.Add(this.O_HE_MVBox);
-            this.O_HE_namelabel.Controls.Add(this.O_HE_MSBox);
-            this.O_HE_namelabel.Controls.Add(this.AS31_Sound);
-            this.O_HE_namelabel.Controls.Add(this.AS29_Sound);
-            this.O_HE_namelabel.Controls.Add(this.RS31);
-            this.O_HE_namelabel.Controls.Add(this.RS29);
-            this.O_HE_namelabel.Controls.Add(this.AS31);
-            this.O_HE_namelabel.Controls.Add(this.O_HE_SVlabel);
-            this.O_HE_namelabel.Controls.Add(this.AS29);
-            this.O_HE_namelabel.Controls.Add(this.AS30_Sound);
-            this.O_HE_namelabel.Controls.Add(this.RS30);
-            this.O_HE_namelabel.Controls.Add(this.O_HE_SIlabel);
-            this.O_HE_namelabel.Controls.Add(this.O_HE_SSlabel);
-            this.O_HE_namelabel.Controls.Add(this.AS30);
-            this.O_HE_namelabel.Controls.Add(this.O_HE_MVlabel);
-            this.O_HE_namelabel.Controls.Add(this.O_HE_MSlabel);
-            this.O_HE_namelabel.Controls.Add(this.O_HE_Enablelabel);
-            this.O_HE_namelabel.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold);
-            this.O_HE_namelabel.Location = new System.Drawing.Point(7, 333);
-            this.O_HE_namelabel.Name = "O_HE_namelabel";
-            this.O_HE_namelabel.Size = new System.Drawing.Size(615, 336);
-            this.O_HE_namelabel.TabIndex = 24;
-            this.O_HE_namelabel.TabStop = false;
-            this.O_HE_namelabel.Text = "Hit Events";
-            // 
-            // O_HE_Enablelabel
-            // 
-            this.O_HE_Enablelabel.AutoSize = true;
-            this.O_HE_Enablelabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
-            this.O_HE_Enablelabel.Location = new System.Drawing.Point(18, 35);
-            this.O_HE_Enablelabel.Name = "O_HE_Enablelabel";
-            this.O_HE_Enablelabel.Size = new System.Drawing.Size(82, 22);
-            this.O_HE_Enablelabel.TabIndex = 3;
-            this.O_HE_Enablelabel.Text = "Enable";
-            this.O_HE_Enablelabel.UseVisualStyleBackColor = true;
-            this.O_HE_Enablelabel.CheckedChanged += new System.EventHandler(this.O_HE_Enablelabel_CheckedChanged);
-            // 
-            // O_HE_MSBox
-            // 
-            this.O_HE_MSBox.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
-            this.O_HE_MSBox.Location = new System.Drawing.Point(17, 79);
-            this.O_HE_MSBox.Name = "O_HE_MSBox";
-            this.O_HE_MSBox.Size = new System.Drawing.Size(290, 22);
-            this.O_HE_MSBox.TabIndex = 24;
-            this.O_HE_MSBox.Visible = false;
-            // 
-            // O_HE_MSlabel
-            // 
-            this.O_HE_MSlabel.AutoSize = true;
-            this.O_HE_MSlabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
-            this.O_HE_MSlabel.Location = new System.Drawing.Point(14, 58);
-            this.O_HE_MSlabel.Name = "O_HE_MSlabel";
-            this.O_HE_MSlabel.Size = new System.Drawing.Size(147, 18);
-            this.O_HE_MSlabel.TabIndex = 25;
-            this.O_HE_MSlabel.Text = "Message Shooter";
-            this.O_HE_MSlabel.Visible = false;
-            // 
-            // O_HE_MVBox
-            // 
-            this.O_HE_MVBox.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
-            this.O_HE_MVBox.Location = new System.Drawing.Point(17, 127);
-            this.O_HE_MVBox.Name = "O_HE_MVBox";
-            this.O_HE_MVBox.Size = new System.Drawing.Size(290, 22);
-            this.O_HE_MVBox.TabIndex = 26;
-            this.O_HE_MVBox.Visible = false;
-            // 
-            // O_HE_MVlabel
-            // 
-            this.O_HE_MVlabel.AutoSize = true;
-            this.O_HE_MVlabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
-            this.O_HE_MVlabel.Location = new System.Drawing.Point(14, 106);
-            this.O_HE_MVlabel.Name = "O_HE_MVlabel";
-            this.O_HE_MVlabel.Size = new System.Drawing.Size(132, 18);
-            this.O_HE_MVlabel.TabIndex = 27;
-            this.O_HE_MVlabel.Text = "Message Victim";
-            this.O_HE_MVlabel.Visible = false;
-            // 
-            // AS29_Sound
-            // 
-            this.AS29_Sound.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
-            this.AS29_Sound.FormattingEnabled = true;
-            this.AS29_Sound.ItemHeight = 16;
-            this.AS29_Sound.Location = new System.Drawing.Point(53, 221);
-            this.AS29_Sound.Name = "AS29_Sound";
-            this.AS29_Sound.Size = new System.Drawing.Size(163, 100);
-            this.AS29_Sound.TabIndex = 28;
-            this.AS29_Sound.Visible = false;
-            // 
-            // RS29
-            // 
-            this.RS29.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
-            this.RS29.Location = new System.Drawing.Point(137, 184);
-            this.RS29.Name = "RS29";
-            this.RS29.Size = new System.Drawing.Size(79, 31);
-            this.RS29.TabIndex = 27;
-            this.RS29.Text = "Remove";
-            this.RS29.UseVisualStyleBackColor = true;
-            this.RS29.Visible = false;
-            // 
-            // AS29
-            // 
-            this.AS29.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
-            this.AS29.Location = new System.Drawing.Point(53, 184);
-            this.AS29.Name = "AS29";
-            this.AS29.Size = new System.Drawing.Size(79, 31);
-            this.AS29.TabIndex = 26;
-            this.AS29.Text = "Add";
-            this.AS29.UseVisualStyleBackColor = true;
-            this.AS29.Visible = false;
-            // 
-            // O_HE_SIlabel
-            // 
-            this.O_HE_SIlabel.AutoSize = true;
-            this.O_HE_SIlabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
-            this.O_HE_SIlabel.Location = new System.Drawing.Point(50, 163);
-            this.O_HE_SIlabel.Name = "O_HE_SIlabel";
-            this.O_HE_SIlabel.Size = new System.Drawing.Size(127, 18);
-            this.O_HE_SIlabel.TabIndex = 25;
-            this.O_HE_SIlabel.Text = "Sounds Impact";
-            this.O_HE_SIlabel.Visible = false;
-            // 
-            // AS30_Sound
-            // 
-            this.AS30_Sound.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
-            this.AS30_Sound.FormattingEnabled = true;
-            this.AS30_Sound.ItemHeight = 16;
-            this.AS30_Sound.Location = new System.Drawing.Point(246, 221);
-            this.AS30_Sound.Name = "AS30_Sound";
-            this.AS30_Sound.Size = new System.Drawing.Size(163, 100);
-            this.AS30_Sound.TabIndex = 32;
-            this.AS30_Sound.Visible = false;
-            // 
-            // RS30
-            // 
-            this.RS30.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
-            this.RS30.Location = new System.Drawing.Point(330, 184);
-            this.RS30.Name = "RS30";
-            this.RS30.Size = new System.Drawing.Size(79, 31);
-            this.RS30.TabIndex = 31;
-            this.RS30.Text = "Remove";
-            this.RS30.UseVisualStyleBackColor = true;
-            this.RS30.Visible = false;
-            // 
-            // AS30
-            // 
-            this.AS30.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
-            this.AS30.Location = new System.Drawing.Point(246, 184);
-            this.AS30.Name = "AS30";
-            this.AS30.Size = new System.Drawing.Size(79, 31);
-            this.AS30.TabIndex = 30;
-            this.AS30.Text = "Add";
-            this.AS30.UseVisualStyleBackColor = true;
-            this.AS30.Visible = false;
-            // 
-            // O_HE_SSlabel
-            // 
-            this.O_HE_SSlabel.AutoSize = true;
-            this.O_HE_SSlabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
-            this.O_HE_SSlabel.Location = new System.Drawing.Point(243, 163);
-            this.O_HE_SSlabel.Name = "O_HE_SSlabel";
-            this.O_HE_SSlabel.Size = new System.Drawing.Size(136, 18);
-            this.O_HE_SSlabel.TabIndex = 29;
-            this.O_HE_SSlabel.Text = "Sounds Shooter";
-            this.O_HE_SSlabel.Visible = false;
-            // 
-            // AS31_Sound
-            // 
-            this.AS31_Sound.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
-            this.AS31_Sound.FormattingEnabled = true;
-            this.AS31_Sound.ItemHeight = 16;
-            this.AS31_Sound.Location = new System.Drawing.Point(433, 221);
-            this.AS31_Sound.Name = "AS31_Sound";
-            this.AS31_Sound.Size = new System.Drawing.Size(163, 100);
-            this.AS31_Sound.TabIndex = 36;
-            this.AS31_Sound.Visible = false;
-            // 
-            // RS31
-            // 
-            this.RS31.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
-            this.RS31.Location = new System.Drawing.Point(517, 184);
-            this.RS31.Name = "RS31";
-            this.RS31.Size = new System.Drawing.Size(79, 31);
-            this.RS31.TabIndex = 35;
-            this.RS31.Text = "Remove";
-            this.RS31.UseVisualStyleBackColor = true;
-            this.RS31.Visible = false;
-            // 
-            // AS31
-            // 
-            this.AS31.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
-            this.AS31.Location = new System.Drawing.Point(433, 184);
-            this.AS31.Name = "AS31";
-            this.AS31.Size = new System.Drawing.Size(79, 31);
-            this.AS31.TabIndex = 34;
-            this.AS31.Text = "Add";
-            this.AS31.UseVisualStyleBackColor = true;
-            this.AS31.Visible = false;
-            // 
-            // O_HE_SVlabel
-            // 
-            this.O_HE_SVlabel.AutoSize = true;
-            this.O_HE_SVlabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
-            this.O_HE_SVlabel.Location = new System.Drawing.Point(430, 163);
-            this.O_HE_SVlabel.Name = "O_HE_SVlabel";
-            this.O_HE_SVlabel.Size = new System.Drawing.Size(121, 18);
-            this.O_HE_SVlabel.TabIndex = 33;
-            this.O_HE_SVlabel.Text = "Sounds Victim";
-            this.O_HE_SVlabel.Visible = false;
-            // 
-            // O2_E_namelabel
-            // 
-            this.O2_E_namelabel.Controls.Add(this.O2_E_RBBox);
-            this.O2_E_namelabel.Controls.Add(this.O2_E_RCcmd);
-            this.O2_E_namelabel.Controls.Add(this.O2_E_RCCcmd);
-            this.O2_E_namelabel.Controls.Add(this.O2_E_MVRCcmd);
-            this.O2_E_namelabel.Controls.Add(this.O2_E_MVSBox);
-            this.O2_E_namelabel.Controls.Add(this.O2_E_RBlabel);
-            this.O2_E_namelabel.Controls.Add(this.O2_E_RCls);
-            this.O2_E_namelabel.Controls.Add(this.O2_E_RCRlabel);
-            this.O2_E_namelabel.Controls.Add(this.O2_E_RCAlabel);
-            this.O2_E_namelabel.Controls.Add(this.O2_E_RClabel);
-            this.O2_E_namelabel.Controls.Add(this.O2_E_RCCls);
-            this.O2_E_namelabel.Controls.Add(this.O2_E_RCCRlabel);
-            this.O2_E_namelabel.Controls.Add(this.O2_E_RCCAlabel);
-            this.O2_E_namelabel.Controls.Add(this.O2_E_RCClabel);
-            this.O2_E_namelabel.Controls.Add(this.O2_E_MVRCls);
-            this.O2_E_namelabel.Controls.Add(this.O2_E_MVRCRlabel);
-            this.O2_E_namelabel.Controls.Add(this.O2_E_MVRCAlabel);
-            this.O2_E_namelabel.Controls.Add(this.O2_E_MVRClabel);
-            this.O2_E_namelabel.Controls.Add(this.O2_E_MVSlabel);
-            this.O2_E_namelabel.Controls.Add(this.O2_E_DUlabel);
-            this.O2_E_namelabel.Controls.Add(this.O2_E_OTUlabel);
-            this.O2_E_namelabel.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold);
-            this.O2_E_namelabel.Location = new System.Drawing.Point(7, 6);
-            this.O2_E_namelabel.Name = "O2_E_namelabel";
-            this.O2_E_namelabel.Size = new System.Drawing.Size(857, 351);
-            this.O2_E_namelabel.TabIndex = 0;
-            this.O2_E_namelabel.TabStop = false;
-            this.O2_E_namelabel.Text = "Extras";
-            // 
-            // O2_E_OTUlabel
-            // 
-            this.O2_E_OTUlabel.AutoSize = true;
-            this.O2_E_OTUlabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
-            this.O2_E_OTUlabel.Location = new System.Drawing.Point(26, 39);
-            this.O2_E_OTUlabel.Name = "O2_E_OTUlabel";
-            this.O2_E_OTUlabel.Size = new System.Drawing.Size(137, 22);
-            this.O2_E_OTUlabel.TabIndex = 0;
-            this.O2_E_OTUlabel.Text = "One Time Use";
-            this.O2_E_OTUlabel.UseVisualStyleBackColor = true;
-            // 
-            // O2_E_DUlabel
-            // 
-            this.O2_E_DUlabel.AutoSize = true;
-            this.O2_E_DUlabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
-            this.O2_E_DUlabel.Location = new System.Drawing.Point(26, 67);
-            this.O2_E_DUlabel.Name = "O2_E_DUlabel";
-            this.O2_E_DUlabel.Size = new System.Drawing.Size(185, 22);
-            this.O2_E_DUlabel.TabIndex = 1;
-            this.O2_E_DUlabel.Text = "Disable Underwater";
-            this.O2_E_DUlabel.UseVisualStyleBackColor = true;
-            // 
-            // O2_E_MVSlabel
-            // 
-            this.O2_E_MVSlabel.AutoSize = true;
-            this.O2_E_MVSlabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
-            this.O2_E_MVSlabel.Location = new System.Drawing.Point(240, 39);
-            this.O2_E_MVSlabel.Name = "O2_E_MVSlabel";
-            this.O2_E_MVSlabel.Size = new System.Drawing.Size(157, 18);
-            this.O2_E_MVSlabel.TabIndex = 2;
-            this.O2_E_MVSlabel.Text = "Make Victim Speak";
-            // 
-            // O2_E_MVSBox
-            // 
-            this.O2_E_MVSBox.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
-            this.O2_E_MVSBox.Location = new System.Drawing.Point(243, 60);
-            this.O2_E_MVSBox.Name = "O2_E_MVSBox";
-            this.O2_E_MVSBox.Size = new System.Drawing.Size(215, 22);
-            this.O2_E_MVSBox.TabIndex = 3;
-            // 
-            // O2_E_MVRCcmd
-            // 
-            this.O2_E_MVRCcmd.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
-            this.O2_E_MVRCcmd.Location = new System.Drawing.Point(21, 121);
-            this.O2_E_MVRCcmd.Name = "O2_E_MVRCcmd";
-            this.O2_E_MVRCcmd.Size = new System.Drawing.Size(215, 22);
-            this.O2_E_MVRCcmd.TabIndex = 4;
-            // 
-            // O2_E_MVRClabel
-            // 
-            this.O2_E_MVRClabel.AutoSize = true;
-            this.O2_E_MVRClabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
-            this.O2_E_MVRClabel.Location = new System.Drawing.Point(18, 100);
-            this.O2_E_MVRClabel.Name = "O2_E_MVRClabel";
-            this.O2_E_MVRClabel.Size = new System.Drawing.Size(237, 18);
-            this.O2_E_MVRClabel.TabIndex = 5;
-            this.O2_E_MVRClabel.Text = "Make Victim Run Commmand";
-            // 
-            // O2_E_MVRCAlabel
-            // 
-            this.O2_E_MVRCAlabel.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
-            this.O2_E_MVRCAlabel.Location = new System.Drawing.Point(21, 149);
-            this.O2_E_MVRCAlabel.Name = "O2_E_MVRCAlabel";
-            this.O2_E_MVRCAlabel.Size = new System.Drawing.Size(105, 28);
-            this.O2_E_MVRCAlabel.TabIndex = 6;
-            this.O2_E_MVRCAlabel.Text = "Add";
-            this.O2_E_MVRCAlabel.UseVisualStyleBackColor = true;
-            // 
-            // O2_E_MVRCRlabel
-            // 
-            this.O2_E_MVRCRlabel.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
-            this.O2_E_MVRCRlabel.Location = new System.Drawing.Point(131, 149);
-            this.O2_E_MVRCRlabel.Name = "O2_E_MVRCRlabel";
-            this.O2_E_MVRCRlabel.Size = new System.Drawing.Size(105, 28);
-            this.O2_E_MVRCRlabel.TabIndex = 7;
-            this.O2_E_MVRCRlabel.Text = "Remove";
-            this.O2_E_MVRCRlabel.UseVisualStyleBackColor = true;
-            // 
-            // O2_E_MVRCls
-            // 
-            this.O2_E_MVRCls.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
-            this.O2_E_MVRCls.FormattingEnabled = true;
-            this.O2_E_MVRCls.ItemHeight = 16;
-            this.O2_E_MVRCls.Location = new System.Drawing.Point(21, 183);
-            this.O2_E_MVRCls.Name = "O2_E_MVRCls";
-            this.O2_E_MVRCls.Size = new System.Drawing.Size(215, 148);
-            this.O2_E_MVRCls.TabIndex = 8;
-            // 
-            // O2_E_RCCls
-            // 
-            this.O2_E_RCCls.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
-            this.O2_E_RCCls.FormattingEnabled = true;
-            this.O2_E_RCCls.ItemHeight = 16;
-            this.O2_E_RCCls.Location = new System.Drawing.Point(271, 183);
-            this.O2_E_RCCls.Name = "O2_E_RCCls";
-            this.O2_E_RCCls.Size = new System.Drawing.Size(215, 148);
-            this.O2_E_RCCls.TabIndex = 13;
-            // 
-            // O2_E_RCCRlabel
-            // 
-            this.O2_E_RCCRlabel.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
-            this.O2_E_RCCRlabel.Location = new System.Drawing.Point(381, 149);
-            this.O2_E_RCCRlabel.Name = "O2_E_RCCRlabel";
-            this.O2_E_RCCRlabel.Size = new System.Drawing.Size(105, 28);
-            this.O2_E_RCCRlabel.TabIndex = 12;
-            this.O2_E_RCCRlabel.Text = "Remove";
-            this.O2_E_RCCRlabel.UseVisualStyleBackColor = true;
-            // 
-            // O2_E_RCCAlabel
-            // 
-            this.O2_E_RCCAlabel.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
-            this.O2_E_RCCAlabel.Location = new System.Drawing.Point(271, 149);
-            this.O2_E_RCCAlabel.Name = "O2_E_RCCAlabel";
-            this.O2_E_RCCAlabel.Size = new System.Drawing.Size(105, 28);
-            this.O2_E_RCCAlabel.TabIndex = 11;
-            this.O2_E_RCCAlabel.Text = "Add";
-            this.O2_E_RCCAlabel.UseVisualStyleBackColor = true;
-            // 
-            // O2_E_RCClabel
-            // 
-            this.O2_E_RCClabel.AutoSize = true;
-            this.O2_E_RCClabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
-            this.O2_E_RCClabel.Location = new System.Drawing.Point(268, 100);
-            this.O2_E_RCClabel.Name = "O2_E_RCClabel";
-            this.O2_E_RCClabel.Size = new System.Drawing.Size(193, 18);
-            this.O2_E_RCClabel.TabIndex = 10;
-            this.O2_E_RCClabel.Text = "Run Console Command";
-            // 
-            // O2_E_RCCcmd
-            // 
-            this.O2_E_RCCcmd.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
-            this.O2_E_RCCcmd.Location = new System.Drawing.Point(271, 121);
-            this.O2_E_RCCcmd.Name = "O2_E_RCCcmd";
-            this.O2_E_RCCcmd.Size = new System.Drawing.Size(215, 22);
-            this.O2_E_RCCcmd.TabIndex = 9;
-            // 
-            // O2_E_RCls
-            // 
-            this.O2_E_RCls.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
-            this.O2_E_RCls.FormattingEnabled = true;
-            this.O2_E_RCls.ItemHeight = 16;
-            this.O2_E_RCls.Location = new System.Drawing.Point(529, 183);
-            this.O2_E_RCls.Name = "O2_E_RCls";
-            this.O2_E_RCls.Size = new System.Drawing.Size(215, 148);
-            this.O2_E_RCls.TabIndex = 18;
-            // 
-            // O2_E_RCRlabel
-            // 
-            this.O2_E_RCRlabel.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
-            this.O2_E_RCRlabel.Location = new System.Drawing.Point(639, 149);
-            this.O2_E_RCRlabel.Name = "O2_E_RCRlabel";
-            this.O2_E_RCRlabel.Size = new System.Drawing.Size(105, 28);
-            this.O2_E_RCRlabel.TabIndex = 17;
-            this.O2_E_RCRlabel.Text = "Remove";
-            this.O2_E_RCRlabel.UseVisualStyleBackColor = true;
-            // 
-            // O2_E_RCAlabel
-            // 
-            this.O2_E_RCAlabel.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
-            this.O2_E_RCAlabel.Location = new System.Drawing.Point(529, 149);
-            this.O2_E_RCAlabel.Name = "O2_E_RCAlabel";
-            this.O2_E_RCAlabel.Size = new System.Drawing.Size(105, 28);
-            this.O2_E_RCAlabel.TabIndex = 16;
-            this.O2_E_RCAlabel.Text = "Add";
-            this.O2_E_RCAlabel.UseVisualStyleBackColor = true;
-            // 
-            // O2_E_RClabel
-            // 
-            this.O2_E_RClabel.AutoSize = true;
-            this.O2_E_RClabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
-            this.O2_E_RClabel.Location = new System.Drawing.Point(526, 100);
-            this.O2_E_RClabel.Name = "O2_E_RClabel";
-            this.O2_E_RClabel.Size = new System.Drawing.Size(124, 18);
-            this.O2_E_RClabel.TabIndex = 15;
-            this.O2_E_RClabel.Text = "Run Command";
-            // 
-            // O2_E_RCcmd
-            // 
-            this.O2_E_RCcmd.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
-            this.O2_E_RCcmd.Location = new System.Drawing.Point(529, 121);
-            this.O2_E_RCcmd.Name = "O2_E_RCcmd";
-            this.O2_E_RCcmd.Size = new System.Drawing.Size(215, 22);
-            this.O2_E_RCcmd.TabIndex = 14;
-            // 
-            // O2_E_RBBox
-            // 
-            this.O2_E_RBBox.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
-            this.O2_E_RBBox.FormattingEnabled = true;
-            this.O2_E_RBBox.Items.AddRange(new object[] {
-            "CONSOLE",
-            "PLAYER"});
-            this.O2_E_RBBox.Location = new System.Drawing.Point(750, 149);
-            this.O2_E_RBBox.Name = "O2_E_RBBox";
-            this.O2_E_RBBox.Size = new System.Drawing.Size(85, 24);
-            this.O2_E_RBBox.TabIndex = 19;
-            // 
-            // O2_E_RBlabel
-            // 
-            this.O2_E_RBlabel.AutoSize = true;
-            this.O2_E_RBlabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
-            this.O2_E_RBlabel.Location = new System.Drawing.Point(750, 125);
-            this.O2_E_RBlabel.Name = "O2_E_RBlabel";
-            this.O2_E_RBlabel.Size = new System.Drawing.Size(65, 18);
-            this.O2_E_RBlabel.TabIndex = 20;
-            this.O2_E_RBlabel.Text = "Run By";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.richTextBox1);
-            this.groupBox1.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold);
-            this.groupBox1.Location = new System.Drawing.Point(7, 98);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(422, 130);
-            this.groupBox1.TabIndex = 2;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Variables";
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox1.Font = new System.Drawing.Font("Arial Narrow", 13F);
-            this.richTextBox1.Location = new System.Drawing.Point(3, 23);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(416, 104);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.clearBtn);
+            this.groupBox3.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold);
+            this.groupBox3.Location = new System.Drawing.Point(7, 3);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(177, 89);
+            this.groupBox3.TabIndex = 7;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Clear Current Setting";
+            // 
+            // clearBtn
+            // 
+            this.clearBtn.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.clearBtn.Location = new System.Drawing.Point(22, 27);
+            this.clearBtn.Name = "clearBtn";
+            this.clearBtn.Size = new System.Drawing.Size(132, 40);
+            this.clearBtn.TabIndex = 6;
+            this.clearBtn.Text = "Clear";
+            this.clearBtn.UseVisualStyleBackColor = true;
+            this.clearBtn.Click += new System.EventHandler(this.clearBtn_Click);
             // 
             // groupBox2
             // 
@@ -8917,27 +8878,27 @@
             this.richTextBox2.TabIndex = 1;
             this.richTextBox2.Text = resources.GetString("richTextBox2.Text");
             // 
-            // groupBox3
+            // groupBox1
             // 
-            this.groupBox3.Controls.Add(this.clearBtn);
-            this.groupBox3.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold);
-            this.groupBox3.Location = new System.Drawing.Point(297, 3);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(177, 89);
-            this.groupBox3.TabIndex = 7;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Clear Current Setting";
+            this.groupBox1.Controls.Add(this.richTextBox1);
+            this.groupBox1.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold);
+            this.groupBox1.Location = new System.Drawing.Point(7, 98);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(422, 130);
+            this.groupBox1.TabIndex = 2;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Variables";
             // 
-            // clearBtn
+            // richTextBox1
             // 
-            this.clearBtn.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
-            this.clearBtn.Location = new System.Drawing.Point(22, 27);
-            this.clearBtn.Name = "clearBtn";
-            this.clearBtn.Size = new System.Drawing.Size(132, 40);
-            this.clearBtn.TabIndex = 6;
-            this.clearBtn.Text = "Clear";
-            this.clearBtn.UseVisualStyleBackColor = true;
-            this.clearBtn.Click += new System.EventHandler(this.clearBtn_Click);
+            this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.richTextBox1.Font = new System.Drawing.Font("Arial Narrow", 13F);
+            this.richTextBox1.Location = new System.Drawing.Point(3, 23);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.ReadOnly = true;
+            this.richTextBox1.Size = new System.Drawing.Size(416, 104);
+            this.richTextBox1.TabIndex = 0;
+            this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
             // 
             // Form1
             // 
@@ -9037,6 +8998,10 @@
             this.E2_P_namelabel.ResumeLayout(false);
             this.E2_P_namelabel.PerformLayout();
             this.O_Tablabel.ResumeLayout(false);
+            this.O_A_namelabel.ResumeLayout(false);
+            this.O_A_namelabel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.O_A_BBPics)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.O_A_BDPics)).EndInit();
             this.O_CDM_namelabel.ResumeLayout(false);
             this.O_CDM_namelabel.PerformLayout();
             this.O_RC_namelabel.ResumeLayout(false);
@@ -9056,22 +9021,16 @@
             this.O_WS_namelabel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.O_WS_IDSign)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.O_WS_PricePic)).EndInit();
-            this.Yamllabel.ResumeLayout(false);
-            this.Settinglabel.ResumeLayout(false);
-            this.groupBox7.ResumeLayout(false);
-            this.groupBox7.PerformLayout();
-            this.O2_Tablabel.ResumeLayout(false);
-            this.O_A_namelabel.ResumeLayout(false);
-            this.O_A_namelabel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.O_A_BDPics)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.O_A_BBPics)).EndInit();
             this.O_HE_namelabel.ResumeLayout(false);
             this.O_HE_namelabel.PerformLayout();
+            this.O2_Tablabel.ResumeLayout(false);
             this.O2_E_namelabel.ResumeLayout(false);
             this.O2_E_namelabel.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
+            this.Yamllabel.ResumeLayout(false);
+            this.Settinglabel.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -9520,9 +9479,6 @@
         private System.Windows.Forms.TabPage I2_Tablabel;
         private System.Windows.Forms.GroupBox I2_CS_clusterbomlabel;
         private System.Windows.Forms.CheckBox I2_CB_Enablelabel;
-        private System.Windows.Forms.GroupBox groupBox7;
-        private System.Windows.Forms.Button savettp;
-        private System.Windows.Forms.CheckBox ttp;
         private System.Windows.Forms.ComboBox I2_CB_bombletids;
         private System.Windows.Forms.PictureBox I2_CB_bombPics;
         private System.Windows.Forms.TextBox I2_CB_DBSBox;

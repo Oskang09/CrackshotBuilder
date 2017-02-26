@@ -195,12 +195,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_0C3780AC9CEF4593801C8D068B2AF1B8"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_0CC0EAB38A5845E692A17D2FC3DE7509"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -4720,26 +4714,6 @@
             "TargetName" = "8:368-0.png"
             "Tag" = "8:"
             "Folder" = "8:_555107B952BC4EB7BD89D987E356EB73"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0C3780AC9CEF4593801C8D068B2AF1B8"
-            {
-            "SourcePath" = "8:..\\..\\..\\..\\..\\Desktop\\CrackshotBuilder Setup\\CrackshotFiles\\Resource\\lang\\tooltip.yml"
-            "TargetName" = "8:tooltip.yml"
-            "Tag" = "8:"
-            "Folder" = "8:_6A573DCBFEE346CA993C274B636156D7"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -17645,7 +17619,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:CrackshotBuilder"
         "ProductCode" = "8:{97BB3C79-4F29-4D06-BB51-B3E9868EE87A}"
-        "PackageCode" = "8:{B4EAFCB8-92DD-44DA-9086-54AE8DCB5BAB}"
+        "PackageCode" = "8:{28FFA5A5-09A9-4CEF-A41B-65F8C539EF91}"
         "UpgradeCode" = "8:{2025E60D-B56E-4EAA-B535-CB68689B0A86}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"

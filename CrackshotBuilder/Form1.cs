@@ -14,20 +14,10 @@ namespace CrackshotBuilder
         //
         string doublespacebar = "        ";
         string spacebar = "    ";
-        private TTPHelper ttphelper;
         public Form1()
         {
 
             InitializeComponent();
-            // TTP Helper POPUP
-            if (Properties.Settings.Default.TTP == true)
-            {
-                ttp.CheckState = CheckState.Checked;
-                TTPHelper frm = new TTPHelper();
-                frm.TopMost = true;
-                frm.Show();
-                ttphelper = frm;
-            }
         }
         public void AddSound(string title, string sound)
         {
@@ -138,37 +128,7 @@ namespace CrackshotBuilder
                 }
             }
         }
-        private void LoadToolTip()
-        {
-            string[] lines = File.ReadAllLines(filepath + "/Resource/lang/tooltip.yml");
-            foreach (string text in lines)
-            {
-                string[] texts = text.Split('.');
-                Control[] clist = Controls.Find(texts[0] + "label", true);
-                foreach (Control c in clist)
-                {
-                    string[] ttplist = texts[1].Split(':');
-                    ToolTip ttp = new ToolTip();
-                    ttp.IsBalloon = true;
-                    ttp.ToolTipTitle = c.Text;
-                    ttp.ToolTipIcon = ToolTipIcon.Info;
-                    ttp.Popup += delegate
-                    {
-                        TTPHelper fr = new TTPHelper();
-                        if (Application.OpenForms.OfType<TTPHelper>().FirstOrDefault() == null)
-                        {
-                            fr.TopMost = true;
-                            fr.Show();
-                            ttphelper = fr;
-                        }
-                        ttphelper.TTP_LabelSet = c.Text;
-                        ttphelper.TTP_TextSet = ttplist[1].Replace('|', '\n');
-                    };
-                    ttp.SetToolTip(c, ttplist[1].Replace('|', '\n'));
-                }
-            }
-
-        }
+        
         private void LoadLangFile()
         {
             string[] lines = File.ReadAllLines(filepath + "/Resource/lang/label.yml");
@@ -220,7 +180,6 @@ namespace CrackshotBuilder
             LoadEnchantment();
             LoadIds();
             Loadpics();
-            LoadToolTip();
             loadPotion();
             loadS_Box();
             loadG_FA_Box();
@@ -2111,16 +2070,6 @@ namespace CrackshotBuilder
         private void I_A_BTBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             I_A_BTPics.Image = Image.FromFile(@filepath + "/Resource/ids/" + I_A_BTBox.Text + ".png");
-        }
-
-        private void savettp_Click(object sender, EventArgs e)
-        {
-            if (ttp.CheckState == CheckState.Checked)
-            {
-                Properties.Settings.Default.TTP = true;
-                return;
-            }
-            Properties.Settings.Default.TTP = false;
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
