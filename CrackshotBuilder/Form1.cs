@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.IO;
+using System.Collections.Generic;
 
 namespace CrackshotBuilder
 {
@@ -128,7 +129,7 @@ namespace CrackshotBuilder
                 }
             }
         }
-        
+
         private void LoadLangFile()
         {
             string[] lines = File.ReadAllLines(filepath + "/Resource/lang/label.yml");
@@ -389,7 +390,7 @@ namespace CrackshotBuilder
             string[] clist = "E2_F_FPS/E2_F_FE/E2_F_FH/E2_F_FH2/E2_F_FC/E2_F_FB".Split('/');
             foreach (string cl in clist)
             {
-                Button add = (Button)Controls.Find( cl + "Alabel", true).FirstOrDefault();
+                Button add = (Button)Controls.Find(cl + "Alabel", true).FirstOrDefault();
                 Button remove = (Button)Controls.Find(cl + "Rlabel", true).FirstOrDefault();
                 ListBox lb = (ListBox)Controls.Find(cl + "ls", true).FirstOrDefault();
                 add.Click += delegate
@@ -795,7 +796,7 @@ namespace CrackshotBuilder
                     csyamlbox.AppendText(Environment.NewLine + doublespacebar + spacebar + "Sounds_Single_Reload: " + getListItem(AS9_Sound));
                     csyamlbox.AppendText(Environment.NewLine + doublespacebar + spacebar + "Single_Reload_Duration: " + G_R_DWSRDBox.Text);
                 }
-                if (G_FA_Typelabel.Visible.Equals(true))
+                if (G_FA_TypeBox.Text != "")
                 {
                     csyamlbox.AppendText(Environment.NewLine + spacebar + "Firearm_Action:");
                     csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Type: " + G_FA_TypeBox.Text);
@@ -1163,7 +1164,7 @@ namespace CrackshotBuilder
             }
             if (getListItem(O2_E_MVRCls) != null)
             {
-                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Make_Victim_Run_Commmand: " + getListItem(O2_E_MVRCls).Replace(',','|'));
+                csyamlbox.AppendText(Environment.NewLine + doublespacebar + "Make_Victim_Run_Commmand: " + getListItem(O2_E_MVRCls).Replace(',', '|'));
             }
             if (getListItem(O2_E_RCCls) != null)
             {
@@ -1179,8 +1180,8 @@ namespace CrackshotBuilder
             }
         }
         private void II_ItemIDBox_SelectedIndexChanged(object sender, EventArgs e)
-        { 
-            II_IDPics.Image = Image.FromFile(@filepath + "/Resource/ids/" +  II_ItemIDids.Text + ".png");
+        {
+            II_IDPics.Image = Image.FromFile(@filepath + "/Resource/ids/" + II_ItemIDids.Text + ".png");
         }
         private void S_projectileType_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1206,7 +1207,7 @@ namespace CrackshotBuilder
                 S_Potpotion.Visible = false;
                 S_P_Fireball.Visible = false;
             }
-                if (S_projectileType.Text == "grenade" || S_projectileType.Text == "flare")
+            if (S_projectileType.Text == "grenade" || S_projectileType.Text == "flare")
             {
                 S_RemoveArrowlabel.Visible = false;
                 S_RemoveBulletlabel.Visible = false;
@@ -1295,7 +1296,7 @@ namespace CrackshotBuilder
                 S_idbox.Visible = false;
                 S_Potpotion.Visible = false;
                 S_P_Fireball.Visible = false;
-            } 
+            }
         }
 
         private void S_Projectileids_SelectedIndexChanged(object sender, EventArgs e)
@@ -1541,6 +1542,7 @@ namespace CrackshotBuilder
                 G_FA_RODlabel.Visible = true;
                 G_FA_RODBox.Visible = true;
                 G_FA_SOlabel.Visible = true;
+                G_FA_GBlabel.Visible = true;
                 AS10_Sound.Visible = true;
                 AS10.Visible = true;
                 RS10.Visible = true;
@@ -1716,53 +1718,21 @@ namespace CrackshotBuilder
         {
             if (getTrueFalse(O_CCR_Enablelabel) == "true")
             {
-                O_CCR_Shapedlabel.Visible = true;
-                O_CCR_Ingrelabel.Visible = true;
-                for (int i = 1; i < 10; i++)
+                foreach (Control c in O_CCR_namelabel.Controls)
                 {
-                    Control[] c3list = Controls.Find("C_OOR_p" + i.ToString(), true);
-                    foreach (PictureBox p in c3list)
-                    {
-                        p.Visible = true;
-                    }
-                }
-                for (int i = 1; i < 10; i++)
-                {
-                    Control[] clist = Controls.Find("C_OOR_" + i.ToString() + "ids", true);
-                    foreach (ComboBox c in clist)
+                    if (c.Name != "O_CCR_Enablelabel")
                     {
                         c.Visible = true;
-                        c.SelectedIndexChanged += delegate
-                        {
-                            string num = c.Name.Replace("C_OOR_", "").Replace("ids","");
-                            Control[] c2list = Controls.Find("C_OOR_p" + num, true);
-                            foreach (PictureBox p in c2list)
-                            {
-                                p.Image = Image.FromFile(filepath + "/Resource/ids/" + c.SelectedItem.ToString() + ".png");
-                            }
-                        };
                     }
                 }
             }
             else
             {
-                O_CCR_Shapedlabel.Visible = false;
-                O_CCR_Ingrelabel.Visible = false;
-                for (int i = 1; i < 10; i++)
+                foreach (Control c in O_CCR_namelabel.Controls)
                 {
-                    Control[] c3list = Controls.Find("C_OOR_p" + i.ToString(), true);
-                    foreach (PictureBox p in c3list)
-                    {
-                        p.Visible = false;
-                    }
-                }
-                for (int i = 1; i < 10; i++)
-                {
-                    Control[] clist = Controls.Find("C_OOR_" + i.ToString() + "ids", true);
-                    foreach (ComboBox c in clist)
+                    if (c.Name != "O_CCR_Enablelabel")
                     {
                         c.Visible = false;
-
                     }
                 }
             }
@@ -1771,7 +1741,7 @@ namespace CrackshotBuilder
         {
             if (getTrueFalse(O_RC_Enablelabel) == "true")
             {
-                foreach (Control c in O_CCR_namelabel.Controls)
+                foreach (Control c in O_RC_namelabel.Controls)
                 {
                     if (c.Name != "O_RC_Enablelabel")
                     {
@@ -1781,7 +1751,7 @@ namespace CrackshotBuilder
             }
             else
             {
-                foreach (Control c in O_CCR_namelabel.Controls)
+                foreach (Control c in O_RC_namelabel.Controls)
                 {
                     if (c.Name != "O_RC_Enablelabel")
                     {
@@ -2404,6 +2374,1614 @@ namespace CrackshotBuilder
         private void clearBtn_Click(object sender, EventArgs e)
         {
             ResetAllControls(this);
+        }
+
+        private void S_PI_Enablelabel_CheckedChanged(object sender, EventArgs e)
+        {
+            if (getTrueFalse(S_PI_Enablelabel) == "true")
+            {
+
+                foreach (Control c in S_PIncendiarylabel.Controls)
+                {
+                    if (c.Name != "S_PI_Enablelabel")
+                    {
+                        c.Visible = true;
+                    }
+                }
+            }
+            else
+            {
+                foreach (Control c in S_PIncendiarylabel.Controls)
+                {
+                    if (c.Name != "S_PI_Enablelabel")
+                    {
+                        c.Visible = false;
+                    }
+                }
+            }
+        }
+
+        private void loadBtn_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "YAML Files|*.yml";
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                loadYAMLFile(ofd.FileName);
+            }
+        }
+        public string[] getStringFromDictionary(string key, Dictionary<string, string[]> dics)
+        {
+            List<string> value = new List<string>();
+            foreach (string word in dics.Keys)
+            {
+                if (word.Equals(key))
+                {
+                    foreach (string a in dics[word])
+                    {
+                        value.Add(a);
+                    }
+                }
+            }
+            return value.ToArray();
+        }
+        public void ReadYamls(Dictionary<string, string[]> dics)
+        {
+            clearBtn.PerformClick();
+            // GUN ID
+            string gunid = getStringFromDictionary("GUN_ID", dics).FirstOrDefault();
+            II_GunID.Text = gunid;
+            // Item Information
+            string[] ii = getStringFromDictionary("Item_Information", dics);
+            if (ii != null)
+            {
+                foreach (string text in ii)
+                {
+                    string[] texts = text.Split(':');
+                    if (texts[0] == "Item_Name")
+                    {
+                        II_Name.Text = texts[1];
+                    }
+                    if (texts[0] == "Item_Type")
+                    {
+                        II_ItemIDids.SelectedText = texts[1].Replace('~', '-');
+                    }
+                    if (texts[0] == "Item_Lore")
+                    {
+                        II_Lore.Text = texts[1];
+                    }
+                    if (texts[0] == "Inventory_Control")
+                    {
+                        invcbox.Text = texts[1];
+                    }
+                    if (texts[0] == "Melee_Mode")
+                    {
+                        II_Meleelabel.Checked = Boolean.Parse(texts[1]);
+                    }
+                    if (texts[0] == "Melee_Attachment")
+                    {
+                        II_MeleeAttach.Text = texts[1];
+                    }
+                    if (texts[0] == "Attachments.Type")
+                    {
+                        II_A_Type.Text = texts[1];
+                    }
+                    if (texts[0] == "Attachments.Info")
+                    {
+                        II_A_Info.Text = texts[1];
+                    }
+                    if (texts[0] == "Attachments.Toggle_Delay")
+                    {
+                        II_A_Delay.Text = texts[1];
+                    }
+                    if (texts[0] == "Attachments.Sounds_Toggle")
+                    {
+                        string[] sound = texts[1].Split(',');
+                        foreach (string s in sound)
+                        {
+                            AS2_Sound.Items.Add(s);
+                        }
+                    }
+                    if (texts[0] == "Enchantment_To_Check")
+                    {
+                        string[] ench = texts[1].Split('-');
+                        II_Enchantenchant.Text = ench[0];
+                        II_enchLevel.Text = ench[1];
+                    }
+                    if (texts[0] == "Skip_Name_Check")
+                    {
+                        II_SkipNamelabel.Checked = Boolean.Parse(texts[1]);
+                    }
+                    if (texts[0] == "Sounds_Acquired")
+                    {
+                        string[] sound = texts[1].Split(',');
+                        foreach (string s in sound)
+                        {
+                            AS1_Sound.Items.Add(s);
+                        }
+                    }
+                    if (texts[0] == "Remove_Unused_Tag")
+                    {
+                        II_RemoveTaglabel.Checked = Boolean.Parse(texts[1]);
+                    }
+                    if (texts[0] == "Hidden_From_List")
+                    {
+                        II_HideListlabel.Checked = Boolean.Parse(texts[1]);
+                    }
+                }
+            }
+            // Shooting
+            string[] shot = getStringFromDictionary("Shooting", dics);
+            string type = "";
+            if (shot != null)
+            {
+                foreach (string text in shot)
+                {
+                    string[] texts = text.Split('|');
+                    if (texts[0] == "Disable")
+                    {
+                        S_Disablelabel.Checked = Boolean.Parse(texts[1]);
+                    }
+                    if (texts[0] == "Dual_Wield")
+                    {
+                        S_DualWieldlabel.Checked = Boolean.Parse(texts[1]);
+                    }
+                    if (texts[0] == "Right_Click_To_Shoot")
+                    {
+                        S_RightClick2Shootlabel.Checked = Boolean.Parse(texts[1]);
+                    }
+                    if (texts[0] == "Cancel_Left_Click_Block_Damage")
+                    {
+                        S_CancelLeftClicklabel.Checked = Boolean.Parse(texts[1]);
+                    }
+                    if (texts[0] == "Cancel_Right_Click_Interactions")
+                    {
+                        S_CancelRightInteractlabel.Checked = Boolean.Parse(texts[1]);
+                    }
+                    if (texts[0] == "Delay_Between_Shots")
+                    {
+                        S_DelayBox.Text = texts[1];
+                    }
+                    if (texts[0] == "Recoil_Amount")
+                    {
+                        S_RecoilBox.Text = texts[1];
+                    }
+                    if (texts[0] == "Projectile_Amount")
+                    {
+                        S_ProjectileAmountBox.Text = texts[1];
+                    }
+                    if (texts[0] == "Projectile_Type")
+                    {
+                        S_projectileType.SelectedText = texts[1];
+                        type = texts[1];
+                    }
+                    if (texts[0] == "Projectile_SubType")
+                    {
+                        if (type == "grenade" || type == "flare")
+                        {
+                            S_Projectileids.SelectedText = texts[1].Replace('~', '-');
+                        }
+                        if (type == "splash")
+                        {
+                            S_Potpotion.SelectedText = texts[1].Replace('~', '-');
+                        }
+                        if (type == "fireball")
+                        {
+                            S_P_Fireball.Checked = Boolean.Parse(texts[1]);
+                        }
+                        if (type == "energy")
+                        {
+                            string[] energy = texts[1].Split('-');
+                            S_P_RangeBox.Text = energy[0];
+                            S_P_Radius.Text = energy[1];
+                            S_P_Victim.Text = energy[2];
+                            S_P_Wall.Text = energy[3];
+                        }
+                    }
+                    if (texts[0] == "Remove_Arrows_On_Impact")
+                    {
+                        S_RemoveArrowlabel.Checked = Boolean.Parse(texts[1]);
+                    }
+                    if (texts[0] == "Remove_Bullet_Drop")
+                    {
+                        S_RemoveBulletlabel.Checked = Boolean.Parse(texts[1]);
+                    }
+                    if (texts[0] == "Removal_Or_Drag_Delay")
+                    {
+                        string[] removal = texts[1].Split('-');
+                        S_removedragbox.Text = removal[0];
+                        S_RemovalDraglabel.Checked = Boolean.Parse(removal[1]);
+                    }
+                    if (texts[0] == "Projectile_Speed")
+                    {
+                        S_projectileSpeed.Text = texts[1];
+                    }
+                    if (texts[0] == "Projectile_Damage")
+                    {
+                        S_ProjectileDamage.Text = texts[1];
+                    }
+                    if (texts[0] == "Projectile_Flames")
+                    {
+                        S_PFlamelabel.Checked = Boolean.Parse(texts[1]);
+                    }
+                    if (texts[0] == "Projectile_Incendiary.Enable")
+                    {
+                        S_PI_Enablelabel.Checked = Boolean.Parse(texts[1]);
+                    }
+                    if (texts[0] == "Projectile_Incendiary.Duration")
+                    {
+                        S_piduration.Text = texts[1];
+                    }
+                    if (texts[0] == "Bullet_Spread")
+                    {
+                        S_BSBox.Text = texts[1];
+                    }
+                    if (texts[0] == "Reset_Fall_Distance")
+                    {
+                        S_ResetFallDislabel.Checked = Boolean.Parse(texts[1]);
+                    }
+                    if (texts[0] == "Sounds_Projectile")
+                    {
+                        string[] sound = texts[1].Split(',');
+                        foreach (string s in sound)
+                        {
+                            AS3_Sound.Items.Add(s);
+                        }
+                    }
+                    if (texts[0] == "Sounds_Shoot")
+                    {
+                        string[] sound = texts[1].Split(',');
+                        foreach (string s in sound)
+                        {
+                            AS4_Sound.Items.Add(s);
+                        }
+                    }
+                }
+            }
+            // Sneak
+            string[] sneak = getStringFromDictionary("Shooting", dics);
+            if (sneak != null)
+            {
+                foreach (string text in sneak)
+                {
+                    string[] texts = text.Split(':');
+                    if (texts[0] == "Enable")
+                    {
+                        G_S_Enablelabel.Checked = Boolean.Parse(texts[1]);
+                    }
+                    if (texts[0] == "No_Recoil")
+                    {
+                        G_S_NoRecoillabel.Checked = Boolean.Parse(texts[1]);
+                    }
+                    if (texts[0] == "Bullet_Spread")
+                    {
+                        G_S_BSlabel.Checked = Boolean.Parse(texts[1]);
+                    }
+                    if (texts[0] == "Sneak_Before_Shooting")
+                    {
+                        G_S_SBSBox.Text = texts[1];
+                    }
+                }
+            }
+            // Fully Automatic
+            string[] auto = getStringFromDictionary("Fully_Automatic", dics);
+            if (auto != null)
+            {
+                foreach (string text in auto)
+                {
+                    string[] texts = text.Split(':');
+                    if (texts[0] == "Enable")
+                    {
+                        G_F_Automaticlabel.Checked = Boolean.Parse(texts[1]);
+                    }
+                    if (texts[0] == "Fire_Rate")
+                    {
+                        G_FB_FRBox.Text = texts[1];
+                    }
+                }
+            }
+            // Burst Fire
+            string[] burst = getStringFromDictionary("Burstfire", dics);
+            if (burst != null)
+            {
+                foreach (string text in burst)
+                {
+                    string[] texts = text.Split(':');
+                    if (texts[0] == "Enable")
+                    {
+                        G_F_Burstlabel.Checked = Boolean.Parse(texts[1]);
+                    }
+                    if (texts[0] == "Shot_Per_Burst")
+                    {
+                        G_FB_FRBox.Text = texts[1];
+                    }
+                    if (texts[0] == "Delay_Between_Shots_In_Burst")
+                    {
+                        G_FB_DBSIBBox.Text = texts[1];
+                    }
+                }
+            }
+            // Ammunition
+            string[] ammo = getStringFromDictionary("Ammo", dics);
+            if (ammo != null)
+            {
+                foreach (string text in ammo)
+                {
+                    string[] texts = text.Split(':');
+                    if (texts[0] == "Enable")
+                    {
+                        G_A_Enablelabel.Checked = Boolean.Parse(texts[1]);
+                    }
+                    if (texts[0] == "Ammo_Item_ID")
+                    {
+                        G_AmmoBoxids.SelectedText = texts[1].Replace('~', '-');
+                    }
+                    if (texts[0] == "Ammo_Name_Check")
+                    {
+                        G_A_ANCbox.Text = texts[1];
+                    }
+                    if (texts[0] == "Take_Ammo_Per_Shot")
+                    {
+                        G_A_TAPSlabel.Checked = Boolean.Parse(texts[1]);
+                    }
+                    if (texts[0] == "Sound_Out_Of_Ammo")
+                    {
+                        string[] sound = texts[1].Split(',');
+                        foreach (string s in sound)
+                        {
+                            AS5_Sound.Items.Add(s);
+                        }
+                    }
+                    if (texts[0] == "Sounds_Shoot_With_No_Ammo")
+                    {
+                        string[] sound = texts[1].Split(',');
+                        foreach (string s in sound)
+                        {
+                            AS6_Sound.Items.Add(s);
+                        }
+                    }
+                }
+            }
+            // Reloading
+            string[] reload = getStringFromDictionary("Reloading", dics);
+            if (reload != null)
+            {
+                foreach (string text in reload)
+                {
+                    string[] texts = text.Split(':');
+                    if (texts[0] == "Enable")
+                    {
+                        G_R_Enablelabel.Checked = Boolean.Parse(texts[1]);
+                    }
+                    if (texts[0] == "Reload_With_Mouse")
+                    {
+                        G_R_RWMouselabel.Checked = Boolean.Parse(texts[1]);
+                    }
+                    if (texts[0] == "Starting_Amount")
+                    {
+                        G_R_Startbox.Text = texts[1];
+                    }
+                    if (texts[0] == "Reload_Amount")
+                    {
+                        G_R_RAbox.Text = texts[1];
+                    }
+                    if (texts[0] == "Reload_Bullets_Individually")
+                    {
+                        G_R_RBIlabel.Checked = Boolean.Parse(texts[1]);
+                    }
+                    if (texts[0] == "Take_Ammo_On_Reload")
+                    {
+                        G_R_TAORlabel.Checked = Boolean.Parse(texts[1]);
+                    }
+                    if (texts[0] == "Take_Ammo_As_Magazine")
+                    {
+                        G_R_TAAMlabel.Checked = Boolean.Parse(texts[1]);
+                    }
+                    if (texts[0] == "Reload_Duration")
+                    {
+                        G_R_RDBox.Text = texts[1];
+                    }
+                    if (texts[0] == "Reload_Shoot_Delay")
+                    {
+                        G_R_RSDBox.Text = texts[1];
+                    }
+                    if (texts[0] == "Destroy_When_Empty")
+                    {
+                        G_R_DWElabel.Text = texts[1];
+                    }
+                    if (texts[0] == "Sounds_Out_Of_Ammo")
+                    {
+                        string[] sound = texts[1].Split(',');
+                        foreach (string s in sound)
+                        {
+                            AS7_Sound.Items.Add(s);
+                        }
+                    }
+                    if (texts[0] == "Sounds_Reloading")
+                    {
+                        string[] sound = texts[1].Split(',');
+                        foreach (string s in sound)
+                        {
+                            AS8_Sound.Items.Add(s);
+                        }
+                    }
+                    if (texts[0] == "Dual_Wield.Sounds_Single_Reload")
+                    {
+                        string[] sound = texts[1].Split(',');
+                        foreach (string s in sound)
+                        {
+                            AS9_Sound.Items.Add(s);
+                        }
+                    }
+                    if (texts[0] == "Dual_Wield.Single_Reload_Duration")
+                    {
+                        G_R_DWSRDBox.Text = texts[1];
+                    }
+                }
+            }
+            // Firearm Actions
+            string[] firearm = getStringFromDictionary("Firearm_Action", dics);
+            if (firearm != null)
+            {
+                foreach (string text in firearm)
+                {
+                    string[] texts = text.Split(':');
+                    if (texts[0] == "Type")
+                    {
+                        G_FA_TypeBox.SelectedText = texts[1];
+                    }
+                    if (texts[0] == "Open_Duration")
+                    {
+                        G_FA_ODBox.Text = texts[1];
+                    }
+                    if (texts[0] == "Close_Duration")
+                    {
+                        G_FA_CDBox.Text = texts[1];
+                    }
+                    if (texts[0] == "Close_Shoot_Delay")
+                    {
+                        G_FA_CSDbox.Text = texts[1];
+                    }
+                    if (texts[0] == "Reload_Open_Delay")
+                    {
+                        G_FA_RODBox.Text = texts[1];
+                    }
+                    if (texts[0] == "Reload_Close_Delay")
+                    {
+                        G_FA_RCDBox.Text = texts[1];
+                    }
+                    if (texts[0] == "Sound_Open")
+                    {
+                        string[] sound = texts[1].Split(',');
+                        foreach (string s in sound)
+                        {
+                            AS10_Sound.Items.Add(s);
+                        }
+                    }
+                    if (texts[0] == "Sound_Close")
+                    {
+                        string[] sound = texts[1].Split(',');
+                        foreach (string s in sound)
+                        {
+                            AS11_Sound.Items.Add(s);
+                        }
+                    }
+                }
+            }
+            // Scope
+            string[] scope = getStringFromDictionary("Scope", dics);
+            if (scope != null)
+            {
+                foreach (string text in scope)
+                {
+                    string[] texts = text.Split(':');
+                    if (texts[0] == "Enable")
+                    {
+                        G_Scope_Enablelabel.Checked = Boolean.Parse(texts[1]);
+                    }
+                    if (texts[0] == "Night_Vision")
+                    {
+                        G_Scope_NVlabel.Checked = Boolean.Parse(texts[1]);
+                    }
+                    if (texts[0] == "Zoom_Amount")
+                    {
+                        G_Scope_ZABox.Text = texts[1];
+                    }
+                    if (texts[0] == "Zoom_Bullet_Spread")
+                    {
+                        G_Scope_ZBSBox.Text = texts[1];
+                    }
+                    if (texts[0] == "Zoom_Before_Shooting")
+                    {
+                        G_Scope_ZBSBox.Text = texts[1];
+                    }
+                    if (texts[0] == "Sounds_Toggle_Zoom")
+                    {
+                        string[] sound = texts[1].Split(',');
+                        foreach (string s in sound)
+                        {
+                            AS12_Sound.Items.Add(s);
+                        }
+                    }
+                }
+            }
+            // Riot Sheilds
+            string[] riot = getStringFromDictionary("Riot_Sheild", dics);
+            if (riot != null)
+            {
+                foreach (string text in riot)
+                {
+                    string[] texts = text.Split(':');
+                    if (texts[0] == "Enable")
+                    {
+                        I_RS_Enablelabel.Checked = Boolean.Parse(texts[1]);
+                    }
+                    if (texts[0] == "Do_Not_Block_Projectiles")
+                    {
+                        I_RS_DNBPlabel.Checked = Boolean.Parse(texts[1]);
+                    }
+                    if (texts[0] == "Do_Not_Block_Melee_Attacks")
+                    {
+                        I_RS_DNBMAlabel.Checked = Boolean.Parse(texts[1]);
+                    }
+                    if (texts[0] == "Durability_Based_On_Damage")
+                    {
+                        I_RS_DBODlabel.Checked = Boolean.Parse(texts[1]);
+                    }
+                    if (texts[0] == "Durability_Loss_Per_Hit")
+                    {
+                        I_RS_DLPHBox.Text = texts[1];
+                    }
+                    if (texts[0] == "Forcefield_Mode")
+                    {
+                        I_RS_FFMlabel.Checked = Boolean.Parse(texts[1]);
+                    }
+                    if (texts[0] == "Sounds_Blocked")
+                    {
+                        string[] sound = texts[1].Split(',');
+                        foreach (string s in sound)
+                        {
+                            AS13_Sound.Items.Add(s);
+                        }
+                    }
+                    if (texts[0] == "Sounds_Break")
+                    {
+                        string[] sound = texts[1].Split(',');
+                        foreach (string s in sound)
+                        {
+                            AS14_Sound.Items.Add(s);
+                        }
+                    }
+                }
+            }
+            // Weapon Stores
+            string[] signshop = getStringFromDictionary("SignShops", dics);
+            if (signshop != null)
+            {
+                foreach (string text in signshop)
+                {
+                    string[] texts = text.Split(':');
+                    if (texts[0] == "Enable")
+                    {
+                        O_WS_Enablelabel.Checked = Boolean.Parse(texts[1]);
+                    }
+                    if (texts[0] == "Price")
+                    {
+                        string[] ids = texts[1].Split('-');
+                        if (ids.Count() == 2)
+                        {
+                            O_WS_Priceids.SelectedText = ids[0];
+                            O_WS_PriceNum.Text = ids[1];   
+                        }
+                        else
+                        {
+                            O_WS_Priceids.SelectedText = ids[0] + "~" + ids[1];
+                            O_WS_PriceNum.Text = ids[2];
+                        }
+                    }
+                    if (texts[0] == "Sign_Gun_ID")
+                    {
+                        O_GUNIDBox.Text = texts[1];
+                    }
+                }
+            }
+            // Custom Crafting Recipes
+            string[] crafting = getStringFromDictionary("Crafting", dics);
+            if (crafting != null)
+            {
+                foreach (string text in crafting)
+                {
+                    string[] texts = text.Split(':');
+                    if (texts[0] == "Enable")
+                    {
+                        O_CCR_Enablelabel.Checked = Boolean.Parse(texts[1]);
+                    }
+                    if (texts[0] == "Quantity")
+                    {
+                        O_CCR_QBox.Text = texts[1];
+                    }
+                    if (texts[0] == "Shaped")
+                    {
+                        O_CCR_Shapedlabel.Checked = Boolean.Parse(texts[1]);
+                    }
+                    if (texts[0] == "Ingredients")
+                    {
+                        string[] ids = texts[1].Split(',');
+                        for (int i = 1; i < ids.Count(); i++)
+                        {
+                            ComboBox id = (ComboBox)Controls.Find("C_OOR" + i.ToString() + "ids", true).First();
+                            id.SelectedText = ids[i].Replace('~','-');
+                        }
+                    }
+                }
+            }
+            // Region Checks
+            string[] region = getStringFromDictionary("Region_Check", dics);
+            if (region != null)
+            {
+                foreach (string text in region)
+                {
+                    string[] texts = text.Split(':');
+                    if (texts[0] == "Enable")
+                    {
+                        O_RC_Enablelabel.Checked = Boolean.Parse(texts[1]);
+                    }
+                    if (texts[0] == "World_And_Coordinates")
+                    {
+                        string[] world = texts[1].Split(',');
+                        O_RC_WorldBox.Text = world[0];
+                        O_RC_X1.Text = world[1];
+                        O_RC_Y1.Text = world[2];
+                        O_RC_Z1.Text = world[3];
+                        O_RC_X2.Text = world[4];
+                        O_RC_Y2.Text = world[5];
+                        O_RC_Z2.Text = world[6];
+                        O_RC_Blacklabel.Checked = Boolean.Parse(world[7]);
+                    }
+                    if (texts[0] == "Message_Of_Denial")
+                    {
+                        O_RC_Modbox.Text = texts[1];
+                    }
+                }
+            }
+            // Custom Death Mesage
+            string[] cdm = getStringFromDictionary("Custom_Death_Message", dics);
+            if (cdm != null)
+            {
+                foreach (string text in cdm)
+                {
+                    string[] texts = text.Split(':');
+                    if (texts[0] == "Normal")
+                    {
+                        O_CDM_MBox.Text = texts[1];
+                    }
+                }
+            }
+            // Headshot
+            string[] headshot = getStringFromDictionary("Headshot", dics);
+            if (headshot != null)
+            {
+                foreach (string text in headshot)
+                {
+                    string[] texts = text.Split(':');
+                    if (texts[0] == "Enable")
+                    {
+                        G2_H_Enablelabel.Checked = Boolean.Parse(texts[1]);
+                    }
+                    if (texts[0] == "Bonus_Damage")
+                    {
+                        G2_H_BDBox.Text = texts[1];
+                    }
+                    if (texts[0] == "Message_Shooter")
+                    {
+                        G2_H_MSBox.Text = texts[1];
+                    }
+                    if (texts[0] == "Message_Victim")
+                    {
+                        G2_H_MVBox.Text = texts[1];
+                    }
+                    if (texts[0] == "Sounds_Shooter")
+                    {
+                        string[] sound = texts[1].Split(',');
+                        foreach (string s in sound)
+                        {
+                            AS15_Sound.Items.Add(s);
+                        }
+                    }
+                    if (texts[0] == "Sounds_Victim")
+                    {
+                        string[] sound = texts[1].Split(',');
+                        foreach (string s in sound)
+                        {
+                            AS16_Sound.Items.Add(s);
+                        }
+                    }
+                }
+            }
+            // Backstab
+            string[] backstab = getStringFromDictionary("Backstab", dics);
+            if (backstab != null)
+            {
+                foreach (string text in backstab)
+                {
+                    string[] texts = text.Split(':');
+                    if (texts[0] == "Enable")
+                    {
+                        G2_B_Enablelabel.Checked = Boolean.Parse(texts[1]);
+                    }
+                    if (texts[0] == "Bonus_Damage")
+                    {
+                        G2_B_BDBox.Text = texts[1];
+                    }
+                    if (texts[0] == "Message_Shooter")
+                    {
+                        G2_B_MSBox.Text = texts[1];
+                    }
+                    if (texts[0] == "Message_Victim")
+                    {
+                        G2_B_MVBox.Text = texts[1];
+                    }
+                    if (texts[0] == "Sounds_Shooter")
+                    {
+                        string[] sound = texts[1].Split(',');
+                        foreach (string s in sound)
+                        {
+                            AS17_Sound.Items.Add(s);
+                        }
+                    }
+                    if (texts[0] == "Sounds_Victim")
+                    {
+                        string[] sound = texts[1].Split(',');
+                        foreach (string s in sound)
+                        {
+                            AS18_Sound.Items.Add(s);
+                        }
+                    }
+                }
+            }
+            // Summon Entities
+            string[] summon = getStringFromDictionary("Spawn_Entity_On_Hit", dics);
+            if (summon != null)
+            {
+                foreach (string text in summon)
+                {
+                    string[] texts = text.Split(':');
+                    if (texts[0] == "Enable")
+                    {
+                        E_SEOH_Enablelabel.Checked = Boolean.Parse(texts[1]);
+                    }
+                    if (texts[0] == "Chance")
+                    {
+                        E_SEOH_ChanceBox.Text = texts[1];
+                    }
+                    if (texts[0] == "Mob_Name")
+                    {
+                        E_SEOH_MNBox.Text = texts[1];
+                    }
+                    if (texts[0] == "EntityType_Baby_Explode_Amount")
+                    {
+                        string[] ett = texts[1].Split(',');
+                        foreach (string e in ett)
+                        {
+                            E_SEOH_EBox.Items.Add(e);
+                        }
+                    }
+                    if (texts[0] == "Make_Entities_Target_Victim")
+                    {
+                        E_SEOH_METVlabel.Checked = Boolean.Parse(texts[1]);
+                    }
+                    if (texts[0] == "Timed_Death")
+                    {
+                        E_SEOH_TDBox.Text = texts[1];
+                    }
+                    if (texts[0] == "Entity_Disable_Drops")
+                    {
+                        E_SEOH_EDDlabel.Checked = Boolean.Parse(texts[1]);
+                    }
+                    if (texts[0] == "Message_Shooter")
+                    {
+                        E_SEOH_MSBox.Text = texts[1];
+                    }
+                    if (texts[0] == "Message_Victim")
+                    {
+                        E_SEOH_MVBox.Text = texts[1];
+                    }
+                }
+            }
+            // Damage Based On Flight Time
+            string[] dboft = getStringFromDictionary("Damage_Based_On_Flight_Time", dics);
+            if (dboft != null)
+            {
+                foreach (string text in dboft)
+                {
+                    string[] texts = text.Split(':');
+                    if (texts[0] == "Enable")
+                    {
+                        G2_DBOFT_Enablelabel.Checked = Boolean.Parse(texts[1]);
+                    }
+                    if (texts[0] == "Bonus_Damage_Per_Tick")
+                    {
+                        G2_DBOFT_BDPTBox.Text = texts[1];
+                    }
+                    if (texts[0] == "Minimum_Damage")
+                    {
+                        G2_DBOFT_MDBox.Text = texts[1];
+                    }
+                    if (texts[0] == "Maximum_Damage")
+                    {
+                        G2_DBOFT_MXBox.Text = texts[1];
+                    }
+                }
+            }
+            // AirStrikes
+            string[] airstrike = getStringFromDictionary("Airstrikes", dics);
+            if (airstrike != null)
+            {
+                foreach (string text in airstrike)
+                {
+                    string[] texts = text.Split(':');
+                    if (texts[0] == "Enable")
+                    {
+                        I_A_Enablelabel.Checked = Boolean.Parse(texts[1]);
+                    }
+                    if (texts[0] == "Flare_Activation_Delay")
+                    {
+                        I_A_FADBox.Text = texts[1];
+                    }
+                    if (texts[0] == "Particle_Call_Airstrike")
+                    {
+                        string[] particle = texts[1].Split(',');
+                        foreach (string p in particle)
+                        {
+                            I_A_PCABoxpartls.Items.Add(p);
+                        }
+                    }
+                    if (texts[0] == "Message_Call_Airstrike")
+                    {
+                        I_A_MCABox.Text = texts[1];
+                    }
+                    if (texts[0] == "Block_Type")
+                    {
+                        I_A_BTBox.SelectedText = texts[1].Replace('~', '-');
+                    }
+                    if (texts[0] == "Area")
+                    {
+                        I_A_ABox.Text = texts[1];
+                    }
+                    if (texts[0] == "Distance_Between_Bombs")
+                    {
+                        I_A_DBBBox.Text = texts[1];
+                    }
+                    if (texts[0] == "Height_Dropped")
+                    {
+                        I_A_HDBox.Text = texts[1];
+                    }
+                    if (texts[0] == "Vertical_Variation")
+                    {
+                        I_A_VVBox.Text = texts[1];
+                    }
+                    if (texts[0] == "Horizontal_Variation")
+                    {
+                        I_A_HVBox.Text = texts[1];
+                    }
+                    if (texts[0] == "Multiple_Strikes.Enable")
+                    {
+                        I_A_MS_Enablelabel.Checked = Boolean.Parse(texts[1]);
+                    }
+                    if (texts[0] == "Multiple_Strikes.Number_Of_Strikes")
+                    {
+                        I_A_MS_NOSBox.Text = texts[1];
+                    }
+                    if (texts[0] == "Multiple_Strikes.Delay_Between_Strikes")
+                    {
+                        I_A_MS_DBSBox.Text = texts[1];
+                    }
+                    if (texts[0] == "Sounds_Airstrike")
+                    {
+                        string[] sound = texts[1].Split(',');
+                        foreach (string s in sound)
+                        {
+                            AS21_Sound.Items.Add(s);
+                        }
+                    }
+                }
+            }
+            //Explosive Device
+            string[] explodevice = getStringFromDictionary("Explosive_Devices", dics);
+            string deviceinfo = "";
+            if (explodevice != null)
+            {
+                foreach (string text in explodevice)
+                {
+                    string[] texts = text.Split(':');
+                    if (texts[0] == "Enable")
+                    {
+                        I_ED_Enablelabel.Checked = Boolean.Parse(texts[1]);
+                    }
+                    if (texts[0] == "Device_Type")
+                    {
+                        I_ED_DeviceTBox.Text = texts[1];
+                        deviceinfo = texts[1];
+                    }
+                    if (texts[0] == "Device_Info")
+                    {
+                        switch (deviceinfo)
+                        {
+                            case "landmine":
+                                I_ED_Itemids.Text = texts[1].Replace('~', '-');
+                                break;
+                            case "remote":
+                                string[] list = texts[1].Split('-');
+                                I_ED_Abox.Text = list[0];
+                                I_ED_UIDbox.Text = list[1];
+                                I_ED_Headbox.Text = list[2];
+                                break;
+                            case "trap":
+                                string[] boolean = texts[1].Split('-');
+                                I_ED_Chestlabel.Checked = Boolean.Parse(boolean[0]);
+                                I_ED_Picklabel.Checked = Boolean.Parse(boolean[1]);
+                                I_ED_DAPlabel.Checked = Boolean.Parse(boolean[2]);
+                                I_ED_Reuselabel.Checked = Boolean.Parse(boolean[3]);
+                                I_ED_NIDlabel.Checked = Boolean.Parse(boolean[4]);
+                                break;
+                            case "itembomb":
+                                string[] ib = texts[1].Split(',');
+                                I_ED_A2Box.Text = ib[0];
+                                I_ED_Sbox.Text = ib[1];
+                                I_ED_b4boxids.SelectedText = ib[2].Replace('~', '-');
+                                I_ED_afterboxids.SelectedText = ib[3].Replace('~', '-');
+                                break;
+                        }
+                    }
+                    if (texts[0] == "Sounds_Deploy")
+                    {
+                        string[] sound = texts[1].Split(',');
+                        foreach (string s in sound)
+                        {
+                            AS22_Sound.Items.Add(s);
+                        }
+                    }
+                    if (texts[0] == "Remote_Bypass_Regions")
+                    {
+                        I_ED_RBRlabel.Checked = Boolean.Parse(texts[1]);
+                    }
+                    if (texts[0] == "Message_Disarm")
+                    {
+                        I_ED_MDbox.Text = texts[1];
+                    }
+                    if (texts[0] == "Message_Trigger_Placer")
+                    {
+                        I_ED_MTPbox.Text = texts[1];
+                    }
+                    if (texts[0] == "Message_Trigger_Victim")
+                    {
+                        I_ED_MTVbox.Text = texts[1];
+                    }
+                    if (texts[0] == "Sounds_Alert_Placer")
+                    {
+                        string[] sound = texts[1].Split(',');
+                        foreach (string s in sound)
+                        {
+                            AS23_Sound.Items.Add(s);
+                        }
+                    }
+                    if (texts[0] == "Sounds_Trigger")
+                    {
+                        string[] sound = texts[1].Split(',');
+                        foreach(string s in sound)
+                        {
+                            AS24_Sound.Items.Add(s);
+                        }
+                    }
+                }
+            }
+            // Cluster Bombs
+            string[] cluster = getStringFromDictionary("Cluster_Bombs", dics);
+            if (cluster != null)
+            {
+                foreach (string text in cluster)
+                {
+                    string[] texts = text.Split(':');
+                    if (texts[0] == "Enable")
+                    {
+                        I2_CB_Enablelabel.Checked = Boolean.Parse(texts[1]);
+                    }
+                    if (texts[0] == "Bomblet_Type")
+                    {
+                        I2_CB_bombletids.SelectedText = texts[1].Replace('~', '-');
+                    }
+                    if (texts[0] == "Delay_Before_Split")
+                    {
+                        I2_CB_DBSBox.Text = texts[1];
+                    }
+                    if (texts[0] == "Number_Of_Splits")
+                    {
+                        I2_CB_NOSBox.Text = texts[1];
+                    }
+                    if (texts[0] == "Number_Of_Bomblets")
+                    {
+                        I2_CB_NOBBox.Text = texts[1];
+                    }
+                    if (texts[0] == "Speed_Of_Bomblets")
+                    {
+                        I2_CB_SOBBox.Text = texts[1];
+                    }
+                    if (texts[0] == "Delay_Before_Detonation")
+                    {
+                        I2_CB_DBDBox.Text = texts[1];
+                    }
+                    if (texts[0] == "Detonation_Delay_Variation")
+                    {
+                        I2_CB_DDVBox.Text = texts[1];
+                    }
+                    if (texts[0] == "Particle_Release")
+                    {
+                        string[] particle = texts[1].Split(',');
+                        foreach (string p in particle)
+                        {
+                            I2_CB_PRpartls.Items.Add(p);
+                        }
+                    }
+                    if (texts[0] == "Sounds_Release")
+                    {
+                        string[] sound = texts[1].Split(',');
+                        foreach (string s in sound)
+                        {
+                            AS25_Sound.Items.Add(s);
+                        }
+                    }
+                }
+            }
+            // Sharnel
+            string[] sharpnel = getStringFromDictionary("Shrapnel", dics);
+            if (sharpnel != null)
+            {
+                foreach (string text in sharpnel)
+                {
+                    string[] texts = text.Split(':');
+                    if (texts[0] == "Enable")
+                    {
+                        E_S_Enablelabel.Checked = Boolean.Parse(texts[1]);
+                    }
+                    if (texts[0] == "Block_Type")
+                    {
+                        E_S_BTids.SelectedText = texts[1].Replace('~', '-');
+                    }
+                    if (texts[0] == "Amount")
+                    {
+                        E_S_ABox.Text = texts[1];
+                    }
+                    if (texts[0] == "Speed")
+                    {
+                        E_S_SBox.Text = texts[1];
+                    }
+                    if (texts[0] == "Place_Blocks")
+                    {
+                        E_S_PBlabel.Checked = Boolean.Parse(texts[1]);
+                    }
+                }
+            }
+            // Explosions 
+            string[] explo = getStringFromDictionary("Explosions", dics);
+            if (explo != null)
+            {
+                foreach (string text in explo)
+                {
+                    string[] texts = text.Split(':');
+                    if (texts[0] == "Enable")
+                    {
+                        E_E_Enablelabel.Checked = Boolean.Parse(texts[1]);
+                    }
+                    if (texts[0] == "Knockback")
+                    {
+                        E_E_KBox.Text = texts[1];
+                    }
+                    if (texts[0] == "Ignite_Victims")
+                    {
+                        E_E_IVBox.Text = texts[1];
+                    }
+                    if (texts[0] == "Damage_Multiplier")
+                    {
+                        E_E_DMBox.Text = texts[1];
+                    }
+                    if (texts[0] == "Enable_Friendly_Fire")
+                    {
+                        E_E_EFFlabel.Checked = Boolean.Parse(texts[1]);
+                    }
+                    if (texts[0] == "Enable_Owner_Immunity")
+                    {
+                        E_E_EOIlabel.Checked = Boolean.Parse(texts[1]);
+                    }
+                    if (texts[0] == "Explosion_No_Damage")
+                    {
+                        E_E_ENDlabel.Checked = Boolean.Parse(texts[1]);
+                    }
+                    if (texts[0] == "Explosion_Potion_Effect")
+                    {
+                        string[] peff = texts[1].Split(',');
+                        foreach (string pef in peff)
+                        {
+                            E_E_EPEpeffls.Items.Add(pef);
+                        }
+                    }
+                    if (texts[0] == "Explosion_No_Grief")
+                    {
+                        E_E_ENGlabel.Checked = Boolean.Parse(texts[1]);
+                    }
+                    if (texts[0] == "Explosion_Radius")
+                    {
+                        E_E_ERBox.Text = texts[1];
+                    }
+                    if (texts[0] == "Explosion_Incendiary")
+                    {
+                        E_E_EIlabel.Checked = Boolean.Parse(texts[1]);
+                    }
+                    if (texts[0] == "Explosion_Delay")
+                    {
+                        E_E_EDBox.Text = texts[1];
+                    }
+                    if (texts[0] == "On_Impact_With_Anything")
+                    {
+                        E_E_OIWAlabel.Checked = Boolean.Parse(texts[1]);
+                    }
+                    if (texts[0] == "Projectile_Activation_Time")
+                    {
+                        E_E_PATBox.Text = texts[1];
+                    }
+                    if (texts[0] == "Message_Shooter")
+                    {
+                        E_E_MSBox.Text = texts[1];
+                    }
+                    if (texts[0] == "Message_Victim")
+                    {
+                        E_E_MVBox.Text = texts[1];
+                    }
+                    if (texts[0] == "Sounds_Shooter")
+                    {
+                        string[] sound = texts[1].Split(',');
+                        foreach (string s in sound)
+                        {
+                            AS26_Sound.Items.Add(s);
+                        }
+                    }
+                    if (texts[0] == "Sounds_Victim")
+                    {
+                        string[] sound = texts[1].Split(',');
+                        foreach (string s in sound)
+                        {
+                            AS27_Sound.Items.Add(s);
+                        }
+                    }
+                    if (texts[0] == "Sounds_Explode")
+                    {
+                        string[] sound = texts[1].Split(',');
+                        foreach (string s in sound)
+                        {
+                            AS28_Sound.Items.Add(s);
+                        }
+                    }
+                }
+            }
+            // Lightning
+            string[] lightning = getStringFromDictionary("Lightning", dics);
+            if (lightning != null)
+            {
+                foreach (string text in lightning)
+                {
+                    string[] texts = text.Split(':');
+                    if (texts[0] == "Enable")
+                    {
+                        E_L_Enablelabel.Checked = Boolean.Parse(texts[1]);
+                    }
+                    if (texts[0] == "No_Damage")
+                    {
+                        E_L_NDlabel.Checked = Boolean.Parse(texts[1]);
+                    }
+                    if (texts[0] == "On_Impact_With_Anything")
+                    {
+                        E_L_OIWAlabel.Checked = Boolean.Parse(texts[1]);
+                    }
+                }
+            }
+            // Potion effects
+            string[] pe = getStringFromDictionary("Potion_Effects", dics);
+            if (pe != null)
+            {
+                foreach (string text in pe)
+                {
+                    string[] texts = text.Split(':');
+                    if (texts[0] == "Activation")
+                    {
+                        string[] activation = texts[1].Split(',');
+                        foreach (string a in activation)
+                        {
+                            E2_PE_Alist.Items.Add(a);
+                        }
+                    }
+                    if (texts[0] == "Potion_Effect_Shooter")
+                    {
+                        string[] pot = texts[1].Split(',');
+                        foreach (string p in pot)
+                        {
+                            E2_PE_PESpeffls.Items.Add(p);
+                        }
+                    }
+                    if (texts[0] == "Potion_Effect_Victim")
+                    {
+                        string[] pot = texts[1].Split(',');
+                        foreach (string p in pot)
+                        {
+                            E2_PE_PEVpeffls.Items.Add(p);
+                        }
+                    }
+                }
+            }
+            // Particle Effects
+            string[] parteff = getStringFromDictionary("Particles", dics);
+            if (parteff != null)
+            {
+                foreach (string text in parteff)
+                {
+                    string[] texts = text.Split(':');
+                    if (texts[0] == "Enable")
+                    {
+                        E2_P_Enablelabel.Checked = Boolean.Parse(texts[1]);
+                    }
+                    if (texts[0] == "Particle_Terrain")
+                    {
+                        E2_P_PTlabel.Checked = Boolean.Parse(texts[1]);
+                    }
+                    if (texts[0] == "Particle_Player_Shoot")
+                    {
+                        string[] part = texts[1].Split(',');
+                        foreach (string p in part)
+                        {
+                            E2_P_PPSpartls.Items.Add(p);
+                        }
+                    }
+                    if (texts[0] == "Particle_Impact_Anything")
+                    {
+                        string[] part = texts[1].Split(',');
+                        foreach (string p in part)
+                        {
+                            E2_P_PIApartls.Items.Add(p);
+                        }
+                    }
+                    if (texts[0] == "Particle_Hit")
+                    {
+                        string[] part = texts[1].Split(',');
+                        foreach (string p in part)
+                        {
+                            E2_P_PHpartls.Items.Add(p);
+                        }
+                    }
+                    if (texts[0] == "Particle_Headshot")
+                    {
+                        string[] part = texts[1].Split(',');
+                        foreach (string p in part)
+                        {
+                            E2_P_PH2partls.Items.Add(p);
+                        }
+                    }
+                    if (texts[0] == "Particle_Critical")
+                    {
+                        string[] part = texts[1].Split(',');
+                        foreach (string p in part)
+                        {
+                            E2_P_PCpartls.Items.Add(p);
+                        }
+                    }
+                    if (texts[0] == "Particle_Backstab")
+                    {
+                        string[] part = texts[1].Split(',');
+                        foreach (string p in part)
+                        {
+                            E2_P_PBpartls.Items.Add(p);
+                        }
+                    }
+                }
+            }
+            // Fireworks
+            string[] firework = getStringFromDictionary("Fireworks", dics);
+            if (firework != null)
+            {
+                foreach (string text in firework)
+                {
+                    string[] texts = text.Split(':');
+                    if (texts[0] == "Enable")
+                    {
+                        E2_F_Enablelabel.Checked = Boolean.Parse(texts[1]);
+                    }
+                    if (texts[0] == "Firework_Player_Shoot")
+                    {
+                        string[] fw = texts[1].Split(',');
+                        foreach (string f in fw)
+                        {
+                            E2_F_FPSls.Items.Add(f);
+                        }
+                    }
+                    if (texts[0] == "Firework_Explode")
+                    {
+                        string[] fw = texts[1].Split(',');
+                        foreach (string f in fw)
+                        {
+                            E2_F_FEls.Items.Add(f);
+                        }
+                    }
+                    if (texts[0] == "Firework_Hit")
+                    {
+                        string[] fw = texts[1].Split(',');
+                        foreach (string f in fw)
+                        {
+                            E2_F_FHls.Items.Add(f);
+                        }
+                    }
+                    if (texts[0] == "Firework_Headshot")
+                    {
+                        string[] fw = texts[1].Split(',');
+                        foreach (string f in fw)
+                        {
+                            E2_F_FH2ls.Items.Add(f);
+                        }
+                    }
+                    if (texts[0] == "Firework_Critical")
+                    {
+                        string[] fw = texts[1].Split(',');
+                        foreach (string f in fw)
+                        {
+                            E2_F_FCls.Items.Add(f);
+                        }
+                    }
+                    if (texts[0] == "Firework_Backstab")
+                    {
+                        string[] fw = texts[1].Split(',');
+                        foreach (string f in fw)
+                        {
+                            E2_F_FBls.Items.Add(f);
+                        }
+                    }
+                }
+            }
+            // Abilities
+            string[] ability = getStringFromDictionary("Abilities", dics);
+            if (ability != null)
+            {
+                foreach (string text in ability)
+                {
+                    string[] texts = text.Split(':');
+                    if (texts[0] == "Super_Effective")
+                    {
+                        string[] se = texts[1].Split(',');
+                        foreach (string s in se)
+                        {
+                            O_A_SEls.Items.Add(s);
+                        }
+                    }
+                    if (texts[0] == "Death_No_Drop")
+                    {
+                        O_A_DNDlabel.Checked = Boolean.Parse(texts[1]);
+                    }
+                    if (texts[0] == "Bonus_Drops")
+                    {
+                        string[] bd = texts[1].Split(',');
+                        foreach (string b in bd)
+                        {
+                            O_A_BDls.Items.Add(b);
+                        }
+                    }
+                    if (texts[0] == "Reset_Hit_Cooldown")
+                    {
+                        O_A_RHClabel.Checked = Boolean.Parse(texts[1]);
+                    }
+                    if (texts[0] == "Knockback")
+                    {
+                        O_A_KBox.Text = texts[1];
+                    }
+                    if (texts[0] == "No_Fall_Damage")
+                    {
+                        O_A_NFDlabel.Checked = Boolean.Parse(texts[1]);
+                    }
+                    if (texts[0] == "No_Vertical_Recoil")
+                    {
+                        O_A_NVRlabel.Checked = Boolean.Parse(texts[1]);
+                    }
+                    if (texts[0] == "Hurt_Effect")
+                    {
+                        O_A_HElabel.Checked = Boolean.Parse(texts[1]);
+                    }
+                    if (texts[0] == "Jetpack_Mode")
+                    {
+                        O_A_JMlabel.Checked = Boolean.Parse(texts[1]);
+                    }
+                    if (texts[0] == "Break_Blocks")
+                    {
+                        O_A_BBls.Items.Add(texts[1]);
+                    }
+                }
+            }
+            // Hit Events
+            string[] hit = getStringFromDictionary("Hit_Events", dics);
+            if (hit != null)
+            {
+                foreach (string text in hit)
+                {
+                    string[] texts = text.Split(':');
+                    if (texts[0] == "Enable")
+                    {
+                        O_HE_Enablelabel.Checked = Boolean.Parse(texts[1]);
+                    }
+                    if (texts[0] == "Message_Shooter")
+                    {
+                        O_HE_MSBox.Text = texts[1];
+                    }
+                    if (texts[0] == "Message_Victim")
+                    {
+                        O_HE_MVBox.Text = texts[1];
+                    }
+                    if (texts[0] == "Sounds_Impact")
+                    {
+                        string[] sound = texts[1].Split(',');
+                        foreach (string s in sound)
+                        {
+                            AS29_Sound.Items.Add(s);
+                        }
+                    }
+                    if (texts[0] == "Sounds_Shooter")
+                    {
+                        string[] sound = texts[1].Split(',');
+                        foreach (string s in sound)
+                        {
+                            AS30_Sound.Items.Add(s);
+                        }
+                    }
+                    if (texts[0] == "Sounds_Victim")
+                    {
+                        string[] sound = texts[1].Split(',');
+                        foreach (string s in sound)
+                        {
+                            AS31_Sound.Items.Add(s);
+                        }
+                    }
+                }
+            }
+            // Extras
+            string[] extra = getStringFromDictionary("Extras", dics);
+            if (extra != null)
+            {
+                foreach (string text in extra)
+                {
+                    string[] texts = text.Split(':');
+                    if (texts[0] == "One_Time_Use")
+                    {
+                        O2_E_OTUlabel.Checked = Boolean.Parse(texts[1]);
+                    }
+                    if (texts[0] == "Disable_Underwater")
+                    {
+                        O2_E_DUlabel.Checked = Boolean.Parse(texts[1]);
+                    }
+                    if (texts[0] == "Make_Victim_Run_Commmand")
+                    {
+                        string[] cmd = texts[1].Split('|');
+                        foreach (string c in cmd)
+                        {
+                            O2_E_MVRCls.Items.Add(c);
+                        }
+                    }
+                    if (texts[0] == "Make_Victim_Speak")
+                    {
+                        O2_E_MVSBox.Text = texts[1];
+                    }
+                    if (texts[0] == "Run_Console_Command")
+                    {
+                        string[] cmd = texts[1].Split('|');
+                        foreach (string c in cmd)
+                        {
+                            O2_E_RCCls.Items.Add(c);
+                        }
+                    }
+                    if (texts[0] == "Run_Command")
+                    {
+                        string[] cmd = texts[1].Split('|');
+                        foreach (string c in cmd)
+                        {
+                            O2_E_RCls.Items.Add(c);
+                        }
+                    }
+                }
+            }
+        }
+        public void loadYAMLFile(string path)
+        {
+            string[] lines = File.ReadAllLines(path);
+            Dictionary<string, string[]> yml = new Dictionary<string, string[]>();
+            string node;
+            foreach (string line in lines)
+            {
+                if (!line.StartsWith(spacebar) && line.EndsWith(":"))
+                {
+                    yml.Add("GUN_ID", new string[] { line.Replace(":","")});
+                    break;
+                }
+            }
+            for (int j = 0;j < lines.Count() - 1;j++)
+            {
+                List<string> vl = new List<string>();
+                if (lines[j].StartsWith(spacebar) && !lines[j].StartsWith(doublespacebar))
+                {
+                    node = lines[j].Replace(" ", "").Replace(":", "");
+                    for (int i = 1; ;i++)
+                    {
+                        if (i + j > lines.Count() - 1)
+                        {
+                            break;
+                        }
+                        if (lines[i + j].StartsWith(spacebar) && lines[i + j].StartsWith(doublespacebar))
+                        {
+                            if (lines[i + j].StartsWith(doublespacebar + spacebar))
+                            {
+                                vl.Remove(lines[i + j - 1].Replace(" ", ""));
+                                vl.Add(lines[i + j - 1].Replace(" ", "").Replace(":","") + "." + lines[i + j].Replace(" ", ""));
+                            }
+                            else
+                            {
+                                if (lines[i + j].StartsWith(doublespacebar + "-"))
+                                {
+                                    List<string> l2v = new List<string>();
+                                    for (int k = 0; ; k++)
+                                    {
+                                        string empty = "";
+                                        if (i + j + k > lines.Count() - 1)
+                                        {
+                                            foreach (string litem in l2v.ToArray())
+                                            {
+                                                empty += litem + "|";
+                                            }
+                                            if (empty.Length > 0)
+                                            {
+                                                empty = empty.Remove(empty.Length - 1);
+                                            }
+                                            vl.Remove(lines[i + j - 1].Replace(" ", ""));
+                                            vl.Add(lines[i + j - 1].Replace(" ", "") + empty);
+                                            i += k;
+                                            break;
+                                        }
+                                        if (lines[i + j + k].StartsWith(doublespacebar + "-"))
+                                        {
+                                            l2v.Add(lines[i + j + k].Replace(doublespacebar + "- ", ""));
+                                        }
+                                        else
+                                        {
+                                            foreach (string litem in l2v.ToArray())
+                                            {
+                                                empty += litem + "|";
+                                            }
+                                            if (empty.Length > 0)
+                                            {
+                                                empty = empty.Remove(empty.Length - 1);
+                                            }
+                                            vl.Remove(lines[i + j - 1].Replace(" ", ""));
+                                            vl.Add(lines[i + j - 1].Replace(" ", "") + empty);
+                                            i += k;
+                                            break;
+                                        }
+                                    }
+                                }
+                                else
+                                {
+                                    vl.Add(lines[i + j].Replace(" ", ""));
+                                }
+                            }
+                        }
+                        else
+                        {
+                            j += i - 1;
+                            break;
+                        }
+                    }
+                    yml.Add(node, vl.ToArray());
+                }
+            }
+            ReadYamls(yml);
         }
     }
 }
