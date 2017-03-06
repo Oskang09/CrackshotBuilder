@@ -735,12 +735,14 @@
             this.buildBtnlabel = new System.Windows.Forms.Button();
             this.csyamlbox = new System.Windows.Forms.RichTextBox();
             this.Settinglabel = new System.Windows.Forms.TabPage();
+            this.loadBtn = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.clearBtn = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.tabControl1.SuspendLayout();
             this.II_Tablabel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.II_IDPics)).BeginInit();
@@ -820,6 +822,7 @@
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -1702,6 +1705,7 @@
             this.S_BSBox.Name = "S_BSBox";
             this.S_BSBox.Size = new System.Drawing.Size(175, 22);
             this.S_BSBox.TabIndex = 57;
+            this.S_BSBox.Visible = false;
             // 
             // S_piduration
             // 
@@ -1710,6 +1714,7 @@
             this.S_piduration.Name = "S_piduration";
             this.S_piduration.Size = new System.Drawing.Size(74, 22);
             this.S_piduration.TabIndex = 22;
+            this.S_piduration.Visible = false;
             // 
             // S_removedragbox
             // 
@@ -1718,6 +1723,7 @@
             this.S_removedragbox.Name = "S_removedragbox";
             this.S_removedragbox.Size = new System.Drawing.Size(175, 22);
             this.S_removedragbox.TabIndex = 47;
+            this.S_removedragbox.Visible = false;
             // 
             // S_ProjectileAmountBox
             // 
@@ -1726,6 +1732,7 @@
             this.S_ProjectileAmountBox.Name = "S_ProjectileAmountBox";
             this.S_ProjectileAmountBox.Size = new System.Drawing.Size(175, 22);
             this.S_ProjectileAmountBox.TabIndex = 12;
+            this.S_ProjectileAmountBox.Visible = false;
             // 
             // S_projectileSpeed
             // 
@@ -1734,6 +1741,7 @@
             this.S_projectileSpeed.Name = "S_projectileSpeed";
             this.S_projectileSpeed.Size = new System.Drawing.Size(175, 22);
             this.S_projectileSpeed.TabIndex = 26;
+            this.S_projectileSpeed.Visible = false;
             // 
             // S_ProjectileDamage
             // 
@@ -1742,6 +1750,7 @@
             this.S_ProjectileDamage.Name = "S_ProjectileDamage";
             this.S_ProjectileDamage.Size = new System.Drawing.Size(175, 22);
             this.S_ProjectileDamage.TabIndex = 24;
+            this.S_ProjectileDamage.Visible = false;
             // 
             // S_RemovalDraglabel
             // 
@@ -1753,6 +1762,7 @@
             this.S_RemovalDraglabel.TabIndex = 27;
             this.S_RemovalDraglabel.Text = "Removal Or Drag Delay";
             this.S_RemovalDraglabel.UseVisualStyleBackColor = true;
+            this.S_RemovalDraglabel.Visible = false;
             // 
             // S_PI_Durationlabel
             // 
@@ -1763,6 +1773,7 @@
             this.S_PI_Durationlabel.Size = new System.Drawing.Size(77, 18);
             this.S_PI_Durationlabel.TabIndex = 21;
             this.S_PI_Durationlabel.Text = "Duration";
+            this.S_PI_Durationlabel.Visible = false;
             // 
             // S_BulletSpreadlabel
             // 
@@ -1773,6 +1784,7 @@
             this.S_BulletSpreadlabel.Size = new System.Drawing.Size(116, 18);
             this.S_BulletSpreadlabel.TabIndex = 57;
             this.S_BulletSpreadlabel.Text = "Bullet Spread";
+            this.S_BulletSpreadlabel.Visible = false;
             // 
             // S_PI_Enablelabel
             // 
@@ -1784,6 +1796,7 @@
             this.S_PI_Enablelabel.TabIndex = 19;
             this.S_PI_Enablelabel.Text = "Enable";
             this.S_PI_Enablelabel.UseVisualStyleBackColor = true;
+            this.S_PI_Enablelabel.CheckedChanged += new System.EventHandler(this.S_PI_Enablelabel_CheckedChanged);
             // 
             // S_PAmountlabel
             // 
@@ -1794,6 +1807,7 @@
             this.S_PAmountlabel.Size = new System.Drawing.Size(150, 18);
             this.S_PAmountlabel.TabIndex = 10;
             this.S_PAmountlabel.Text = "Projectile Amount";
+            this.S_PAmountlabel.Visible = false;
             // 
             // S_PDamagelabel
             // 
@@ -1804,6 +1818,7 @@
             this.S_PDamagelabel.Size = new System.Drawing.Size(154, 18);
             this.S_PDamagelabel.TabIndex = 23;
             this.S_PDamagelabel.Text = "Projectile Damage";
+            this.S_PDamagelabel.Visible = false;
             // 
             // S_PSpeedlabel
             // 
@@ -1814,6 +1829,7 @@
             this.S_PSpeedlabel.Size = new System.Drawing.Size(139, 18);
             this.S_PSpeedlabel.TabIndex = 25;
             this.S_PSpeedlabel.Text = "Projectile Speed";
+            this.S_PSpeedlabel.Visible = false;
             // 
             // S_Soundlabel
             // 
@@ -2551,7 +2567,6 @@
             this.I_A_MS_Enablelabel.TabIndex = 1;
             this.I_A_MS_Enablelabel.Text = "Enable";
             this.I_A_MS_Enablelabel.UseVisualStyleBackColor = true;
-            this.I_A_MS_Enablelabel.Visible = false;
             this.I_A_MS_Enablelabel.CheckedChanged += new System.EventHandler(this.I_A_MS_Enablelabel_CheckedChanged);
             // 
             // I_RS_riotlabel
@@ -5213,6 +5228,7 @@
             this.E_L_OIWAlabel.TabIndex = 4;
             this.E_L_OIWAlabel.Text = "On Impact With Anything";
             this.E_L_OIWAlabel.UseVisualStyleBackColor = true;
+            this.E_L_OIWAlabel.Visible = false;
             // 
             // E_L_NDlabel
             // 
@@ -5224,6 +5240,7 @@
             this.E_L_NDlabel.TabIndex = 3;
             this.E_L_NDlabel.Text = "No Damage";
             this.E_L_NDlabel.UseVisualStyleBackColor = true;
+            this.E_L_NDlabel.Visible = false;
             // 
             // E_L_Enablelabel
             // 
@@ -6170,6 +6187,10 @@
             // 
             // E2_F_Fnamelabel
             // 
+            this.E2_F_Fnamelabel.Controls.Add(this.E2_FC_B);
+            this.E2_F_Fnamelabel.Controls.Add(this.E2_FC_G);
+            this.E2_F_Fnamelabel.Controls.Add(this.E2_FC_R);
+            this.E2_F_Fnamelabel.Controls.Add(this.E2_FC_TBox);
             this.E2_F_Fnamelabel.Controls.Add(this.E2_F_FBRlabel);
             this.E2_F_Fnamelabel.Controls.Add(this.E2_F_FBAlabel);
             this.E2_F_Fnamelabel.Controls.Add(this.E2_F_FBls);
@@ -6195,12 +6216,8 @@
             this.E2_F_Fnamelabel.Controls.Add(this.E2_F_Blabel);
             this.E2_F_Fnamelabel.Controls.Add(this.E2_F_Glabel);
             this.E2_F_Fnamelabel.Controls.Add(this.E2_F_Rlabel);
-            this.E2_F_Fnamelabel.Controls.Add(this.E2_FC_B);
-            this.E2_F_Fnamelabel.Controls.Add(this.E2_FC_G);
-            this.E2_F_Fnamelabel.Controls.Add(this.E2_FC_R);
             this.E2_F_Fnamelabel.Controls.Add(this.E2_F_Flabel);
             this.E2_F_Fnamelabel.Controls.Add(this.E2_F_T2label);
-            this.E2_F_Fnamelabel.Controls.Add(this.E2_FC_TBox);
             this.E2_F_Fnamelabel.Controls.Add(this.E2_F_Tlabel);
             this.E2_F_Fnamelabel.Controls.Add(this.E2_F_FPSls);
             this.E2_F_Fnamelabel.Controls.Add(this.E2_F_FPSlabel);
@@ -8325,16 +8342,16 @@
             this.O_HE_namelabel.Controls.Add(this.RS31);
             this.O_HE_namelabel.Controls.Add(this.RS29);
             this.O_HE_namelabel.Controls.Add(this.AS31);
-            this.O_HE_namelabel.Controls.Add(this.O_HE_SVlabel);
             this.O_HE_namelabel.Controls.Add(this.AS29);
             this.O_HE_namelabel.Controls.Add(this.AS30_Sound);
             this.O_HE_namelabel.Controls.Add(this.RS30);
-            this.O_HE_namelabel.Controls.Add(this.O_HE_SIlabel);
-            this.O_HE_namelabel.Controls.Add(this.O_HE_SSlabel);
             this.O_HE_namelabel.Controls.Add(this.AS30);
             this.O_HE_namelabel.Controls.Add(this.O_HE_MVlabel);
             this.O_HE_namelabel.Controls.Add(this.O_HE_MSlabel);
             this.O_HE_namelabel.Controls.Add(this.O_HE_Enablelabel);
+            this.O_HE_namelabel.Controls.Add(this.O_HE_SVlabel);
+            this.O_HE_namelabel.Controls.Add(this.O_HE_SIlabel);
+            this.O_HE_namelabel.Controls.Add(this.O_HE_SSlabel);
             this.O_HE_namelabel.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold);
             this.O_HE_namelabel.Location = new System.Drawing.Point(7, 333);
             this.O_HE_namelabel.Name = "O_HE_namelabel";
@@ -8824,6 +8841,7 @@
             // 
             // Settinglabel
             // 
+            this.Settinglabel.Controls.Add(this.groupBox4);
             this.Settinglabel.Controls.Add(this.groupBox3);
             this.Settinglabel.Controls.Add(this.groupBox2);
             this.Settinglabel.Controls.Add(this.groupBox1);
@@ -8833,6 +8851,17 @@
             this.Settinglabel.TabIndex = 8;
             this.Settinglabel.Text = "Setting";
             this.Settinglabel.UseVisualStyleBackColor = true;
+            // 
+            // loadBtn
+            // 
+            this.loadBtn.Font = new System.Drawing.Font("Arial Narrow", 9.75F);
+            this.loadBtn.Location = new System.Drawing.Point(22, 28);
+            this.loadBtn.Name = "loadBtn";
+            this.loadBtn.Size = new System.Drawing.Size(132, 40);
+            this.loadBtn.TabIndex = 7;
+            this.loadBtn.Text = "Load";
+            this.loadBtn.UseVisualStyleBackColor = true;
+            this.loadBtn.Click += new System.EventHandler(this.loadBtn_Click);
             // 
             // groupBox3
             // 
@@ -8899,6 +8928,17 @@
             this.richTextBox1.Size = new System.Drawing.Size(416, 104);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.loadBtn);
+            this.groupBox4.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold);
+            this.groupBox4.Location = new System.Drawing.Point(190, 3);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(177, 89);
+            this.groupBox4.TabIndex = 8;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Load Guns";
             // 
             // Form1
             // 
@@ -9031,6 +9071,7 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -9749,6 +9790,8 @@
         private System.Windows.Forms.RichTextBox richTextBox2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Button loadBtn;
+        private System.Windows.Forms.GroupBox groupBox4;
     }
 }
 
